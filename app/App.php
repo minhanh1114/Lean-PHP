@@ -1,8 +1,9 @@
 <?php
 class App{
-    private $__controller,$__action,$__params;
+    private $__controller,$__action,$__params,$__router;
     // hàm khởi tạo
     function __construct(){
+        $this->__router = NEW Router();
         global $routers;
         if(!empty($routers['default_controller']))
         {
@@ -27,9 +28,38 @@ class App{
     }
     function handleUrl(){
         $url = $this->getUrl();
+        $url =$this->__router->handleRouter($url);
         $urlArr= array_filter(explode('/',$url));
         $urlArr = array_values($urlArr); // đánh lại chỉ mục
-        //xử lí controllers
+        //xử lí controllers nếu có /product sẽ gán lại nếu k bằng controllers mặc định
+        $urlCheck='';
+        if(!empty($urlArr))
+        {
+            foreach ($urlArr as $key=>$item)
+            {
+                $urlCheck .= $item .'/';
+                $fileCheck = rtrim($urlCheck,'/');
+                $fileArr = explode('/',$fileCheck);
+                $fileArr[count($fileArr)-1]= ucfirst($fileArr[count($fileArr)-1]);
+                $fileCheck = implode('/', $fileArr);
+                if(!empty($urlArr[$key-1]))
+                {
+                    unset($urlArr[$key-1]);
+                    
+                }
+                // kiểm tra đúng đến file thì break
+                if(file_exists('app/controllers/'.$fileCheck.'.php')) // kiểm tra file tồn tại
+                {
+                    $urlCheck = $fileCheck;
+                    break;
+                }
+                    
+            }
+            
+            $urlArr = array_values($urlArr);
+        }
+        
+    
         if(!empty($urlArr[0]))
         {
             $this->__controller =ucfirst($urlArr[0]); //ucfirst is uppercase first letter
@@ -38,9 +68,9 @@ class App{
         else{
             $this->__controller =ucfirst($this->__controller);
         }
-        if(file_exists('app/controllers/'. $this->__controller.'.php')) // kiểm tra file tồn tại
+        if(file_exists('app/controllers/'. $urlCheck.'.php')) // kiểm tra file tồn tại
             {
-                require_once('app/controllers/'. $this->__controller.'.php');
+                require_once('app/controllers/'.$urlCheck.'.php');
                 if(class_exists($this->__controller))//kiểm tra class tồn tại
                 {
                     $this->__controller = new $this->__controller();

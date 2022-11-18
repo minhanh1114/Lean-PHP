@@ -1,7 +1,14 @@
 <?php
-class Home{
+class Home extends Controller{
+    private $HomeModel;
+    public $data=[];
+    public function __construct(){
+      $this->HomeModel = $this->model('HomeModel');
+    }
     public function index (){
-        echo "HOME";
+        $data['sub_content']['productList'] = $this->HomeModel->getList();
+        $data['content']= 'home/index';
+        $this->render('layouts/client_layout',$data);
     }
     public function detail ($id='',$slug=''){
         echo "HOME".$id;
