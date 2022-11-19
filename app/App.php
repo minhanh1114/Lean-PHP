@@ -29,6 +29,7 @@ class App{
     function handleUrl(){
         $url = $this->getUrl();
         $url =$this->__router->handleRouter($url);
+        echo $url;
         $urlArr= array_filter(explode('/',$url));
         $urlArr = array_values($urlArr); // đánh lại chỉ mục
         //xử lí controllers nếu có /product sẽ gán lại nếu k bằng controllers mặc định
@@ -37,6 +38,7 @@ class App{
         {
             foreach ($urlArr as $key=>$item)
             {
+
                 $urlCheck .= $item .'/';
                 $fileCheck = rtrim($urlCheck,'/');
                 $fileArr = explode('/',$fileCheck);
@@ -67,6 +69,10 @@ class App{
         }
         else{
             $this->__controller =ucfirst($this->__controller);
+        }
+        if(empty($urlCheck))
+        {
+            $urlCheck = $this->__controller;
         }
         if(file_exists('app/controllers/'. $urlCheck.'.php')) // kiểm tra file tồn tại
             {

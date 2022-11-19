@@ -7,6 +7,10 @@ class Router{
         global $routers;
         unset($routers['default_controller']);
         $url = trim($url,'/');
+        // if(empty($url))
+        // {
+        //     $url ='/';
+        // }
         $handleUrl = $url;
         if(!empty($routers))
         {
