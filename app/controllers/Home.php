@@ -19,4 +19,21 @@ class Home extends Controller{
         echo "Key word:".$keyWord;
         
     }
+    public function get_category(){
+       $request = new Request();
+        $data= $request->getDataRequest();
+     $this->render('categorys/add');
+       
+    }
+    public function post_category(){
+       $request = new Request();
+       $data=$request->getDataRequest();
+    //    var_dump($data); truy vấn csdl
+       $response = new Response();
+       $response->redirect('home/get_category');
+    //    $response->redirect('https://google.com/'); link ngoài web site
+
+       
+
+    }
 }

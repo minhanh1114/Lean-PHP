@@ -1,8 +1,10 @@
 <?php
-class HomeModel {
-    protected $_table = 'products';
+class HomeModel extends Model {
+    protected $_table = 'province';
+ 
+    
     function getList(){
-        $data =['item1','item2','item3'];
+        $data = $this->database->query('SELECT * FROM '. $this->_table)->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
     function getDetail($id){

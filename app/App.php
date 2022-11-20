@@ -2,7 +2,9 @@
 class App{
     private $__controller,$__action,$__params,$__router;
     // hàm khởi tạo
+    static public $app;
     function __construct(){
+        self::$app = $this;
         $this->__router = NEW Router();
         global $routers;
         if(!empty($routers['default_controller']))
@@ -29,7 +31,7 @@ class App{
     function handleUrl(){
         $url = $this->getUrl();
         $url =$this->__router->handleRouter($url);
-        echo $url;
+        
         $urlArr= array_filter(explode('/',$url));
         $urlArr = array_values($urlArr); // đánh lại chỉ mục
         //xử lí controllers nếu có /product sẽ gán lại nếu k bằng controllers mặc định
@@ -108,7 +110,8 @@ class App{
         }
         // echo ("<pre>".print_r($this->__params)."</pre>");
     }
-    function loadError($nameError='404'){
+    function loadError($nameError='404',$data =[]){
+            extract($data);
         require_once('app/errors/'.$nameError.'.php');
 
     }

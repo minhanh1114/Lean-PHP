@@ -24,4 +24,5 @@ class Product extends Controller{
         $this->data['content'] = 'products/detail';
         $this->render('layouts/client_layout', $this->data);
     }
+    
 }
