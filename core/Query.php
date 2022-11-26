@@ -22,7 +22,7 @@ class Query{
             $valueStr = rtrim($valueStr, ',');
 
             $sql = "INSERT INTO $table($fieldStr) VALUES ($valueStr)";
-            
+            var_dump($sql);
             $status = $this->conn->query($sql);
 
             if ($status){

@@ -17,10 +17,11 @@ class Product extends Controller{
     }
     public function detailProductId($id=0) {
         $productId = $this->ProductModel->getProductId($id);
-        // var_dump($productId);
+        // data
         $this->data['sub_content']['product'] = $productId;
         $this->data['sub_content']['title'] = 'chi tết sản phẩm';
         $this->data['page_title'] = 'Chi tiết sản phẩm';
+        // page cần render vào nội dụng layouts
         $this->data['content'] = 'products/detail';
         $this->render('layouts/client_layout', $this->data);
     }
