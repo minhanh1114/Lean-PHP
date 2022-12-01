@@ -30,8 +30,11 @@ class App{
     }
     function handleUrl(){
         $url = $this->getUrl();
-        $url =$this->__router->handleRouter($url);
         
+        $url =$this->__router->handleRouter($url);
+        //middleWare
+        
+        $this->handleRouteMiddleware($this->__router->getUri());
         $urlArr= array_filter(explode('/',$url));
         $urlArr = array_values($urlArr); // đánh lại chỉ mục
         //xử lí controllers nếu có /product sẽ gán lại nếu k bằng controllers mặc định
@@ -109,6 +112,27 @@ class App{
             $this->loadError();
         }
         // echo ("<pre>".print_r($this->__params)."</pre>");
+    }
+    public function handleRouteMiddleware($routeKey){
+        global $config;
+        $routeKey = trim($routeKey);
+        if (!empty($config['app']['routeMiddleware'])){
+            $routeMiddleWareArr = $config['app']['routeMiddleware'];
+            
+            foreach ($routeMiddleWareArr as $key=>$middleWareItem){
+                
+                if ($routeKey==trim($key) && file_exists('app/middlewares/'.$middleWareItem.'.php')){
+                    require_once 'app/middlewares/'.$middleWareItem.'.php';
+                    if (class_exists($middleWareItem)){
+                        $middleWareObject = new $middleWareItem();
+                        
+                        $middleWareObject->handle();
+                    }
+                }
+            }
+        }
+        else
+            echo 'k thấy config middleWare';
     }
     function loadError($nameError='404',$data =[]){
             extract($data);

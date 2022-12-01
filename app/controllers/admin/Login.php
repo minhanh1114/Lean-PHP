@@ -1,19 +1,43 @@
 <?php
 class Login extends Controller{
     private $data =[];
-    private $HomeModel;
+    private $Login;
     public function __construct(){
-        $this->HomeModel = $this->model('Admin');
+        $this->Login = $this->model('Admin');
       }
     function index(){
+        $request = new Request();
+        $dataRequest = $request->getDataRequest();
+        if(!empty($dataRequest['mess']))
+        {
+            $this->data['mess']=$dataRequest['mess'];
+        }
         $this->data['title']='Đăng nhập';
         $this->render('admin/login', $this->data);
         
     }
-    function login(){
+    function checkLogin(){
         $request = new Request();
        $response = new Response();
        $data =$request->getDataRequest();
-       var_dump($data);
+       $user = $this->Login->checkLogin($data['username'],$data['password']);
+       print_r($user[0]['uid']);
+        if(!empty($user))
+        {
+            //thành công
+            Session::data('nameAdmin',$user[0]['fullname']);
+            Session::data('loginAdmin',$user[0]['uid']);
+             $response->redirect('admin/product');
+        }
+        else{
+            $response->redirect('admin/login','Tài khoản hoặc mật khẩu không chính xác');
+        }
+    }
+    function logout(){
+       $response = new Response();
+        Session::delete('nameAdmin');
+        Session::delete('LoginAdmin');
+        $response->redirect('admin/login');
+
     }
 }

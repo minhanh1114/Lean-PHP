@@ -4,3 +4,4 @@ $routers['default_controller'] ='Home';
 $routers['san-pham'] = 'product/index';
 $routers['trang-chu'] = 'home';
 $routers['tin-tuc/.+-(\d+).html'] = 'news/index/$1';
+$routers['admin/product'] = 'admin/product';

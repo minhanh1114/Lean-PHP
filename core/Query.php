@@ -81,7 +81,6 @@ class Query{
 
     //Truy vấn câu lệnh SQL
     function query($sql){
-       
         try{
             $statement = $this->conn->prepare($sql);
 

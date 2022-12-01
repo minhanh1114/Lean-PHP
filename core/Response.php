@@ -1,6 +1,10 @@
 <?php
 class Response {
-    function redirect($uri=''){
+    function redirect($uri='',$mess=''){
+        if(!empty($mess))
+        {
+            $uri=$uri . '?mess=' . $mess;
+        }
         if(preg_match('~^(http|https)~is',$uri))
         {
             $url= $uri;

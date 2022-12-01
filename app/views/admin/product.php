@@ -38,9 +38,9 @@
                                                             <td><?php echo $product['date'] ?></td>
                                                             <td><?php echo $product['slug'] ?></td>
                                                             <td>
-                                                                <a  class =" btn btn-success" href="./product/edit/<?php echo $product['id'] ?> "><i class="fa fa-edit"></i> Sửa</a>
+                                                                <a  class =" btn btn-success" href="<?php echo _WEB_ROOT . '/admin/product/edit/'. $product['id'] ?> "><i class="fa fa-edit"></i> Sửa</a>
                                                             
-                                                                <a class="btn btn-warning" href="./product/del/<?php echo $product['id'] ?>"><i class="fa fa-times"></i>Xóa</a></td>
+                                                                <a class="btn btn-warning" href="<?php echo _WEB_ROOT . '/admin/product/del/'. $product['id'] ?> "><i class="fa fa-times"></i>Xóa</a></td>
                                                             
                                                  </tr>
                                                  <?php 
@@ -120,4 +120,13 @@
                     </div>
                 </div>
             </div>
+
+    <script>
+        <?php 
+        if(!empty($mess))
+        {
+            echo "alert('".$mess."')";
+        }
+        ?>
+    </script>
            

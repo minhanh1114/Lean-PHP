@@ -1,10 +1,10 @@
 <?php
-class Product  extends Controller {
+class News  extends Controller {
     private $data =[];
-    private $ProductModel;
+    private $NewsModel;
 public function __construct()
 {
-    $this->ProductModel = $this->model('ProductModel');
+    $this->NewsModel = $this->model('NewsModel');
 }
 private function create_slug($string)
     {
@@ -55,31 +55,29 @@ function index(){
         {
             $this->data['sub_content'][$key] = $val;
         }
-    $this->data['sub_content']['products'] = $this->ProductModel->getProductList();
-    $this->data['sub_content']['title'] = 'chi tết sản phẩm';
-    $this->data['content']='admin/product';
+    $this->data['sub_content']['title'] = 'Danh Sách Tin Tức';
+    $this->data['sub_content']['news'] = $this->NewsModel->getNewsList();
+    $this->data['content']='admin/news';
     $this->render('layouts/admin_layout', $this->data);
 }
 function detail($id){
     echo 'xin chào cả nhà' . $id;
 }
-function addProduct(){
-  
-
-    $this->data['sub_content']['typeProduct'] = $this->ProductModel->getTypeProduct();
-    $this->data['sub_content']['title'] = 'Thêm sản phẩm';
-    $this->data['content']='admin/add_product';
+function addNews (){
+    $this->data['sub_content']['title'] = 'Thêm tin tức';
+    $this->data['content']='admin/add_news';
     $this->render('layouts/admin_layout', $this->data);
 }
-function postAddProduct(){
+function postAddNews (){
     $request = new Request();
     $response = new Response();
-    $data=$request->getDataRequest();
-    // upload file image
+    $dataNews = $request->getDataRequest();
+    $dataNews['slug']=$this->create_slug($dataNews['title']);
 
+    // file upload
     $file = $_FILES['img'];
     $size_allow = 10; //dung lượng tải lên là 10 mb
-    $target_dir = "public/assets/products/";
+    $target_dir = "public/assets/news/";
     $error = '';
     $type_allow= ['png', 'jpg', 'jpeg', 'gif'];
 
@@ -98,15 +96,12 @@ function postAddProduct(){
             $upload = move_uploaded_file($file['tmp_name'],$target_dir . '/' . $newName);
             if($upload)
             {
-                $data['img'] = $newName;
-                $data['slug'] = $this->create_slug($data['name']);
-                // truy vấn database
-                $inserted =$this->ProductModel->insertProduct($data);
+                $dataNews['img'] = $newName;
+                $inserted =$this->NewsModel->insertNews($dataNews);
                 if($inserted)
                 {
                    
                     $erro = 'thêm thành công';
-                    
                 }
                 else
                 {
@@ -131,56 +126,52 @@ function postAddProduct(){
     {
         $error = 'Không đúng định dạng file ảnh';
 
-
-
     }
-    $response->redirect('admin/product',$error);
     
-
-
-    // echo '<pre>';
-    //  print_r($data);
-    // echo '</pre>';
-   
-
+     $response->redirect('admin/news',$error);
 }
 function edit($id){
-   
-    $product =  $this->ProductModel->editProduct($id);
-    $typeProduct =$this->ProductModel->getTypeProduct();
-
-    $this->data['sub_content']['product'] = $product;
-    $this->data['sub_content']['typeProduct'] = $typeProduct;
-
-    $this->data['sub_content']['title'] = 'Sửa sản phẩm';
-    $this->data['content']='admin/edit_product';
+    $news =  $this->NewsModel->editNews($id);
+    $this->data['sub_content']['news'] = $news;
+    $this->data['sub_content']['title'] = 'Sửa tin tức';
+    $this->data['content']='admin/edit_news';
 
     $this->render('layouts/admin_layout', $this->data);
 }
-function postEdit(){
-    $request = new Request();
+function del($id)
+{
     $response = new Response();
-    $data = $request->getDataRequest();
+    $condition = 'id='.$id;
+    if($this->NewsModel->delNews($condition))
+    {
+        $mess ="Xóa tin tức thành công";
+    }
+    else
+    {
+        $mess ="Xóa tin tức thất bại";
+        
+    }
+    $response->redirect('admin/news',$mess);
+
+}
+function postEdit()
+{
+    $response = new Response();
+    $request = new Request();
+    $data =  $request->getDataRequest();
     $file = $_FILES['img'];
     $size_allow = 10; //dung lượng tải lên là 10 mb
-    $target_dir = "public/assets/products/";
+    $target_dir = "public/assets/news/";
     $error = '';
     $type_allow= ['png', 'jpg', 'jpeg', 'gif'];
-    // var_dump($file);
-    // check file tồn tại không
-    //delete file img old
+    // 
     if (!empty($file['tmp_name']))
     {
-        // echo 'có ảnh' .  $file['tmp_name'];
-   
-    
-
     // RENAME   FILE IMG
     $fileName = $file['name'];
     $fileName = explode('.',$fileName);
     $extension = end($fileName);
     $newName = md5(uniqid()) .'.'. $extension;
-
     // check type image upload format
         if(in_array($extension,$type_allow))
         {
@@ -191,19 +182,16 @@ function postEdit(){
                 if($upload)
                 {
                     $data['img'] = $newName;
-                    $error="upload thành công";
                 }
                 else{
                     $error="upload ảnh thất bại";
-                      $response->redirect('admin/product',$error);
-                    
+                    $response->redirect('admin/news',$error);
                 }
             }
-
             else
             {
                 $error = 'file upload large(lớn)';
-                $response->redirect('admin/product',$error);
+                $response->redirect('admin/news',$error);
 
             }
 
@@ -211,71 +199,47 @@ function postEdit(){
         else
         {
             $error = 'Không đúng định dạng file ảnh';
-            $response->redirect('admin/product',$error);
+            $response->redirect('admin/news',$error);
 
         }
-
-
-
     }
     else
     {
         echo 'không có ảnh' ;
     
     }
-    $data['slug'] = $this->create_slug($data['name']);
+
+    $data['slug'] = $this->create_slug($data['title']);
                 // truy vấn database
     if(!empty($data['id']))
     {
         $condition = 'id='.$data['id'];
         unset($data['id']);
-         echo '<pre>';
-    print_r($data);
-    echo '</pre>';
-    print_r($condition);
-     $inserted =$this->ProductModel->updateProduct($data,$condition);
-     if($inserted)
-     {
-        $error ="Sửa sản phẩm thành công";
-        $response->redirect('admin/product',$error);
-     }
-     else
-     {
-        $error ="Sửa sản phẩm thất bại, vui lòng kiểm tra lại";
-        $response->redirect('admin/product',$error);
+        print_r($condition);
+        $inserted =$this->NewsModel->updateNews($data,$condition);
+        if($inserted)
+        {
+            $error ="Sửa sản phẩm thành công";
+            $response->redirect('admin/news',$error);
+        }
+        else
+        {
+            $error ="Sửa sản phẩm thất bại, vui lòng kiểm tra lại";
+            $response->redirect('admin/news',$error);
 
-     }
+        }
     }
     else
     {
         $data['message'] ='lỗi truy vấn thiếu trường id';
         App::loadError('exception',$data);
     }
-   
 
-    // echo '<pre>';
-    // print_r($data);
-    // echo '</pre>';
-    // print_r($condition);
+
+    // 
+//    echo '<pre>';
+//    print_r($data);
+//    echo '</pre>';
 }
-
-    function del($id){
-        $response = new Response();
-        $condition = 'id='.$id;
-        if($this->ProductModel->delProduct($condition))
-        {
-            $mess ="Xóa sản phẩm thành công";
-        }
-        else
-        {
-            $mess ="Xóa sản phẩm thất bại";
-            
-        }
-        $response->redirect('admin/product',$mess);
-
-        
-    }
-
-
 
 }

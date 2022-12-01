@@ -227,6 +227,12 @@ body {
 <body>
 
 <div class="wrapper">
+  <?php
+  if(!empty($mess))
+  {
+    echo '<h2 class="text-danger">'.$mess.'</h2>';
+  }
+  ?>
   <div class="container">
     <div class="col-left">
       <div class="login-text">
@@ -238,7 +244,7 @@ body {
     <div class="col-right">
       <div class="login-form">
         <h2>Đăng nhập</h2>
-        <form action="<?php echo _WEB_ROOT; ?>/admin/Login/login" method="POST">
+        <form action="<?php echo _WEB_ROOT; ?>/admin/Login/checkLogin" method="POST">
           <p>
             <label>Tài Khoản<span>*</span></label>
             <input name="username" type="text" placeholder="Tài khoản" required>
@@ -256,6 +262,7 @@ body {
         </form>
       </div>
     </div>
+    
   </div>
   <!-- <div class="credit">
     Designed by <a href="https://htmlcodex.com">HTML Codex</a>

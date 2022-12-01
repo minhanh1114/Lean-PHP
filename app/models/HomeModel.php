@@ -11,4 +11,5 @@ class HomeModel extends Model {
         $data =['item1','item2','item3'];
         return $data[$id];
     }
+   
 }

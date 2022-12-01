@@ -1,8 +1,7 @@
 <?php
 class Router{
-    function __construct(){
-       
-    }
+    private $uri=null;
+    
      function  handleRouter($url){
         global $routers;
         unset($routers['default_controller']);
@@ -21,10 +20,14 @@ class Router{
                 {
                    
                     $handleUrl =preg_replace('~'.$key.'~is',$value,$url);
+                    $this->uri =$key;
 
                 }
             }
         }
         return $handleUrl;
+    }
+    function getUri(){
+        return $this->uri;
     }
 }
