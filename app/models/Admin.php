@@ -17,4 +17,19 @@ class Admin extends Model {
         $data =['item1','item2','item3'];
         return $data[$id];
     }
+    function getAllUser()
+    {
+        $user =$this->database->query('Select * from '.$this->_table)->fetchAll(PDO::FETCH_ASSOC);
+        return $user;
+    }
+    function updateUser($data,$condition)
+    {
+       if($this->database->updateData($this->_table,$data,$condition)){
+             return true;
+       }
+       else
+       {
+        return false;
+       }
+    }
 }

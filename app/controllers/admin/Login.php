@@ -27,7 +27,7 @@ class Login extends Controller{
             //thành công
             Session::data('nameAdmin',$user[0]['fullname']);
             Session::data('loginAdmin',$user[0]['uid']);
-             $response->redirect('admin/product');
+             $response->redirect('admin/Dashboard');
         }
         else{
             $response->redirect('admin/login','Tài khoản hoặc mật khẩu không chính xác');
@@ -36,7 +36,7 @@ class Login extends Controller{
     function logout(){
        $response = new Response();
         Session::delete('nameAdmin');
-        Session::delete('LoginAdmin');
+        Session::delete('loginAdmin');
         $response->redirect('admin/login');
 
     }

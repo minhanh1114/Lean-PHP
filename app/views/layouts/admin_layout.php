@@ -52,19 +52,19 @@
                     </li>
                     <li>
                         <a class="nav-link" href="<?php echo _WEB_ROOT . '/admin/product' ?>">
-                            <i class="nc-icon nc-circle-09"></i>
+                            <i class="nc-icon nc-app"></i>
                             <p>Sản Phẩm</p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="<?php echo _WEB_ROOT . '/admin/news' ?>">
-                            <i class="nc-icon nc-notes"></i>
+                            <i class="nc-icon nc-paper-2"></i>
                             <p>Tin Tức</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./typography.html">
-                            <i class="nc-icon nc-paper-2"></i>
+                        <a class="nav-link" href="<?php echo _WEB_ROOT . '/admin/user' ?>">
+                            <i class="nc-icon nc-circle-09"></i>
                             <p>Tài Khoản</p>
                         </a>
                     </li>
@@ -156,20 +156,15 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="no-icon">Dropdown</span>
+                                    <span class="no-icon">Thông báo</span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    <div class="divider"></div>
-                                    <a class="dropdown-item" href="#">Separated link</a>
+                                    <a class="dropdown-item" href="#">Chức năng đang bảo trì</a>
                                 </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo _WEB_ROOT . '/admin/login/logout' ?>">
-                                    <span class="no-icon">Log out</span>
+                                    <span class="no-icon">Đăng Xuất</span>
                                 </a>
                             </li>
                         </ul>

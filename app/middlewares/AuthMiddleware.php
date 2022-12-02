@@ -4,7 +4,7 @@ class AuthMiddleware extends Middlewares {
 
         if (Session::data('loginAdmin')==null){
             $response = new Response();
-            $response->redirect('trang-chu');
+            $response->redirect('admin/login');
         }
     }
 }

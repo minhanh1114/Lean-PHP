@@ -33,8 +33,17 @@ class App{
         
         $url =$this->__router->handleRouter($url);
         //middleWare
+        if(!empty($this->__router->getUri()))
+        {
+
+            $this->handleRouteMiddleware($this->__router->getUri());
+        }
+        else
+        {
+            $this->handleRouteMiddleware($url);
+
+        }
         
-        $this->handleRouteMiddleware($this->__router->getUri());
         $urlArr= array_filter(explode('/',$url));
         $urlArr = array_values($urlArr); // đánh lại chỉ mục
         //xử lí controllers nếu có /product sẽ gán lại nếu k bằng controllers mặc định
@@ -116,6 +125,7 @@ class App{
     public function handleRouteMiddleware($routeKey){
         global $config;
         $routeKey = trim($routeKey);
+        // var_dump($routeKey);
         if (!empty($config['app']['routeMiddleware'])){
             $routeMiddleWareArr = $config['app']['routeMiddleware'];
             
