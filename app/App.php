@@ -25,7 +25,7 @@ class App{
         else{
             $url ='/';
         }
-
+        
         return $url;
     }
     function handleUrl(){
@@ -33,6 +33,7 @@ class App{
         
         $url =$this->__router->handleRouter($url);
         //middleWare
+        // var_dump($url);
         if(!empty($this->__router->getUri()))
         {
 

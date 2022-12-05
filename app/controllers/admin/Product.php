@@ -53,9 +53,9 @@ function index(){
     if(!empty($param))
         foreach($param as $key => $val)
         {
-            $this->data['sub_content'][$key] = $val;
+            $this->data[$key] = $val;
         }
-    $this->data['sub_content']['products'] = $this->ProductModel->getProductList();
+    $this->data['sub_content']['products'] = array_reverse($this->ProductModel->getProductList()) ;
     $this->data['sub_content']['title'] = 'chi tết sản phẩm';
     $this->data['content']='admin/product';
     $this->render('layouts/admin_layout', $this->data);

@@ -27,7 +27,7 @@ class Login extends Controller{
             //thành công
             Session::data('nameAdmin',$user[0]['fullname']);
             Session::data('loginAdmin',$user[0]['uid']);
-             $response->redirect('admin/Dashboard');
+            $response->redirect('admin/Dashboard');
         }
         else{
             $response->redirect('admin/login','Tài khoản hoặc mật khẩu không chính xác');

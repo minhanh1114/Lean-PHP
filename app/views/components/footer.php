@@ -1,3 +1,305 @@
-<h1>
-    Header
-</h1>
+    </div>
+        </div>
+        <div class="slide-two">
+            <h1 class="slide-two_heading">ĐỐI TÁC</h1>
+            <div class="display-area">
+                <div class="cards-wrapper">
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vingroup.jpg" alt=""></div>
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sungroup.jpg" alt=""></div>  
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/tonhoasen.jpg" alt=""></div>
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vinamilk.jpg" alt=""></div>
+              
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/makrolon-bayer.png" alt=""></div>
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo6.jpg" alt=""></div>  
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo5.jpg" alt=""></div>
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo4.jpg" alt=""></div>
+                  
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo3.jpg" alt=""></div>
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vingroup.jpg" alt=""></div>
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo2.jpg" alt=""></div>  
+                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/makrolon-bayer.png" alt=""></div>
+
+                </div> 
+              </div>
+              <button class="slider-two_left"> <i class="fa-solid fa-chevron-left"></i> </button>
+              <button class="slider-two_right"> <i class="fa-solid fa-chevron-right"></i></i></button>
+              
+              <div class="dots-wrapper">
+                <button class="dot active"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot dot-mobile"></button>
+              </div>
+              
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-4 m-4 c-12">
+                        <h3 class="footer__hedding">VỀ CHÚNG TÔI</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-name_cty " >Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật</a>
+                            </li>
+                            <li class="footer-item footer-flexbox">
+                                <a href="#" class="footer-item_link">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <p class="footer-item_location">
+                                        Văn Phòng Giao Dịch: Số 32, Thanh Lân, Thanh Trì, Hoàng Mai, Hà Nội
+                                    </p>
+                                     
+                            </li>
+                            <li class="footer-item">
+                                <a href="tel:0973 022 983" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0973 022 983 </a>
+                            </li>
+                            <li class="footer-item footer-flexbox">
+                                <a href="#" class="footer-item_link">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <p class="footer-item_location">
+                                        Nhà Máy: Số 32, Thanh Lân, Thanh Trì, Hoàng Mai, Hà Nội
+                                    </p>
+                                     
+                            </li>
+                            <li class="footer-item">
+                                <a href="tel:0964 297 683" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0964 297 683  </a>
+                            </li>
+                            <li class="footer-item">
+                                <h1  class="footer-item_link" style="margin-left: 15px; font-size: 2rem;">HOTLINE:  <a href="tel:0905988900" style=" font-weight: bold ;font-family: 'Open Sans'; color: #ce0000; display: block;"> 0973 022 983</a></h1>
+                            </li>
+                           
+                            
+                        </ul>
+                    </div>
+                    <div class="col l-3 m-4 c-12">
+                        <h3 class="footer__hedding">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item_link">Giới Thiệu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item_link">Trung Tâm Trợ Giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item_link">Hướng dẫn thi công</a>
+                            </li>
+                            
+                            <li class="footer-item">
+                                <a href="#" class="footer-item_link">Hướng Dẫn Mua Hàng</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col l-2 m-4 c-12">
+                        <h3 class="footer__hedding">THANH TOÁN</h3>
+                        <ul class="footer-list-tt">
+                            <li class="footer-item-tt">
+                                <div class="footer-vn-background footer-vn-visa-png" style="width: 55px; height: 18px;"></div>
+                            </li>
+                            <li class="footer-item-tt">
+                                <div class="footer-vn-background footer-vn-mastercard-png" style="width: 55px; height: 29px;"></div>
+                            </li>
+                            <li class="footer-item-tt">
+                                <div class="footer-vn-background footer-vn-jcb-png" style="width: 55px; height: 23px;"></div>
+                            </li>
+                            <li class="footer-item-tt">
+                               <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-vnpay.png" alt="">
+                            </li>
+                            <li class="footer-item-tt">
+                                <div class="footer-vn-background footer-vn-vn_cod_footer-png" style="width: 50px; height: 29px;"></div>
+                            </li>
+                            <li class="footer-item-tt">
+                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-atm.png" alt="">
+                            </li>
+                            <li class="footer-item-tt">
+                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/bct.png" alt="" width="100%">
+                            </li>
+                        </ul>
+                       
+                    </div>
+                     
+                    <div class="col l-3 m-4 c-12">
+                        <h3 class="footer__hedding">Vị trí </h3>
+                        <div class="footer-dowload">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d930.3682103180541!2d106.42420572922792!3d21.133572950026743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313579167eaf0125%3A0xb9c9b66790e5035e!2zQ8O0bmcgdHkgVE5ISCBUaMawxqFuZyBtYcyjaSB2YcyAIHNhzIluIHh1w6LMgXQgVMOibiBNaW5oIE5ow6LMo3Q!5e0!3m2!1svi!2s!4v1669120955913!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer__bottom">
+                <div class="grid wide">
+                    <p class="footer__text">© Bản quyền thuộc về Công ty TNHH Thương mại và sản xuất Tân Minh Nhật</p>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+    <!-- phone ring -->
+    <div class="hotline-phone_ring">
+        <div class="hotline-phone-ring">
+            <div class="hotline-phone-ring-circle"></div>
+            <div class="hotline-phone-ring-circle-fill"></div>
+            <div class="hotline-phone-ring-icon">
+                <a href="tel:0973 022 983">
+                    <img class="hotline-phone-ring-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-ring-phone.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="hotline-phone-bar">
+            <a href="tel:0973 022 983">
+                0973 022 983
+            </a>
+        </div>
+    </div>
+        <script >
+            /// slider two
+
+
+                const btnSliderTwoPrev = document.querySelector('.slider-two_left')
+                const btnSliderTwoNext = document.querySelector('.slider-two_right')
+
+                const wrapper = document.querySelector('.cards-wrapper');
+
+                // console.log(wrapper.clientWidth);
+
+                // grab the dots
+                const dots = document.querySelectorAll('.slide-two .dot');
+                // the default active dot num which is array[0]
+                let activeDotNum = 0;
+
+                dots.forEach((dot, idx) => {  
+                //   number each dot according to array index
+                dot.setAttribute('data-num', idx);
+                
+                //   add a click event listener to each dot
+                dot.addEventListener('click', (e) => {
+                    
+                    let clickedDotNum = e.target.dataset.num;
+                    // console.log(clickedDotNum);
+                //     if the dot clicked is already active, then do nothing
+                    if(clickedDotNum == activeDotNum) {
+                    // console.log('active');
+                    return;
+                    }
+                    else {
+                    // console.log('not active');
+                    // shift the wrapper
+                    let displayArea = wrapper.parentElement.clientWidth;
+                    // let pixels = -wrapper.clientWidth * clickedDotNum;
+                    let pixels = -displayArea * clickedDotNum
+                    wrapper.style.transform = 'translateX('+ pixels + 'px)';
+                //       remove the active class from the active dot
+                    dots[activeDotNum].classList.remove('active');
+                //       add the active class to the clicked dot
+                    dots[clickedDotNum].classList.add('active');
+                //       now set the active dot number to the clicked dot;
+                    activeDotNum = clickedDotNum;
+                    }
+                    
+                });
+                
+                });
+                btnSliderTwoNext.addEventListener('click',()=>{
+                if(activeDotNum>=dots.length-1)
+                {
+                    activeDotNum=-1;
+                }
+                let count=activeDotNum;
+                count++;
+                activeDotNum = count;
+                // if()
+                dots.forEach((item)=>{
+                    if(item.classList.contains('active'))
+                    {
+                    item.classList.remove('active');
+                    }
+                    
+
+                })
+                let displayArea = wrapper.parentElement.clientWidth * count;
+                wrapper.style.transform = 'translateX(-'+ displayArea + 'px)';
+                dots[count].classList.add('active');
+                })
+
+                btnSliderTwoPrev.addEventListener('click',()=>{
+                
+                
+                if(activeDotNum===0)
+                {
+                    activeDotNum=dots.length;
+                }
+                let count=activeDotNum;
+                count--;
+                activeDotNum = count;
+                // if()
+                dots.forEach((item)=>{
+                    if(item.classList.contains('active'))
+                    {
+                    item.classList.remove('active');
+                    }
+                    
+
+                })
+                let displayArea = wrapper.parentElement.clientWidth * count;
+                
+                wrapper.style.transform = 'translateX(-'+ displayArea + 'px)';
+                dots[count].classList.add('active');
+                })
+                setInterval(() => {
+                // btnSliderTwoNext.click();
+                },5000);
+
+                // drag the slider
+
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+                const slider = document.querySelector('.display-area');
+
+                const end = () => {
+                    isDown = false;
+                slider.classList.remove('active');
+                }
+
+                const start = (e) => {
+                isDown = true;
+                slider.classList.add('active');
+                startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;	
+                }
+
+                const move = (e) => {
+                    if(!isDown) return;
+
+                e.preventDefault();
+                const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+                const dist = (x - startX);
+                slider.scrollLeft = scrollLeft - dist;
+                }
+
+                (() => {
+                    slider.addEventListener('mousedown', start);
+                    slider.addEventListener('touchstart', start);
+
+                    slider.addEventListener('mousemove', move);
+                    slider.addEventListener('touchmove', move);
+
+                    slider.addEventListener('mouseleave', end);
+                    slider.addEventListener('mouseup', end);
+                    slider.addEventListener('touchend', end);
+                })();
+
+            document.querySelector('.category_heading-icon').addEventListener('click',function(e){
+                document.querySelector('.category_list').classList.toggle('open_bar-mobile');
+
+            })
+
+        </script>
+        <script src="<?php echo _WEB_ROOT ?>/public/assets/client/js/script.js"></script>
+</body>
+</html>
+        
+      

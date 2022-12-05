@@ -13,18 +13,18 @@
                                             <div class="col-md-8 ">
                                                 <div class="form-group">
                                                     <label>Tiêu đề tin tức</label>
-                                                    <textarea placeholder="Nhập tiêu đề tin tức" name="title" maxlength="255" class="form-control"  rows="5" style="height: 100%;"></textarea>
+                                                    <textarea required placeholder="Nhập tiêu đề tin tức" name="title" maxlength="255" class="form-control"  rows="5" style="height: 100%;"></textarea>
                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-4 ">
                                                 <div class="form-group">
                                                     <label>Hình ảnh đại diện</label>
-                                                    <input name="img" type="file" class="form-control-file">
+                                                    <input required name="img" type="file" class="form-control-file">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Lượt xem</label>
-                                                    <input value="0" type="text" name="view" class="form-control" placeholder="Số lượng lượt xem" >
+                                                    <input required value="0" type="text" name="view" class="form-control" placeholder="Số lượng lượt xem" >
                                                 </div>
                                             </div>
                                         </div>

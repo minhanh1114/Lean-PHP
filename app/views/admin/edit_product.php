@@ -19,13 +19,13 @@
                                                         
                                                     ?>
                                                     <label>Mã sản phẩm</label>
-                                                    <input value="<?php echo $item['code'] ?>" type="text" name="code" class="form-control"  placeholder="Mã sản phẩm" >
+                                                    <input required value="<?php echo $item['code'] ?>" type="text" name="code" class="form-control"  placeholder="Mã sản phẩm" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6 px-1">
                                                 <div class="form-group">
                                                     <label>Tên sản phẩm</label>
-                                                    <input value="<?php echo $item['name'] ?>" type="text" name="name" class="form-control" placeholder="Tên sản phẩm" >
+                                                    <input required value="<?php echo $item['name'] ?>" type="text" name="name" class="form-control" placeholder="Tên sản phẩm" >
                                                 </div>
                                             </div>
                                             <div class="col-md-4 pl-1">
@@ -47,17 +47,25 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-8 pr-1">
+                                            <div class="col-md-8">
                                                 <div class="form-group">
                                                     <label>Tóm tắt</label>
-                                                    <textarea name="des_short"  class="form-control" id="exampleFormControlTextarea1" rows="3"> <?php echo $item['des_short'] ?> </textarea>
+                                                    <textarea required name="des_short" maxlength="255" class="form-control" id="exampleFormControlTextarea1" rows="5" style="height: 100%;"> <?php echo $item['des_short'] ?> </textarea>
                                                    
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 pl-1">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label>Hình ảnh</label>
-                                                    <input  name="img" type="file" class="form-control " id="customFile">
+                                                    <input   name="img" type="file" class="form-control " id="customFile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3 ">
+                                                <div class="form-group">
+                                                    <label>Lượt xem</label>
+                                                    <input required name="view" type="text" placeholder="Nhập lượt xem" class="form-control-file" value="<?php echo $item['view'] ?>" >
                                                 </div>
                                             </div>
                                         </div>
@@ -76,7 +84,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     
-                                                    <input class="invisible" name ="id"  class="form-control" value="<?php echo $item['id'] ?>" > 
+                                                    <input required class="invisible" name ="id"  class="form-control" value="<?php echo $item['id'] ?>" > 
                                                 </div>
                                             </div>
                                         </div>

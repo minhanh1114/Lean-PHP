@@ -12,7 +12,7 @@ class User extends Controller{
         if(!empty($param))
             foreach($param as $key => $val)
             {
-                $this->data['sub_content'][$key] = $val;
+                $this->data[$key] = $val;
             }
         $this->data['sub_content']['title'] = 'Danh Sách tài khoản quản trị';
         $this->data['sub_content']['users'] = $this->User->getAllUser();

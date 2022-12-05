@@ -22,7 +22,6 @@ class Query{
             $valueStr = rtrim($valueStr, ',');
 
             $sql = "INSERT INTO $table($fieldStr) VALUES ($valueStr)";
-            var_dump($sql);
             $status = $this->conn->query($sql);
 
             if ($status){
@@ -81,6 +80,7 @@ class Query{
 
     //Truy vấn câu lệnh SQL
     function query($sql){
+        //   var_dump($sql);
         try{
             $statement = $this->conn->prepare($sql);
 

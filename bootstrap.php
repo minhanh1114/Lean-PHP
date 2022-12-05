@@ -13,7 +13,7 @@ else{
 $folder = explode('/',$_SERVER['SCRIPT_FILENAME']);
 $folder= $folder[3]; 
 
- $web_root = $web_root . $folder; // thay đổi khi đẩy lên server;
+ $web_root = $web_root . $folder ; // sửa khi upload hosting ( nhớ bỏ gạch chéo  '/' và .folder)
  define('_WEB_ROOT', $web_root);
  require_once ('./configs/App.php');
  require_once ('./configs/Session.php');

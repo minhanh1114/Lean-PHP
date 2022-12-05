@@ -2,14 +2,32 @@
 class ProductModel extends Model{
     private $_table='product';
 
-    public function getProductList()
+    public function getProductList($idType ="",$limit ="")
     {
-        $data = $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type')->fetchAll(PDO::FETCH_ASSOC);
+        if(!empty($idType) && !empty($limit)) 
+        {
+            $data = $this->database->query('SELECT * FROM '. $this->_table . '  WHERE product.type= ' . $idType .' ORDER BY view DESC limit ' . $limit)->fetchAll(PDO::FETCH_ASSOC);
+        }
+        else
+        {
+
+            $data = $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type')->fetchAll(PDO::FETCH_ASSOC);
+        }
         return $data;
     }
+    public function getToProductType($slugType)
+    {
+        return $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type where types.slug_type = ' . '"' .$slugType.'"')->fetchAll(PDO::FETCH_ASSOC);
+           
+    }
 
-    function getProductId($id){
-       
+    function getProductSlug($slug="")
+    {
+        return $this->database->query('SELECT * FROM '. $this->_table . '  WHERE slug = ' .'"'. $slug.'"')->fetchAll(PDO::FETCH_ASSOC);
+    }
+    function getProductOffer($limit)
+    {
+        return $this->database->query('SELECT * FROM '. $this->_table . ' ORDER BY view DESC limit ' . $limit)->fetchAll(PDO::FETCH_ASSOC);
     }
 
     function getTypeProduct(){
@@ -29,7 +47,9 @@ class ProductModel extends Model{
     }
 
     function delProduct($condition){
-        $this->database->deleteData($this->_table,$condition);
+
+        return $this->database->deleteData($this->_table,$condition);
+        
           
     }
 

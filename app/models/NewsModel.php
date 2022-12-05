@@ -3,9 +3,31 @@ class NewsModel extends Model{
     private $_table='news';
 
     // admin/news
-    public function getNewsList()
+    public function getNewsList($limit="")
     {
-        $data = $this->database->query('SELECT * FROM '. $this->_table )->fetchAll(PDO::FETCH_ASSOC);
+        if(!empty($limit))
+        {
+            $data = $this->database->query('SELECT * FROM '. $this->_table. ' ORDER BY view DESC LIMIT ' .$limit)->fetchAll(PDO::FETCH_ASSOC);
+
+        }
+        else
+        {
+
+            $data = $this->database->query('SELECT * FROM '. $this->_table )->fetchAll(PDO::FETCH_ASSOC);
+        }
+        return $data;
+    }
+    public function getAllNews($page_index,$limit)
+    {
+        return $this->database->query('select * from ' . $this->_table . ' limit ' . $page_index . ' , ' . $limit)->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function getCountNew()
+    {
+        return $this->database->query('select count(*) from ' . $this->_table)->fetchAll();
+    }
+    public function getNewsSlug($slug)
+    {
+        $data = $this->database->query('SELECT * FROM '. $this->_table.' WHERE slug = '. '"'.$slug.'"' )->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
     // admin/postAddNews

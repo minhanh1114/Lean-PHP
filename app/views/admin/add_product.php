@@ -12,13 +12,13 @@
                                             <div class="col-md-2 pr-1">
                                                 <div class="form-group">
                                                     <label>Mã sản phẩm</label>
-                                                    <input type="text" name="code" class="form-control"  placeholder="Mã sản phẩm" >
+                                                    <input required type="text" name="code" class="form-control"  placeholder="Mã sản phẩm" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6 px-1">
                                                 <div class="form-group">
                                                     <label>Tên sản phẩm</label>
-                                                    <input type="text" name="name" class="form-control" placeholder="Tên sản phẩm" >
+                                                    <input required type="text" name="name" class="form-control" placeholder="Tên sản phẩm" >
                                                 </div>
                                             </div>
                                             <div class="col-md-4 pl-1">
@@ -43,24 +43,32 @@
                                             <div class="col-md-8 ">
                                                 <div class="form-group">
                                                     <label>Tóm tắt</label>
-                                                    <textarea name="des_short" maxlength="255" class="form-control"  rows="5" style="height: 100%;"></textarea>
+                                                    <textarea  required name="des_short" maxlength="255" class="form-control"  rows="5" style="height: 100%;"></textarea>
                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-4 ">
                                                 <div class="form-group">
                                                     <label>Hình ảnh</label>
-                                                    <input name="img" type="file" class="form-control-file">
+                                                    <input required name="img" type="file" class="form-control-file">
                                                 </div>
                                             </div>
                                         </div>
-                                        
+                                        <!-- view -->
+                                        <div class="row">
+                                            <div class="col-md-3 ">
+                                                <div class="form-group">
+                                                    <label>Lượt xem</label>
+                                                    <input required name="view" type="text" placeholder="Nhập lượt xem" class="form-control-file" value="0">
+                                                </div>
+                                            </div>
+                                        </div>
                                         
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label>Mô tả</label>
-                                                    <textarea name ="description" id="editor" rows="4" cols="80" class="form-control" p ></textarea>
+                                                    <textarea  name ="description" id="editor" rows="4" cols="80" class="form-control" p ></textarea>
                                                 </div>
                                             </div>
                                         </div>
