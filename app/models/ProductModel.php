@@ -34,6 +34,10 @@ class ProductModel extends Model{
         $data = $this->database->query("SELECT * FROM types")->fetchAll(PDO::FETCH_ASSOC);
         return  $data;
     }
+    function searchProduct($searchKey)
+    {
+        return $this->database->query("SELECT * FROM ".$this->_table." WHERE name LIKE '%".$searchKey."%' " )->fetchAll(PDO::FETCH_ASSOC);
+    }
 
     function insertProduct($data)
     {

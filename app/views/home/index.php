@@ -52,8 +52,8 @@
                     <a class="menu_mobile__link" href="<?php echo _WEB_ROOT . '/lien-he' ?>">LIÊN HỆ</a>
                 </li>
         </ul>
-        <form class="bar_search-mobile" action=" " method="">
-            <input type="text" name="search" placeholder="Tìm kiếm... " class="bar_mobile__input">
+        <form class="bar_search-mobile" action="post" method="<?php echo _WEB_ROOT . '/search' ?>">
+            <input type="text" name="k" placeholder="Tìm kiếm... " class="bar_mobile__input">
             <button type="submit" class="bar_mobile__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         </div>
@@ -203,8 +203,8 @@
                                         <a class="navigation-content__link" href="<?php echo _WEB_ROOT . '/lien-he' ?>">LIÊN HỆ</a>
                                     </li>
                             </ul>
-                            <form method="POST" action="<?php echo _WEB_ROOT ?>/home/search" class="navigation-search">
-                                <input type="text" name="key" placeholder="Tìm kiếm sản phẩm" class="navigation-search__input">
+                            <form method="POST" action="<?php echo _WEB_ROOT ?>/search" class="navigation-search">
+                                <input type="text" name="k" placeholder="Tìm kiếm sản phẩm" class="navigation-search__input">
                                 <button type="submit" class="navigation-search__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </nav>

@@ -19,14 +19,12 @@ class Product extends Controller{
     {   
         $request = new Request();
         $dataRequest = $request->getDataRequest();
-        $this->data['sub_content']['title'] = 'Loại sản ph';
+        $this->data['sub_content']['title'] = 'Loại sản phẩm';
         $this->data['page_title'] = 'Loại sản phẩm';
         $this->data['content'] = 'products/index';
         $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
         $this->data['sub_content']['dataProduct'] = $this->ProductModel->getToProductType($slug);
         $this->render('layouts/client_layout', $this->data);
-        var_dump($dataRequest);
-        echo $slug;
     }
 
     public function getAllProducts() {
@@ -45,5 +43,6 @@ class Product extends Controller{
         $this->data['content'] = 'products/detail';
         $this->render('layouts/client_layout', $this->data);
     }
+
     
 }

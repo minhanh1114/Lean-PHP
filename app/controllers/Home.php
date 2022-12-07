@@ -42,7 +42,22 @@ class Home extends Controller{
         $request = new Request();
         $response = new Response();
         $keyWord = $request->getDataRequest();
-        echo "Key word:".var_dump($keyWord);
+        if (!empty($keyWord["k"]))
+        {
+            // xử lí search
+            $this->data['page_title'] = 'Tìm kiếm sản phẩm';
+            $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
+            $this->data['sub_content']['dataProduct'] = $this->ProductModel->searchProduct($keyWord["k"]);
+            $this->data['sub_content']['keySearch'] = $keyWord["k"];
+            $this->data['content'] = 'home/search';
+            $this->render('layouts/client_layout', $this->data);
+            echo "Key word:" .$keyWord["k"];
+        }
+        else
+        {
+            // redirect home page
+            $response->redirect('');
+        }
         
     }
     public function get_category(){
