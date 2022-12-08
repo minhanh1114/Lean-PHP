@@ -80,7 +80,7 @@ class Query{
 
     //Truy vấn câu lệnh SQL
     function query($sql){
-        //   var_dump($sql);
+        // var_dump($sql);
         try{
             $statement = $this->conn->prepare($sql);
 

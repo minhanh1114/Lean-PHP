@@ -28,11 +28,14 @@
     }
     .navigation-search__input{
         width: 85%;
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .slider-two_left,
     .slider-two_right{
         display: none;
+    }
+    .promo-product_heading::after{
+        bottom: -3px;
     }
     .promo-product{
         display: none;
@@ -52,6 +55,10 @@
     .promo-text_link{
         font-size:1.6rem;
         font-weight:600;
+    }
+    .hotline-zalo_ring,
+    .hotline-phone_ring{
+        left: 0px; 
     }
    
    

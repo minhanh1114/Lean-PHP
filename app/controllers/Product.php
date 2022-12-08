@@ -7,11 +7,22 @@ class Product extends Controller{
         $this->ProductModel = $this->model('ProductModel');
     }
     public function index ($slug=""){
-        $this->data['sub_content']['title'] = 'chi tết sản phẩm';
-        $this->data['page_title'] = 'Chi tiết sản phẩm';
+        // chi tiết sản phẩm
         $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
         $this->data['sub_content']['dataProduct'] = $this->ProductModel->getProductSlug($slug); 
         $this->data['sub_content']['dataProductOffer']=$this->ProductModel->getProductOffer(5);
+        if(!empty($this->data['sub_content']['dataProduct']))
+        {
+                $this->data['title'] = $this->data['sub_content']['dataProduct'][0]['name'];
+        }
+        else{
+            
+            $this->data['title'] = 'Chi tết sản phẩm';
+        }
+        if(!empty($this->data['sub_content']['dataProduct'][0]['des_short']))
+        {
+            $this->data['description'] = $this->data['sub_content']['dataProduct'][0]['des_short'];
+        }
         $this->data['content'] = 'products/detail';
         $this->render('layouts/client_layout', $this->data);
     }
@@ -19,11 +30,17 @@ class Product extends Controller{
     {   
         $request = new Request();
         $dataRequest = $request->getDataRequest();
-        $this->data['sub_content']['title'] = 'Loại sản phẩm';
-        $this->data['page_title'] = 'Loại sản phẩm';
-        $this->data['content'] = 'products/index';
         $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
         $this->data['sub_content']['dataProduct'] = $this->ProductModel->getToProductType($slug);
+        if(!empty($this->data['sub_content']['dataProduct']))
+        {
+            $this->data['title'] = $this->data['sub_content']['dataProduct'][0]['name_type'];
+        }
+        else{
+            
+            $this->data['title'] = 'Loại sản phẩm';
+        }
+        $this->data['content'] = 'products/index';
         $this->render('layouts/client_layout', $this->data);
     }
 
@@ -33,16 +50,7 @@ class Product extends Controller{
         $this->render('products/index', $this->data);
 
     }
-    public function detailProductId($id=0) {
-        $productId = $this->ProductModel->getProductId($id);
-        // data
-        $this->data['sub_content']['product'] = $productId;
-        $this->data['sub_content']['title'] = 'chi tết sản phẩm';
-        $this->data['page_title'] = 'Chi tiết sản phẩm';
-        // page cần render vào nội dụng layouts
-        $this->data['content'] = 'products/detail';
-        $this->render('layouts/client_layout', $this->data);
-    }
+    
 
     
 }

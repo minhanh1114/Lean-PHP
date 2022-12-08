@@ -5,6 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?php echo empty($description)? "Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.":$description ?>">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?php echo empty($title)? "Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam": $title ?>">
+    <meta property="og:description" content="<?php echo empty($description)? 'Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.': $description ?>">
+    <meta property="og:url" content="<?php echo _WEB_ROOT ?>">
+    <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:height" content="900">
+    <meta property="og:image:width" content="900">
+    <meta property="og:site_name" content="<?php echo empty($title)? "Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam": $title ?>">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="<?php echo empty($title)? "Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam": $title ?>">
+    <meta name="twitter:description" content="<?php echo empty($description)? 'Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.': $description ?>">
+    <meta name="twitter:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
+    <meta name=”geo.region” content=”VN-HN” />
+    <meta name="geo.position" content="20.9922614 , 105.8884573" />
+    <meta name="ICBM" content="20.9922614,105.8884573" />
+    <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="<?php echo _WEB_ROOT ?>">
+    <link rel="icon" href="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>" type="image/jpg" sizes="30x30">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet">
@@ -13,7 +35,7 @@
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css">
-<title>Document</title>
+    <title><?php echo empty($title)? "Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam": $title ?></title>
 </head>
 <body>
     <!-- modal bar -->
@@ -25,7 +47,7 @@
                     <a class="menu_mobile__link" href="<?php echo _WEB_ROOT ?>"><i class="fa-sharp fa-solid fa-house-chimney"></i> TRANG CHỦ</a>
                 </li>
                 <li class="menu_mobile__item">
-                    <a class="<?php echo _WEB_ROOT . '/gioi-thieu' ?>" href="">GIỚI THIỆU</a>
+                    <a class="menu_mobile__link" href="<?php echo _WEB_ROOT . '/gioi-thieu' ?>">GIỚI THIỆU</a>
                 </li>
                 <li class="menu_mobile__item">
                     <a class="menu_mobile__link" href="#">SẢN PHẨM <span class="menu_mobile-icon"><i class="fa-sharp fa-solid fa-chevron-down"></i></span></a>
@@ -47,10 +69,10 @@
                     <a class="menu_mobile__link" href="<?php echo _WEB_ROOT . '/tin-tuc' ?>">TIN TỨC</a>
                 </li>
                 <li class="menu_mobile__item">
-                    <a class="<?php echo _WEB_ROOT . '/lien-he' ?>" href="">LIÊN HỆ</a>
+                    <a class="menu_mobile__link" href="<?php echo _WEB_ROOT . '/lien-he' ?>">LIÊN HỆ</a>
                 </li>
         </ul>
-        <form class="bar_search-mobile" action="<?php echo _WEB_ROOT . '/search' ?>" method="post">
+        <form class="bar_search-mobile" action="<?php echo _WEB_ROOT . '/search' ?>" method="GET">
             <input type="text" name="k" placeholder="Tìm kiếm... " class="bar_mobile__input">
             <button type="submit" class="bar_mobile__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
@@ -75,9 +97,7 @@
                                 Tiếng việt <i class="fa-solid fa-chevron-down"></i>
     
                             </span>
-                        </span >
-                        
-                        
+                        </span>  
                     </div>
                 </div>
             </div>
@@ -198,7 +218,7 @@
                                         <a class="navigation-content__link" href="<?php echo _WEB_ROOT . '/lien-he' ?>">LIÊN HỆ</a>
                                     </li>
                             </ul>
-                            <form class="navigation-search" method="POST" action="<?php echo _WEB_ROOT . '/search' ?>">
+                            <form class="navigation-search" method="GET" action="<?php echo _WEB_ROOT . '/search' ?>">
 
                                 <input type="text" name="k" placeholder="Tìm kiếm sản phẩm" class="navigation-search__input">
                                 <button type="submit" class="navigation-search__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -208,3 +228,9 @@
                     </div>
 
                 </div>
+                <div class="breadcrumb">
+                        <span class="">
+                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
+                            <span class="breadcrumb_last"><?php echo $title ?></span>
+                        </span>
+                    </div>

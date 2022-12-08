@@ -48,17 +48,45 @@ private function create_slug($string)
         return $string;
     }
 function index(){
+
+    $this->data['mess'] = Session::flash('mess'); //thôn báo
+    
     $request = new Request();
     $param=$request->getDataRequest();
-    if(!empty($param))
-        foreach($param as $key => $val)
+
+    if(!empty($param['k']))
+    {
+        $this->data['sub_content']['news']=$this->NewsModel->searchNews($param['k']);
+        $this->data['content']='admin/news';
+        $this->render('layouts/admin_layout', $this->data);
+    }
+    else
+    {
+        if(!empty($param["page"]))
         {
-            $this->data[$key] = $val;
+            $page =$param["page"];
         }
-    $this->data['sub_content']['title'] = 'Danh Sách Tin Tức';
-    $this->data['sub_content']['news'] = $this->NewsModel->getNewsList();
-    $this->data['content']='admin/news';
-    $this->render('layouts/admin_layout', $this->data);
+        else
+        {
+            $page = 1;
+        }
+        $limit = 5;
+        $page_index = ($page-1) * $limit; 
+        //  lấy dữ liêu từ đâu đến đâu
+        $dataNews = array_reverse($this->NewsModel->getAllNews($page_index,$limit));
+        $this->data['sub_content']['news'] = $dataNews;
+        $totalNews= $this->NewsModel->getCountNew();
+        $totalNews = $totalNews[0][0];
+        $total = ceil($totalNews / $limit);
+        $this->data['sub_content']['totalPage'] = $total;
+        $this->data['sub_content']['page_index'] =  $page;
+    
+        $this->data['sub_content']['title'] = 'Danh Sách Tin Tức';
+        $this->data['content']='admin/news';
+        $this->render('layouts/admin_layout', $this->data);
+    }
+
+    
 }
 function detail($id){
     echo 'xin chào cả nhà' . $id;
@@ -127,8 +155,8 @@ function postAddNews (){
         $error = 'Không đúng định dạng file ảnh';
 
     }
-    
-     $response->redirect('admin/news',$error);
+    Session::flash('mess',$error);
+     $response->redirect('admin/news');
 }
 function edit($id){
     $news =  $this->NewsModel->editNews($id);
@@ -151,7 +179,8 @@ function del($id)
         $mess ="Xóa tin tức thất bại";
         
     }
-    $response->redirect('admin/news',$mess);
+    Session::flash('mess',$mess);
+    $response->redirect('admin/news');
 
 }
 function postEdit()
@@ -185,49 +214,38 @@ function postEdit()
                 }
                 else{
                     $error="upload ảnh thất bại";
-                    $response->redirect('admin/news',$error);
                 }
             }
             else
             {
                 $error = 'file upload large(lớn)';
-                $response->redirect('admin/news',$error);
-
+              
             }
 
         }
         else
         {
             $error = 'Không đúng định dạng file ảnh';
-            $response->redirect('admin/news',$error);
-
+            
         }
     }
-    else
-    {
-        echo 'không có ảnh' ;
-    
-    }
-
+   
     $data['slug'] = $this->create_slug($data['title']);
-                // truy vấn database
     if(!empty($data['id']))
     {
         $condition = 'id='.$data['id'];
         unset($data['id']);
-        print_r($condition);
         $inserted =$this->NewsModel->updateNews($data,$condition);
         if($inserted)
         {
             $error ="Sửa sản phẩm thành công";
-            $response->redirect('admin/news',$error);
         }
         else
         {
             $error ="Sửa sản phẩm thất bại, vui lòng kiểm tra lại";
-            $response->redirect('admin/news',$error);
-
         }
+        Session::flash('mess',$error);
+        $response->redirect('admin/news');
     }
     else
     {

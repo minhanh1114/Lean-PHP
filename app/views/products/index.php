@@ -1,22 +1,22 @@
  <!-- show typeProduct -->
  <div class="product-catalog">
                     <h1 class="promo-product_heading">
-                        <a href="" class="promo-text_link" >Trang chủ > <?php  if (!empty($dataProduct[0]['name_type'])){ echo $dataProduct[0]['name_type'];} ?></a>
+                        <a href="" class="promo-text_link" > <?php  if (!empty($dataProduct[0]['name_type'])){ echo $dataProduct[0]['name_type'];} ?></a>
                     </h1>
                     <div class="product-catalog_fillter">
                         <p>Số lượng sản phẩm: <?php echo count($dataProduct)<0? "0": count($dataProduct) ?></p>
                         <form action="" method="get" class="product-catalog_form">
                             <select class="product-catalog_select" name="orderby" class="orderby" aria-label="Đơn hàng của cửa hàng" >
-                                <option value="popularity">Thứ tự theo mức độ phổ biến</option>
-                                <option value="date" >Mới nhất</option>
                                 <option value="sort" selected="selected" >Sắp xếp</option>
+                                <option value="popularity">Phổ biến</option>
+                                <option value="date" >Mới nhất</option>
                             </select>
                         </form>
                     </div>
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <a href=""  class ="promo-product_link">
-                                <img class="promo-product-img" src="https://nhualaysang.com/uploads/images/slide/qc3.jpg" alt="" >
+                                <img class="promo-product-img" src=" <?php echo _WEB_ROOT .'/public/assets/client/images/banner-home.png' ?>" alt="" >
                             </a>
                             <div class="promo-product_contact">
                                 <header class="promo-product-heading">
@@ -24,11 +24,11 @@
                                 </header>
                                 <div class="promo-product_contact">
                                     <h2 class="promo-product_title">Hỗ trợ bán hàng</h2>
-                                    <p class="promo-product_phone">09122133123</p>
+                                    <p class="promo-product_phone">0964 297 683</p>
                                 </div>
                                 <div class="promo-product_contact">
                                     <h2 class="promo-product_title">Hỗ trợ kĩ thuật</h2>
-                                    <p class="promo-product_phone">09122133123</p>
+                                    <p class="promo-product_phone">0973 022 983</p>
                                 </div>
                                 
                             </div>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <!-- mô tả loại sản phẩm  -->
-                <div class="product-describe_container">
+                <!-- <div class="product-describe_container">
                     <div class="row">
                         <div class="col l-12">
                             <div class="product-describe">
@@ -80,7 +80,7 @@
                             
                         </div>
                     </div>
-                </div>
+                </div> -->
     <script>
         document.querySelector('.product-catalog_select').addEventListener('change', function(){
             // console.log('select ');

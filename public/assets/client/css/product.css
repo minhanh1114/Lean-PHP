@@ -24,10 +24,16 @@ html{
 body{
     
 }
-a, h1, h2, h3, h4, h5, h6, span, p{
-    font-family: Helvetica, sans-serif;
+a, h1, h2, h3, h4, h5, h6{
     text-decoration: none;
     color: var(--text-color);
+    
+
+}
+span ,p{
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+
 }
 
  .header{
@@ -148,7 +154,7 @@ color: var(--text-color);
     /* background-color: #f5f5f5; */
 }
 .navigation-content{
-    margin: 20px 0;
+    margin: 20px 0 5px 0;
     border-top: 1px var(--color-gray) solid;
     border-bottom: 1px var(--color-gray) solid;
     /* background-color: var(--private-color); */
@@ -233,7 +239,7 @@ font-weight: 500;
 
 /*  category */
 .category{
-margin: 20px 0;
+margin: 20px 0 5px 0;
 position: relative;
 }
 .category_heading{
@@ -320,6 +326,22 @@ position: relative;
     border-radius: 4px;
     background: var(--private-color);
 }
+/* breadcrumb */
+.breadcrumb{
+    font-size: 1.3rem;
+    line-height: 4.4rem;
+    border-bottom: 1px solid #e7e7e7;
+    font-family: Arial, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-weight: 400;
+    padding: 0 10px;
+}
+.breadcrumb_last{
+   color: #7e7e7e;
+}
+
 /* type Product  */
 .promo-product{
     margin-top: 30px;
@@ -386,7 +408,7 @@ position: relative;
 .promo-product_heading::after{
     content: "";
     position: absolute;
-    bottom: -7px;
+    bottom: -3px;
     left: 0;
     height: 2px;
     background-color: var(--private-color);
@@ -397,9 +419,10 @@ position: relative;
 .promo-text_link{
     border-bottom: 5px solid #00a79d;
     height: 285px;
+    color: #575757;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 1.7rem;
+    font-size: 2rem;
     line-height: 2.2rem;
     
 
@@ -526,7 +549,7 @@ justify-content: space-evenly;
 }
 .product-offer_heading span{
     line-height: 2.2rem;
-    border-bottom: 2px solid #00a79d;
+    border-bottom: 2px solid #068e47;
 }
 .product-offer_heading{
     padding:5px 5px;
@@ -545,17 +568,19 @@ justify-content: space-evenly;
 .product-offer_img{
     overflow: hidden;
     width: 100%;
+    height: 150px;
 }
 .product-offer_img img{
 
-    width: 100%;
+    max-width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 .product-offer_img img:hover{
     /* object-fit: contain; */
     max-height: 210px;
     transform: scale(1.1);
-    transition: all 0.3s ease 0s;;
+    transition: all 0.3s ease-in-out;
 }
 
 .product-describe{
@@ -826,6 +851,68 @@ color: var(--white-color);
 .hidden_scroll{
     overflow: hidden;
 }
+.hotline-zalo_ring{
+    position: fixed;
+    left: 20px;
+    bottom: 90px;
+
+}
+.hotline-zalo-ring-circle{
+    width: 87px;
+    height: 87px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 100%;
+    border: 2px solid #2294f1;
+    -webkit-animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+    animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+    transition: all .5s;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    opacity: .5;
+}
+.hotline-zalo-ring-circle-fill{
+    width: 57px;
+    height: 57px;
+    top: 25px;
+    left: 25px;
+    position: absolute;
+     background-color: rgba(36, 160, 238, 0.7); 
+    border-radius: 100%;
+    border: 2px solid transparent;
+    -webkit-animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    transition: all .5s;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.hotline-zalo-ring-icon{
+    text-transform: capitalize;
+    background-color: #2294f1;
+    width: 33px;
+    height: 33px;
+    top: 37px;
+    left: 37px;
+    position: absolute;
+    background-size: 20px;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    -webkit-animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+    animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* ring phone */
 .hotline-phone_ring{
     position: fixed;
@@ -940,6 +1027,65 @@ color: var(--white-color);
     text-indent: 50px;
     color:var(--white-color);
 }
+/* new page */
+.home-news{
+    display: block;
+    margin: 20px 0;
+}
+.home-news_heading{
+    
+
+}
+.home-news_continer{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.home-news_img{
+    max-width: 200px;
+    max-height: 150px;
+    padding: 3px;
+    border: 1px solid #999;
+}
+.home-new_content{
+    
+    padding-left: 20px;
+    color: var(--text-gray);
+    font-size: 1.3rem;
+}
+.home-news_date{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #999;
+    line-height: 3rem;
+}
+.hom-news-des{
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+}
+.home-new_offer{
+    display: flex;
+
+}
+.new_offer-main{
+flex: 1;
+}
+.new_offer-sub{
+flex:1
+}
+.new_offer-description
+{
+    padding-top:7px;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+.home-news_img.offer-img{
+   max-width: 100%;
+   margin-left: auto;
+   width: 200px;
+   display: block;
+}
 .show-news_des-html p ,
 .show-news_des-html li{
     font-size: 1.6rem;
@@ -953,6 +1099,16 @@ color: var(--white-color);
 }
 .show-news_des-html figure{
     text-align: center;
+}
+.show-news-date{
+    padding-bottom: 10px;
+}
+.show-news-heading{
+    line-height: 3rem;
+    color: #0c1d3c;
+    font-family: 'Roboto';
+    font-size: 2.5rem;
+
 }
 .show-product-heading{
     padding: 15px 0;

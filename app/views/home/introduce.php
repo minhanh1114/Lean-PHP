@@ -1,13 +1,15 @@
 <style>
     .mainContent .title{
     margin: 0 15px 15px;
-    font-size: 25px;
-    line-height: 24px;
+    font-size: 2.5rem;
+    line-height: 2.4rem;
     color: #00a651;
     
     }
     .mainContent p{
-        font-size: 15px;
+        font-family: Arial, sans-serif;
+        font-size: 1.6rem;
+        line-height: 2rem;
         margin: 15px 15px;
     }
     .main-content .text-content ul{
@@ -15,7 +17,7 @@
         margin: 15px 50px;
     }
     .text-content .title{
-        font-size: 20px;
+        font-size: 2rem;
     }
     .main-content .text-content a{
         color:red;

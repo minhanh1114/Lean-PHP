@@ -4,6 +4,7 @@ class ProductModel extends Model{
 
     public function getProductList($idType ="",$limit ="")
     {
+        
         if(!empty($idType) && !empty($limit)) 
         {
             $data = $this->database->query('SELECT * FROM '. $this->_table . '  WHERE product.type= ' . $idType .' ORDER BY view DESC limit ' . $limit)->fetchAll(PDO::FETCH_ASSOC);
@@ -14,6 +15,13 @@ class ProductModel extends Model{
             $data = $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type')->fetchAll(PDO::FETCH_ASSOC);
         }
         return $data;
+    }
+    function getProductsPagination($page_index,$limit)
+    {
+       
+
+            return $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type limit ' . $page_index . ' , ' . $limit)->fetchAll(PDO::FETCH_ASSOC);
+       
     }
     public function getToProductType($slugType)
     {
@@ -36,7 +44,7 @@ class ProductModel extends Model{
     }
     function searchProduct($searchKey)
     {
-        return $this->database->query("SELECT * FROM ".$this->_table." WHERE name LIKE '%".$searchKey."%' " )->fetchAll(PDO::FETCH_ASSOC);
+        return $this->database->query("SELECT * FROM ".$this->_table." INNER JOIN types ON product.type = types.id_type WHERE name LIKE '%".$searchKey."%' " )->fetchAll(PDO::FETCH_ASSOC);
     }
 
     function insertProduct($data)
@@ -72,5 +80,9 @@ class ProductModel extends Model{
         else{
             return false;
         }
+    }
+    function getCountProduct()
+    {
+        return $this->database->query('select count(*) from ' . $this->_table)->fetchAll();
     }
 }

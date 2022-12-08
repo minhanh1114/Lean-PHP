@@ -11,7 +11,16 @@ class Home extends Controller{
     }
     public function index (){
         $data['typesProduct']= $this->ProductModel->getTypeProduct();
-        $data['news'] = $this->NewsModel->getNewsList(3);
+        $dataNews = $this->NewsModel->getNewsList(3);
+        for ($i=0; $i < count($dataNews); $i++) 
+            {
+                if(!empty($dataNews[$i]['description']))
+                {
+                    $dataNews[$i]['description'] = $this->character_limiter($dataNews[$i]['description'],100);
+                    
+                }
+            }
+            $data['news']=$dataNews;
         //get list products
         $data['productList']['one'] = $this->ProductModel->getProductList($data['typesProduct'][0]['id_type'],8);
         $data['productList']['two'] = $this->ProductModel->getProductList($data['typesProduct'][1]['id_type'],8);
@@ -22,22 +31,19 @@ class Home extends Controller{
     }
     public function contact()
     {
-        $this->data['page_title'] = 'Liên hệ';
+        $this->data['title'] = 'Liên hệ';
         $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
         $this->data['content'] = 'home/contact';
         $this->render('layouts/client_layout', $this->data);
     }
     public function introduce()
     {
-        $this->data['page_title'] = 'Giới thiệu';
+        $this->data['title'] = 'Giới thiệu';
         $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
         $this->data['content'] = 'home/introduce';
         $this->render('layouts/client_layout', $this->data);
     }
-    public function detail ($id='',$slug=''){
-        echo "HOME".$id;
-        echo "HOME".$slug;
-    }
+    
     public function search (){
         $request = new Request();
         $response = new Response();
@@ -45,13 +51,12 @@ class Home extends Controller{
         if (!empty($keyWord["k"]))
         {
             // xử lí search
-            $this->data['page_title'] = 'Tìm kiếm sản phẩm';
+            $this->data['title'] = 'Tìm kiếm sản phẩm';
             $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
             $this->data['sub_content']['dataProduct'] = $this->ProductModel->searchProduct($keyWord["k"]);
             $this->data['sub_content']['keySearch'] = $keyWord["k"];
             $this->data['content'] = 'home/search';
             $this->render('layouts/client_layout', $this->data);
-            echo "Key word:" .$keyWord["k"];
         }
         else
         {

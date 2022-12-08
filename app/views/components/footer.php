@@ -38,7 +38,7 @@
             <div class="grid wide footer__content">
                 <div class="row">
                     <div class="col l-4 m-4 c-12">
-                        <h3 class="footer__hedding">VỀ CHÚNG TÔI</h3>
+                        <h2 class="footer__hedding">VỀ CHÚNG TÔI</23>
                         <ul class="footer-list">
                             <li class="footer-item">
                                 <a href="#" class="footer-name_cty " >Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật</a>
@@ -52,18 +52,21 @@
                                      
                             </li>
                             <li class="footer-item">
-                                <a href="tel:0973 022 983" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0973 022 983 </a>
+                                <a href="tel:02203882983" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 02203 882 983 </a>
                             </li>
                             <li class="footer-item footer-flexbox">
                                 <a href="#" class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
                                     <p class="footer-item_location">
-                                        Nhà Máy: Số 32, Thanh Lân, Thanh Trì, Hoàng Mai, Hà Nội
+                                        Nhà Máy: KM-39, Quốc lộ 18, Cộng Hòa, Phố Chí Linh, Hải Dương.
                                     </p>
                                      
                             </li>
                             <li class="footer-item">
-                                <a href="tel:0964 297 683" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0964 297 683  </a>
+                                <a href="tel:0964 297 683" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0964 297 683</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="tel:0961045066" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0961 045 066</a>
                             </li>
                             <li class="footer-item">
                                 <h1  class="footer-item_link" style="margin-left: 15px; font-size: 2rem;">HOTLINE:  <a href="tel:0905988900" style=" font-weight: bold ;font-family: 'Open Sans'; color: #ce0000; display: block;"> 0973 022 983</a></h1>
@@ -73,10 +76,10 @@
                         </ul>
                     </div>
                     <div class="col l-3 m-4 c-12">
-                        <h3 class="footer__hedding">Chăm sóc khách hàng</h3>
+                        <h2 class="footer__hedding">Chăm sóc khách hàng</h2>
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <a href="#" class="footer-item_link">Giới Thiệu</a>
+                                <a href="<?php echo _WEB_ROOT .'/gioi-thieu'?>" class="footer-item_link">Giới Thiệu</a>
                             </li>
                             <li class="footer-item">
                                 <a href="#" class="footer-item_link">Trung Tâm Trợ Giúp</a>
@@ -88,11 +91,16 @@
                             <li class="footer-item">
                                 <a href="#" class="footer-item_link">Hướng Dẫn Mua Hàng</a>
                             </li>
+                            <li class="footer-item">
+                                <a href="https://www.facebook.com/tonnhualaysangtanminhnhat" class="footer-item_link">
+                                    <img src="<?php echo _WEB_ROOT .'/public/assets/client/images/plug_page_facebook.png' ?>">
+                                </a>
+                            </li>
                             
                         </ul>
                     </div>
                     <div class="col l-2 m-4 c-12">
-                        <h3 class="footer__hedding">THANH TOÁN</h3>
+                        <h2 class="footer__hedding">THANH TOÁN</h2>
                         <ul class="footer-list-tt">
                             <li class="footer-item-tt">
                                 <div class="footer-vn-background footer-vn-visa-png" style="width: 55px; height: 18px;"></div>
@@ -120,7 +128,7 @@
                     </div>
                      
                     <div class="col l-3 m-4 c-12">
-                        <h3 class="footer__hedding">Vị trí </h3>
+                        <h2 class="footer__hedding">Vị trí </h2>
                         <div class="footer-dowload">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d930.3682103180541!2d106.42420572922792!3d21.133572950026743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313579167eaf0125%3A0xb9c9b66790e5035e!2zQ8O0bmcgdHkgVE5ISCBUaMawxqFuZyBtYcyjaSB2YcyAIHNhzIluIHh1w6LMgXQgVMOibiBNaW5oIE5ow6LMo3Q!5e0!3m2!1svi!2s!4v1669120955913!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
@@ -135,6 +143,19 @@
             </div>
         </footer>
         
+    </div>
+    <!-- zalo ring -->
+    <div class="hotline-zalo_ring">
+        <div class="hotline-phone-ring">
+            <div class="hotline-zalo-ring-circle"></div>
+            <div class="hotline-zalo-ring-circle-fill"></div>
+            <div class="hotline-zalo-ring-icon">
+                <a href="https://zalo.me/0961045066">
+                    <img class="hotline-phone-ring-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/zalo.png" alt="">
+                </a>
+            </div>
+        </div>
+
     </div>
     <!-- phone ring -->
     <div class="hotline-phone_ring">

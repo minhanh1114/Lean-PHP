@@ -115,84 +115,51 @@
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"><?php
-                                        if(!empty(Session::data('nameAdmin')))
-                                        {
-                                                echo 'Xin chào:'. Session::data('nameAdmin');
-                                        }
-                                    ?></a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav row navbar-left">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-dashboard"></i>
-								<p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-globe"></i>
-                                    <b class="caret hidden-lg hidden-md"></b>
-									<p class="hidden-lg hidden-md">
-										5 Notifications
-										<b class="caret"></b>
-									</p>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                              </ul>
-                        </li>
-                        <li>
-                           <a href="">
-                                <i class="fa fa-search"></i>
-								<p class="hidden-lg hidden-md">Search</p>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="nav row navbar-right">
-                        <li>
-                           <a href="">
-                               <p><?php if(!empty(Session::data('loginAdmin')))
+                <div class=" d-inline-flex align-items-center">
+                    
+                    <h4 class="d-flex align-items-center" style="margin:17px 0">Xin chào:</h4>
+                    <div class="dropdown">
+                    
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><?php if(!empty(Session::data('loginAdmin')))
                                         {
                                                if(Session::data('loginAdmin') == 1)
                                                {
                                                  echo 'Quản Lí';
                                                }
                                         }
-                                    ?></p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <p>
-										Dropdown
-										<b class="caret"></b>
-									</p>
-
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Chức năng đang bảo trì</a></li>
+                                    ?>
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo _WEB_ROOT . '/admin/login/logout' ?>">
+                                        <p>Đăng xuất</p>
+                                    </a></li>
+                            </ul>
+                    </div>
+                    <button style="margin-top:30px" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- <p class="navbar-brand" >
+                                    
+                    </p> -->
+                    
+                               
+                                   
                                 
-                              </ul>
-                        </li>
+                </div>
+                
+                <div class="collapse navbar-collapse">
+                   
+                    <ul class="nav row navbar-right">
                         <li>
-                            <a href="<?php echo _WEB_ROOT . '/admin/login/logout' ?>">
-                                <p>Log out</p>
+                           <a href="">
+                               
                             </a>
                         </li>
+                        
+                        
 						<li class="separator hidden-lg"></li>
                     </ul>
                 </div>
@@ -268,18 +235,17 @@
     	$(document).ready(function(){
 
         	demo.initChartist();
+            <?php
+             if(!empty($mess)) 
+                 {echo "$.notify({icon: 'pe-7s-gift',message: '".$mess."'},{type: 'info',timer: 2000});";}
+             
+             
+             ?>
 
-        	$.notify({
-            	icon: 'pe-7s-gift',
-            	message: "<?php if(!empty($mess)) {echo $mess ;}else {echo "Trang quản trị viên";}?>"
-            },{
-                type: 'info',
-                timer: 2000
-            });
-
+        	
     	});
 	</script>
 <!-- end -->
 
-
+123321
 </html>

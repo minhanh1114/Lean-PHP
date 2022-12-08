@@ -1,60 +1,9 @@
 <style>
-                .home-news{
-                    display: block;
-                    margin: 20px 0;
-                }
-                .home-news_heading{
-                    
-
-                }
-                .home-news_continer{
-                    display: flex;
-                    justify-content: center;
-                    margin-top: 10px;
-                }
-                .home-news_img{
-                    max-width: 200px;
-                    max-height: 150px;
-                    padding: 3px;
-                    border: 1px solid #999;
-                }
-                .home-new_content{
-                    
-                    padding-left: 20px;
-                    color: var(--text-gray);
-                    font-size: 1.3rem;
-                }
-                .home-news_date{
-                    font-size: 1.4rem;
-                    font-weight: 500;
-                    color: #999;
-                    line-height: 3rem;
-                }
-                .hom-news-des{
-                    font-size: 1.6rem;
-                    font-weight: 600;
-                    line-height: 2.2rem;
-                }
-                .home-new_offer{
-                    display: flex;
-
-                }
-                .new_offer-main{
-                flex: 1;
-                }
-                .new_offer-sub{
-                flex:1
-                }
-                .home-news_img.offer-img{
-                   max-width: 100%;
-                   margin-left: auto;
-                   width: 200px;
-                   display: block;
-                }
+                
             </style>
                     <div class="product-catalog">
                         <h1 class="promo-product_heading">
-                            <a href="" class="promo-text_link" >Trang chủ > Tin tức </a>
+                            <a href="" class="promo-text_link" >Tin tức & Sự kiện </a>
                         </h1>
                         <div class="row">
                             <div class="col l-8 m-12 c-12" style=" border-right: 2px solid #ccc;">   
@@ -73,6 +22,7 @@
                                                             <div class="home-new_content offer-content">
                                                                 <p class="hom-news-des"><?php echo $news['title'] ?></p>
                                                                 <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news['date']); echo $dt->format('m/d/Y');?></p>
+                                                                <p class="new_offer-description"><?php echo $news['description'] ?></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -100,6 +50,7 @@
                                                                 <div class="home-new_content offer-content">
                                                                     <p class="hom-news-des"><?php echo $news['title'] ?></p>
                                                                     <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news['date']); echo $dt->format('m/d/Y');?> </p>
+                                                                   
                                                                 </div>
                                                             </div>
                                                             

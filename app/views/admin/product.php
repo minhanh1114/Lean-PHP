@@ -4,8 +4,19 @@
                         <div class="col-md-12">
                             <div class="card strpied-tabled-with-hover">
                                 <div class="card-header ">
-                                    <h3 class="card-title">Danh sách các sản phẩm</h3>
-                                    <a href="./product/addProduct" class="btn btn-primary">Thêm sản phẩm</a>
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">Danh sách các sản phẩm</h3>
+                                        <a href="./product/addProduct" class="btn btn-primary">Thêm sản phẩm</a>
+                                    </div>
+                                    <div class="col-md-5">
+                                    <form class="input-group d-flex justify-content-center" method="GET" action="">
+                                        <input type="search" name ="k" class="form-control rounded" placeholder="Tìm kiếm sản phẩm" aria-label="Search" aria-describedby="search-addon" />
+                                        <input type="submit" class="btn btn-outline-primary" value="Tìm kiếm">
+                                    </form>
+                                    </div>
+                                </div>
+                                   
                                 </div>
                                 <div class="card-body table-full-width table-responsive">
                                     <table class="table table-hover table-striped">
@@ -118,6 +129,20 @@
                             </div>
                         </div> -->
                     </div>
+                    <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <?php
+                                    if(!empty($page_index)&&!empty($totalPage))
+                                    {
+                                        for($i=1;$i<=$totalPage;$i++)
+                                        {
+                                ?>
+                                     <li class="page-item <?php if($i == $page_index)echo 'active'; ?>"><a class="page-link" href="<?php echo _WEB_ROOT .'/admin/product?page='.$i?>"><?php echo $i ?></a></li>
+                                <?php
+                                        } }
+                                 ?>
+                            </ul>
+                    </nav>
                 </div>
             </div>
 

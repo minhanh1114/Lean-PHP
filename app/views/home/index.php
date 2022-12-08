@@ -6,6 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate,tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
+    <meta property="og:description" content="Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate,tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.">
+    <meta property="og:url" content="<?php echo _WEB_ROOT ?>">
+    <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:height" content="900">
+    <meta property="og:image:width" content="900">
+    <meta property="og:site_name" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
+    <meta name="twitter:description" content="Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.">
+    <meta name="twitter:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
+    <meta name=”geo.region” content=”VN-HN” />
+    <meta name="geo.position" content="20.9922614 , 105.8884573" />
+    <meta name="ICBM" content="20.9922614,105.8884573" />
+    <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="<?php echo _WEB_ROOT ?>">
+    <link rel="icon" href="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>" type="image/jpg" sizes="30x30">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet">
@@ -14,7 +36,7 @@
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css">
-<title>Document</title>
+<title>Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam</title>
 </head>
 <body>
     <!-- modal bar -->
@@ -52,7 +74,7 @@
                     <a class="menu_mobile__link" href="<?php echo _WEB_ROOT . '/lien-he' ?>">LIÊN HỆ</a>
                 </li>
         </ul>
-        <form class="bar_search-mobile" action="post" method="<?php echo _WEB_ROOT . '/search' ?>">
+        <form class="bar_search-mobile" action="GET" method="<?php echo _WEB_ROOT . '/search' ?>">
             <input type="text" name="k" placeholder="Tìm kiếm... " class="bar_mobile__input">
             <button type="submit" class="bar_mobile__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
@@ -203,7 +225,7 @@
                                         <a class="navigation-content__link" href="<?php echo _WEB_ROOT . '/lien-he' ?>">LIÊN HỆ</a>
                                     </li>
                             </ul>
-                            <form method="POST" action="<?php echo _WEB_ROOT ?>/search" class="navigation-search">
+                            <form method="GET" action="<?php echo _WEB_ROOT ?>/search" class="navigation-search">
                                 <input type="text" name="k" placeholder="Tìm kiếm sản phẩm" class="navigation-search__input">
                                 <button type="submit" class="navigation-search__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
@@ -396,7 +418,7 @@
                                         <img width="280px" class="home-news_img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[0]['img']  ?>"></img>
                                         <div class="home-new_content">
                                             <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[0]['date']); echo $dt->format('m/d/Y');?></p>
-                                            <p class="hom-news-des">Chi tiết các bước thi công tấm nhựa ốp tường nano Lion</p>
+                                            <p class="hom-news-des"><?php echo $news[0]['description']?></p>
                                         </div>
                                         
                                     </div>
@@ -491,7 +513,7 @@
                         <h3 class="footer__hedding">VỀ CHÚNG TÔI</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <a href="#" class="footer-name_cty " >Công ty TNHH Thương Mại Và Dịch Vụ Tân Minh Nhật</a>
+                                <a href="#" class="footer-name_cty " >Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật</a>
                             </li>
                             <li class="footer-item footer-flexbox">
                                 <a href="#" class="footer-item_link">
@@ -502,18 +524,21 @@
                                      
                             </li>
                             <li class="footer-item">
-                                <a href="tel:0973 022 983" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0973 022 983 </a>
+                                <a href="tel:0973 022 983" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 02203 882 983 </a>
                             </li>
                             <li class="footer-item footer-flexbox">
                                 <a href="#" class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
                                     <p class="footer-item_location">
-                                        Nhà Máy: Số 32, Thanh Lân, Thanh Trì, Hoàng Mai, Hà Nội
+                                        Nhà Máy:  KM-39, Quốc lộ 18, Cộng Hòa, Phố Chí Linh, Hải Dương.
                                     </p>
                                      
                             </li>
                             <li class="footer-item">
                                 <a href="tel:0964 297 683" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0964 297 683  </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="tel:0961045066" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0961 045 066</a>
                             </li>
                             <li class="footer-item">
                                 <h1  class="footer-item_link" style="margin-left: 15px; font-size: 2rem;">HOTLINE:  <a href="tel:0905988900" style=" font-weight: bold ;font-family: 'Open Sans'; color: #ce0000; display: block;"> 0973 022 983</a></h1>
@@ -526,7 +551,7 @@
                         <h3 class="footer__hedding">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <a href="#" class="footer-item_link">Giới Thiệu</a>
+                                <a href="<?php echo _WEB_ROOT . '/gioi-thieu'?>" class="footer-item_link">Giới Thiệu</a>
                             </li>
                             <li class="footer-item">
                                 <a href="#" class="footer-item_link">Trung Tâm Trợ Giúp</a>
@@ -537,6 +562,11 @@
                             
                             <li class="footer-item">
                                 <a href="#" class="footer-item_link">Hướng Dẫn Mua Hàng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="https://www.facebook.com/tonnhualaysangtanminhnhat" class="footer-item_link">
+                                    <img src="<?php echo _WEB_ROOT .'/public/assets/client/images/plug_page_facebook.png' ?>">
+                                </a>
                             </li>
                             
                         </ul>
@@ -592,7 +622,7 @@
             <div class="hotline-zalo-ring-circle"></div>
             <div class="hotline-zalo-ring-circle-fill"></div>
             <div class="hotline-zalo-ring-icon">
-                <a href="https://zalo.me/0973 022 983">
+                <a href="https://zalo.me/0961045066">
                     <img class="hotline-phone-ring-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/zalo.png" alt="">
                 </a>
             </div>

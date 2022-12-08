@@ -9,10 +9,27 @@ class News extends Controller{
             $this->ProductModel = $this->model('ProductModel');
         }
     function index($slug){
-    
-        $this->data['sub_content']['dataNews'] = $this->NewsModel->getNewsSlug($slug);
-        $this->data['sub_content']['dataNewsOffer'] = $this->NewsModel->getNewsList(5);
+        // chi tiết news
         $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
+        $this->data['sub_content']['dataNewsOffer'] = $this->NewsModel->getNewsList(5);
+        $this->data['sub_content']['dataNews'] = $this->NewsModel->getNewsSlug($slug);
+
+    
+        if(!empty($this->data['sub_content']['dataNews'][0]['title']))
+        {
+
+            $this->data['title']=$this->data['sub_content']['dataNews'][0]['title'];
+        }
+        else
+        {
+            $this->data['title'] ="Tin tức & Sự kiện";
+        }
+        if(!empty($this->data['sub_content']['dataNews'][0]['description']))
+        {
+            $this->data['description']=$this->character_limiter($this->data['sub_content']['dataNews'][0]['description'],200,false);
+        }
+        
+
         $this->data['content']='news/index';
         $this->render('layouts/client_layout', $this->data);
     }
@@ -32,17 +49,30 @@ class News extends Controller{
         $limit = 10;
         $page_index = ($page-1) * $limit; 
         //  lấy dữ liêu từ đâu đến đâu
-        $this->data['sub_content']['dataNews'] = array_reverse($this->NewsModel->getAllNews($page_index,$limit));
+        $dataNews = array_reverse($this->NewsModel->getAllNews($page_index,$limit));
+        // gán lại description ngắn gọn;
+            for ($i=0; $i < count($dataNews); $i++) 
+            {
+                if(!empty($dataNews[$i]['description']))
+                {
+                    $dataNews[$i]['description'] = $this->character_limiter($dataNews[$i]['description'],100);
+                    
+                }
+            }
+        $this->data['sub_content']['dataNews'] = $dataNews;
         $totalNews= $this->NewsModel->getCountNew();
         $totalNews = $totalNews[0][0];
         $total = ceil($totalNews / $limit);
         $this->data['sub_content']['totalPage'] = $total;
-        $this->data['sub_content']['page_index'] =  $page_index;
+        $this->data['sub_content']['page_index'] =  $page;
         $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
+        
         $this->data['sub_content']['dataNewsOffer'] = $this->NewsModel->getNewsList(4);
+        $this->data['title']='Tin Tức & Sự kiện';
         $this->data['content']='news/show_all';
         $this->render('layouts/client_layout', $this->data);
     }
+    
    
 }
 //call_user_func_array([$this->__controller, $this->__action], $this->__params);

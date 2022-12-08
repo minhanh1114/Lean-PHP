@@ -48,20 +48,39 @@ private function create_slug($string)
         return $string;
     }
 function index(){
+   
+     $this->data['mess'] = Session::flash('mess');
     $request = new Request();
     $param=$request->getDataRequest();
-    if(!empty($param))
-        foreach($param as $key => $val)
+    if(!empty($param['k']))
+    {
+        $this->data['sub_content']['products']=$this->ProductModel->searchProduct($param['k']);
+        $this->data['sub_content']['title'] = 'tìm kiếm sản phẩm';
+        $this->data['content']='admin/product';
+        $this->render('layouts/admin_layout', $this->data);
+    }
+        if(!empty($param["page"]))
         {
-            $this->data[$key] = $val;
+                $page =$param["page"];
         }
-    $this->data['sub_content']['products'] = array_reverse($this->ProductModel->getProductList()) ;
-    $this->data['sub_content']['title'] = 'chi tết sản phẩm';
-    $this->data['content']='admin/product';
-    $this->render('layouts/admin_layout', $this->data);
-}
-function detail($id){
-    echo 'xin chào cả nhà' . $id;
+        else
+        {
+                $page = 1;
+        }
+        // phân trnag
+        $limit = 5;
+        $page_index = ($page-1) * $limit; 
+        //  lấy dữ liêu từ đâu đến đâu    
+        $this->data['sub_content']['products'] = array_reverse($this->ProductModel->getProductsPagination($page_index,$limit));
+        $totalNews= $this->ProductModel->getCountProduct();
+        $totalNews = $totalNews[0][0];
+        $total = ceil($totalNews / $limit);
+        $this->data['sub_content']['totalPage'] = $total;
+        $this->data['sub_content']['page_index'] =  $page;
+        // phân trang
+        $this->data['sub_content']['title'] = 'sản phẩm';
+        $this->data['content']='admin/product';
+        $this->render('layouts/admin_layout', $this->data);
 }
 function addProduct(){
   
@@ -134,7 +153,8 @@ function postAddProduct(){
 
 
     }
-    $response->redirect('admin/product',$error);
+    Session::flash('mess',$error);
+    $response->redirect('admin/product');
     
 
 
@@ -175,13 +195,13 @@ function postEdit(){
    
     
 
-    // RENAME   FILE IMG
-    $fileName = $file['name'];
-    $fileName = explode('.',$fileName);
-    $extension = end($fileName);
-    $newName = md5(uniqid()) .'.'. $extension;
+        // RENAME   FILE IMG
+        $fileName = $file['name'];
+        $fileName = explode('.',$fileName);
+        $extension = end($fileName);
+        $newName = md5(uniqid()) .'.'. $extension;
 
-    // check type image upload format
+        // check type image upload format
         if(in_array($extension,$type_allow))
         {
             $size = $file['size']/1024/1024; //  bytes->mb
@@ -195,57 +215,47 @@ function postEdit(){
                 }
                 else{
                     $error="upload ảnh thất bại";
-                      $response->redirect('admin/product',$error);
-                    
+                      
                 }
             }
-
             else
             {
                 $error = 'file upload large(lớn)';
-                $response->redirect('admin/product',$error);
-
+              
             }
 
         }
         else
         {
             $error = 'Không đúng định dạng file ảnh';
-            $response->redirect('admin/product',$error);
 
         }
 
-
-
     }
-    else
-    {
-        echo 'không có ảnh' ;
-    
-    }
+
     $data['slug'] = $this->create_slug($data['name']);
                 // truy vấn database
     if(!empty($data['id']))
     {
         $condition = 'id='.$data['id'];
         unset($data['id']);
-         echo '<pre>';
-    print_r($data);
-    echo '</pre>';
-    print_r($condition);
-     $inserted =$this->ProductModel->updateProduct($data,$condition);
-     if($inserted)
-     {
-        $error ="Sửa sản phẩm thành công";
-        $response->redirect('admin/product',$error);
-     }
-     else
-     {
-        $error ="Sửa sản phẩm thất bại, vui lòng kiểm tra lại";
-        $response->redirect('admin/product',$error);
-
-     }
+         
+        $inserted =$this->ProductModel->updateProduct($data,$condition);
+        if($inserted)
+        {
+            $error ="Sửa sản phẩm thành công";
+        
+        }
+        else
+        {
+            $error ="Sửa sản phẩm thất bại, vui lòng kiểm tra lại";
+            
+        }
+        // session
+        Session::flash('mess',$error);
+        $response->redirect('admin/product');
     }
+
     else
     {
         $data['message'] ='lỗi truy vấn thiếu trường id';
@@ -271,7 +281,8 @@ function postEdit(){
             $mess ="Xóa sản phẩm thất bại";
             
         }
-        $response->redirect('admin/product',$mess);
+        Session::flash('mess',$mess);
+        $response->redirect('admin/product');
 
         
     }

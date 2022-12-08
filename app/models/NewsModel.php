@@ -30,6 +30,11 @@ class NewsModel extends Model{
         $data = $this->database->query('SELECT * FROM '. $this->_table.' WHERE slug = '. '"'.$slug.'"' )->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
+    function searchNews($searchKey)
+    {
+        return $this->database->query('SELECT * FROM '. $this->_table.' WHERE title LIKE '. '"%'.$searchKey.'%"' )->fetchAll(PDO::FETCH_ASSOC);
+        
+    }
     // admin/postAddNews
     function insertNews($dataNews)
     {
