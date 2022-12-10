@@ -7,8 +7,8 @@
                         <p>Số lượng sản phẩm: <?php echo count($dataProduct)<0? "0": count($dataProduct) ?></p>
                         <form action="" method="get" class="product-catalog_form">
                             <select class="product-catalog_select" name="orderby" class="orderby" aria-label="Đơn hàng của cửa hàng" >
-                                <option value="sort" selected="selected" >Sắp xếp</option>
-                                <option value="popularity">Phổ biến</option>
+                                <option value="sort" selected="selected" >Thứ tự mặc định</option>
+                                <option value="popularity">Thứ tự theo phổ biến</option>
                                 <option value="date" >Mới nhất</option>
                             </select>
                         </form>

@@ -1,62 +1,122 @@
 
   
-  .slider-content {
-    margin-left: 12px;
-    width: 100%;
-    max-width: 950px;
-    height: 448px;
-    position: relative;
-    overflow: hidden; /* <===  */
-    /* border-radius: 15px; */
-    border-radius: 5px;
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+
+
+  
+  
+  
+  .slider-content {
+    
+    box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+    max-width: 894px; 
+    height: 448px;
+    width: 100%; 
+    position: relative;
+    margin: 0px 0 0 10px;
+  }
+  .slider-content:hover .control{
+    opacity: 1;
   }
   
-  .slider-content .slide {
-    width: 100%;
-    max-width: 950px;
+  .wrapper {
+    overflow: hidden;
+    position: relative;
     height: 100%;
-    position: absolute;
-    transition: all 0.5s;
+    z-index: 1;
+    width: 100%;
     border-radius: 5px;
   }
   
-  .slider-content .slide img {
+  .slides {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 10000px;
+    height: 100%;
+    
+  }
+  .slide img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
   }
   
-  .slider-content .btn-slide {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    border: none;
-    border-radius: 50%;
-    z-index: 10px;
-    cursor: pointer;
-    background:rgba(0, 0, 0, 0.5);
-    font-size: 18px;
-    color:var(--white-color);
+  .slides.shifting {
+    transition: left .5s ease-out;
   }
-  .slider-content .btn-slide:active {
-    transform: scale(1.1);
-  }
-  .slider-content .btn-prev {
-    top: 45%;
-    left: -2px;
-}
-   
   
-    .slider-content .btn-next {
-    top: 45%;
-    right: -2px;
-    
+  .slide {
 
+    width: 100%;
+    max-width: 894px;
+
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s linear;
+    position: relative;
+    background: #FFCF47;
+    border-radius: 2px;
   }
-/*  */
+  
+ 
+    .slide:nth-child(2),
+    .slide:nth-child(7) { background: #FFCF47 }
+    .slide:nth-child(1),
+    .slide:nth-child(6) { background: #7ADCEF }
+    .slide:nth-child(3) { background: #3CFF96 }
+    .slide:nth-child(4) { background: #a78df5 }
+    .slide:nth-child(5) { background: #ff8686 }
+
+  
+  .control {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    margin-top: -20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--white-color);
+    font-size: 1.5rem;
+    opacity: 0;
+
+    transition: 0.5s;
+  }
+  
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev:active,
+  .next:active {
+    transform: scale(.8);
+  }
+
+
+
+
+
+
+
+/* slide 2 */
 .slide-two{
   margin-top: 40px;
   position: relative;

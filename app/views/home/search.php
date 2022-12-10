@@ -4,7 +4,7 @@
                         <a href="#" class="promo-text_link" >Tìm kiếm sản phẩm </a>
                     </h1>
                     <div class="product-catalog_fillter">
-                        <p style="margin-right:15px">Từ khóa tìm kiếm: <?php echo empty($keySearch)?"": $keySearch ?></p>
+                        <h2 style="margin-right:15px">Kết quả tìm kiếm: <?php echo empty($keySearch)?"": $keySearch ?></h2>
                         <p>Số lượng sản phẩm: <?php echo count($dataProduct)<0? "0": count($dataProduct) ?></p>
                         <!-- <form action="" method="get" class="product-catalog_form">
                             <select class="product-catalog_select" name="orderby" class="orderby" aria-label="Đơn hàng của cửa hàng" >

@@ -67,12 +67,14 @@
                     </div>
 
                 <div class="pagination">
+                    
                     <?php
+                    
                         for( $i = 1 ; $i <= $totalPage ; $i++)
                         {
                     ?>
                         <p class="pagination-item">
-                            <a href="<?php echo _WEB_ROOT . '/tin-tuc?page='.$i ?>" class="pagination_item-link <?php if($i = $page_index+1){ echo 'active';} ?>">
+                            <a href="<?php echo _WEB_ROOT . '/tin-tuc?page='.$i ?>" class="pagination_item-link <?php if($i == $page_index){ echo 'active';} ?>">
                                 <?php echo $i; ?>
                             </a>
                         </p>

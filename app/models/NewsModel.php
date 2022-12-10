@@ -35,6 +35,9 @@ class NewsModel extends Model{
         return $this->database->query('SELECT * FROM '. $this->_table.' WHERE title LIKE '. '"%'.$searchKey.'%"' )->fetchAll(PDO::FETCH_ASSOC);
         
     }
+    function updateView($data,$condition){
+        return $this->database->updateData($this->_table,$data,$condition);
+    }
     // admin/postAddNews
     function insertNews($dataNews)
     {

@@ -1,67 +1,211 @@
-"use strict";
-// Select all slides
-const slides = document.querySelectorAll(".slide");
 
-// loop through slides and set each slides translateX
-slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
-});
 
-// select next slide button
-const nextSlide = document.querySelector(".btn-next");
 
-// current slide counter
-let curSlide = 0;
-// maximum number of slides
-let maxSlide = slides.length - 1;
+var slider = document.getElementById('slider'),
+    sliderItems = document.getElementById('slides'),
+    prev = document.getElementById('prev'),
+    next = document.getElementById('next');
+    let slideSize=0;
+    var interval_slide_one;
 
-// add event listener and navigation functionality
-nextSlide.addEventListener("click", function () {
-  // check if current slide is the last and reset current slide
-  if (curSlide === maxSlide) {
-    curSlide = 0;
-  } else {
-    curSlide++;
+function slide(wrapper, items, prev, next) {
+  var posX1 = 0,
+      posX2 = 0,
+      posInitial,
+      posFinal,
+      threshold = 100,
+      slides = items.getElementsByClassName('slide'),
+      slidesLength = slides.length,
+      firstSlide = slides[0],
+      lastSlide = slides[slidesLength - 1],
+      cloneFirst = firstSlide.cloneNode(true),
+      cloneLast = lastSlide.cloneNode(true),
+      index = 0,
+      allowShift = true;
+
+      slideSize = items.getElementsByClassName('slide')[items.getElementsByClassName('slide').length-1].offsetWidth;
+console.log('slide 1',slideSize);
+  // Clone first and last slide
+  items.appendChild(cloneFirst);
+  items.insertBefore(cloneLast, firstSlide);
+  wrapper.classList.add('loaded');
+  
+  // Mouse events
+  items.onmousedown = dragStart;
+  
+  // Touch events
+  items.addEventListener('touchstart', dragStart);
+  items.addEventListener('touchend', dragEnd);
+  items.addEventListener('touchmove', dragAction);
+  
+  // Click events
+  prev.addEventListener('click', function () { shiftSlide(-1) });
+  next.addEventListener('click', function () { shiftSlide(1) });
+  // 
+  interval_slide_one = setInterval(() => {
+    posInitial = items.offsetLeft;
+     items.classList.add('shifting');
+     items.style.left = (posInitial - slideSize) + "px";
+     index++;      
+     
+   }, 8000);
+   window.addEventListener('blur', (e) => {
+    console.log('leave tab');
+    clearInterval(interval_slide_one);
+
+  });
+  
+  // Transition events
+  items.addEventListener('transitionend', checkIndex);
+  
+  function dragStart (e) {
+    e = e || window.event;
+    e.preventDefault();
+    posInitial = items.offsetLeft;
+    
+    if (e.type == 'touchstart') {
+      posX1 = e.touches[0].clientX;
+    } else {
+      posX1 = e.clientX;
+      document.onmouseup = dragEnd;
+      document.onmousemove = dragAction;
+    }
   }
 
-  //   move slide by -100%
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-  clearInterval(interval);
+  function dragAction (e) {
+    e = e || window.event;
+    
+    if (e.type == 'touchmove') {
+      posX2 = posX1 - e.touches[0].clientX;
+      posX1 = e.touches[0].clientX;
+    } else {
+      posX2 = posX1 - e.clientX;
+      posX1 = e.clientX;
+    }
+    items.style.left = (items.offsetLeft - posX2) + "px";
+  }
   
-  
-  
-});
+  function dragEnd (e) {
+    clearInterval(interval_slide_one);
+    posFinal = items.offsetLeft;
+    if (posFinal - posInitial < -threshold) {
+      shiftSlide(1, 'drag');
+    } else if (posFinal - posInitial > threshold) {
+      shiftSlide(-1, 'drag');
+    } else {
+      items.style.left = (posInitial) + "px";
+    }
 
-// select next slide button
-const prevSlide = document.querySelector(".btn-prev");
-// add event listener and navigation functionality
-prevSlide.addEventListener("click", function () {
-  // check if current slide is the first and reset current slide to last
-  if (curSlide === 0) {
-    curSlide = maxSlide;
-  } else {
-    curSlide--;
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+  
+  function shiftSlide(dir, action) {
+
+    clearInterval(interval_slide_one);
+
+    items.classList.add('shifting');
+    
+    if (allowShift) {
+      if (!action) {
+        posInitial = items.offsetLeft; }
+        console.log(posInitial);
+
+      if (dir == 1) {
+        items.style.left = (posInitial - slideSize) + "px";
+        index++;      
+      } else if (dir == -1) {
+        items.style.left = (posInitial + slideSize) + "px";
+        index--;      
+      }
+      // console.log(slideSize);
+    };
+    
+    allowShift = false;
+  }
+    
+  function checkIndex (){
+    items.classList.remove('shifting');
+
+    if (index == -1) {
+      items.style.left = -(slidesLength * slideSize) + "px";
+      index = slidesLength - 1;
+    }
+
+    if (index == slidesLength) {
+      items.style.left = -(1 * slideSize) + "px";
+      index = 0;
+    }
+    
+    allowShift = true;
   }
 
-  //   move slide by 100%
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  
+}
+
+// console.log('chiều rộng của phần tử slider-content',document.getElementsByClassName('slider-content')[0].offsetWidth);
+
+
+
+// load event khi dom load xong
+document.addEventListener("DOMContentLoaded", function(){
+
+  const slides_children = document.getElementsByClassName('slide');
+  let slide_width = document.getElementsByClassName('slider-content')[0].offsetWidth;
+  // console.log(slides_children.length);
+
+  for (let i = 0; i < slides_children.length; i++)  {
+    slides_children[i].style.maxWidth = slide_width + 'px';
+    slider.style.height = slide_width /1.995 + 'px';
+  };
+  
+
+
+  window.addEventListener('resize', function(event) {
+    clearInterval(interval_slide_one);
+    setTimeout(() => {
+        slide_width = document.getElementsByClassName('slider-content')[0].offsetWidth;
+        slideSize = slide_width;
+        for (let i = 0; i < slides_children.length; i++)  {
+          slides_children[i].style.maxWidth = slide_width + 'px';
+          slider.style.height = slide_width /1.995 + 'px';
+        };
+    }, 500);
+    document.addEventListener("visibilitychange", (event) => {
+      if (document.visibilityState == "visible") {
+        console.log("tab is active")
+      } else {
+        console.log("tab is inactive")
+      }
+    });
+
+    
+    
   });
-  clearInterval(interval);
-  
-  
-  
+  setTimeout(() => {
+    slide(slider, sliderItems, prev, next);
+
+   
+  }, 1500);
+
+ 
+
 });
-const interval= setInterval(() => {
-  
-  nextSlide.click();
-}, 5000);
+
+
+//  event thay đổi cửa sổ trình duyệt
 
 /// slider two
 // 
 // 
+
+
+
+
+
+
+
+
 
 const btnSliderTwoPrev = document.querySelector('.slider-two_left')
 const btnSliderTwoNext = document.querySelector('.slider-two_right')
@@ -162,38 +306,38 @@ setInterval(() => {
 let isDown = false;
 let startX;
 let scrollLeft;
-const slider = document.querySelector('.display-area');
+const slider_two = document.querySelector('.display-area');
 
 const end = () => {
 	isDown = false;
-  slider.classList.remove('active');
+  slider_two.classList.remove('active');
 }
 
 const start = (e) => {
   isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;	
+  slider_two.classList.add('active');
+  startX = e.pageX || e.touches[0].pageX - slider_two.offsetLeft;
+  scrollLeft = slider_two.scrollLeft;	
 }
 
 const move = (e) => {
 	if(!isDown) return;
 
   e.preventDefault();
-  const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+  const x = e.pageX || e.touches[0].pageX - slider_two.offsetLeft;
   const dist = (x - startX);
-  slider.scrollLeft = scrollLeft - dist;
+  slider_two.scrollLeft = scrollLeft - dist;
 }
 
 (() => {
-	slider.addEventListener('mousedown', start);
-	slider.addEventListener('touchstart', start);
+	slider_two.addEventListener('mousedown', start);
+	slider_two.addEventListener('touchstart', start);
 
-	slider.addEventListener('mousemove', move);
-	slider.addEventListener('touchmove', move);
+	slider_two.addEventListener('mousemove', move);
+	slider_two.addEventListener('touchmove', move);
 
-	slider.addEventListener('mouseleave', end);
-	slider.addEventListener('mouseup', end);
-	slider.addEventListener('touchend', end);
+	slider_two.addEventListener('mouseleave', end);
+	slider_two.addEventListener('mouseup', end);
+	slider_two.addEventListener('touchend', end);
 })();
 

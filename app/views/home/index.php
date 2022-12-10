@@ -230,31 +230,58 @@
                                 <button type="submit" class="navigation-search__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </nav>
-                        <div class="slider-content">
-                            <!-- slide 1 -->
+
+                        <div id="slider" class="slider-content">
+                            <div class="wrapper">
+                                <div id="slides" class="slides">
+                                
+                                <span class="slide">
+                                    <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_2.png" alt="" />
+                                </span>
+                                <span class="slide">
+                                    <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_1.png" alt="" />
+                                </span>
+                                <span class="slide">
+                                    <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_3.png" alt="" />
+                                </span>
+                                <span class="slide">
+                                    <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_4.png" alt="" />
+                                </span>
+                            </div>
+                            </div>
+                            <a id="prev" class="control prev">
+                            
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </a>
+                            <a id="next" class="control next">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                       
+                        <!-- <div class="slider-content">
                             <div class="slide">
                               <img src="https://source.unsplash.com/random?landscape,mountain" alt="" />
                             </div>
                           
-                            <!-- slide 2 -->
+                           
                             <div class="slide">
                               <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
                             </div>
                           
-                            <!-- slide 3 -->
+                            <
                             <div class="slide">
                               <img src="https://source.unsplash.com/random?landscape,night" alt="" />
                             </div>
                           
-                            <!-- slide 4 -->
+                     
                             <div class="slide">
                               <img src="https://source.unsplash.com/random?landscape,city" alt="" />
                             </div>
                           
-                            <!-- Control buttons -->
+                           
                             <button class="btn-slide btn-next"> <i class="fa-solid fa-chevron-right"></i> </button>
                             <button class="btn-slide btn-prev"> <i class="fa-solid fa-chevron-left"></i></i></button>
-                          </div>
+                          </div> -->
                     </div>
                 </div>
                <div class="promo-product">
@@ -262,17 +289,17 @@
                     <div class="row">
                         <div class="col l-4 m-6 c-12">
                             <a href=""  class ="promo-product_link">
-                                <img class="promo-product-img" src="https://nhualaysang.com/uploads/images/slide/dang-dac-polycarbonate.jpg" alt="" >
+                                <img class="promo-product-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_1.png" alt="" >
                             </a>
                         </div>
                         <div class="col l-4 m-6 c-12">
                             <a href="">
-                                <img class="promo-product-img"  src="https://nhualaysang.com/uploads/images/slide/dang-dac-polycarbonate.jpg" alt="">
+                                <img class="promo-product-img"  src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_2.png" alt="">
                             </a>
                         </div>
                         <div class="col l-4 m-6 c-12">
                             <a href="">
-                            <img class="promo-product-img"  src="https://nhualaysang.com/uploads/images/slide/tam-nhua-lay-sang.jpg" alt="">
+                            <img class="promo-product-img"  src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_3.png" alt="">
                             </a>
                         </div>
                     </div>

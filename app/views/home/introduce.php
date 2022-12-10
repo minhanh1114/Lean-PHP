@@ -11,6 +11,7 @@
         font-size: 1.6rem;
         line-height: 2rem;
         margin: 15px 15px;
+        text-align: justify;
     }
     .main-content .text-content ul{
         font-size: 15px;

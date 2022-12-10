@@ -15,23 +15,36 @@ class News extends Controller{
         $this->data['sub_content']['dataNews'] = $this->NewsModel->getNewsSlug($slug);
 
     
-        if(!empty($this->data['sub_content']['dataNews'][0]['title']))
+        if(!empty($this->data['sub_content']['dataNews']))
         {
-
+            //get data to tag meta
             $this->data['title']=$this->data['sub_content']['dataNews'][0]['title'];
+            if(!empty($this->data['sub_content']['dataNews'][0]['description']))
+            {
+                 $this->data['description']=$this->character_limiter($this->data['sub_content']['dataNews'][0]['description'],200,false);
+            }
+            // update view 
+            $dataView['view'] =  $this->data['sub_content']['dataNews'][0]['view'] +1;
+            $condition = 'id='.$this->data['sub_content']['dataNews'][0]['id'];
+            // update view success
+            if($this->NewsModel->updateView($dataView,$condition))
+                {
+                    $this->data['content']='news/index';
+                    $this->render('layouts/client_layout', $this->data);
+                }
+            else{
+                App::loadError('exception', $data['message'] ='Update view lỗi');
+            }
         }
         else
         {
             $this->data['title'] ="Tin tức & Sự kiện";
-        }
-        if(!empty($this->data['sub_content']['dataNews'][0]['description']))
-        {
-            $this->data['description']=$this->character_limiter($this->data['sub_content']['dataNews'][0]['description'],200,false);
+            App::loadError('404', $this->data);
         }
         
+        
 
-        $this->data['content']='news/index';
-        $this->render('layouts/client_layout', $this->data);
+       
     }
     function getAllNew(){
         // 

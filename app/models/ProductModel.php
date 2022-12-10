@@ -23,9 +23,17 @@ class ProductModel extends Model{
             return $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type limit ' . $page_index . ' , ' . $limit)->fetchAll(PDO::FETCH_ASSOC);
        
     }
-    public function getToProductType($slugType)
+    public function getToProductType($slugType,$orderby="")
     {
-        return $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type where types.slug_type = ' . '"' .$slugType.'"')->fetchAll(PDO::FETCH_ASSOC);
+        if(!empty($orderby))
+        {
+            return $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type where types.slug_type = ' . '"' .$slugType.'"' .' ORDER BY ' .$orderby . ' DESC ' )->fetchAll(PDO::FETCH_ASSOC);
+        }
+        else 
+        {
+
+            return $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type where types.slug_type = ' . '"' .$slugType.'"')->fetchAll(PDO::FETCH_ASSOC);
+        }
            
     }
 
@@ -45,6 +53,9 @@ class ProductModel extends Model{
     function searchProduct($searchKey)
     {
         return $this->database->query("SELECT * FROM ".$this->_table." INNER JOIN types ON product.type = types.id_type WHERE name LIKE '%".$searchKey."%' " )->fetchAll(PDO::FETCH_ASSOC);
+    }
+    function updateView($data,$condition){
+        return $this->database->updateData($this->_table,$data,$condition);
     }
 
     function insertProduct($data)
