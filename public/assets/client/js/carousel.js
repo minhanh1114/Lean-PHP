@@ -41,9 +41,9 @@ console.log('slide 1',slideSize);
   // Click events
   prev.addEventListener('click', function () { shiftSlide(-1) });
   next.addEventListener('click', function () { shiftSlide(1) });
-  // 
+  // set chuyển slide (thời gian)
   interval_slide_one = setInterval(() => {
-    posInitial = items.offsetLeft;
+      posInitial = items.offsetLeft;
      items.classList.add('shifting');
      items.style.left = (posInitial - slideSize) + "px";
      index++;      
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function(){
   };
   
 
-
+// event change window resize
   window.addEventListener('resize', function(event) {
     clearInterval(interval_slide_one);
     setTimeout(() => {
@@ -182,6 +182,7 @@ document.addEventListener("DOMContentLoaded", function(){
     
     
   });
+  // 
   setTimeout(() => {
     slide(slider, sliderItems, prev, next);
 

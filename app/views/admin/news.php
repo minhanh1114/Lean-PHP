@@ -22,7 +22,7 @@
                                             <th>Mã</th>
                                             <th>Hình ảnh</th>
                                             <th>Tiêu đề</th>
-                                            <th>Mô tả</th>
+                                            <!-- <th>Mô tả</th> -->
                                             <th>Lượt xem</th>
                                             <th>Ngày đăng</th>
                                             <th>Plug</th>
@@ -40,7 +40,7 @@
                                                             <td><?php echo $item['id'] ?></td>
                                                             <td><img src="<?php echo _WEB_ROOT . '/public/assets/news/'. $item['img'] ?>" width="100px"/></td>
                                                             <td style="max-width: 150px;" class="text-truncate"><?php echo $item['title'] ?></td>
-                                                            <td style="max-width: 450px;" class="text-truncate"><?php echo $item['description'] ?></td>
+                                                            <!-- <td style="max-width: 450px;" class="text-truncate"><?php //echo $item['description'] ?></td> -->
                                                             <td><?php echo $item['view'] ?></td>
                                                             <td><?php echo $item['date'] ?></td>
                                                             <td><?php echo $item['slug'] ?></td>

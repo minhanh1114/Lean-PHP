@@ -25,7 +25,7 @@
                                             <th>Hình ảnh</th>
                                             <th>Tên sản phẩm</th>
                                             <th>Tóm tắt</th>
-                                            <th>Mô tả</th>
+                                            <!-- <th>Mô tả</th> -->
                                             <th>Loại sản phẩm</th>
                                             <th>Ngày đăng</th>
                                             <th>Plug</th>
@@ -44,7 +44,7 @@
                                                             <td><img src="<?php echo _WEB_ROOT . '/public/assets/products/'. $product['img'] ?>" width="100px"/></td>
                                                             <td><?php echo $product['name'] ?></td>
                                                             <td style="max-width: 150px;" class="text-truncate"><?php echo $product['des_short'] ?></td>
-                                                            <td style="max-width: 250px;" class="text-truncate"><?php echo $product['description'] ?></td>
+                                                            <!-- <td style="max-width: 250px;" class="text-truncate"><?php //echo $product['description'] ?></td> -->
                                                             <td><?php echo $product['name_type'] ?></td>
                                                             <td><?php echo $product['date'] ?></td>
                                                             <td><?php echo $product['slug'] ?></td>

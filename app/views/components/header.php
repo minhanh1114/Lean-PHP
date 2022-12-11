@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -107,18 +107,18 @@
                 
                 <div class=" col l-3 m-12 c-12 ">
                     <div class="header_mobile-contact">
-                        <a href="tel:0973022983" class="header_mobile-phone">0973 022 983</a>
+                        <a href="tel:0964297683" class="header_mobile-phone">0964 297 683</a>
                         <p>Nhân viên tư vấn</p>
                         <p>(Hỗ trợ 24/7)</p>
                     </div>
                     <div class="bar-mobile"><i class="fa-solid fa-bars"></i> <br>Menu</div>
-                    <a href="<?php echo _WEB_ROOT ?>" class="header-logo"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" alt="" ></a>
+                    <a href="<?php echo _WEB_ROOT ?>" class="header-logo"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" alt="logo-cong-ty" ></a>
                  </div>
                  <div class="col l-9 m-0 c-0 header-right">
                     <div class=" header-content">
                         <a href=""  class=" header-content_item">
                              
-                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-dich-vu.png" alt="" class=" header-content_icon" >
+                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-dich-vu.png" alt="icon-dich-vu" class=" header-content_icon" >
                                 <div class=" header-content_text">
                                     <h4 class="header-content_title">dịch vụ chuyên nghiệp</h4>
                                     <p class="header-content_des">Độ tin cậy, Năng lực, Tác phong</p>
@@ -127,7 +127,7 @@
                         </a>
                         <a href="" class=" header-content_item">
                             
-                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-san-pham.jpg" alt="" class="  header-content_icon">
+                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-san-pham.jpg" alt="icon-san-pham" class="  header-content_icon">
                                 <div class=" header-content_text">
                                     <h4 class="header-content_title">SẢN PHẨM CHẤT LƯỢNG</h4>
                                     <p class="header-content_des">Bảo hành 10 năm</p>
@@ -136,7 +136,7 @@
                         </a>
                         <a href="" class=" header-content_item">
                             
-                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-chat-luong.png" alt="" class="  header-content_icon">
+                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-chat-luong.png" alt="icon-chat-luong" class="  header-content_icon">
                                 <div class=" header-content_text">
                                     <h4 class="header-content_title">UY TÍN HÀNG ĐẦU</h4>
                                     <p class="header-content_des">Năng lực & Nhiệt huyết</p>
@@ -145,7 +145,7 @@
                         </a>
                         <a href="" class=" header-content_item">
                            
-                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-handshake.png" alt="" class="  header-content_icon">
+                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-handshake.png" alt="icon-handshake" class="  header-content_icon">
                                 <div class=" header-content_text">
                                     <h4 class="header-content_title">MẪU MÃ ĐA DẠNG</h4>
                                     <p class="header-content_des">Sản phẩm chất lượng cao</p>
@@ -166,7 +166,7 @@
                 <div class="row no-gutters">
                     <div class="col  l-3 m-0 c-0" style="">
                         <nav class="category">
-                            <h1 class="category_heading">
+                            <div class="category_heading">
                                 <div class="category_heading-title">
                                     <i class="fa-solid fa-bars"></i>
                                     <span class="category_heading-text">DANH MỤC</span>
@@ -174,7 +174,7 @@
                                 <div class="category_heading-icon">
                                     <i class="fa-sharp fa-solid fa-chevron-down"></i>
                                 </div>
-                            </h1>
+                            </div>
                             <ul class="category_list">
                                 <?php foreach ($sub_content['typesProduct'] as $type)
                                         {

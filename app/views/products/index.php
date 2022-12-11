@@ -16,18 +16,18 @@
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <a href=""  class ="promo-product_link">
-                                <img class="promo-product-img" src=" <?php echo _WEB_ROOT .'/public/assets/client/images/banner-home.png' ?>" alt="" >
+                                <img class="promo-product-img" src=" <?php echo _WEB_ROOT .'/public/assets/client/images/banner-home.jpg' ?>" alt="banner-home" >
                             </a>
                             <div class="promo-product_contact">
                                 <header class="promo-product-heading">
-                                    <p class="promo-product_contact-heading">Hỗ trợ trực tuyến</p>
+                                    <h2 class="promo-product_contact-heading">Hỗ trợ trực tuyến</h2>
                                 </header>
                                 <div class="promo-product_contact">
-                                    <h2 class="promo-product_title">Hỗ trợ bán hàng</h2>
+                                    <h4 class="promo-product_title">Hỗ trợ bán hàng</h4>
                                     <p class="promo-product_phone">0964 297 683</p>
                                 </div>
                                 <div class="promo-product_contact">
-                                    <h2 class="promo-product_title">Hỗ trợ kĩ thuật</h2>
+                                    <h4 class="promo-product_title">Hỗ trợ kĩ thuật</h4>
                                     <p class="promo-product_phone">0973 022 983</p>
                                 </div>
                                 
@@ -43,15 +43,13 @@
                                     echo '<h2 style="text-align: center; width: 100%; padding: 15px"> Không có sản phẩm nào </h2>';
                                    }
                                    else{
-
-                                   
                                             foreach($dataProduct as $product)
                                             {
                                             ?>
                                                 <div class="col l-3 m-4 c-6">
                                                         <a href="<?php echo _WEB_ROOT . '/san-pham/'. $product['slug'] .'.html' ?>" class="home-product_item">
-                                                            <img class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'. $product['img'] ?>"></img>
-                                                            <h4 class="home-product_heading"><?php echo $product['name'] ?></h4>
+                                                            <img class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'. $product['img'] ?>" alt="<?php echo $product['name'] ?>"></img>
+                                                            <h3 class="home-product_heading"><?php echo $product['name'] ?></h3>
                                                             <p class="home-product_code">Mã sản phẩm: <?php echo $product['code'] ?></p>
                                                             <p class="hom-product-price">Liên hệ</p>
                                                         </a>

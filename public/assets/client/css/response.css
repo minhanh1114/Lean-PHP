@@ -60,6 +60,14 @@
     .hotline-phone_ring{
         left: 0px; 
     }
+    #btn_gototop{
+        display: none !important;
+    }
+    .control{
+        height: 30px;
+        width: 30px;
+        font-size: 1.4rem;
+    }
    
    
 }
@@ -86,6 +94,9 @@
     .promo-product{
         display: none;
     }
+    .home-product_heading{
+        font-weight: 500;
+    }
     .dot-mobile{
         display: block;
     }
@@ -95,5 +106,13 @@
     .footer__hedding{
         margin-top: 20px;
         text-align: center;
+    }
+    
+}
+@media (max-width:400px)
+{
+
+    .product-offer_contact{
+        padding: 8px 29px;
     }
 }

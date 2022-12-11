@@ -5,7 +5,7 @@ $config['app'] = [
         'admin/product' => AuthMiddleware::class,
         'admin/news' => AuthMiddleware::class,
         'admin/user' => AuthMiddleware::class,
-        // 'san-pham' => AuthMiddleware::class
+        'quantri' => AuthMiddleware::class
 
     ],
     'globalMiddleware' => [

@@ -70,7 +70,7 @@ function index(){
         {
             $page = 1;
         }
-        $limit = 5;
+        $limit = 8;
         $page_index = ($page-1) * $limit; 
         //  lấy dữ liêu từ đâu đến đâu
         $dataNews = array_reverse($this->NewsModel->getAllNews($page_index,$limit));

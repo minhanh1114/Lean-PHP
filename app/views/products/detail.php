@@ -3,19 +3,19 @@
                             
                             <div class="col l-6 m-12 c-12">
                                 <div class="product-img_container">
-                                    <img class="product-img" src="<?php  echo _WEB_ROOT . '/public/assets/products/'. $dataProduct[0]['img'] ?>" alt="">
+                                    <img class="product-img" src="<?php  echo _WEB_ROOT . '/public/assets/products/'. $dataProduct[0]['img'] ?>" alt="<?php echo $dataProduct[0]['name'] ?>">
                                 </div>
                             </div>
                             <div class="col l-6 m-12 c-12">
                                 <div class="product-info">
-                                    <div class="product-title"><?php  echo $dataProduct[0]['name'] ?></div>
+                                    <h1 class="product-title"><?php  echo $dataProduct[0]['name'] ?></h1>
                                     <p class="product-des">
                                     <?php  echo $dataProduct[0]['des_short'] ?>
                                     </p>
                                     <p class="product-status">Tình trạng: Còn hàng</p>
                                     <div class="product-submit">
-                                        <a href="" class="buy-product">Mua ngay</a>
-                                        <a href="" class="product-contact">Liên hệ</a>
+                                        <a href="tel:0973 022 983" class="buy-product">Mua ngay</a>
+                                        <a href="><?php  echo _WEB_ROOT . '/lien-he' ?>" class="product-contact">Liên hệ</a>
                                     </div>
                                     
                                 </div>
@@ -24,9 +24,9 @@
                         
                     </div>
                     <div class="product-offer_container">
-                    <h1 class="product-offer_heading">
+                    <h2 class="product-offer_heading">
                         <span>Sản phẩm đề xuất</span>
-                    </h1>
+                    </h2>
                     
                     <div class="row">
 
@@ -42,10 +42,10 @@
                             <div  class="product-offer">
                                 <a href="<?php  echo _WEB_ROOT .'/san-pham/'. $product['slug']?>.html" style="display: block;">
                                     <div class="product-offer_img">
-                                        <img height="150px" src="<?php  echo _WEB_ROOT . '/public/assets/products/'. $product['img'] ?>" alt="">
+                                        <img height="150px" src="<?php  echo _WEB_ROOT . '/public/assets/products/'. $product['img'] ?>" alt="<?php echo $product['name'] ?>">
                                     </div>
                                 
-                                    <h2  class="product-offer_title"><?php echo $product['name'] ?></h2>
+                                    <h3  class="product-offer_title"><?php echo $product['name'] ?></h3>
                                 
                                 </a>
                                 

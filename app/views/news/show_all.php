@@ -16,11 +16,11 @@
                                                 <a href="<?php echo _WEB_ROOT.'/tin-tuc/'. $news['slug'] . '.html' ?> " class="home-news">
                                                     <div class="row no-gutters">
                                                        <div class="col l-5 m-5 c-5">
-                                                           <img class="home-news_img offer-img" src="<?php echo _WEB_ROOT . '/public/assets/news/'. $news['img'] ?>"></img>
+                                                           <img class="home-news_img" src="<?php echo _WEB_ROOT . '/public/assets/news/'. $news['img'] ?>" alt="<?php echo $news['title'] ?>" ></img>
                                                        </div> 
                                                        <div class="col l-7 m-7 c-7">
                                                             <div class="home-new_content offer-content">
-                                                                <p class="hom-news-des"><?php echo $news['title'] ?></p>
+                                                                <h3 class="hom-news-des"><?php echo $news['title'] ?></h3>
                                                                 <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news['date']); echo $dt->format('m/d/Y');?></p>
                                                                 <p class="new_offer-description"><?php echo $news['description'] ?></p>
                                                             </div>
@@ -44,11 +44,11 @@
                                                     <a href="<?php echo _WEB_ROOT . '/tin-tuc/'  . $news['slug'] .'.html' ?>" class="home-news">
                                                         <div class="row no-gutters">
                                                         <div class="col l-5 m-5 c-5">
-                                                            <img class="home-news_img offer-img" src="<?php echo _WEB_ROOT . '/public/assets/news/' . $news['img'] ?>"></img>
+                                                            <img class="home-news_img offer-img " src="<?php echo _WEB_ROOT . '/public/assets/news/' . $news['img'] ?>" alt="<?php echo $news['title'] ?>"></img>
                                                         </div> 
                                                         <div class="col l-7 m-7 c-7">
                                                                 <div class="home-new_content offer-content">
-                                                                    <p class="hom-news-des"><?php echo $news['title'] ?></p>
+                                                                    <h3 class="hom-news-title offer-title"><?php echo $news['title'] ?></h3>
                                                                     <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news['date']); echo $dt->format('m/d/Y');?> </p>
                                                                    
                                                                 </div>

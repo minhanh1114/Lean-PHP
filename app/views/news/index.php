@@ -18,9 +18,9 @@
 
                <!-- content -->
                <div class="product-offer_container">
-                    <h1 class="product-offer_heading">
+                    <h2 class="product-offer_heading">
                         <span>Tin tức đề xuất</span>
-                    </h1>
+                    </h2>
                     
                     <div class="row">
 
@@ -34,10 +34,10 @@
                             <div  class="product-offer">
                                 <a href="<?php echo _WEB_ROOT .'/tin-tuc/'.$news['slug'] .'.html' ?>" style="display: block;">
                                     <div class="product-offer_img">
-                                        <img src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news['img'] ?>" alt="">
+                                        <img src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news['img'] ?>" alt="<?php echo $news['title'] ?>">
                                     </div>
                                     <div class="product-offer_title">
-                                        <h2><?php echo $news['title'] ?></h2>
+                                        <h3><?php echo $news['title'] ?></h3>
                                     </div>
                                 </a>
                                 <div class="product-offer_code">

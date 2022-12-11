@@ -68,7 +68,7 @@ function index(){
                 $page = 1;
         }
         // phân trnag
-        $limit = 5;
+        $limit = 8;
         $page_index = ($page-1) * $limit; 
         //  lấy dữ liêu từ đâu đến đâu    
         $this->data['sub_content']['products'] = array_reverse($this->ProductModel->getProductsPagination($page_index,$limit));

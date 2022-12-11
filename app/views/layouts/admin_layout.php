@@ -66,7 +66,7 @@
 
             <ul class="nav">
                 <li >
-                    <a href="dashboard.html">
+                    <a href="<?php echo _WEB_ROOT . '/quantri'?>">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
