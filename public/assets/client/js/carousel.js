@@ -50,7 +50,7 @@ console.log('slide 1',slideSize);
      
    }, 8000);
    window.addEventListener('blur', (e) => {
-    console.log('leave tab');
+    // console.log('leave tab');
     clearInterval(interval_slide_one);
 
   });
@@ -109,7 +109,7 @@ console.log('slide 1',slideSize);
     if (allowShift) {
       if (!action) {
         posInitial = items.offsetLeft; }
-        console.log(posInitial);
+        // console.log(posInitial);
 
       if (dir == 1) {
         items.style.left = (posInitial - slideSize) + "px";

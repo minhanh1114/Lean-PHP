@@ -10,7 +10,7 @@
                                 <div class="product-info">
                                     <h1 class="product-title"><?php  echo $dataProduct[0]['name'] ?></h1>
                                     <p class="product-des">
-                                    <?php  echo $dataProduct[0]['des_short'] ?>
+                                    <?php  echo $this->character_limiter ($dataProduct[0]['des_short'],501,false) ?>
                                     </p>
                                     <p class="product-status">Tình trạng: Còn hàng</p>
                                     <div class="product-submit">

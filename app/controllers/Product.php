@@ -15,10 +15,10 @@ class Product extends Controller{
         {
                 // mô tả tag meta
                 $this->data['title'] = $this->data['sub_content']['dataProduct'][0]['name'];
-                
+                $this->data['image'] = 'products/' . $this->data['sub_content']['dataProduct'][0]['img'];
                 if(!empty($this->data['sub_content']['dataProduct'][0]['des_short']))
                 {
-                    $this->data['description'] = $this->data['sub_content']['dataProduct'][0]['des_short'];
+                    $this->data['description'] = $this->character_limiter($this->data['sub_content']['dataProduct'][0]['des_short'],170,false) ;
                 }
                 // update view 
                 $dataView['view'] =  $this->data['sub_content']['dataProduct'][0]['view'] +1;

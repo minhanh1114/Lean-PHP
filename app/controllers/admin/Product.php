@@ -108,7 +108,11 @@ function postAddProduct(){
     $extension = end($fileName);
     $newName = md5(uniqid()) .'.'. $extension;
 
+
+    // if($data['des_short'])
+
     // check type image upload
+    
     if(in_array($extension,$type_allow))
     {
         $size = $file['size']/1024/1024; //  bytes->mb

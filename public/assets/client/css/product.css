@@ -859,6 +859,7 @@ color: var(--white-color);
 
 }
 .open_bar-mobile{
+    list-style: none;
     display: block;
 }
 .hidden_scroll{

@@ -39,9 +39,12 @@
 
 
     <style>
-        .ck-editor__editable {
+        .description .ck-editor__editable {
                 min-height: 500px !important;
             }
+        /* .des_short .ck-editor__editable {
+                min-height: 200px !important;
+            } */
         </style>
 </head>
 
@@ -90,21 +93,21 @@
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
+                    <a href="<?php echo _WEB_ROOT . '/admin/Dashboard/icons'?>">
                         <i class="pe-7s-science"></i>
                         <p>Icons</p>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="maps.html">
                         <i class="pe-7s-map-marker"></i>
                         <p>Maps</p>
                     </a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="notifications.html">
+                    <a href="<?php echo _WEB_ROOT . '/admin/Dashboard/notification'?>">
                         <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
+                        <p>Notification</p>
                     </a>
                 </li>
 				
@@ -245,7 +248,6 @@
         	
     	});
 	</script>
-<!-- end -->
 
-123321
+
 </html>

@@ -19,6 +19,8 @@ class News extends Controller{
         {
             //get data to tag meta
             $this->data['title']=$this->data['sub_content']['dataNews'][0]['title'];
+            $this->data['image'] = 'news/' . $this->data['sub_content']['dataNews'][0]['img'];
+            
             if(!empty($this->data['sub_content']['dataNews'][0]['description']))
             {
                  $this->data['description']=$this->character_limiter($this->data['sub_content']['dataNews'][0]['description'],200,false);

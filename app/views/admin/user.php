@@ -50,12 +50,3 @@
                     </div>
                 </div>
             </div>
-
-    <script>
-        <?php 
-        if(!empty($mess))
-        {
-            echo "alert('".$mess."')";
-        }
-        ?>
-    </script>

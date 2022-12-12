@@ -10,8 +10,8 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?php echo empty($title)? "Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam": $title ?>">
     <meta property="og:description" content="<?php echo empty($description)? 'Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.': $description ?>">
-    <meta property="og:url" content="<?php echo _WEB_ROOT ?>">
-    <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
+    <meta property="og:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
+    <meta property="og:image" content="<?php  echo  empty($image)? _WEB_ROOT .'/public/assets/client/images/logo.jpg':  _WEB_ROOT .'/public/assets/'. $image ?>">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:height" content="900">
     <meta property="og:image:width" content="900">
@@ -19,13 +19,13 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="<?php echo empty($title)? "Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam": $title ?>">
     <meta name="twitter:description" content="<?php echo empty($description)? 'Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.': $description ?>">
-    <meta name="twitter:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
+    <meta name="twitter:image" content="<?php  echo  empty($image)? _WEB_ROOT .'/public/assets/client/images/logo.jpg':  _WEB_ROOT .'/public/assets/'. $image ?>">
     <meta name=”geo.region” content=”VN-HN” />
     <meta name="geo.position" content="20.9922614 , 105.8884573" />
     <meta name="ICBM" content="20.9922614,105.8884573" />
-    <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
+    <meta property="og:image" content="<?php  echo  empty($image)? _WEB_ROOT .'/public/assets/client/images/logo.jpg':  _WEB_ROOT .'/public/assets/'. $image ?>">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="<?php echo _WEB_ROOT ?>">
+    <link rel="canonical" href="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
     <link rel="icon" href="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>" type="image/jpg" sizes="30x30">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

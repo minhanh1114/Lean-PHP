@@ -41,9 +41,9 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-8 ">
-                                                <div class="form-group">
+                                                <div class="form-group des_short">
                                                     <label>Tóm tắt</label>
-                                                    <textarea  required name="des_short" maxlength="255" class="form-control"  rows="5" style="height: 100%;"></textarea>
+                                                    <textarea  required name="des_short" id="editor_short" maxlength="500" class="form-control"  rows="5" style="height: 100%;"></textarea>
                                                    
                                                 </div>
                                             </div>
@@ -66,9 +66,9 @@
                                         
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group">
+                                                <div class="form-group description">
                                                     <label>Mô tả</label>
-                                                    <textarea  name ="description" id="editor" rows="4" cols="80" class="form-control" p ></textarea>
+                                                    <textarea  name ="description" id="editor" rows="4" cols="80" class="form-control" ></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -86,7 +86,7 @@
          <script>
             ClassicEditor
                 .create( document.querySelector( '#editor' ), {
-                    // minHeight: '300px',
+                    // minHeight: '500px',
                     ckfinder: {
                         uploadUrl: '<?php echo _WEB_ROOT?>/public/assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
                     },
@@ -108,6 +108,9 @@
                 .catch( error => {
                     console.error( error );
                 } );
+
+           
+            
 
 
 

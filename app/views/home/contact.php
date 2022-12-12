@@ -83,6 +83,7 @@
     .map-content .icon-info{
         float: right;
         font-size: 30px;
+        text-align: center;
     }
     .icon-info .fa-facebook{
         color: blue;
@@ -107,7 +108,7 @@
                                         <p><i class="fa-solid fa-location-dot"></i><b>Nhà Máy:</b> Số 165 Lê Thanh Nghị, Phường Hoàng Tân, Thành phố Chí Linh, Tỉnh Hải Dương</p> </p>
                                         <p><i class="fa-solid fa-phone"></i>0973 022 983 – 0964 297 683 </p>
                                         <p><i class="fa-solid fa-envelope"></i>Email:<a href="tamlopnhuathanglong@gmail.com">tamlopnhuathanglong@gmail.com</a> 
-                                            – <a href="thuha1001@gmail.com">thuha1001@gmail.com</a></p>
+                                            – <a href="mailto:thuha1001@gmail.com">thuha1001@gmail.com</a></p>
                                         <p><i class="fa-solid fa-earth-americas"></i><a href="https://tonnhualaysang.vn">https://tonnhualaysang.vn</a></p>
                                     </div>
                                     <div class="col col-half address-form">
@@ -136,9 +137,8 @@
                                 </div>
                                 <div class=" icon-info">
                                     <p>Liên hệ chúng tôi</p>
-                                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                                    <a href=""><i class="fa-brands fa-youtube"></i></a>
-                                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                                    <a href="https://www.facebook.com/tonnhualaysangtanminhnhat"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="mailto:thuha1001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                                 </div>
                         </div>
                             </div>

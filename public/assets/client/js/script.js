@@ -71,3 +71,24 @@ document.getElementById('btn_gototop').addEventListener("click", function(){
     //Nếu button được click thì nhảy về đầu trang
     window.scrollTo({top: 0, behavior: 'smooth'});
 });
+
+// nhận dạng trình duyệt 
+function BrowserDetect(){
+                 
+    var userAgent = navigator.userAgent;
+    if(userAgent.match(/chrome|chromium|crios/i)){
+      
+      }
+    else if(userAgent.match(/safari/i)){
+      
+         document.getElementById('fb-root').style.display = 'none';
+    }
+   
+   
+    
+      
+}
+BrowserDetect()
+
+    
+

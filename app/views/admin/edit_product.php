@@ -48,9 +48,9 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-8">
-                                                <div class="form-group">
+                                                <div class="form-group des_short">
                                                     <label>Tóm tắt</label>
-                                                    <textarea required name="des_short" maxlength="255" class="form-control" id="exampleFormControlTextarea1" rows="5" style="height: 100%;"> <?php echo $item['des_short'] ?> </textarea>
+                                                    <textarea  required name="des_short" id="editor_short" maxlength="500" class="form-control"  rows="5" style="height: 100%;"><?php echo $item['des_short'] ?></textarea>
                                                    
                                                 </div>
                                             </div>
@@ -73,7 +73,7 @@
                                         
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group">
+                                                <div class="form-group description">
                                                     <label>Mô tả</label>
                                                     <textarea name ="description" id="editor" rows="4" cols="80" class="form-control" > <?php echo $item['description'] ?></textarea>
                                                 </div>
@@ -128,6 +128,10 @@
                 .catch( error => {
                     console.error( error );
                 } );
+                
+
+
+                
 
 
 
