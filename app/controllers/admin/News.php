@@ -80,7 +80,8 @@ function index(){
         $total = ceil($totalNews / $limit);
         $this->data['sub_content']['totalPage'] = $total;
         $this->data['sub_content']['page_index'] =  $page;
-    
+        $this->data['sub_content']['totalNews'] =  $totalNews;
+        
         $this->data['sub_content']['title'] = 'Danh Sách Tin Tức';
         $this->data['content']='admin/news';
         $this->render('layouts/admin_layout', $this->data);

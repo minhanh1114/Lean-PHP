@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đăng nhập hệ thống quản trị</title>
+  <title>Đổi mật khẩu</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -228,37 +228,46 @@ body {
 
 <div class="wrapper">
   <?php
-  if(!empty($mess))
+  $messenger = Session::flash('mess');
+  if(!empty($messenger))
   {
-    echo '<h2 class="text-danger">'.$mess.'</h2>';
+    echo '<h2 class="text-danger">'.$messenger.'</h2>';
   }
   ?>
   <div class="container">
     <div class="col-left">
       <div class="login-text">
         <h2>Xin chào quản trị viên</h2>
-        <p>Sử dụng tài khoản được <br> cung cấp để đăng nhập.</p>
+        
         <!-- <a class="btn" href="">Sign Up</a> -->
       </div>
     </div>
     <div class="col-right">
       <div class="login-form">
-        <h2>Đăng nhập</h2>
-        <form action="<?php echo _WEB_ROOT; ?>/admin/Login/checkLogin" method="POST">
+        <h2>Đổi mật khẩu</h2>
+        <form action="<?php echo _WEB_ROOT; ?>/admin/User/postChangePass" method="POST">
           <p>
             <label>Tài Khoản<span>*</span></label>
             <input name="username" type="text" placeholder="Tài khoản" required>
           </p>
           <p>
-            <label>Mật Khẩu<span>*</span></label>
-            <input name="password" type="password" placeholder="Mật khẩu" required>
+            <label>Mật Khẩu hiện tại<span>*</span></label>
+            <input name="passwordold" type="password" placeholder="Mật khẩu hiện tại" required>
           </p>
           <p>
-            <input type="submit" value="Đăng nhập" />
+            <label>Mật Khẩu mới<span>*</span></label>
+            <input id="passwordNew" name="passwordnew" type="password" placeholder="Mật khẩu mới" required>
+            <p class="text-danger " id="mess_password" style="display:none">Mật khẩu mới phải từ 6 kí tự</p>
           </p>
           <p>
-            <a id="forgot-pass" href="">Quên mật khẩu?</a>
+            <label>Xác nhận mật Khẩu mới<span>*</span></label>
+            <input  id="config_password" name="configpassword" type="password" placeholder="nhập lại mật khẩu mới" required>
+            <p class="text-danger " id="mess_config_password" style="display:none">Mật khẩu mới chưa chính xác</p>
           </p>
+          <p>
+            <input type="submit" value="Đổi mật khẩu" />
+          </p>
+          
         </form>
       </div>
     </div>
@@ -271,9 +280,42 @@ body {
 
 
   <script>
-      document.querySelector('#forgot-pass').addEventListener('click', function(){
-          alert('Xin vui lòng liên hệ người phát hành để lấy lại mật khẩu');
-      })
+     var input_configPassword = document.getElementById('config_password'),
+        input_passwordNew = document.getElementById('passwordNew')
+        mess_config_password =document.getElementById('mess_config_password'),
+        mess_password_new =document.getElementById('mess_password') ;
+
+        input_passwordNew.addEventListener('blur',function(e) {
+          if(input_passwordNew.value.length >=6)
+          {
+            mess_password_new.style.display = 'none';
+          }
+          else{
+            mess_password_new.style.display = 'block';
+          }
+        });
+        input_passwordNew.oninput = function (e)
+        {
+          if(e.target.value.length >=6)
+          {
+            mess_password_new.style.display = 'none';
+          }
+        }
+
+        input_configPassword.addEventListener('input',function(e) {
+          if(input_passwordNew.value === e.target.value )
+          {
+            mess_config_password.style.display = 'none';
+          }
+          else{
+            mess_config_password.style.display = 'block';
+
+          }
+          console.log(e.target.value);
+
+        })
+       
+
   </script>
 </body>
 </html>

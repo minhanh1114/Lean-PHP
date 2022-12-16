@@ -44,6 +44,10 @@
     .contact .address{
         margin: 15px 15px;
     }
+    .contact-phone{
+        color: #006600;
+        font-weight: 600;
+    }
     .address-form .form-control{
         margin: 10px 10px 0 0;
         padding: 10px;
@@ -86,10 +90,10 @@
         text-align: center;
     }
     .icon-info .fa-facebook{
-        color: blue;
+        color: #3692f1;
     }
     .icon-info .fa-envelope{
-        color:darkseagreen;
+        color: #57ab28;
 
     }
 </style>
@@ -106,7 +110,8 @@
                                     <div class="col col-half address-info">
                                         <p><i class="fa-solid fa-location-dot"></i><b>Văn Phòng Giao Dịch:</b> Số 32, Thanh Lân, Thanh Trì, Hoàng Mai, Hà Nội
                                         <p><i class="fa-solid fa-location-dot"></i><b>Nhà Máy:</b> Số 165 Lê Thanh Nghị, Phường Hoàng Tân, Thành phố Chí Linh, Tỉnh Hải Dương</p> </p>
-                                        <p><i class="fa-solid fa-phone"></i>0973 022 983 – 0964 297 683 </p>
+                                        <p><i class="fa-solid fa-phone"></i>
+                                        <span class="contact-phone">0973 022 983 – 0964 297 683</span> </p>
                                         <p><i class="fa-solid fa-envelope"></i>Email:<a href="tamlopnhuathanglong@gmail.com">tamlopnhuathanglong@gmail.com</a> 
                                             – <a href="mailto:thuha1001@gmail.com">thuha1001@gmail.com</a></p>
                                         <p><i class="fa-solid fa-earth-americas"></i><a href="https://tonnhualaysang.vn">https://tonnhualaysang.vn</a></p>

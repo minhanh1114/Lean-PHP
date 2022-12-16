@@ -44,24 +44,32 @@ class Product extends Controller{
     {   
         $request = new Request();
         $dataRequest = $request->getDataRequest();
+        
+        $this->data['sub_content']['dataSelectOrderby'] = ['sort'=>'Thứ tự mặc định','popularity'=>'Thứ tự theo phổ biến','date'=>'Mới nhất'];
         if(!empty($dataRequest['orderby']))
         {
             $orderby =$dataRequest['orderby'];
+            $this->data['sub_content']['orderby'] = $orderby;
             if($orderby == 'date')
             {
                  $this->data['sub_content']['dataProduct'] = $this->ProductModel->getToProductType($slug,$orderby);
 
             }
-            else
+            else if($orderby == 'popularity ')
             {
                 //popularity 
                 $orderby ='view';
                 $this->data['sub_content']['dataProduct'] = $this->ProductModel->getToProductType($slug,$orderby);
             }
+            else{
+
+                $this->data['sub_content']['dataProduct'] = $this->ProductModel->getToProductType($slug);
+            }
 
         }
-        else{
-
+        else
+        {
+            $this->data['sub_content']['orderby'] ='sort';
             $this->data['sub_content']['dataProduct'] = $this->ProductModel->getToProductType($slug);
         }
 

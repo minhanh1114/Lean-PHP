@@ -24,6 +24,11 @@ class Request {
     function getDataRequest()
     {
         $dataRequest=[];
+        // if($post)
+        // {
+
+        // }
+        
         if($this->isGet())
         {
             if(!empty($_GET))

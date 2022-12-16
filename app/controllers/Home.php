@@ -36,6 +36,27 @@ class Home extends Controller{
         $this->data['content'] = 'home/contact';
         $this->render('layouts/client_layout', $this->data);
     }
+    public function subRouter($content)
+    {
+        $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
+        if($content == 'huong-dan-mua-hang')
+        { 
+            $this->data['title'] = 'Hướng dẫn mua hàng';
+            $this->data['content'] = 'home/policy';
+            $this->render('layouts/client_layout', $this->data);
+        }
+        else if ($content == 'huong-dan-thi-cong'){
+            $this->data['title'] = 'Hướng dẫn thi công';
+            $this->data['content'] = 'home/construction';
+            $this->render('layouts/client_layout', $this->data);
+        }
+        else if ($content == 'chinh-sach-va-quy-dinh-chung'){
+            $this->data['title'] = 'Chính sách và quy định chung';
+            $this->data['content'] = 'home/generalRules';
+            $this->render('layouts/client_layout', $this->data);
+        }
+        
+    }
     public function introduce()
     {
         $this->data['title'] = 'Giới thiệu';

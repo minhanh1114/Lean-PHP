@@ -39,7 +39,7 @@
 
 
     <style>
-        .description .ck-editor__editable {
+        .ck-editor__editable {
                 min-height: 500px !important;
             }
         /* .des_short .ck-editor__editable {
@@ -76,7 +76,7 @@
                 </li>
                 <li>
                     <a href="<?php echo _WEB_ROOT . '/admin/product' ?>">
-                        <i class="pe-7s-user"></i>
+                        <i class="pe-7s-box2"></i>
                         <p>Sản Phẩm</p>
                     </a>
                 </li>

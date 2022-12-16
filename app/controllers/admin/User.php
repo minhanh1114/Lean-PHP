@@ -29,6 +29,27 @@ class User extends Controller{
         }
         return implode($pass); //turn the array into a string
     }
+    function changePass()
+    {
+        $this->render('admin/changepass', $this->data);
+    }
+    function postChangePass()
+    {
+        $response = new Response();
+        $request = new Request();
+        $dataResquest =   $request->getDataRequest();
+        if($dataResquest['configpassword']!= $dataResquest['passwordnew'] )
+        {
+            Session::flash('mess','Đổi mật khẩu thất bại');
+            $response->redirect('admin/user/changePass');
+        }
+        else
+        {
+            Session::flash('mess','Vui lòng liên hệ với người phát triển để thay đổi mật khẩu');
+            $response->redirect('admin/user/changePass');
+        }
+        
+    }
     function resetPass($id)
     {
 
@@ -41,7 +62,8 @@ class User extends Controller{
             $newPasswordHash = md5($newPassword);
             $resetData['password'] = $newPasswordHash;
             $this->User->updateUser($resetData,$condition);
-            $response->redirect('admin/user','Mật khẩu mới:'.$newPassword );
+            Session::flash('mess','Mật khẩu mới:'.$newPassword);
+            $response->redirect('admin/user');
         }
         else
         {

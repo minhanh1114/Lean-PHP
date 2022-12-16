@@ -196,7 +196,7 @@ font-weight: 500;
     top:40px;
     left: 0;
     list-style: none;
-    z-index: 9999;
+    z-index: 997;
     background-color: var(--private-color);
     border-radius: 6px;
     padding: 8px 0;
@@ -625,7 +625,7 @@ flex:1
 }
 .bar_menu-mobile{
     position: fixed;
-    z-index: 1000;
+    z-index: 999;
     top: 0;
     bottom: 0;
     left: 0;
@@ -742,6 +742,7 @@ color: var(--white-color);
     position: fixed;
     left: 20px;
     bottom: 90px;
+    z-index: 998;
 
 }
 .hotline-zalo-ring-circle{
@@ -805,6 +806,7 @@ color: var(--white-color);
     position: fixed;
     left: 20px;
     bottom: 20px;
+    z-index: 998;
 
 }
 .hotline-phone-ring{
@@ -925,7 +927,7 @@ color: var(--white-color);
     border: 2px solid var(--text-color);
     color: var(--text-color);
     cursor: pointer;
-    padding: 8px 10px;
+    padding: 8px 9px;
     font-size: 1.6rem;
     border-radius: 50%;
   }

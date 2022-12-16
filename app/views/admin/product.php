@@ -6,7 +6,7 @@
                                 <div class="card-header ">
                                 <div class="row">
                                     <div class="col-md-7">
-                                        <h3 class="card-title">Danh sách các sản phẩm</h3>
+                                        <h3 class="card-title">Danh sách các sản phẩm (<?php echo empty($totalProduct)? count($products): $totalProduct ?>)</h3>
                                         <a href="./product/addProduct" class="btn btn-primary">Thêm sản phẩm</a>
                                     </div>
                                     <div class="col-md-5">

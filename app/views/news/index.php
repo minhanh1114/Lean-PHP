@@ -2,10 +2,11 @@
                     <div class="row">
                         <div class="col l-12 m-12 c-12">
                             <div class="show-news-describe">
-                                <p class="show-news-date"><i class="fa-solid fa-calendar-days"></i> Ngày đăng: <?php $dt = new DateTime($dataNews[0]['date']); echo $dt->format('m/d/Y');?>
-                                  <span class="show-news_view">  <i class="fa-solid fa-eye"></i> Lượt xem: <?php  echo $dataNews[0]['view'] ?></span>
-                                </p>
+                                
                                     <h1 class="show-news-heading"><?php  echo $dataNews[0]['title'] ?></h1>
+                                    <p class="show-news-date"><i class="fa-solid fa-calendar-days"></i> Ngày đăng: <?php $dt = new DateTime($dataNews[0]['date']); echo $dt->format('m/d/Y');?>
+                                        <span class="show-news_view">  <i class="fa-solid fa-eye"></i> Lượt xem: <?php  echo $dataNews[0]['view'] ?></span>
+                                    </p>
                                     <div class="show-news_des-html">
                                         <?php echo htmlspecialchars_decode($dataNews[0]['description']) ?>
                                     </div>

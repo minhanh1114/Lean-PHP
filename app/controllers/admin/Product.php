@@ -55,7 +55,7 @@ function index(){
     if(!empty($param['k']))
     {
         $this->data['sub_content']['products']=$this->ProductModel->searchProduct($param['k']);
-        $this->data['sub_content']['title'] = 'tìm kiếm sản phẩm';
+        $this->data['sub_content']['title'] = 'Tìm kiếm sản phẩm';
         $this->data['content']='admin/product';
         $this->render('layouts/admin_layout', $this->data);
     }
@@ -72,13 +72,14 @@ function index(){
         $page_index = ($page-1) * $limit; 
         //  lấy dữ liêu từ đâu đến đâu    
         $this->data['sub_content']['products'] = array_reverse($this->ProductModel->getProductsPagination($page_index,$limit));
-        $totalNews= $this->ProductModel->getCountProduct();
-        $totalNews = $totalNews[0][0];
-        $total = ceil($totalNews / $limit);
-        $this->data['sub_content']['totalPage'] = $total;
-        $this->data['sub_content']['page_index'] =  $page;
+        $totalProduct= $this->ProductModel->getCountProduct();
+        $totalProduct = $totalProduct[0][0];
+        $total = ceil($totalProduct / $limit);
+        $this->data['sub_content']['totalPage'] = $total;// sổng số trang
+        $this->data['sub_content']['page_index'] =  $page;//page hiện tại
+        $this->data['sub_content']['totalProduct'] =  $totalProduct; //tổng số sản phẩm
         // phân trang
-        $this->data['sub_content']['title'] = 'sản phẩm';
+        $this->data['sub_content']['title'] = 'Quản lí sản phẩm';
         $this->data['content']='admin/product';
         $this->render('layouts/admin_layout', $this->data);
 }

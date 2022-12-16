@@ -200,7 +200,7 @@ font-weight: 500;
     top:40px;
     left: 0;
     list-style: none;
-    z-index: 9999;
+    z-index: 997;
     background-color: var(--private-color);
     border-radius: 6px;
 
@@ -270,7 +270,7 @@ position: relative;
 }
 .category_list{
     position: absolute;
-    z-index: 999;
+    z-index: 997;
     display: none;
     padding-top: 30px;
     border-bottom: 1px var(--color-gray) solid;
@@ -760,7 +760,7 @@ justify-content: space-evenly;
 }
 .bar_menu-mobile{
     position: fixed;
-    z-index: 1000;
+    z-index: 999;
     top: 0;
     bottom: 0;
     left: 0;
@@ -869,6 +869,8 @@ color: var(--white-color);
     position: fixed;
     left: 20px;
     bottom: 90px;
+    z-index: 998;
+    
 
 }
 .hotline-zalo-ring-circle{
@@ -932,6 +934,7 @@ color: var(--white-color);
     position: fixed;
     left: 20px;
     bottom: 20px;
+    z-index: 998;
 
 }
 .hotline-phone-ring{
@@ -1112,12 +1115,37 @@ flex:1
 .home-news_img.offer-img{
     /* margin-left: 10px; */
 }
+.show-news_des-html{
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    font-family: Arial;
+    text-align: justify;
+    margin: 0 0 10px 0;
+}
 .show-news_des-html p ,
 .show-news_des-html li{
     font-size: 1.6rem;
     line-height: 2.3rem;
     font-family: Arial;
     text-align: justify;
+    margin: 0 0 10px 0;
+    
+}
+.show-news_des-html h1 {
+    font-size: 2.3rem !important;
+    margin: 0 0 10px 0;
+}
+.show-news_des-html h2 {
+    font-size: 2.1rem !important;
+    margin: 0 0 10px 0;
+}
+.show-news_des-html h3 {
+    font-size: 1.9rem !important;
+    margin: 0 0 10px 0;
+}
+.show-news_des-html h4 {
+    font-size: 1.7rem !important;
+    margin: 0 0 10px 0;
 }
 .show-news_des-html li{
     margin-left: 20px;
@@ -1128,7 +1156,7 @@ flex:1
 }
 .show-news-date{
     font-size: 1.3rem;
-    padding-bottom: 10px;
+    padding: 10px 0;
 }
 .show-news-heading{
     line-height: 3rem;
@@ -1185,7 +1213,7 @@ flex:1
     border: 2px solid var(--text-color);
     color: var(--text-color);
     cursor: pointer;
-    padding: 8px 10px;
+    padding: 8px 9px;
     font-size: 1.6rem;
     border-radius: 50%;
   }

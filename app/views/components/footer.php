@@ -83,14 +83,14 @@
                                 <a href="<?php echo _WEB_ROOT . '/gioi-thieu'?>" class="footer-item_link">Giới Thiệu</a>
                             </li>
                             <li class="footer-item">
-                                <a href="#" class="footer-item_link">Trung Tâm Trợ Giúp</a>
+                                <a href="<?php echo _WEB_ROOT ?>/chinh-sach-va-quy-dinh-chung.html" class="footer-item_link">Chính sách và quy định chung</a>
                             </li>
                             <li class="footer-item">
-                                <a href="#" class="footer-item_link">Hướng dẫn thi công</a>
+                                <a href="<?php echo _WEB_ROOT ?>/huong-dan-thi-cong.html" class="footer-item_link">Hướng dẫn thi công</a>
                             </li>
                             
                             <li class="footer-item">
-                                <a href="#" class="footer-item_link">Hướng Dẫn Mua Hàng</a>
+                                <a href="<?php echo _WEB_ROOT ?>/huong-dan-mua-hang.html" class="footer-item_link">Chính sách giao hàng</a>
                             </li>
                             <li class="footer-item">
                                 <a href="https://www.facebook.com/tonnhualaysangtanminhnhat" class="footer-item_link">

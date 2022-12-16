@@ -15,7 +15,7 @@
                                     <p class="product-status">Tình trạng: Còn hàng</p>
                                     <div class="product-submit">
                                         <a href="tel:0973 022 983" class="buy-product">Mua ngay</a>
-                                        <a href="><?php  echo _WEB_ROOT . '/lien-he' ?>" class="product-contact">Liên hệ</a>
+                                        <a href="<?php  echo _WEB_ROOT . '/lien-he' ?>" class="product-contact">Liên hệ</a>
                                     </div>
                                     
                                 </div>

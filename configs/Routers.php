@@ -6,7 +6,9 @@ $routers['trang-chu'] = 'home';
 $routers['gioi-thieu'] = 'home/introduce';
 $routers['lien-he'] = 'home/contact';
 $routers['tin-tuc'] = 'news/getAllNew'; // tin tức
-$routers['search'] = 'home/search'; // tin tức
+$routers['search'] = 'home/search'; 
+
+$routers['(.*).html'] = 'home/subRouter/$1'; // tin tức
 
 $routers['tin-tuc/(.*).html'] = 'news/index/$1'; // tin tức
 $routers['san-pham/(.*).html'] = 'product/index/$1'; // 

@@ -33,7 +33,7 @@
                                                             <td>
                                                                 <a  class =" btn btn-success" href="<?php echo _WEB_ROOT . '/admin/user/resetPass/'. $item['id'] ?> "><i class="fa fa-edit"></i> Reset mật khẩu</a>
                                                             
-                                                                <a class="btn btn-warning" href="<?php echo _WEB_ROOT . '/admin/news/changePass/'. $item['id'] ?> "><i class="fa fa-times"></i>Thay đổi mật khẩu</a></td>
+                                                                <a class="btn btn-warning" href="<?php echo _WEB_ROOT . '/admin/user/changePass/'. $item['id'] ?> ">Thay đổi mật khẩu</a></td>
                                                             
                                                  </tr>
                                                  <?php 

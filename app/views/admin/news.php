@@ -6,7 +6,7 @@
                                 <div class="card-header ">
                                 <div class="row">
                                     <div class="col-md-7">    
-                                        <h3 class="card-title">Danh Sách Tin Tức</h3>
+                                        <h3 class="card-title">Danh Sách Tin Tức(<?php echo empty($totalNews)? count($news): $totalNews ?>)</h3>
                                         <a href="<?php echo _WEB_ROOT . '/admin/news/addNews/' ?>" class="btn btn-primary">Thêm Tin Tức</a>
                                     </div>
                                     <div class="col-md-5">  

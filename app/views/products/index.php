@@ -7,9 +7,12 @@
                         <p>Số lượng sản phẩm: <?php echo count($dataProduct)<0? "0": count($dataProduct) ?></p>
                         <form action="" method="get" class="product-catalog_form">
                             <select class="product-catalog_select" name="orderby" class="orderby" aria-label="Đơn hàng của cửa hàng" >
-                                <option value="sort" selected="selected" >Thứ tự mặc định</option>
-                                <option value="popularity">Thứ tự theo phổ biến</option>
-                                <option value="date" >Mới nhất</option>
+                                <?php 
+                                foreach($dataSelectOrderby as $key => $value)
+                                {
+                                ?>
+                                  <option value="<?php echo $key ?>" <?php if($orderby == $key) echo 'selected="selected"' ?>  ><?php echo $value ?></option>
+                            <?php }?>
                             </select>
                         </form>
                     </div>
