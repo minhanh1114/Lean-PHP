@@ -3,9 +3,15 @@
         color: #00a651;
     }
 </style>
+<div class="breadcrumb">
+                        <span class="">
+                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
+                            <span class="breadcrumb_last">Hướng dẫn thi công</span>
+                        </span>
+</div>
 <div class="show-news_des-html policy">
-    <h1 class="title">Chính sách và quy định chung</h1>
-    <h2 class="title">A. Quy định và hình thức thanh toán</h2>
+    <h1 class="title">Hướng dẫn thi công</h1>
+    <h2 class="title">A. VẬN CHUYỂN VÀ BẢO QUẢN TẤM TRƯỚC KHI THI CÔNG</h2>
     <p>Sau khi nhận sản phẩm nếu quý khách thi công trong 72 tiếng, quý khách cần lưu ý những điều sau đây</p>
     <ul>
         <li>Tấm lợp không để cuộn nằm ngoài trời nắng mưa quá 72 tiếng.</li>

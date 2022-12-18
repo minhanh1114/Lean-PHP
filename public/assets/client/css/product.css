@@ -333,14 +333,14 @@ position: relative;
 /* breadcrumb */
 .breadcrumb{
     font-size: 1.3rem;
-    line-height: 4.4rem;
+    line-height: 1.7rem;
     border-bottom: 1px solid #e7e7e7;
     font-family: Arial, sans-serif;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
     font-weight: 400;
-    padding: 0 10px;
+    padding: 7px 10px;
 }
 .breadcrumb_last{
    color: #7e7e7e;
@@ -511,10 +511,13 @@ position: relative;
     font-size: 2.2rem;
     line-height: 2rem;
 }
+.product-code{
+    margin-bottom: 10px;
+}
 .product-des{
     font-family: 'Roboto';
     text-align: justify;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
    
 }
 .product-submit{
@@ -567,6 +570,9 @@ justify-content: space-evenly;
     padding:0px 5px;
     border-bottom: 2px solid #ececec;
 
+}
+.product-offer_title h3{
+    font-size: 1.7rem;
 }
 .product-offer_title{
     line-height: 2rem;
@@ -768,11 +774,14 @@ justify-content: space-evenly;
     background-color: rgba(0,0,0,.5);
 }
 .bar_container{
-    width: 60%;
+    width: 260px;
     height: 100%;
-    /* background-color: #f5f5f5; */
     background-color: #43A3D6;
-    animation: openBarMobile .5s ease;
+    transition: transform .2s;
+    transform: translate(-270px);
+}
+.open_bar_container{
+    transform: translate(0);
 }
 .close_bar-mobile{
 /* display: inline-block; */
@@ -803,6 +812,7 @@ color: var(--white-color);
     padding:10px 0px
 }
 .menu_mobile__link:hover{
+    /* background-color: #f5f5f5; */
     color: var(--white-color);
 
 }
@@ -821,6 +831,7 @@ color: var(--white-color);
     margin-left: 30px;
     display: flex;
     align-items: center;
+    /* width: 100%; */
     position: relative;
     margin-top: 15px;
     
@@ -851,6 +862,10 @@ color: var(--white-color);
     
   }
 .bar_mobile__submit{
+    /* position: absolute; */
+    /* top: 52%;
+    right: 20%; */
+    /* transform: translate(); */
     margin-left: -2em;
     outline: none;
     border: none;
@@ -865,6 +880,7 @@ color: var(--white-color);
 .hidden_scroll{
     overflow: hidden;
 }
+/* zalo zing */
 .hotline-zalo_ring{
     position: fixed;
     left: 20px;
@@ -1286,11 +1302,4 @@ flex:1
         width: 60%;
     }
 }
-@keyframes pacman {
-    from {
-        
-    }
-    to {
-       
-    }
-}
+

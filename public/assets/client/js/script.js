@@ -9,11 +9,19 @@ const body = document.body;
 // code customer
 openMenuMobileBtn.addEventListener('click', function(){
     barMenuMobile.classList.add('open_bar-mobile');
+    setTimeout(() => {
+        
+        barContainer.classList.add('open_bar_container')
+    }, 100);
     body.classList.add('hidden_scroll');
 });
 closeBarMenuMobile.addEventListener('click', function()
 {
-   
+    if( barContainer.classList.contains('open_bar_container'))
+    {
+        barContainer.classList.remove('open_bar_container')
+    }
+    barContainer.classList.remove('open_bar_container')
 
     if(barMenuMobile.classList.contains('open_bar-mobile'))
     {
@@ -27,6 +35,10 @@ closeBarMenuMobile.addEventListener('click', function()
 
 });
 barMenuMobile.addEventListener('click',function(){
+    if( barContainer.classList.contains('open_bar_container'))
+    {
+        barContainer.classList.remove('open_bar_container')
+    }
     if(barMenuMobile.classList.contains('open_bar-mobile'))
     {
         barMenuMobile.classList.remove('open_bar-mobile');
@@ -37,7 +49,6 @@ barMenuMobile.addEventListener('click',function(){
     }
 
     
-
 
 })
 barContainer.addEventListener('click', function(e){
@@ -81,7 +92,7 @@ function BrowserDetect(){
       }
     else if(userAgent.match(/safari/i)){
       
-         document.getElementById('fb-root').style.display = 'none';
+        //  document.getElementById('fb-root').style.display = 'none';
     }
    
    

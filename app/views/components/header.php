@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<?php echo empty($description)? "Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.":$description ?>">
+    <meta name="description" content="<?php echo empty($meta_description)? "Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường.":$meta_description ?>">
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?php echo empty($title)? "Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam": $title ?>">
-    <meta property="og:description" content="<?php echo empty($description)? 'Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.': $description ?>">
+    <meta property="og:description" content="<?php echo empty($meta_description)? 'Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường.': $meta_description ?>">
     <meta property="og:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
     <meta property="og:image" content="<?php  echo  empty($image)? _WEB_ROOT .'/public/assets/client/images/logo.jpg':  _WEB_ROOT .'/public/assets/'. $image ?>">
     <meta property="og:image:type" content="image/jpeg">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="<?php echo empty($title)? "Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam": $title ?>">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="<?php echo empty($title)? "Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam": $title ?>">
-    <meta name="twitter:description" content="<?php echo empty($description)? 'Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.': $description ?>">
+    <meta name="twitter:description" content="<?php echo empty($meta_description)? 'Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường.': $meta_description ?>">
     <meta name="twitter:image" content="<?php  echo  empty($image)? _WEB_ROOT .'/public/assets/client/images/logo.jpg':  _WEB_ROOT .'/public/assets/'. $image ?>">
     <meta name=”geo.region” content=”VN-HN” />
     <meta name="geo.position" content="20.9922614 , 105.8884573" />
@@ -35,9 +35,79 @@
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css">
-    <title><?php echo empty($title)? "Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam": $title ?></title>
+    <title><?php echo empty($title)? "Tân Minh Nhật - Cơ Sở Sản Xuất Tấm Lợp Số #1 Việt Nam": $title ?></title>
+    <script type="application/ld+json">
+	{
+  	"@context": "http://schema.org",
+  	"@type": "LocalBusiness",
+	"url": "https://tonnhualaysang.vn/",
+	"logo": "https://tonnhualaysang.vn/public/assets/client/images/logo.jpg",
+	"hasMap": "https://goo.gl/maps/3GBtjMjVcXK9s8HGA",
+	"email": "thuha1001@gmail.com",
+  	"address": {
+    	"@type": "PostalAddress",
+    	"addressLocality": "Chí Linh",
+    	"addressRegion": "Hải Dương",
+    	"postalCode":"174200",
+    	"streetAddress": "165 Lê Thanh Nghị - Phường Hoàng Tân",
+        "addressCountry": "VN"
+  	},
+  	"description": "Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường.",
+  	"name": "Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật",
+  	"telephone": "0964297683",
+  	"openingHours": [ "Mo-Th 09:00-17:00", "Fr 09:00-12:00" ],
+  	"geo": {
+    	"@type": "GeoCoordinates",
+   	    "latitude": "21.133572",
+    	"longitude": "106.424753"
+ 		}, 			
+  	"sameAs" : [ "https://www.facebook.com/tonnhualaysangtanminhnhat"]
+	}
+</script>
+<?php 
+if(!empty($sub_content['dataProduct']))
+{
+    echo '<script type="application/ld+json">{"@context": "https://schema.org/","@type": "Product","name": "'. $title.'","image": "'. $image.'","description": " '. $description.'","sku":"'. $code.'","mpn": "'. $code.'","inLanguage":"vi","brand": {"@type": "Brand","name": "Tân Minh Nhật"},"aggregateRating": {"@type": "AggregateRating","ratingValue": "4.7","reviewCount": "89"},"offers": {"@type": "Offer", "priceCurrency": "VND","price": "Liên hệ", "availability": "http://schema.org/InStock"}}</script>';
+}
+else if(!empty($sub_content['dataNews']))
+{
+     echo '<script type="application/ld+json">{"@context": "http://schema.org","@type": "WebPage","name": "'. $title.'","thumbnailUrl":"'. $image.'","description": "'. $meta_description.'","inLanguage":"vi","publisher": {"@type": "ProfilePage","name": "Tân Minh Nhật" }}</script>';
+}
+?>
+
+
+
 </head>
 <body>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "383977521955804");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- mess -->
     <!-- modal bar -->
     <div class="bar_menu-mobile">
         <div class="bar_container">
@@ -228,9 +298,4 @@
                     </div>
 
                 </div>
-                <div class="breadcrumb">
-                        <span class="">
-                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
-                            <span class="breadcrumb_last"><?php echo $title ?></span>
-                        </span>
-                    </div>
+               

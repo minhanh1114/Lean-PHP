@@ -25,6 +25,12 @@
         text-decoration: underline;
     }
 </style>
+<div class="breadcrumb">
+                        <span class="">
+                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
+                            <span class="breadcrumb_last">Giới thiệu</span>
+                        </span>
+</div>
 <div class="mainContent">
                         <div class="titleContent">
                             <h1 class="title">Giới thiệu công ty</h1>

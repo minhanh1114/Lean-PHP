@@ -50,7 +50,7 @@ class NewsModel extends Model{
     }
 
     function delNews($condition){
-        $this->database->deleteData($this->_table,$condition);
+        return $this->database->deleteData($this->_table,$condition);
           
     }
 

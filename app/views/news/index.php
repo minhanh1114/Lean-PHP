@@ -1,3 +1,9 @@
+<div class="breadcrumb">
+                        <span class="">
+                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
+                            <span class="breadcrumb_last"> <a  href="<?php echo _WEB_ROOT . '/tin-tuc' ?>">Tin tức  » </a>  <?php echo $dataNews[0]['title'] ?></span>
+                        </span>
+</div>
 <div class="show-news-describe_container">
                     <div class="row">
                         <div class="col l-12 m-12 c-12">

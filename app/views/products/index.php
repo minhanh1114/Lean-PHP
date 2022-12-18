@@ -1,10 +1,17 @@
+
+<div class="breadcrumb">
+                        <span class="">
+                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
+                            <span class="breadcrumb_last"> <?php if (!empty( $dataProductAll[0]['name_type'])) echo $dataProductAll[0]['name_type'] ?></span>
+                        </span>
+</div>
  <!-- show typeProduct -->
  <div class="product-catalog">
                     <h1 class="promo-product_heading">
-                        <a href="" class="promo-text_link" > <?php  if (!empty($dataProduct[0]['name_type'])){ echo $dataProduct[0]['name_type'];} ?></a>
+                        <a href="" class="promo-text_link" > <?php  if (!empty($dataProductAll[0]['name_type'])){ echo $dataProductAll[0]['name_type'];} ?></a>
                     </h1>
                     <div class="product-catalog_fillter">
-                        <p>Số lượng sản phẩm: <?php echo count($dataProduct)<0? "0": count($dataProduct) ?></p>
+                        <p>Số lượng sản phẩm: <?php echo count($dataProductAll)<0? "0": count($dataProductAll) ?></p>
                         <form action="" method="get" class="product-catalog_form">
                             <select class="product-catalog_select" name="orderby" class="orderby" aria-label="Đơn hàng của cửa hàng" >
                                 <?php 
@@ -41,12 +48,12 @@
                                 <div class="row sm-gutter">
                                 
                                    <?php 
-                                   if(empty($dataProduct))
+                                   if(empty($dataProductAll))
                                    {
                                     echo '<h2 style="text-align: center; width: 100%; padding: 15px"> Không có sản phẩm nào </h2>';
                                    }
                                    else{
-                                            foreach($dataProduct as $product)
+                                            foreach($dataProductAll as $product)
                                             {
                                             ?>
                                                 <div class="col l-3 m-4 c-6">

@@ -15,11 +15,11 @@ class Product extends Controller{
         {
                 // mô tả tag meta
                 $this->data['title'] = $this->data['sub_content']['dataProduct'][0]['name'];
+                $this->data['code'] = $this->data['sub_content']['dataProduct'][0]['code'];
                 $this->data['image'] = 'products/' . $this->data['sub_content']['dataProduct'][0]['img'];
-                if(!empty($this->data['sub_content']['dataProduct'][0]['des_short']))
-                {
-                    $this->data['description'] = $this->character_limiter($this->data['sub_content']['dataProduct'][0]['des_short'],170,false) ;
-                }
+                $this->data['description'] = $this->character_limiter($this->data['sub_content']['dataProduct'][0]['description'],15000,false);
+                $this->data['meta_description'] = $this->data['sub_content']['dataProduct'][0]['meta_description'];
+                
                 // update view 
                 $dataView['view'] =  $this->data['sub_content']['dataProduct'][0]['view'] +1;
                 $condition = 'id='.$this->data['sub_content']['dataProduct'][0]['id'];
@@ -44,6 +44,8 @@ class Product extends Controller{
     {   
         $request = new Request();
         $dataRequest = $request->getDataRequest();
+        // load navbar
+        $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
         
         $this->data['sub_content']['dataSelectOrderby'] = ['sort'=>'Thứ tự mặc định','popularity'=>'Thứ tự theo phổ biến','date'=>'Mới nhất'];
         if(!empty($dataRequest['orderby']))
@@ -52,31 +54,30 @@ class Product extends Controller{
             $this->data['sub_content']['orderby'] = $orderby;
             if($orderby == 'date')
             {
-                 $this->data['sub_content']['dataProduct'] = $this->ProductModel->getToProductType($slug,$orderby);
+                 $this->data['sub_content']['dataProductAll'] = $this->ProductModel->getToProductType($slug,$orderby);
 
             }
             else if($orderby == 'popularity ')
             {
                 //popularity 
                 $orderby ='view';
-                $this->data['sub_content']['dataProduct'] = $this->ProductModel->getToProductType($slug,$orderby);
+                $this->data['sub_content']['dataProductAll'] = $this->ProductModel->getToProductType($slug,$orderby);
             }
             else{
 
-                $this->data['sub_content']['dataProduct'] = $this->ProductModel->getToProductType($slug);
+                $this->data['sub_content']['dataProductAll'] = $this->ProductModel->getToProductType($slug);
             }
 
         }
         else
         {
             $this->data['sub_content']['orderby'] ='sort';
-            $this->data['sub_content']['dataProduct'] = $this->ProductModel->getToProductType($slug);
+            $this->data['sub_content']['dataProductAll'] = $this->ProductModel->getToProductType($slug);
         }
 
-        $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
-        if(!empty($this->data['sub_content']['dataProduct']))
+        if(!empty($this->data['sub_content']['dataProductAll']))
         {
-            $this->data['title'] = $this->data['sub_content']['dataProduct'][0]['name_type'];
+            $this->data['title'] = $this->data['sub_content']['dataProductAll'][0]['name_type'];
         }
         else{
             

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -6,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate,tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.">
+    <meta name="description" content="Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường ">
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
-    <meta property="og:description" content="Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate,tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.">
+    <meta property="og:description" content="Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường ">
     <meta property="og:url" content="<?php echo _WEB_ROOT ?>">
     <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
     <meta property="og:image:type" content="image/jpeg">
@@ -19,7 +18,7 @@
     <meta property="og:site_name" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
-    <meta name="twitter:description" content="Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.">
+    <meta name="twitter:description" content="Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường ">
     <meta name="twitter:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
     <meta name=”geo.region” content=”VN-HN” />
     <meta name="geo.position" content="20.9922614 , 105.8884573" />
@@ -36,9 +35,67 @@
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css">
-<title>Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam</title>
+<title>Tân Minh Nhật - Cơ Sở Sản Xuất Tấm Lợp Số #1 Việt Nam</title>
+<script type="application/ld+json">
+	{
+  	"@context": "http://schema.org",
+  	"@type": "LocalBusiness",
+	"url": "https://tonnhualaysang.vn/",
+	"logo": "https://tonnhualaysang.vn/public/assets/client/images/logo.jpg",
+	"hasMap": "https://goo.gl/maps/3GBtjMjVcXK9s8HGA",
+	"email": "thuha1001@gmail.com",
+  	"address": {
+    	"@type": "PostalAddress",
+    	"addressLocality": "Chí Linh",
+    	"addressRegion": "Hải Dương",
+    	"postalCode":"174200",
+    	"streetAddress": "165 Lê Thanh Nghị - Phường Hoàng Tân",
+        "addressCountry": "VN"
+  	},
+  	"description": "Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường.",
+  	"name": "Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật",
+  	"telephone": "0964297683",
+  	"openingHours": [ "Mo-Th 09:00-17:00", "Fr 09:00-12:00" ],
+  	"geo": {
+    	"@type": "GeoCoordinates",
+   	    "latitude": "21.133572",
+    	"longitude": "106.424753"
+ 		}, 			
+  	"sameAs" : [ "https://www.facebook.com/tonnhualaysangtanminhnhat"]
+	}
+</script>
+
 </head>
 <body>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "383977521955804");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- mess -->
     <h1 style="display: none"> Tân Minh Nhật - Tấm Nhựa Lấy Sáng Bền Đẹp Tiết Kiệm Chi Phí</h1>
     <!-- modal bar -->
     <div class="bar_menu-mobile">

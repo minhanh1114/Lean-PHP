@@ -3,6 +3,12 @@
         color: #00a651;
     }
 </style>
+<div class="breadcrumb">
+                        <span class="">
+                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
+                            <span class="breadcrumb_last">Chính sách giao hàng</span>
+                        </span>
+</div>
 <div class="show-news_des-html policy">
     <h1 class="title">Chính sách giao hàng</h1>
     <p>Công ty TNHH Thương mại và sản xuất Tân Minh Nhật giao hàng miễn phí và chuyển các tỉnh đảm bảo thời gian theo yêu cầu của khách hàng. </p>

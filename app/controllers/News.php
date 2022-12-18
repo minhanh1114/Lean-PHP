@@ -20,11 +20,8 @@ class News extends Controller{
             //get data to tag meta
             $this->data['title']=$this->data['sub_content']['dataNews'][0]['title'];
             $this->data['image'] = 'news/' . $this->data['sub_content']['dataNews'][0]['img'];
-            
-            if(!empty($this->data['sub_content']['dataNews'][0]['description']))
-            {
-                 $this->data['description']=$this->character_limiter($this->data['sub_content']['dataNews'][0]['description'],200,false);
-            }
+            $this->data['meta_description']=$this->data['sub_content']['dataNews'][0]['meta_description'];
+
             // update view 
             $dataView['view'] =  $this->data['sub_content']['dataNews'][0]['view'] +1;
             $condition = 'id='.$this->data['sub_content']['dataNews'][0]['id'];
@@ -74,7 +71,7 @@ class News extends Controller{
                     
                 }
             }
-        $this->data['sub_content']['dataNews'] = $dataNews;
+        $this->data['sub_content']['dataNewsAll'] = $dataNews;
         $totalNews= $this->NewsModel->getCountNew();
         $totalNews = $totalNews[0][0];
         $total = ceil($totalNews / $limit);

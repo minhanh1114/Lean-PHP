@@ -30,7 +30,15 @@
                                         </div>
                                         
                                         <!-- update  -->
-                                        
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Meta-Description</label>
+                                                    <textarea required name="meta_description" type="text" placeholder="Nhập Meta-Description " class="form-control" rows="3" maxlength="225"> </textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">

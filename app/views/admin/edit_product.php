@@ -65,7 +65,14 @@
                                             <div class="col-md-3 ">
                                                 <div class="form-group">
                                                     <label>Lượt xem</label>
-                                                    <input required name="view" type="text" placeholder="Nhập lượt xem" class="form-control-file" value="<?php echo $item['view'] ?>" >
+                                                    <input required name="view" type="text" placeholder="Nhập lượt xem" class="form-control" value="<?php echo $item['view'] ?>" >
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="form-group">
+                                                    <label>Meta-Description</label>
+                                                    <textarea required name="meta_description" type="text" placeholder="Nhập Meta-Description " class="form-control" rows="3" maxlength="225"> <?php echo $item['meta_description'] ?></textarea>
                                                 </div>
                                             </div>
                                         </div>

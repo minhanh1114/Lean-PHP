@@ -1,3 +1,9 @@
+<div class="breadcrumb">
+                        <span class="">
+                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
+                            <span class="breadcrumb_last"><a  href="<?php echo _WEB_ROOT .'/loai-san-pham/'.$dataProduct[0]['slug_type'].'.html'?>"><?php echo $dataProduct[0]['name_type'] ?> » </a><?php echo $dataProduct[0]['name'] ?></span>
+                        </span>
+</div>
 <div class="detail-product">
                         <div class="row">
                             
@@ -9,6 +15,9 @@
                             <div class="col l-6 m-12 c-12">
                                 <div class="product-info">
                                     <h1 class="product-title"><?php  echo $dataProduct[0]['name'] ?></h1>
+                                    <p class="product-code">
+                                        Mã sản phẩm: <?php echo  $dataProduct[0]['code'] ?>
+                                    </p>
                                     <p class="product-des">
                                     <?php  echo $this->character_limiter ($dataProduct[0]['des_short'],501,false) ?>
                                     </p>

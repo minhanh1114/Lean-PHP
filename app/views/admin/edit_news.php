@@ -15,7 +15,7 @@
                                         <div class="row">
 
                                             
-                                            <div class="col-md-8 ">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label>Tiêu đề tin tức</label>
                                                     <textarea placeholder="Nhập tiêu đề tin tức" name="title" maxlength="255" class="form-control"  rows="5" style="height: 100%;"><?php echo $item['title'] ?></textarea>
@@ -25,14 +25,24 @@
                                             
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-2 ">
+                                            <div class="col-md-3">
                                                    
                                                     <div class="form-group">
                                                         <label>Lượt xem</label>
                                                         <input type="text" name="view" class="form-control" placeholder="Số lượng lượt xem"  value="<?php echo $item['view'] ?>">
                                                     </div>
                                             </div>
+                                            
+                                            <div class="col-md-9">
+                                                <div class="form-group">
+                                                    <label>Meta-Description</label>
+                                                    <textarea required name="meta_description" type="text" placeholder="Nhập Meta-Description " class="form-control" rows="3" maxlength="225"> <?php echo $item['meta_description'] ?></textarea>
+                                                </div>
+                                            </div>
+                                       
+                                            <!--  -->
                                         </div>
+                                        
                                         <div class="row">
                                            
                                             <div class="col-md-2">

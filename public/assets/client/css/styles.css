@@ -610,7 +610,7 @@ flex:1
     right: 5%;
     text-align: center;
     cursor: pointer;
-    display: none;
+    display: block;
 }
 .bar-mobile i{
     color: var(--white-color);
@@ -633,11 +633,14 @@ flex:1
     background-color: rgba(0,0,0,.5);
 }
 .bar_container{
-    width: 60%;
+    width: 260px;
     height: 100%;
-    /* background-color: #f5f5f5; */
     background-color: #43A3D6;
-    animation: openBarMobile .5s ease;
+    transition: transform .2s;
+    transform: translate(-270px);
+}
+.open_bar_container{
+    transform: translate(0);
 }
 .close_bar-mobile{
 /* display: inline-block; */
