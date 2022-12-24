@@ -234,6 +234,13 @@
         const loadingButton = document.querySelector('.loading-button');
         const modalImage = document.querySelector('.modal_image');
         const closeModalImage = document.querySelector('.close-modal_image');
+        function handleClickModalImage(){
+                modalShowImage.classList.remove('active-modal_image');
+                closeModalImage.style.display = 'none';
+                modalImage.classList.remove('active-tab_content'); 
+                document.body.classList.remove('hidden_scroll');
+                modalShowImage.removeEventListener('click',handleClickModalImage); 
+            }
         modalImage.addEventListener('click', function(e){
             e.stopPropagation();
         });
@@ -243,20 +250,17 @@
         modalShowImage.classList.add('active-modal_image');
         loadingButton.classList.add('loading');
         document.body.classList.add('hidden_scroll');
-
+        
         setTimeout(() => {
+
             loadingButton.classList.remove('loading');
              modalImage.classList.add('active-tab_content'); 
              closeModalImage.style.display = 'flex';
+             modalShowImage.addEventListener('click',handleClickModalImage );
+            
         }, 2000);
     });
-    modalShowImage.addEventListener('click', function(){
-        modalShowImage.classList.remove('active-modal_image');
-        closeModalImage.style.display = 'none';
-        modalImage.classList.remove('active-tab_content'); 
-        document.body.classList.remove('hidden_scroll');
-
-    });
+    
     });
     
 

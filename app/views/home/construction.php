@@ -9,7 +9,7 @@
                             <span class="breadcrumb_last">Hướng dẫn thi công</span>
                         </span>
 </div>
-<div class="show-news_des-html policy">
+<div class="show-news_des-html active-tab_content policy">
     <h1 class="title">Hướng dẫn thi công</h1>
     <h2 class="title">A. VẬN CHUYỂN VÀ BẢO QUẢN TẤM TRƯỚC KHI THI CÔNG</h2>
     <p>Sau khi nhận sản phẩm nếu quý khách thi công trong 72 tiếng, quý khách cần lưu ý những điều sau đây</p>

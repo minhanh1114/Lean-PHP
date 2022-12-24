@@ -9,7 +9,7 @@
                             <span class="breadcrumb_last">Chính sách giao hàng</span>
                         </span>
 </div>
-<div class="show-news_des-html policy">
+<div class="show-news_des-html active-tab_content policy">
     <h1 class="title">Chính sách giao hàng</h1>
     <p>Công ty TNHH Thương mại và sản xuất Tân Minh Nhật giao hàng miễn phí và chuyển các tỉnh đảm bảo thời gian theo yêu cầu của khách hàng. </p>
     <h2 class="title">1. Thời gian nhận được hàng là bao lâu? </h2>

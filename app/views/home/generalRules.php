@@ -9,7 +9,7 @@
                             <span class="breadcrumb_last">Chính sách và quy định chung</span>
                         </span>
 </div>
-<div class="show-news_des-html policy">
+<div class="show-news_des-html active-tab_content policy">
     <h1 class="title">Chính sách và quy định chung</h1>
     <h2 class="title">A. Quy định và hình thức thanh toán</h2>
     <p>Khách hàng thanh toán bằng tiền mặt ngay khi nhận hàng hoặc bằng hình thức theo thỏa thuận của khách hàng với công ty.</p>
