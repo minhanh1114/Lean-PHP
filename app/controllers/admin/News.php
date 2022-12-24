@@ -171,9 +171,19 @@ function del($id)
 {
     $response = new Response();
     $condition = 'id='.$id;
+    $news = $this->NewsModel->getNewsId($id);
+    $old_image= _DIR_ROOT . '/public/assets/news/'.$news['img'];
     if($this->NewsModel->delNews($condition))
     {
-        $mess ="Xóa tin tức thành công";
+        if (file_exists($old_image))
+        {
+                unlink($old_image);
+                $mess ="Xóa tin tức thành công"; 
+        }
+        else{
+                $mess ="Hình ảnh không tồn tại";
+        }
+       
     }
     else
     {
@@ -211,6 +221,16 @@ function postEdit()
                 $upload = move_uploaded_file($file['tmp_name'],$target_dir . '/' . $newName);
                 if($upload)
                 {
+                    $news = $this->NewsModel->getNewsId($data['id']);
+                    $old_image= _DIR_ROOT . '/public/assets/news/'.$news['img'];
+                    if (file_exists($old_image))
+                    {
+                            unlink($old_image);
+                            $error ="Sửa hình ảnh tin tức thành công - "; 
+                    }
+                    else{
+                            $error ="Hình ảnh không tồn tại - ";
+                    }
                     $data['img'] = $newName;
                 }
                 else{
@@ -239,11 +259,11 @@ function postEdit()
         $inserted =$this->NewsModel->updateNews($data,$condition);
         if($inserted)
         {
-            $error ="Sửa sản phẩm thành công";
+            $error +="Sửa sản phẩm thành công";
         }
         else
         {
-            $error ="Sửa sản phẩm thất bại, vui lòng kiểm tra lại";
+            $error +="Sửa sản phẩm thất bại, vui lòng kiểm tra lại";
         }
         Session::flash('mess',$error);
         $response->redirect('admin/news');

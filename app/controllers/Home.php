@@ -74,7 +74,7 @@ class Home extends Controller{
             // xử lí search
             $this->data['title'] = 'Tìm kiếm sản phẩm';
             $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
-            $this->data['sub_content']['dataProduct'] = $this->ProductModel->searchProduct($keyWord["k"]);
+            $this->data['sub_content']['dataProductSearch'] = $this->ProductModel->searchProduct($keyWord["k"]);
             $this->data['sub_content']['keySearch'] = $keyWord["k"];
             $this->data['content'] = 'home/search';
             $this->render('layouts/client_layout', $this->data);

@@ -3,6 +3,12 @@
         color: #00a651;
     }
 </style>
+<div class="breadcrumb">
+                        <span class="">
+                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
+                            <span class="breadcrumb_last">Chính sách và quy định chung</span>
+                        </span>
+</div>
 <div class="show-news_des-html policy">
     <h1 class="title">Chính sách và quy định chung</h1>
     <h2 class="title">A. Quy định và hình thức thanh toán</h2>

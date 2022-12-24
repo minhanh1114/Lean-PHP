@@ -62,7 +62,7 @@
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
+                <a href="<?php echo _WEB_ROOT ?>" class="simple-text">
                    Hệ thống quản trị
                 </a>
             </div>

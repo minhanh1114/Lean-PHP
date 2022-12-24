@@ -30,6 +30,10 @@ class NewsModel extends Model{
         $data = $this->database->query('SELECT * FROM '. $this->_table.' WHERE slug = '. '"'.$slug.'"' )->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
+    function getNewsId($id)
+    {
+        return $this->database->query('SELECT * FROM '. $this->_table.' WHERE id = ' .$id)->fetch(PDO::FETCH_ASSOC);;
+    }
     function searchNews($searchKey)
     {
         return $this->database->query('SELECT * FROM '. $this->_table.' WHERE title LIKE '. '"%'.$searchKey.'%"' )->fetchAll(PDO::FETCH_ASSOC);
@@ -50,7 +54,7 @@ class NewsModel extends Model{
     }
 
     function delNews($condition){
-        $this->database->deleteData($this->_table,$condition);
+        return $this->database->deleteData($this->_table,$condition);
           
     }
 

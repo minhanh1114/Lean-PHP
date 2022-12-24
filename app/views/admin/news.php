@@ -39,11 +39,12 @@
                                                    <tr>
                                                             <td><?php echo $item['id'] ?></td>
                                                             <td><img src="<?php echo _WEB_ROOT . '/public/assets/news/'. $item['img'] ?>" width="100px"/></td>
-                                                            <td style="max-width: 150px;" class="text-truncate"><?php echo $item['title'] ?></td>
+                                                            <td style="max-width: 300px;" class="text-truncate"><?php echo $item['title'] ?></td>
                                                             <!-- <td style="max-width: 450px;" class="text-truncate"><?php //echo $item['description'] ?></td> -->
                                                             <td><?php echo $item['view'] ?></td>
                                                             <td><?php echo $item['date'] ?></td>
-                                                            <td><?php echo $item['slug'] ?></td>
+                                                            <td style="max-width: 200px;" class="text-truncate"> <a href="<?php echo _WEB_ROOT .'/tin-tuc/'. $item['slug'].'.html' ?>"><?php echo _WEB_ROOT .'/tin-tuc/' . $item['slug'].'.html' ?> </a></td>
+
                                                             <td>
                                                                 <a  class =" btn btn-success" href="<?php echo _WEB_ROOT . '/admin/news/edit/'. $item['id'] ?> "><i class="fa fa-edit"></i> Sửa</a>
                                                             

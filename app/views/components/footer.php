@@ -38,7 +38,7 @@
          <footer class="footer">
             <div class="grid wide footer__content">
                 <div class="row">
-                    <div class="col l-4 m-4 c-12">
+                    <div class="col l-4 m-6 c-12">
                         <h4 class="footer__hedding">VỀ CHÚNG TÔI</h4>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -76,7 +76,7 @@
                             
                         </ul>
                     </div>
-                    <div class="col l-3 m-4 c-12">
+                    <div class="col l-3 m-6 c-12">
                         <h5 class="footer__hedding">Chăm sóc khách hàng</h5>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -100,7 +100,7 @@
                             
                         </ul>
                     </div>
-                    <div class="col l-2 m-4 c-12">
+                    <div class="col l-2 m-6 c-12">
                         <h5 class="footer__hedding">THANH TOÁN</h5>
                         <ul class="footer-list-tt">
                             <li class="footer-item-tt">
@@ -128,7 +128,7 @@
                        
                     </div>
                      
-                    <div class="col l-3 m-4 c-12">
+                    <div class="col l-3 m-6 c-12">
                         <h5 class="footer__hedding">Vị trí </h5>
                         <div class="footer-dowload">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d930.3682103180541!2d106.42420572922792!3d21.133572950026743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313579167eaf0125%3A0xb9c9b66790e5035e!2zQ8O0bmcgdHkgVE5ISCBUaMawxqFuZyBtYcyjaSB2YcyAIHNhzIluIHh1w6LMgXQgVMOibiBNaW5oIE5ow6LMo3Q!5e0!3m2!1svi!2s!4v1669120955913!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -152,7 +152,7 @@
             <div class="hotline-zalo-ring-circle-fill"></div>
             <div class="hotline-zalo-ring-icon">
                 <a href="https://zalo.me/0961045066">
-                    <img class="hotline-phone-ring-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/zalo.png" alt="logo-zalo">
+                    <img class="hotline-phone-ring-img" style="margin-top: 5px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/zalo.png" alt="logo-zalo">
                 </a>
             </div>
         </div>
@@ -178,8 +178,20 @@
     </div>
     <!-- go to top  -->
     <button  id="btn_gototop" title="Go to top">
-    <i class="fa-solid fa-chevron-up"></i>
+        <i class="fa-solid fa-chevron-up"></i>
     </button>
+    <!-- MODAL IMAGE -->
+    <div class="modal_show-image">
+        <div class="modal-imge_container">
+        <p class="loading-button"></p>
+        <div class="modal_image-wrap">
+            <img  class="modal_image" src ="https://www.nhualaysang.com/uploads/images/san-pham/nhua-lay-sang-dac-ruot/nhua-lay-sang-2ly5(1).jpg" alt="img-product">
+           <div class="close-modal_image">
+            <i class="fa-solid fa-x"></i>
+           </div> 
+        </div>
+        </div>
+    </div>
     
         <script >
             /// slider two

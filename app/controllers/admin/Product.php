@@ -48,10 +48,13 @@ private function create_slug($string)
         return $string;
     }
 function index(){
-   
-     $this->data['mess'] = Session::flash('mess');
+    
+    $this->data['mess'] = Session::flash('mess');
     $request = new Request();
     $param=$request->getDataRequest();
+    $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
+    $this->data['sub_content']['typeSelected']='';
+
     if(!empty($param['k']))
     {
         $this->data['sub_content']['products']=$this->ProductModel->searchProduct($param['k']);
@@ -59,29 +62,41 @@ function index(){
         $this->data['content']='admin/product';
         $this->render('layouts/admin_layout', $this->data);
     }
-        if(!empty($param["page"]))
-        {
-                $page =$param["page"];
-        }
-        else
-        {
-                $page = 1;
-        }
-        // phân trnag
-        $limit = 8;
-        $page_index = ($page-1) * $limit; 
-        //  lấy dữ liêu từ đâu đến đâu    
-        $this->data['sub_content']['products'] = array_reverse($this->ProductModel->getProductsPagination($page_index,$limit));
-        $totalProduct= $this->ProductModel->getCountProduct();
-        $totalProduct = $totalProduct[0][0];
-        $total = ceil($totalProduct / $limit);
-        $this->data['sub_content']['totalPage'] = $total;// sổng số trang
-        $this->data['sub_content']['page_index'] =  $page;//page hiện tại
-        $this->data['sub_content']['totalProduct'] =  $totalProduct; //tổng số sản phẩm
-        // phân trang
-        $this->data['sub_content']['title'] = 'Quản lí sản phẩm';
+    else if(!empty($param['type']))
+    {
+        $this->data['sub_content']['products']=$this->ProductModel->getToProductType($param['type']);
+        $this->data['sub_content']['typeSelected']=$param['type'];
+        $this->data['sub_content']['title'] = 'Tìm kiếm sản phẩm';
         $this->data['content']='admin/product';
         $this->render('layouts/admin_layout', $this->data);
+    }
+    else
+    {
+        if(!empty($param["page"]))
+        {
+            $page =$param["page"];
+        }
+        else {
+            
+            $page = 1;
+        }
+            // phân trnag
+            $limit = 8;
+            $page_index = ($page-1) * $limit; 
+            //  lấy dữ liêu từ đâu đến đâu    
+            $this->data['sub_content']['products'] = array_reverse($this->ProductModel->getProductsPagination($page_index,$limit));
+            $totalProduct= $this->ProductModel->getCountProduct();
+            $totalProduct = $totalProduct[0][0];
+            $total = ceil($totalProduct / $limit);
+            $this->data['sub_content']['totalPage'] = $total;// sổng số trang
+            $this->data['sub_content']['page_index'] =  $page;//page hiện tại
+            $this->data['sub_content']['totalProduct'] =  $totalProduct; //tổng số sản phẩm
+            // phân trang
+            $this->data['sub_content']['title'] = 'Quản lí sản phẩm';
+            $this->data['content']='admin/product';
+            $this->render('layouts/admin_layout', $this->data);
+    }
+    
 }
 function addProduct(){
   
@@ -196,10 +211,7 @@ function postEdit(){
     //delete file img old
     if (!empty($file['tmp_name']))
     {
-        // echo 'có ảnh' .  $file['tmp_name'];
-   
-    
-
+        
         // RENAME   FILE IMG
         $fileName = $file['name'];
         $fileName = explode('.',$fileName);
@@ -213,10 +225,25 @@ function postEdit(){
             if($size<=$size_allow)
             {
                 $upload = move_uploaded_file($file['tmp_name'],$target_dir . '/' . $newName);
+                
                 if($upload)
                 {
-                    $data['img'] = $newName;
-                    $error="upload thành công";
+                    //xóa ảnh cũ
+                    $product = $this->ProductModel->getProductId($data['id']);
+                    $old_image= _DIR_ROOT . '/public/assets/products/'.$product['img'];
+                    if (file_exists($old_image))
+                    {
+                        unlink($old_image);
+                        $data['img'] = $newName;
+                        $error ="upload thành công";
+                        
+                    }
+                    else{
+                        $error ="Hình ảnh không cũ không tồn tại";
+            
+                    }
+                    // end 
+                    
                 }
                 else{
                     $error="upload ảnh thất bại";
@@ -276,14 +303,32 @@ function postEdit(){
 
     function del($id){
         $response = new Response();
+        $mess='';
         $condition = 'id='.$id;
+        $product = $this->ProductModel->getProductId($id);
+        $old_image= _DIR_ROOT . '/public/assets/products/'.$product['img'];
+
+        //  echo '<pre>';
+        // print_r($product['img']);
+        // echo '</pre>';
         if($this->ProductModel->delProduct($condition))
         {
-            $mess ="Xóa sản phẩm thành công";
+            if (file_exists($old_image))
+            {
+                if(unlink($old_image))
+                {
+                    $mess ="Xóa sản phẩm thành công";
+                }
+            }
+            else{
+                $mess ="Hình ảnh không tồn tại";
+    
+            }
+
         }
         else
         {
-            $mess ="Xóa sản phẩm thất bại";
+            $mess +=" Xóa sản phẩm thất bại";
             
         }
         Session::flash('mess',$mess);

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -6,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate,tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.">
+    <meta name="description" content="Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường ">
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
-    <meta property="og:description" content="Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate,tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.">
+    <meta property="og:description" content="Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường ">
     <meta property="og:url" content="<?php echo _WEB_ROOT ?>">
     <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
     <meta property="og:image:type" content="image/jpeg">
@@ -19,13 +18,14 @@
     <meta property="og:site_name" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
-    <meta name="twitter:description" content="Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, tấm nhựa đặc, tấm cách nhiệt mái tôn, tấm cách nhiệt xốp.">
+    <meta name="twitter:description" content="Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường ">
     <meta name="twitter:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
     <meta name=”geo.region” content=”VN-HN” />
     <meta name="geo.position" content="20.9922614 , 105.8884573" />
     <meta name="ICBM" content="20.9922614,105.8884573" />
     <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
     <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="fHa5a6FbC6ouHpaTYmxWQLhfvGLUh8l3EIFUGczyOGU" />
     <link rel="canonical" href="<?php echo _WEB_ROOT ?>">
     <link rel="icon" href="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>" type="image/jpg" sizes="30x30">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,10 +36,78 @@
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css">
-<title>Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam</title>
+<title>Tân Minh Nhật - Cơ Sở Sản Xuất Tấm Lợp Số #1 Việt Nam</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7PV8LYT75Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7PV8LYT75Z');
+</script>
+<!--Google tag -->
+<script type="application/ld+json">
+	{
+  	"@context": "http://schema.org",
+  	"@type": "LocalBusiness",
+	"url": "https://tonnhualaysang.vn/",
+	"logo": "https://tonnhualaysang.vn/public/assets/client/images/logo.jpg",
+	"hasMap": "https://goo.gl/maps/3GBtjMjVcXK9s8HGA",
+	"email": "thuha1001@gmail.com",
+  	"address": {
+    	"@type": "PostalAddress",
+    	"addressLocality": "Chí Linh",
+    	"addressRegion": "Hải Dương",
+    	"postalCode":"174200",
+    	"streetAddress": "165 Lê Thanh Nghị - Phường Hoàng Tân",
+        "addressCountry": "VN"
+  	},
+  	"description": "Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường.",
+  	"name": "Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật",
+  	"telephone": "0964297683",
+  	"openingHours": [ "Mo-Th 09:00-17:00", "Fr 09:00-12:00" ],
+  	"geo": {
+    	"@type": "GeoCoordinates",
+   	    "latitude": "21.133572",
+    	"longitude": "106.424753"
+ 		}, 			
+  	"sameAs" : [ "https://www.facebook.com/tonnhualaysangtanminhnhat"]
+	}
+</script>
+
 </head>
 <body>
-    <h1 style="display: none"> Tân Minh Nhật - Tấm Nhựa Lấy Sáng Bền Đẹp Tiết Kiệm Chi Phí</h1>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "383977521955804");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- mess -->
+    <h1 style="display: none">Tân Minh Nhật - Tấm Nhựa Lấy Sáng Bền Đẹp Tiết Kiệm Chi Phí</h1>
     <!-- modal bar -->
     <div class="bar_menu-mobile">
         <div class="bar_container">
@@ -282,7 +350,7 @@
                 </div>
                 <!-- product catalog -->
                 <div class="product-catalog">
-                    <h2 class="promo-product_heading"><a href="<?php echo $typesProduct[0]['slug_type'] ?>" class="promo-text_link" ><?php echo $typesProduct[0]['name_type'] ?></a></h2>
+                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[2]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo  $typesProduct[2]['name_type'] ?></a></h2>
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
@@ -292,7 +360,7 @@
                         <div class="col l-10 m-12 c-12">
                             <div class="home-product">
                                 <div class="row sm-gutter">
-                                    <?php foreach($productList['one'] as $product )
+                                    <?php foreach($productList['three'] as $product )
                                     {
                                     ?>
                                     <div class="col l-3 m-4 c-6">
@@ -315,7 +383,7 @@
 
                 <!-- product catalog -->
                 <div class="product-catalog">
-                    <h2 class="promo-product_heading"><a href="<?php echo $typesProduct[1]['slug_type'] ?>" class="promo-text_link" ><?php echo $typesProduct[1]['name_type'] ?></a></h2>
+                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[1]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo  $typesProduct[1]['name_type'] ?></a></h2>
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
@@ -347,7 +415,7 @@
 
                 <!-- product catalog three -->
                 <div class="product-catalog">
-                    <h2 class="promo-product_heading"><a href="<?php echo $typesProduct[2]['slug_type'] ?>" class="promo-text_link" ><?php echo $typesProduct[2]['name_type'] ?></a></h2>
+                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[0]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo $typesProduct[0]['name_type'] ?></a></h2>
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <a href=""  class ="promo-product_link">
@@ -357,7 +425,7 @@
                         <div class="col l-10 m-12 c-12">
                             <div class="home-product">
                                 <div class="row sm-gutter">
-                                <?php foreach($productList['three'] as $product )
+                                <?php foreach($productList['one'] as $product )
                                     {
                                     ?>
                                     <div class="col l-3 m-4 c-6">
@@ -379,7 +447,7 @@
 
                 <!-- product catalog four -->
                 <div class="product-catalog">
-                    <h2 class="promo-product_heading"><a href="<?php echo $typesProduct[3]['slug_type'] ?>" class="promo-text_link" ><?php echo $typesProduct[3]['name_type'] ?></a></h2>
+                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[3]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo $typesProduct[3]['name_type'] ?></a></h2>
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <a href=""  class ="promo-product_link">
@@ -439,7 +507,7 @@
                                                    </div> 
                                                    <div class="col l-7 m-6 c-6">
                                                         <div class="home-new_content offer-content">
-                                                            <h4 class="hom-news-des"><?php echo $news[1]['title']?></h4>
+                                                            <h3 class="hom-news-des"><?php echo $news[1]['title']?></h3>
                                                             <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[1]['date']); echo $dt->format('m/d/Y');?></p>
                                                         </div>
                                                     </div>
@@ -458,7 +526,7 @@
                                                     
                                                    <div class="col l-7 m-6 c-6">
                                                         <div class="home-new_content offer-content">
-                                                            <p class="hom-news-des"><?php echo $news[2]['title']?></p>
+                                                            <h3 class="hom-news-des"><?php echo $news[2]['title']?></h3>
                                                             <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[2]['date']); echo $dt->format('m/d/Y');?></p>
                                                         </div>
                                                     </div>
@@ -512,8 +580,8 @@
         <footer class="footer">
             <div class="grid wide footer__content">
                 <div class="row">
-                    <div class="col l-4 m-4 c-12">
-                        <h4 class="footer__hedding">VỀ CHÚNG TÔI</h4>
+                    <div class="col l-4 m-6 c-12">
+                        <h5 class="footer__hedding">VỀ CHÚNG TÔI</h5>
                         <ul class="footer-list">
                             <li class="footer-item">
                                 <h2 href="#" class="footer-name_cty " >Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật</h2>
@@ -521,9 +589,9 @@
                             <li class="footer-item footer-flexbox">
                                 <a href="#" class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <p class="footer-item_location">
+                                    <h4 class="footer-item_location">
                                         Văn Phòng Giao Dịch: Số 32 Thanh Lân - Thanh Trì - Hoàng Mai - Hà Nội.
-                                    </p>
+                                    </h4>
                                      
                             </li>
                             <li class="footer-item">
@@ -532,9 +600,9 @@
                             <li class="footer-item footer-flexbox">
                                 <a href="#" class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <p class="footer-item_location">
+                                    <h4 class="footer-item_location">
                                         Nhà Máy:  165 Lê Thanh Nghị - Hoàng Tân - Chí linh - Hải Dương.
-                                    </p>
+                                    </h4>
                                      
                             </li>
                             <li class="footer-item">
@@ -550,7 +618,7 @@
                             
                         </ul>
                     </div>
-                    <div class="col l-3 m-4 c-12">
+                    <div class="col l-3 m-6 c-12">
                         <h5 class="footer__hedding">Chăm sóc khách hàng</h5>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -574,7 +642,7 @@
                             
                         </ul>
                     </div>
-                    <div class="col l-2 m-4 c-12">
+                    <div class="col l-2 m-6 c-12">
                         <h5 class="footer__hedding">THANH TOÁN</h5>
                         <ul class="footer-list-tt">
                             <li class="footer-item-tt">
@@ -602,7 +670,7 @@
                        
                     </div>
                      
-                    <div class="col l-3 m-4 c-12">
+                    <div class="col l-3 m-6 c-12">
                         <h5 class="footer__hedding">Vị trí </h5>
                         <div class="footer-dowload">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d930.3682103180541!2d106.42420572922792!3d21.133572950026743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313579167eaf0125%3A0xb9c9b66790e5035e!2zQ8O0bmcgdHkgVE5ISCBUaMawxqFuZyBtYcyjaSB2YcyAIHNhzIluIHh1w6LMgXQgVMOibiBNaW5oIE5ow6LMo3Q!5e0!3m2!1svi!2s!4v1669120955913!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -626,7 +694,7 @@
             <div class="hotline-zalo-ring-circle-fill"></div>
             <div class="hotline-zalo-ring-icon">
                 <a href="https://zalo.me/0961045066">
-                    <img class="hotline-phone-ring-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/zalo.png" alt="logo-zalo">
+                    <img class="hotline-phone-ring-img" style="margin-top: 5px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/zalo.png" alt="logo-zalo">
                 </a>
             </div>
         </div>

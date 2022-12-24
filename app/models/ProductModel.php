@@ -39,7 +39,7 @@ class ProductModel extends Model{
 
     function getProductSlug($slug="")
     {
-        return $this->database->query('SELECT * FROM '. $this->_table . '  WHERE slug = ' .'"'. $slug.'"')->fetchAll(PDO::FETCH_ASSOC);
+        return $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type  WHERE product.slug = ' .'"'. $slug.'"')->fetchAll(PDO::FETCH_ASSOC);
     }
     function getProductOffer($limit)
     {
@@ -49,6 +49,10 @@ class ProductModel extends Model{
     function getTypeProduct(){
         $data = $this->database->query("SELECT * FROM types")->fetchAll(PDO::FETCH_ASSOC);
         return  $data;
+    }
+    function getProductId($id)
+    {
+        return $this->database->query('SELECT * FROM product WHERE id =' . $id)->fetch(PDO::FETCH_ASSOC);
     }
     function searchProduct($searchKey)
     {

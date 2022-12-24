@@ -1,3 +1,9 @@
+<div class="breadcrumb">
+                        <span class="">
+                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
+                            <span class="breadcrumb_last"> <a  href="<?php echo _WEB_ROOT . '/tin-tuc' ?>">Tin tức  » </a>  <?php echo $dataNews[0]['title'] ?></span>
+                        </span>
+</div>
 <div class="show-news-describe_container">
                     <div class="row">
                         <div class="col l-12 m-12 c-12">
@@ -7,7 +13,7 @@
                                     <p class="show-news-date"><i class="fa-solid fa-calendar-days"></i> Ngày đăng: <?php $dt = new DateTime($dataNews[0]['date']); echo $dt->format('m/d/Y');?>
                                         <span class="show-news_view">  <i class="fa-solid fa-eye"></i> Lượt xem: <?php  echo $dataNews[0]['view'] ?></span>
                                     </p>
-                                    <div class="show-news_des-html">
+                                    <div class="show-news_des-html active-tab_content">
                                         <?php echo htmlspecialchars_decode($dataNews[0]['description']) ?>
                                     </div>
                                 

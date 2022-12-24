@@ -1,3 +1,9 @@
+<div class="breadcrumb">
+    <span class="">
+        <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
+        <span class="breadcrumb_last">Tin tức</span>
+    </span>
+</div>
 <style>
                 
             </style>
@@ -9,7 +15,7 @@
                             <div class="col l-8 m-12 c-12" style=" border-right: 2px solid #ccc;">   
                                                    <!--  item new-->
                             <?php
-                                foreach($dataNews as $news)
+                                foreach($dataNewsAll as $news)
                                 {
                             ?>
                                              <div class="new_offer">

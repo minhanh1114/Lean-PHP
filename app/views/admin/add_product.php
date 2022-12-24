@@ -59,7 +59,13 @@
                                             <div class="col-md-3 ">
                                                 <div class="form-group">
                                                     <label>Lượt xem</label>
-                                                    <input required name="view" type="text" placeholder="Nhập lượt xem" class="form-control-file" value="0">
+                                                    <input required name="view" type="text" placeholder="Nhập lượt xem" class="form-control" value="0">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="form-group">
+                                                    <label>Meta-Description</label>
+                                                    <textarea required name="meta_description" type="text" placeholder="Nhập Meta-Description " class="form-control" rows="3" maxlength="225"> </textarea>
                                                 </div>
                                             </div>
                                         </div>
