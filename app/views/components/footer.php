@@ -39,28 +39,30 @@
             <div class="grid wide footer__content">
                 <div class="row">
                     <div class="col l-4 m-6 c-12">
-                        <h4 class="footer__hedding">VỀ CHÚNG TÔI</h4>
+                        <p class="footer__hedding">VỀ CHÚNG TÔI</p>
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <h2 href="#" class="footer-name_cty " >Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật</h2>
+                                <h2  class="footer-name_cty " >Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật</h2>
                             </li>
                             <li class="footer-item footer-flexbox">
-                                <a href="#" class="footer-item_link">
+                                <p class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <p class="footer-item_location">
+                                    <h4 class="footer-item_location">
                                         Văn Phòng Giao Dịch: Số 32 Thanh Lân - Thanh Trì - Hoàng Mai - Hà Nội.
-                                    </p>
+                                    </h4>
+                                </p>
                                      
                             </li>
                             <li class="footer-item">
                                 <a href="tel:02203882983" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 02203 882 983 </a>
                             </li>
                             <li class="footer-item footer-flexbox">
-                                <a href="#" class="footer-item_link">
+                                <p class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <p class="footer-item_location">
+                                    <h4 class="footer-item_location">
                                         Nhà Máy:  165 Lê Thanh Nghị - Hoàng Tân - Chí linh - Hải Dương.
-                                    </p>
+                                    </h4>
+                                </p>
                                      
                             </li>
                             <li class="footer-item">
@@ -77,7 +79,7 @@
                         </ul>
                     </div>
                     <div class="col l-3 m-6 c-12">
-                        <h5 class="footer__hedding">Chăm sóc khách hàng</h5>
+                        <p class="footer__hedding">Chăm sóc khách hàng</p>
                         <ul class="footer-list">
                             <li class="footer-item">
                                 <a href="<?php echo _WEB_ROOT . '/gioi-thieu'?>" class="footer-item_link">Giới Thiệu</a>
@@ -101,7 +103,7 @@
                         </ul>
                     </div>
                     <div class="col l-2 m-6 c-12">
-                        <h5 class="footer__hedding">THANH TOÁN</h5>
+                        <p class="footer__hedding">THANH TOÁN</p>
                         <ul class="footer-list-tt">
                             <li class="footer-item-tt">
                                 <div class="footer-vn-background footer-vn-visa-png" style="width: 55px; height: 18px;"></div>
@@ -129,9 +131,11 @@
                     </div>
                      
                     <div class="col l-3 m-6 c-12">
-                        <h5 class="footer__hedding">Vị trí </h5>
+                        <p class="footer__hedding">Vị trí </p>
                         <div class="footer-dowload">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d930.3682103180541!2d106.42420572922792!3d21.133572950026743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313579167eaf0125%3A0xb9c9b66790e5035e!2zQ8O0bmcgdHkgVE5ISCBUaMawxqFuZyBtYcyjaSB2YcyAIHNhzIluIHh1w6LMgXQgVMOibiBNaW5oIE5ow6LMo3Q!5e0!3m2!1svi!2s!4v1669120955913!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <a href="https://www.google.com/maps/place/C%C3%B4ng+ty+TNHH+Th%C6%B0%C6%A1ng+m%E1%BA%A1i+v%C3%A0+Sx+T%C3%A2n+Minh+Nh%E1%BA%ADt/@21.1342605,106.4231619,16.25z/data=!4m5!3m4!1s0x0:0x42751289833074c1!8m2!3d21.13364!4d106.4249772!5m2!1e4!1e2?hl=vi" title="Bản đồ">
+                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/mapTMN.jpg" alt="bản đồ">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -185,7 +189,7 @@
         <div class="modal-imge_container">
         <p class="loading-button"></p>
         <div class="modal_image-wrap">
-            <img  class="modal_image" src ="https://www.nhualaysang.com/uploads/images/san-pham/nhua-lay-sang-dac-ruot/nhua-lay-sang-2ly5(1).jpg" alt="img-product">
+            <img  class="modal_image" src ="" alt="img-product">
            <div class="close-modal_image">
             <i class="fa-solid fa-x"></i>
            </div> 
@@ -337,7 +341,7 @@
             })
 
         </script>
-        <script src="<?php echo _WEB_ROOT ?>/public/assets/client/js/script.js"></script>
+        <script async src="<?php echo _WEB_ROOT ?>/public/assets/client/js/script.js"></script>
 </body>
 </html>
         

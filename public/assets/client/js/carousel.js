@@ -22,8 +22,8 @@ function slide(wrapper, items, prev, next) {
       cloneLast = lastSlide.cloneNode(true),
       index = 0,
       allowShift = true;
-
-      slideSize = items.getElementsByClassName('slide')[items.getElementsByClassName('slide').length-1].offsetWidth;
+  
+      slideSize = wrapper.offsetWidth;
 console.log('slide 1',slideSize);
   // Clone first and last slide
   items.appendChild(cloneFirst);
@@ -118,7 +118,7 @@ console.log('slide 1',slideSize);
         items.style.left = (posInitial + slideSize) + "px";
         index--;      
       }
-      // console.log(slideSize);
+       console.log(slideSize);
     };
     
     allowShift = false;
@@ -148,8 +148,6 @@ console.log('slide 1',slideSize);
 
 
 // load event khi dom load xong
-document.addEventListener("DOMContentLoaded", function(){
-
   const slides_children = document.getElementsByClassName('slide');
   let slide_width = document.getElementsByClassName('slider-content')[0].offsetWidth;
   // console.log(slides_children.length);
@@ -157,41 +155,44 @@ document.addEventListener("DOMContentLoaded", function(){
   for (let i = 0; i < slides_children.length; i++)  {
     slides_children[i].style.maxWidth = slide_width + 'px';
     slider.style.height = slide_width /1.995 + 'px';
+    sliderItems.style.left = '-' +slide_width + 'px';
   };
   
 
 // event change window resize
   window.addEventListener('resize', function(event) {
-    clearInterval(interval_slide_one);
-    setTimeout(() => {
-        slide_width = document.getElementsByClassName('slider-content')[0].offsetWidth;
+    // clearInterval(interval_slide_one);
+    
+        slide_width = slider.offsetWidth;
+        console.log(slide_width);
         slideSize = slide_width;
         for (let i = 0; i < slides_children.length; i++)  {
           slides_children[i].style.maxWidth = slide_width + 'px';
           slider.style.height = slide_width /1.995 + 'px';
         };
-    }, 500);
-    document.addEventListener("visibilitychange", (event) => {
-      if (document.visibilityState == "visible") {
-        console.log("tab is active")
-      } else {
-        console.log("tab is inactive")
-      }
+      sliderItems.style.left = '-' +slide_width + 'px';
+
     });
+  //   document.addEventListener("visibilitychange", (event) => {
+  //     if (document.visibilityState == "visible") {
+  //       console.log("tab is active")
+  //     } else {
+  //       console.log("tab is inactive")
+  //     }
+  //   });
 
     
     
-  });
+  // });
   // 
-  setTimeout(() => {
-    slide(slider, sliderItems, prev, next);
+ 
+slide(slider, sliderItems, prev, next);
 
-   
-  }, 1500);
 
  
 
-});
+ 
+
 
 
 //  event thay đổi cửa sổ trình duyệt

@@ -62,7 +62,7 @@
                                 <div class="product-offer_code">
                                     Mã sản phẩm: <span><?php echo $product['code'] ?></span>
                                 </div>
-                                <a href="lienhe" class="product-offer_contact">
+                                <a href="<?php  echo _WEB_ROOT . '/lien-he' ?>" class="product-offer_contact">
                                    Liên hệ
                                 </a>
                              

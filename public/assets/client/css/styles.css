@@ -15,7 +15,7 @@
 html{
     font-size: 62.5%;
     line-height: 1.6rem;
-     font-family: 'Roboto', sans-serif, sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 body{
@@ -490,6 +490,7 @@ flex:1
     padding:5px 0
 }
 .footer__hedding{
+    font-weight: 600;
     font-size: 1.7rem;
     text-transform:uppercase;
     color: #333333;
@@ -579,6 +580,7 @@ flex:1
 
 }
 .footer-item_location{
+    font-family: 'Roboto', sans-serif;
     margin-left: 8px;
     font-size: 1.5rem;
     font-weight: 500;

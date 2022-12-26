@@ -526,7 +526,7 @@ position: relative;
     font-weight: 500;
     margin-bottom: 20px;
     font-size: 2.2rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
 }
 .product-code{
     margin-bottom: 10px;
@@ -647,6 +647,7 @@ justify-content: space-evenly;
     padding:5px 0
 }
 .footer__hedding{
+    font-weight: 600;
     font-size: 1.7rem;
     text-transform:uppercase;
     color: #333333;

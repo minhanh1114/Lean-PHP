@@ -17,7 +17,7 @@ class Product extends Controller{
                 $this->data['title'] = $this->data['sub_content']['dataProduct'][0]['name'];
                 $this->data['code'] = $this->data['sub_content']['dataProduct'][0]['code'];
                 $this->data['image'] = 'products/' . $this->data['sub_content']['dataProduct'][0]['img'];
-                $this->data['description'] = $this->character_limiter($this->data['sub_content']['dataProduct'][0]['description'],15000,false);
+                $this->data['description'] = $this->data['sub_content']['dataProduct'][0]['des_short'];
                 $this->data['meta_description'] = $this->data['sub_content']['dataProduct'][0]['meta_description'];
                 
                 // update view 

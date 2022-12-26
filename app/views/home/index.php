@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường ">
+    <meta name="copyright" content="Tấm Lợp Tấn Minh Nhật">
+    <meta name="author" content="Tấn Minh Nhật">
+    <meta name="keywords" content="Báo Giá Nhựa Lấy Sáng Composite Poly, tonnhualaysang, Tấn Minh Nhật, ton nhua lay sang, Nhựa Lấy Sáng Tấn Minh Nhật.">
+    <meta name="description" content="Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
-    <meta property="og:description" content="Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường ">
+    <meta property="og:title" content="Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng Cao, tonnhualaysang">
+    <meta property="og:description" content="Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
     <meta property="og:url" content="<?php echo _WEB_ROOT ?>">
     <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:height" content="900">
     <meta property="og:image:width" content="900">
-    <meta property="og:site_name" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
+    <meta property="og:site_name" content="Tấm Lợp Tân Minh Nhật">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Tân Minh Nhật - Cơ Sở Sản Xuất Nhựa Số #1 Việt Nam">
-    <meta name="twitter:description" content="Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường ">
+    <meta name="twitter:title" content="Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng Cao, tonnhualaysang">
+    <meta name="twitter:description" content="Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
     <meta name="twitter:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
     <meta name=”geo.region” content=”VN-HN” />
     <meta name="geo.position" content="20.9922614 , 105.8884573" />
@@ -31,12 +34,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/styles.css">
-    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css">
-    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css">
-    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css">
-<title>Tân Minh Nhật - Cơ Sở Sản Xuất Tấm Lợp Số #1 Việt Nam</title>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/styles.css"> -->
+    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<title>Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng Cao</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PV8LYT75Z"></script>
 <script>
@@ -54,6 +58,7 @@
 	"url": "https://tonnhualaysang.vn/",
 	"logo": "https://tonnhualaysang.vn/public/assets/client/images/logo.jpg",
 	"hasMap": "https://goo.gl/maps/3GBtjMjVcXK9s8HGA",
+    "name": "Tấm Lợp Lấy Sáng Tân Minh Nhật",
 	"email": "thuha1001@gmail.com",
   	"address": {
     	"@type": "PostalAddress",
@@ -63,8 +68,7 @@
     	"streetAddress": "165 Lê Thanh Nghị - Phường Hoàng Tân",
         "addressCountry": "VN"
   	},
-  	"description": "Tấm lợp Tân Minh Nhật: Chuyên cung cấp tấm lợp lấy sáng Composite, Polycarbonate, Tấm nhựa đặc, Tấm cách nhiệt mái tôn, Tấm cách nhiệt xốp tấm cao cấp chính hãng giá ưu đãi tốt nhất thị trường.",
-  	"name": "Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật",
+  	"description": "Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường.",
   	"telephone": "0964297683",
   	"openingHours": [ "Mo-Th 09:00-17:00", "Fr 09:00-12:00" ],
   	"geo": {
@@ -75,7 +79,10 @@
   	"sameAs" : [ "https://www.facebook.com/tonnhualaysangtanminhnhat"]
 	}
 </script>
+<style>
 
+
+</style>
 </head>
 <body>
     <!-- Messenger Plugin chat Code -->
@@ -107,7 +114,7 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
     <!-- mess -->
-    <h1 style="display: none">Tân Minh Nhật - Tấm Nhựa Lấy Sáng Bền Đẹp Tiết Kiệm Chi Phí</h1>
+    <h1 style="display: none">Tấm Lợp Tân Minh Nhật Tấm lợp lấy Sáng Composite,Poly Tấm Lợp Thông Minh Chất Lượng Cao</h1>
     <!-- modal bar -->
     <div class="bar_menu-mobile">
         <div class="bar_container">
@@ -157,7 +164,7 @@
                     <div class="row">
                         <div class=" col l-6 header-top_left">
                             <span class="header-top_wellcome">Well come to Tân Minh Nhật </span>
-                            <span class="header-top_email"><i class="fa-solid fa-envelope"></i> tanminhnhat@gmail.com</span>
+                            <span class="header-top_email"><i class="fa-solid fa-envelope"></i>tanminhnhat@gmail.com</span>
                         </div>
                         <div class="col l-6 header-top_right">
                             <span class="header-top_social">
@@ -186,11 +193,11 @@
                             <p>(Hỗ trợ 24/7)</p>
                         </div>
                         <div class="bar-mobile"><i class="fa-solid fa-bars"></i> <br>Menu</div>
-                        <a href="" class="header-logo"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" alt="logo-cong-ty" ></a>
+                        <a href="<?php echo _WEB_ROOT ?>" title="Tấm Poly Tân Minh Nhật Tấm Lợp Lấy Sáng" class="header-logo"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" alt="logo-cong-ty" ></a>
                     </div>
                     <div class="col l-9 m-0 c-0 header-right">
                         <div class=" header-content">
-                            <a href=""  class=" header-content_item">
+                            <p  class=" header-content_item">
                                 
                                     <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-dich-vu.png" alt="icon-dich-vu" class=" header-content_icon" >
                                     <div class=" header-content_text">
@@ -198,8 +205,8 @@
                                         <p class="header-content_des">Độ tin cậy, Năng lực, Tác phong</p>
                                     </div>
                                 
-                            </a>
-                            <a href="" class=" header-content_item">
+                            </p>
+                            <p class=" header-content_item">
                                 
                                     <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-san-pham.jpg" alt="icon-san-pham" class="  header-content_icon">
                                     <div class=" header-content_text">
@@ -207,8 +214,8 @@
                                         <p class="header-content_des">Bảo hành 10 năm</p>
                                     </div>
                             
-                            </a>
-                            <a href="" class=" header-content_item">
+                            </p>
+                            <p class=" header-content_item">
                                 
                                     <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-chat-luong.png" alt="icon-chat-luon" class="  header-content_icon">
                                     <div class=" header-content_text">
@@ -216,8 +223,8 @@
                                         <p class="header-content_des">Năng lực & Nhiệt huyết</p>
                                     </div>
                                 
-                            </a>
-                            <a href="" class=" header-content_item">
+                            </p>
+                            <p class=" header-content_item">
                             
                                     <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-handshake.png" alt="icon-handshake" class="  header-content_icon">
                                     <div class=" header-content_text">
@@ -225,7 +232,7 @@
                                         <p class="header-content_des">Sản phẩm chất lượng cao</p>
                                     </div>
                             
-                            </a>
+                            </p>
                         </div>
                         
                     
@@ -299,11 +306,15 @@
                                 <button type="submit" class="navigation-search__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </nav>
-
+                        
+                        
                         <div id="slider" class="slider-content">
                             <div class="wrapper">
                                 <div id="slides" class="slides">
                                 
+                                <span class="slide">
+                                    <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_4.jpg" alt="slider_4" />
+                                </span>
                                 <span class="slide">
                                     <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_2.jpg" alt="slider_2" />
                                 </span>
@@ -313,36 +324,33 @@
                                 <span class="slide">
                                     <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_3.png" alt="slider_3" />
                                 </span>
-                                <span class="slide">
-                                    <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_4.jpg" alt="slider_4" />
-                                </span>
                             </div>
                             </div>
-                            <a id="prev" class="control prev">
+                            <p id="prev" class="control prev">
                             
                                 <i class="fa-solid fa-chevron-left"></i>
-                            </a>
-                            <a id="next" class="control next">
+                            </p>
+                            <p id="next" class="control next">
                                 <i class="fa-solid fa-chevron-right"></i>
-                            </a>
+                            </p>
                         </div>
                     </div>
                 </div>
                <div class="promo-product">
-                    <h2 class="promo-product_heading"><a href="" class="promo-text_link" >Sản Phẩm Khuyến Mãi</a></h2>
+                    <h2 class="promo-product_heading"><p style="display: inline;" class="promo-text_link" >Sản Phẩm Khuyến Mãi</p></h2>
                     <div class="row">
                         <div class="col l-4 m-6 c-12">
-                            <a href=""  class ="promo-product_link">
+                            <a href="<?php echo _WEB_ROOT ?>/loai-san-pham/tam-lop-lay-sang-composite.html" title="tấm lợp lấy sáng composite"  class ="promo-product_link">
                                 <img class="promo-product-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_1.jpg" alt="sp_khuyen_mai_1" >
                             </a>
                         </div>
                         <div class="col l-4 m-6 c-12">
-                            <a href="">
+                            <a href="<?php echo _WEB_ROOT ?>/loai-san-pham/tam-nhua-lay-sang-polycarbonate.html" title="tấm lợp dạng đặc poly">
                                 <img class="promo-product-img"  src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_2.jpg" alt="sp_khuyen_mai_2">
                             </a>
                         </div>
                         <div class="col l-4 m-6 c-12">
-                            <a href="">
+                            <a href="<?php echo _WEB_ROOT ?>/loai-san-pham/tam-nhua-polycarbonate-rong-ruot.html" title="tấm lợp dạng rỗng poly">
                             <img class="promo-product-img"  src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_3.jpg" alt="sp_khuyen_mai_3">
                             </a>
                         </div>
@@ -418,9 +426,9 @@
                     <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[0]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo $typesProduct[0]['name_type'] ?></a></h2>
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
-                            <a href=""  class ="promo-product_link">
+                            <div  class ="promo-product_link">
                                 <img class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home.jpg" alt="banner-home" >
-                            </a>
+                            </div>
                         </div>
                         <div class="col l-10 m-12 c-12">
                             <div class="home-product">
@@ -450,9 +458,9 @@
                     <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[3]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo $typesProduct[3]['name_type'] ?></a></h2>
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
-                            <a href=""  class ="promo-product_link">
+                            <div  class ="promo-product_link">
                                 <img class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home.jpg" alt="banner-home" >
-                            </a>
+                            </div>
                         </div>
                         <div class="col l-10 m-12 c-12">
                             <div class="home-product">
@@ -479,7 +487,7 @@
                 
                 <!-- start news -->
                 <div class="product-catalog">
-                    <h2 class="promo-product_heading"><a href="" class="promo-text_link" >Tin Tức - Sự Kiện</a></h2>
+                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/tin-tuc/' ?>" class="promo-text_link" >Tin Tức - Sự Kiện</a></h2>
                     <div class="row">
                         
                         <div class="col l-8 m-12 c-12">                      
@@ -581,17 +589,18 @@
             <div class="grid wide footer__content">
                 <div class="row">
                     <div class="col l-4 m-6 c-12">
-                        <h5 class="footer__hedding">VỀ CHÚNG TÔI</h5>
+                        <p class="footer__hedding">VỀ CHÚNG TÔI</p>
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <h2 href="#" class="footer-name_cty " >Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật</h2>
+                                <h2  class="footer-name_cty " >Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật</h2>
                             </li>
                             <li class="footer-item footer-flexbox">
-                                <a href="#" class="footer-item_link">
+                                <p class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
                                     <h4 class="footer-item_location">
                                         Văn Phòng Giao Dịch: Số 32 Thanh Lân - Thanh Trì - Hoàng Mai - Hà Nội.
                                     </h4>
+                                </p>
                                      
                             </li>
                             <li class="footer-item">
@@ -619,7 +628,7 @@
                         </ul>
                     </div>
                     <div class="col l-3 m-6 c-12">
-                        <h5 class="footer__hedding">Chăm sóc khách hàng</h5>
+                        <p class="footer__hedding">Chăm sóc khách hàng</p>
                         <ul class="footer-list">
                             <li class="footer-item">
                                 <a href="<?php echo _WEB_ROOT . '/gioi-thieu'?>" class="footer-item_link">Giới Thiệu</a>
@@ -643,7 +652,7 @@
                         </ul>
                     </div>
                     <div class="col l-2 m-6 c-12">
-                        <h5 class="footer__hedding">THANH TOÁN</h5>
+                        <p class="footer__hedding">THANH TOÁN</p>
                         <ul class="footer-list-tt">
                             <li class="footer-item-tt">
                                 <div class="footer-vn-background footer-vn-visa-png" style="width: 55px; height: 18px;"></div>
@@ -671,9 +680,11 @@
                     </div>
                      
                     <div class="col l-3 m-6 c-12">
-                        <h5 class="footer__hedding">Vị trí </h5>
+                        <p class="footer__hedding">Vị trí </p>
                         <div class="footer-dowload">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d930.3682103180541!2d106.42420572922792!3d21.133572950026743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313579167eaf0125%3A0xb9c9b66790e5035e!2zQ8O0bmcgdHkgVE5ISCBUaMawxqFuZyBtYcyjaSB2YcyAIHNhzIluIHh1w6LMgXQgVMOibiBNaW5oIE5ow6LMo3Q!5e0!3m2!1svi!2s!4v1669120955913!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <a href="https://www.google.com/maps/place/C%C3%B4ng+ty+TNHH+Th%C6%B0%C6%A1ng+m%E1%BA%A1i+v%C3%A0+Sx+T%C3%A2n+Minh+Nh%E1%BA%ADt/@21.1342605,106.4231619,16.25z/data=!4m5!3m4!1s0x0:0x42751289833074c1!8m2!3d21.13364!4d106.4249772!5m2!1e4!1e2?hl=vi" title="Bản đồ">
+                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/mapTMN.jpg" alt="bản đồ">
+                            </a>
                         </div>
                     </div>
                 </div>

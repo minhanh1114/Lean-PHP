@@ -1,15 +1,7 @@
 
-  
-  @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-
-
-  
-  
-  
   .slider-content {
     
-    box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+  box-shadow: 3px 3px 10px rgba(0,0,0,.2);
     max-width: 894px; 
     height: 448px;
     width: 100%; 
@@ -18,24 +10,24 @@
   }
   .slider-content:hover .control{
     opacity: 1;
-  }
-  
-  .wrapper {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-    z-index: 1;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  z-index: 1;
     width: 100%;
     border-radius: 5px;
-  }
-  
-  .slides {
-    display: flex;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 10000px;
-    height: 100%;
+}
+
+.slides {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: -894px;
+  width: 10000px;
+  height: 100%;
     
   }
   .slide img{
@@ -43,72 +35,60 @@
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
-  }
-  
-  .slides.shifting {
-    transition: left .5s ease-out;
-  }
-  
-  .slide {
+}
 
-    width: 100%;
-    max-width: 894px;
+.slides.shifting {
+  transition: left .5s ease-out;
+}
 
-    height: 100%;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all .7s linear;
-    position: relative;
-    background: #FFCF47;
-    border-radius: 2px;
-  }
-  
- 
-    .slide:nth-child(2),
-    .slide:nth-child(7) { background: #FFCF47 }
-    .slide:nth-child(1),
-    .slide:nth-child(6) { background: #7ADCEF }
-    .slide:nth-child(3) { background: #3CFF96 }
-    .slide:nth-child(4) { background: #a78df5 }
-    .slide:nth-child(5) { background: #ff8686 }
+.slide {
+  width: 100%;
+  max-width: 894px;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* transition: all .7s linear; */
+  position: relative;
+  border-radius: 5px;
+}
 
-  
-  .control {
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    height: 50px;
+
+.control {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
     background: rgba(0, 0, 0, 0.5);
-    border-radius: 50px;
-    margin-top: -20px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-    z-index: 2;
+  border-radius: 50px;
+  margin-top: -20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+  cursor: pointer;
     color: var(--white-color);
     font-size: 1.5rem;
     opacity: 0;
 
     transition: 0.4s;
-  }
+}
+
   
-  
-  .prev {
+.prev {
     left: 0;
-  }
-  
-  .next {
+}
+
+.next {
     right: 0;
-  }
-  
-  .prev:active,
-  .next:active {
-    transform: scale(.8);
-  }
+}
+
+.prev:active,
+.next:active {
+  transform: scale(.8);
+}  
 
 
 
