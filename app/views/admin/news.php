@@ -81,11 +81,16 @@
             </div>
 
     <script>
-        <?php 
-        if(!empty($mess))
-        {
-            echo "alert('".$mess."')";
-        }
-        ?>
+        document.querySelectorAll('.btn.btn-warning').forEach((item=>{
+            item.addEventListener('click', function(event){
+            var confirmDel = confirm("Bạn có chắc chắn muốn xóa không ?");  
+            if (confirmDel == true) {  
+                 console.log("You have selected OK!") ;  
+            } else {  
+                event.preventDefault();
+                console.log("You have selected Cancelled!");  
+            }  
+        })
+        }));
     </script>
            

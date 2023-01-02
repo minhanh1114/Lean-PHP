@@ -50,6 +50,7 @@ private function create_slug($string)
 function index(){
     
     $this->data['mess'] = Session::flash('mess');
+    
     $request = new Request();
     $param=$request->getDataRequest();
     $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();

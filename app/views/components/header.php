@@ -11,7 +11,7 @@
     <meta name="description" content="<?php echo empty($meta_description)? "Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường.":$meta_description ?>">
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="<?php echo empty($title)? "Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng Cao, tonnhualaysang": $title ?>">
+    <meta property="og:title" content="<?php echo empty($title)? "Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng, tonnhualaysang": $title ?>">
     <meta property="og:description" content="<?php echo empty($meta_description)? 'Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường.': $meta_description ?>">
     <meta property="og:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
     <meta property="og:image" content="<?php  echo  empty($image)? _WEB_ROOT .'/public/assets/client/images/logo.jpg':  _WEB_ROOT .'/public/assets/'. $image ?>">
@@ -20,7 +20,7 @@
     <meta property="og:image:width" content="900">
     <meta property="og:site_name" content="<?php echo empty($title)? "Tấm Lợp Tân Minh Nhật": $title ?>">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="<?php echo empty($title)? "Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng Cao, tonnhualaysang": $title ?>">
+    <meta name="twitter:title" content="<?php echo empty($title)? "Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng, tonnhualaysang": $title ?>">
     <meta name="twitter:description" content="<?php echo empty($meta_description)? 'Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường.': $meta_description ?>">
     <meta name="twitter:image" content="<?php  echo  empty($image)? _WEB_ROOT .'/public/assets/client/images/logo.jpg':  _WEB_ROOT .'/public/assets/'. $image ?>">
     <meta name=”geo.region” content=”VN-HN” />
@@ -33,7 +33,7 @@
     <link rel="icon" href="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>" type="image/jpg" sizes="30x30">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link  href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap" rel="stylesheet">
+        <link  href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap" rel="stylesheet">
 
    
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/fonts/fontawesome/css/all.min.css">
@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css">
-    <title><?php echo empty($title)? "Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng Cao": $title ?></title>
+    <title><?php echo empty($title)? "Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng": $title ?></title>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PV8LYT75Z"></script>
 <script>
@@ -239,7 +239,7 @@ else if(!empty($sub_content['dataNews']))
                         <p>(Hỗ trợ 24/7)</p>
                     </div>
                     <div class="bar-mobile"><i class="fa-solid fa-bars"></i> <br>Menu</div>
-                    <a href="<?php echo _WEB_ROOT ?>" class="header-logo"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" alt="logo-cong-ty" ></a>
+                    <a href="<?php echo _WEB_ROOT ?>" class="header-logo"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" width="100%" height="100%" alt="logo-cong-ty"  ></a>
                  </div>
                  <div class="col l-9 m-0 c-0 header-right">
                     <div class=" header-content">

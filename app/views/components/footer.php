@@ -5,25 +5,25 @@
             <h2 class="slide-two_heading">ĐỐI TÁC</h2>
             <div class="display-area">
                 <div class="cards-wrapper">
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vingroup.jpg" alt="vingroup"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sungroup.jpg" alt="sungroup"></div>  
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/tonhoasen.jpg" alt="tonhoasen"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vinamilk.jpg" alt="vinamilk"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vingroup.jpg" alt="vingroup"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sungroup.jpg" alt="sungroup"></div>  
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/tonhoasen.jpg" alt="tonhoasen"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vinamilk.jpg" alt="vinamilk"></div>
               
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/makrolon-bayer.png" alt="makrolon-bayer"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo6.jpg" alt="plogo6"></div>  
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo5.jpg" alt="plogo5"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo4.jpg" alt="plogo4"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/makrolon-bayer.png" alt="makrolon-bayer"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo6.jpg" alt="plogo6"></div>  
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo5.jpg" alt="plogo5"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo4.jpg" alt="plogo4"></div>
                   
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo3.jpg" alt="plogo3"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vingroup.jpg" alt="vingroup"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo2.jpg" alt="plogo2"></div>  
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/makrolon-bayer.png" alt="makrolon-bayer"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo3.jpg" alt="plogo3"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vingroup.jpg" alt="vingroup"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo2.jpg" alt="plogo2"></div>  
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/makrolon-bayer.png" alt="makrolon-bayer"></div>
 
                 </div> 
               </div>
               <button class="slider-two_left" aria-label="slider-two_left"> <i class="fa-solid fa-chevron-left"></i> </button>
-              <button class="slider-two_right"aria-label="slider-two_right" > <i class="fa-solid fa-chevron-right"></i></i></button>
+              <button class="slider-two_right" aria-label="slider-two_right"> <i class="fa-solid fa-chevron-right"></i></i></button>
               
               <div class="dots-wrapper">
                 <button class="dot active" aria-label="dot-1"></button>
@@ -33,9 +33,8 @@
               </div>
               
         </div>
-
-         <!-- footer -->
-         <footer class="footer">
+        <!-- footer -->
+        <footer class="footer">
             <div class="grid wide footer__content">
                 <div class="row">
                     <div class="col l-4 m-6 c-12">
@@ -57,12 +56,12 @@
                                 <a href="tel:02203882983" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 02203 882 983 </a>
                             </li>
                             <li class="footer-item footer-flexbox">
-                                <div  class="footer-item_link">
+                                <div class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
                                     <p class="footer-item_location">
                                         Nhà Máy:  165 Lê Thanh Nghị - Hoàng Tân - Chí linh - Hải Dương.
                                     </p>
-                                </div>
+                                <div>
                                      
                             </li>
                             <li class="footer-item">
@@ -72,7 +71,7 @@
                                 <a href="tel:0961045066" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0961 045 066</a>
                             </li>
                             <li class="footer-item">
-                                <p  style=" font-weight: bold ;" class="footer-item_link" style="margin-left: 15px; font-size: 2rem;">HOTLINE:  <a href="tel:0964297683" class="hotline_number-phone" > 0964 297 683</a></p>
+                                <p  style=" font-weight: bold ;" class="footer-item_link" style="margin-left: 15px; font-size: 2rem;">HOTLINE:  <a href="tel:0964297683" class="hotline_number-phone"> 0964 297 683</a></p>
                             </li>
                            
                             
@@ -96,7 +95,7 @@
                             </li>
                             <li class="footer-item">
                                 <a href="https://www.facebook.com/tonnhualaysangtanminhnhat" class="footer-item_link">
-                                    <img src="<?php echo _WEB_ROOT .'/public/assets/client/images/plug_page_facebook.png' ?>" alt="plug_page_facebook">
+                                    <img loading="lazy" width="100%" height="100%" src="<?php echo _WEB_ROOT .'/public/assets/client/images/plug_page_facebook.png' ?>" alt="plug_page_facebook">
                                 </a>
                             </li>
                             
@@ -115,16 +114,16 @@
                                 <div class="footer-vn-background footer-vn-jcb-png" style="width: 55px; height: 23px;"></div>
                             </li>
                             <li class="footer-item-tt">
-                               <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-vnpay.png" alt="logo-vnpay">
+                               <img loading="lazy" style="width: 77px; height: 30px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-vnpay.png" alt="logo-vnpay">
                             </li>
                             <li class="footer-item-tt">
                                 <div class="footer-vn-background footer-vn-vn_cod_footer-png" style="width: 50px; height: 29px;"></div>
                             </li>
                             <li class="footer-item-tt">
-                                <img style="width: 55px; height: 23px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-atm.png" alt="logo-atm">
+                                <img loading="lazy" style="width: 55px; height: 23px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-atm.png" alt="logo-atm">
                             </li>
                             <li class="footer-item-tt">
-                                <img style="width: 55px; height: 23px;"src="<?php echo _WEB_ROOT ?>/public/assets/client/images/bct.png" alt="logo-bct" >
+                                <img loading="lazy" style="width: 123px; height: 47px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/bct.png" alt="logo-bct" >
                             </li>
                         </ul>
                        
@@ -134,7 +133,7 @@
                         <p class="footer__hedding">Vị trí </p>
                         <div class="footer-dowload">
                             <a href="https://www.google.com/maps/place/C%C3%B4ng+ty+TNHH+Th%C6%B0%C6%A1ng+m%E1%BA%A1i+v%C3%A0+Sx+T%C3%A2n+Minh+Nh%E1%BA%ADt/@21.1342605,106.4231619,16.25z/data=!4m5!3m4!1s0x0:0x42751289833074c1!8m2!3d21.13364!4d106.4249772!5m2!1e4!1e2?hl=vi" title="Bản đồ">
-                                <img width="100%" height="100%" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/mapTMN.jpg" alt="bản đồ">
+                                <img width="100%" height="100%" loading="lazy" style="max-height:147px" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/mapTMN.jpg" alt="bản đồ">
                             </a>
                         </div>
                     </div>
@@ -156,7 +155,7 @@
             <div class="hotline-zalo-ring-circle-fill"></div>
             <div class="hotline-zalo-ring-icon">
                 <a href="https://zalo.me/0961045066">
-                    <img class="hotline-phone-ring-img" style="margin-top: 5px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/zalo.png" alt="logo-zalo">
+                    <img width="100%" height="100%" class="hotline-phone-ring-img" style="margin-top: 5px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/zalo.png" alt="logo-zalo">
                 </a>
             </div>
         </div>
@@ -169,7 +168,7 @@
             <div class="hotline-phone-ring-circle-fill"></div>
             <div class="hotline-phone-ring-icon">
                 <a href="tel:0973 022 983">
-                    <img class="hotline-phone-ring-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-ring-phone.png" alt="icon-ring-phone">
+                    <img width="100%" height="100%" class="hotline-phone-ring-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-ring-phone.png" alt="icon-ring-phone">
                 </a>
             </div>
         </div>
@@ -181,7 +180,7 @@
         </div>
     </div>
     <!-- go to top  -->
-    <button  id="btn_gototop" title="Go to top">
+    <button  id="btn_gototop" title="Go to top" aria-label="go_to_top">
     <i class="fa-solid fa-chevron-up"></i>
     </button>
     <!-- MODAL IMAGE -->

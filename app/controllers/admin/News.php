@@ -130,14 +130,13 @@ function postAddNews (){
                 if($inserted)
                 {
                    
-                    $erro = 'thêm thành công';
+                    $erro = 'Thêm tin tức thành công';
                 }
                 else
                 {
                     $erro ="thêm thất bại";
                 }
                 
-                $error="upload thành công";
             }
             else{
                 $error="upload thất bại";
@@ -262,11 +261,11 @@ function postEdit()
         $inserted =$this->NewsModel->updateNews($data,$condition);
         if($inserted)
         {
-            $error ="Sửa sản phẩm thành công";
+            $error ="Sửa tin tức thành công";
         }
         else
         {
-            $error ="Sửa sản phẩm thất bại, vui lòng kiểm tra lại";
+            $error ="Sửa tin tức thất bại, vui lòng kiểm tra lại";
         }
         Session::flash('mess',$error);
 

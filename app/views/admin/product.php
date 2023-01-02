@@ -67,7 +67,7 @@
                                                             <td>
                                                                 <a  class =" btn btn-success" href="<?php echo _WEB_ROOT . '/admin/product/edit/'. $product['id'] ?> "><i class="fa fa-edit"></i> Sửa</a>
                                                             
-                                                                <a class="btn btn-warning" href="<?php echo _WEB_ROOT . '/admin/product/del/'. $product['id'] ?>"><i class="fa fa-times"></i>Xóa</a></td>
+                                                                <a class="btn btn-warning" href="<?php echo _WEB_ROOT . '/admin/product/del/'. $product['id'] ?> "><i class="fa fa-times"></i>Xóa</a></td>
                                                             
                                                  </tr>
                                                  <?php 

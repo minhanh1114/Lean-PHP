@@ -36,7 +36,7 @@
                                             <div class="col-md-9">
                                                 <div class="form-group">
                                                     <label>Meta-Description</label>
-                                                    <textarea required name="meta_description" type="text" placeholder="Nhập Meta-Description " class="form-control" rows="3" maxlength="225"> <?php echo $item['meta_description'] ?></textarea>
+                                                    <textarea required name="meta_description" type="text" placeholder="Nhập Meta-Description " class="form-control" rows="3" maxlength="225"><?php echo $item['meta_description'] ?></textarea>
                                                 </div>
                                             </div>
                                        
@@ -69,7 +69,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label>Mô tả</label>
-                                                    <textarea name ="description" id="editor" rows="4" cols="80" class="form-control"  ><?php echo $item['description'] ?></textarea>
+                                                    <textarea name ="description" id="editor" rows="4" cols="80" class="form-control" ><?php echo $item['description'] ?></textarea>
                                                 </div>
                                             </div>
                                         </div>
