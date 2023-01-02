@@ -49,7 +49,7 @@ private function create_slug($string)
     }
 function index(){
 
-    $this->data['mess'] = Session::flash('mess'); //thôn báo
+    $this->data['mess'] = Session::flash('mess'); //thông báo
     
     $request = new Request();
     $param=$request->getDataRequest();
@@ -165,6 +165,7 @@ function edit($id){
     $this->data['sub_content']['title'] = 'Sửa tin tức';
     $this->data['content']='admin/edit_news';
 
+    Session::flash('pageHistoryNews',$_SERVER["HTTP_REFERER"]);
     $this->render('layouts/admin_layout', $this->data);
 }
 function del($id)
@@ -191,7 +192,7 @@ function del($id)
         
     }
     Session::flash('mess',$mess);
-    $response->redirect('admin/news');
+    $response->redirect($_SERVER["HTTP_REFERER"]);
 
 }
 function postEdit()
@@ -252,6 +253,8 @@ function postEdit()
     }
    
     $data['slug'] = $this->create_slug($data['title']);
+    $data['date'] = date('Y-m-d H:i:s');
+
     if(!empty($data['id']))
     {
         $condition = 'id='.$data['id'];
@@ -259,14 +262,16 @@ function postEdit()
         $inserted =$this->NewsModel->updateNews($data,$condition);
         if($inserted)
         {
-            $error +="Sửa sản phẩm thành công";
+            $error ="Sửa sản phẩm thành công";
         }
         else
         {
-            $error +="Sửa sản phẩm thất bại, vui lòng kiểm tra lại";
+            $error ="Sửa sản phẩm thất bại, vui lòng kiểm tra lại";
         }
         Session::flash('mess',$error);
-        $response->redirect('admin/news');
+
+        $pageHistoryNews = Session::flash('pageHistoryNews');
+        $response->redirect($pageHistoryNews);
     }
     else
     {

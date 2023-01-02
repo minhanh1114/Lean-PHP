@@ -21,10 +21,7 @@ class NewsModel extends Model{
     {
         return $this->database->query('select * from ' . $this->_table . ' limit ' . $page_index . ' , ' . $limit)->fetchAll(PDO::FETCH_ASSOC);
     }
-    public function getCountNew()
-    {
-        return $this->database->query('select count(*) from ' . $this->_table)->fetchAll();
-    }
+    
     public function getNewsSlug($slug)
     {
         $data = $this->database->query('SELECT * FROM '. $this->_table.' WHERE slug = '. '"'.$slug.'"' )->fetchAll(PDO::FETCH_ASSOC);
@@ -74,5 +71,14 @@ class NewsModel extends Model{
         else{
             return false;
         }
+    }
+    public function getCountNew()
+    {
+        return $this->database->query('select count(*) from ' . $this->_table)->fetchAll();
+    }
+    public function getNewsOrderDate()
+    {
+        return $this->database->query('select * from ' . $this->_table. ' ORDER BY date DESC ')->fetchAll(PDO::FETCH_ASSOC);
+        
     }
 }

@@ -33,8 +33,11 @@
     <link rel="icon" href="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>" type="image/jpg" sizes="30x30">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link  href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap" rel="stylesheet">
+
+   
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/fonts/fontawesome/css/all.min.css">
+    
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/product.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css">
     <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css">
@@ -198,7 +201,7 @@ else if(!empty($sub_content['dataNews']))
         </ul>
         <form class="bar_search-mobile" action="<?php echo _WEB_ROOT . '/search' ?>" method="GET">
             <input type="text" name="k" placeholder="Tìm kiếm... " class="bar_mobile__input">
-            <button type="submit" class="bar_mobile__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button type="submit" class="bar_mobile__submit" aria-label="search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         </div>
 </div>
@@ -217,10 +220,10 @@ else if(!empty($sub_content['dataNews']))
                             <i class="fa-brands fa-facebook"></i>
                             <i class="fa-brands fa-twitter"></i>
                             <i class="fa-brands fa-google"></i>
-                            <span class="header-top_language">
+                            <!-- <span class="header-top_language">
                                 Tiếng việt <i class="fa-solid fa-chevron-down"></i>
     
-                            </span>
+                            </span> -->
                         </span>  
                     </div>
                 </div>
@@ -345,7 +348,7 @@ else if(!empty($sub_content['dataNews']))
                             <form class="navigation-search" method="GET" action="<?php echo _WEB_ROOT . '/search' ?>">
 
                                 <input type="text" name="k" placeholder="Tìm kiếm sản phẩm" class="navigation-search__input">
-                                <button type="submit" class="navigation-search__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button type="submit" class="navigation-search__submit" aria-label="search"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </nav>
 

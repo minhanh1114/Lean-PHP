@@ -65,7 +65,7 @@
                                             <div class="col-md-9">
                                                 <div class="form-group">
                                                     <label>Meta-Description</label>
-                                                    <textarea required name="meta_description" type="text" placeholder="Nhập Meta-Description " class="form-control" rows="3" maxlength="225"> </textarea>
+                                                    <textarea required name="meta_description" type="text" placeholder="Nhập Meta-Description " class="form-control" rows="3" maxlength="225"></textarea>
                                                 </div>
                                             </div>
                                         </div>

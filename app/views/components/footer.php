@@ -22,14 +22,14 @@
 
                 </div> 
               </div>
-              <button class="slider-two_left"> <i class="fa-solid fa-chevron-left"></i> </button>
-              <button class="slider-two_right"> <i class="fa-solid fa-chevron-right"></i></i></button>
+              <button class="slider-two_left" aria-label="slider-two_left"> <i class="fa-solid fa-chevron-left"></i> </button>
+              <button class="slider-two_right"aria-label="slider-two_right" > <i class="fa-solid fa-chevron-right"></i></i></button>
               
               <div class="dots-wrapper">
-                <button class="dot active"></button>
-                <button class="dot"></button>
-                <button class="dot"></button>
-                <button class="dot dot-mobile"></button>
+                <button class="dot active" aria-label="dot-1"></button>
+                <button class="dot" aria-label="dot-2"></button>
+                <button class="dot" aria-label="dot-3"></button>
+                <button class="dot dot-mobile" aria-label="dot-4"></button>
               </div>
               
         </div>
@@ -45,24 +45,24 @@
                                 <h2  class="footer-name_cty " >Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật</h2>
                             </li>
                             <li class="footer-item footer-flexbox">
-                                <p class="footer-item_link">
+                                <div class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <h4 class="footer-item_location">
+                                    <p class="footer-item_location">
                                         Văn Phòng Giao Dịch: Số 32 Thanh Lân - Thanh Trì - Hoàng Mai - Hà Nội.
-                                    </h4>
-                                </p>
+                                    </p>
+                                </div>
                                      
                             </li>
                             <li class="footer-item">
                                 <a href="tel:02203882983" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 02203 882 983 </a>
                             </li>
                             <li class="footer-item footer-flexbox">
-                                <p class="footer-item_link">
+                                <div  class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <h4 class="footer-item_location">
+                                    <p class="footer-item_location">
                                         Nhà Máy:  165 Lê Thanh Nghị - Hoàng Tân - Chí linh - Hải Dương.
-                                    </h4>
-                                </p>
+                                    </p>
+                                </div>
                                      
                             </li>
                             <li class="footer-item">
@@ -72,7 +72,7 @@
                                 <a href="tel:0961045066" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0961 045 066</a>
                             </li>
                             <li class="footer-item">
-                                <h4  class="footer-item_link" style="margin-left: 15px; font-size: 2rem;">HOTLINE:  <a href="tel:0964297683" style=" font-weight: bold ;font-family: 'Open Sans'; color: #ce0000; display: block;"> 0964 297 683</a></h4>
+                                <p  style=" font-weight: bold ;" class="footer-item_link" style="margin-left: 15px; font-size: 2rem;">HOTLINE:  <a href="tel:0964297683" class="hotline_number-phone" > 0964 297 683</a></p>
                             </li>
                            
                             
@@ -121,10 +121,10 @@
                                 <div class="footer-vn-background footer-vn-vn_cod_footer-png" style="width: 50px; height: 29px;"></div>
                             </li>
                             <li class="footer-item-tt">
-                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-atm.png" alt="logo-atm">
+                                <img style="width: 55px; height: 23px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-atm.png" alt="logo-atm">
                             </li>
                             <li class="footer-item-tt">
-                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/bct.png" alt="logo-bct" width="100%">
+                                <img style="width: 55px; height: 23px;"src="<?php echo _WEB_ROOT ?>/public/assets/client/images/bct.png" alt="logo-bct" >
                             </li>
                         </ul>
                        
@@ -134,7 +134,7 @@
                         <p class="footer__hedding">Vị trí </p>
                         <div class="footer-dowload">
                             <a href="https://www.google.com/maps/place/C%C3%B4ng+ty+TNHH+Th%C6%B0%C6%A1ng+m%E1%BA%A1i+v%C3%A0+Sx+T%C3%A2n+Minh+Nh%E1%BA%ADt/@21.1342605,106.4231619,16.25z/data=!4m5!3m4!1s0x0:0x42751289833074c1!8m2!3d21.13364!4d106.4249772!5m2!1e4!1e2?hl=vi" title="Bản đồ">
-                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/mapTMN.jpg" alt="bản đồ">
+                                <img width="100%" height="100%" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/mapTMN.jpg" alt="bản đồ">
                             </a>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
     </div>
     <!-- go to top  -->
     <button  id="btn_gototop" title="Go to top">
-        <i class="fa-solid fa-chevron-up"></i>
+    <i class="fa-solid fa-chevron-up"></i>
     </button>
     <!-- MODAL IMAGE -->
     <div class="modal_show-image">

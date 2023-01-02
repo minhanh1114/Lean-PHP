@@ -100,4 +100,14 @@ class ProductModel extends Model{
     {
         return $this->database->query('select count(*) from ' . $this->_table)->fetchAll();
     }
+    function getProductOrderDate()
+    {
+        return $this->database->query('SELECT * FROM '. $this->_table  .' ORDER BY date DESC ' )->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+    function getCountType()
+    {
+        return $this->database->query('select count(*) from types')->fetchAll();
+
+    }
 }

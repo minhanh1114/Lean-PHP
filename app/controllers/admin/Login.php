@@ -6,8 +6,15 @@ class Login extends Controller{
         $this->Login = $this->model('Admin');
       }
     function index(){
+       $response = new Response();
+
+       
         $request = new Request();
         $dataRequest = $request->getDataRequest();
+        if( Session::data('nameAdmin')&&Session::data('loginAdmin'))
+        {
+            $response->redirect('admin/Dashboard');
+        }
         if(!empty($dataRequest['mess']))
         {
             $this->data['mess']=$dataRequest['mess'];
@@ -27,6 +34,8 @@ class Login extends Controller{
             //thành công
             Session::data('nameAdmin',$user[0]['fullname']);
             Session::data('loginAdmin',$user[0]['uid']);
+            Session::data('idAdmin',$user[0]['id']);
+            Session::data('usernameAdmin',$user[0]['username']);
             $response->redirect('admin/Dashboard');
         }
         else{

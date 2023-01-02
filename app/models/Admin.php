@@ -13,9 +13,9 @@ class Admin extends Model {
         $user =$this->database->query('Select * from '.$this->_table .' where username = "' . $username . '" and password = "' . $password.'" LIMIT 1')->fetchAll(PDO::FETCH_ASSOC);
         return $user;
     }
-    function getDetail($id){
-        $data =['item1','item2','item3'];
-        return $data[$id];
+    function getCount(){
+        return $this->database->query('Select count(*) from '.$this->_table)->fetchAll();
+       
     }
     function getAllUser()
     {

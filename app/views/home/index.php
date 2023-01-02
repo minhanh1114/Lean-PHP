@@ -11,7 +11,7 @@
     <meta name="description" content="Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng Cao, tonnhualaysang">
+    <meta property="og:title" content="Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng, tonnhualaysang">
     <meta property="og:description" content="Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
     <meta property="og:url" content="<?php echo _WEB_ROOT ?>">
     <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
@@ -20,7 +20,7 @@
     <meta property="og:image:width" content="900">
     <meta property="og:site_name" content="Tấm Lợp Tân Minh Nhật">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng Cao, tonnhualaysang">
+    <meta name="twitter:title" content="Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng, tonnhualaysang">
     <meta name="twitter:description" content="Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
     <meta name="twitter:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
     <meta name=”geo.region” content=”VN-HN” />
@@ -31,16 +31,26 @@
     <meta name="google-site-verification" content="fHa5a6FbC6ouHpaTYmxWQLhfvGLUh8l3EIFUGczyOGU" />
     <link rel="canonical" href="<?php echo _WEB_ROOT ?>">
     <link rel="icon" href="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>" type="image/jpg" sizes="30x30">
+    <!--load lcp-->
+    <link rel="preload" as="image" href="<?php echo _WEB_ROOT ?>/public/assets/client/images/slider_4.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/styles.css"> -->
-    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<title>Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng Cao</title>
+    <link  href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/fonts/fontawesome/css/all.min.css" as="style" 
+     onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css" >
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/styles.css" >
+    
+    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css" as="style"   onload="this.onload=null;this.rel='stylesheet'">
+    <!-- <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css" as="style"  onload="this.onload=null;this.rel='stylesheet'" > -->
+
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css"> 
+
+<title>Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng</title>
+<!--  -->
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PV8LYT75Z"></script>
 <script>
@@ -80,7 +90,50 @@
 	}
 </script>
 <style>
+    .swiper-container {
+  max-width: 894px;
+  max-height: 448px;
+  margin: 0px 0 0 10px !important;
+}
+.swiper-container img{
+  max-width: 100%;
+}
+span.outer-dot {
+position: relative;
+height: 20px;
+width: 20px;
+border: solid 2px transparent;
+background: transparent;
+}
+span.inner-dot {
+position: absolute;
+width: 10px;
+height: 10px;
+border-radius: 10px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: white;
+margin: 0!important;
+}
 
+.swiper-pagination-bullet-active
+{
+  background: var(--white-color) !important;
+}
+.swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'><path%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23FFFFFF'%2F><%2Fsvg>") !important;
+}
+
+.swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23FFFFFF'%2F%3E%3C%2Fsvg%3E") !important;
+}
+.slider-content.loaded .slide:nth-child(2){ background:url("<?php echo _WEB_ROOT . "/public/assets/client/images/slider_4.jpg" ?>" )   ; background-size: cover; }
+
+.slider-content.loaded .slide:nth-child(1){  background:url("<?php echo _WEB_ROOT . "/public/assets/client/images/slider_1.jpg" ?>") ;    background-size: cover;  }
+.slider-content.loaded .slide:nth-child(3) {  background:url("<?php echo _WEB_ROOT . "/public/assets/client/images/slider_2.jpg" ?>")   ;  background-size: cover; }
+.slider-content.loaded .slide:nth-child(4) {  background:url("<?php echo _WEB_ROOT . "/public/assets/client/images/slider_1.jpg" ?>")   ;  background-size: cover; }
+.slider-content.loaded .slide:nth-child(5) {  background:url("<?php echo _WEB_ROOT . "/public/assets/client/images/slider_4.jpg" ?>")   ;  background-size: cover; }
 
 </style>
 </head>
@@ -90,14 +143,14 @@
     <!-- Your Plugin chat code -->
     <div id="fb-customer-chat" class="fb-customerchat">
     </div>
-    <script>
+    <script async>
       var chatbox = document.getElementById('fb-customer-chat');
       chatbox.setAttribute("page_id", "383977521955804");
       chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
     <!-- Your SDK code -->
-    <script>
+    <script async>
       window.fbAsyncInit = function() {
         FB.init({
           xfbml            : true,
@@ -150,9 +203,9 @@
                     <a class="menu_mobile__link" href="<?php echo _WEB_ROOT . '/lien-he' ?>">LIÊN HỆ</a>
                 </li>
         </ul>
-        <form class="bar_search-mobile" action="GET" method="<?php echo _WEB_ROOT . '/search' ?>">
+        <form class="bar_search-mobile" action="<?php echo _WEB_ROOT . '/search' ?>" method="GET">
             <input type="text" name="k" placeholder="Tìm kiếm... " class="bar_mobile__input">
-            <button type="submit" class="bar_mobile__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button type="submit" class="bar_mobile__submit" aria-label="search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         </div>
 </div>
@@ -171,10 +224,10 @@
                                 <i class="fa-brands fa-facebook"></i>
                                 <i class="fa-brands fa-twitter"></i>
                                 <i class="fa-brands fa-google"></i>
-                                <span class="header-top_language">
+                                <!-- <span class="header-top_language">
                                     Tiếng việt <i class="fa-solid fa-chevron-down"></i>
         
-                                </span>
+                                </span> -->
                             </span >
                             
                             
@@ -193,14 +246,14 @@
                             <p>(Hỗ trợ 24/7)</p>
                         </div>
                         <div class="bar-mobile"><i class="fa-solid fa-bars"></i> <br>Menu</div>
-                        <a href="<?php echo _WEB_ROOT ?>" title="Tấm Poly Tân Minh Nhật Tấm Lợp Lấy Sáng" class="header-logo"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" alt="logo-cong-ty" ></a>
+                        <a href="<?php echo _WEB_ROOT ?>" title="Tấm Poly Tân Minh Nhật Tấm Lợp Lấy Sáng" class="header-logo"><img width="100%" height="100%" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" alt="logo-cong-ty" ></a>
                     </div>
                     <div class="col l-9 m-0 c-0 header-right">
                         <div class=" header-content">
                             <p  class=" header-content_item">
                                 
                                     <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-dich-vu.png" alt="icon-dich-vu" class=" header-content_icon" >
-                                    <div class=" header-content_text">
+                                    <div class=" header-content_text" style="font-display:swap">
                                         <h4 class="header-content_title">dịch vụ chuyên nghiệp</h4>
                                         <p class="header-content_des">Độ tin cậy, Năng lực, Tác phong</p>
                                     </div>
@@ -209,13 +262,13 @@
                             <p class=" header-content_item">
                                 
                                     <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-san-pham.jpg" alt="icon-san-pham" class="  header-content_icon">
-                                    <div class=" header-content_text">
+                                    <div class=" header-content_text" style="font-display:swap">
                                         <h4 class="header-content_title">SẢN PHẨM CHẤT LƯỢNG</h4>
                                         <p class="header-content_des">Bảo hành 10 năm</p>
                                     </div>
                             
                             </p>
-                            <p class=" header-content_item">
+                            <p class=" header-content_item" style="font-display:swap">
                                 
                                     <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-chat-luong.png" alt="icon-chat-luon" class="  header-content_icon">
                                     <div class=" header-content_text">
@@ -224,7 +277,7 @@
                                     </div>
                                 
                             </p>
-                            <p class=" header-content_item">
+                            <p class=" header-content_item" style="font-display:swap">
                             
                                     <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-handshake.png" alt="icon-handshake" class="  header-content_icon">
                                     <div class=" header-content_text">
@@ -277,13 +330,13 @@
                         <nav class="navigation-content">
                             <ul class="navigation-content__list">
                                     <li class="navigation-content__item">
-                                        <a class="navigation-content__link" href="<?php echo _WEB_ROOT  ?>"><i class="fa-sharp fa-solid fa-house-chimney"></i> TRANG CHỦ</a>
+                                        <a style="font-display:swap" class="navigation-content__link" href="<?php echo _WEB_ROOT  ?>"><i class="fa-sharp fa-solid fa-house-chimney"></i> TRANG CHỦ</a>
                                     </li>
                                     <li class="navigation-content__item">
-                                        <a class="navigation-content__link" href="<?php echo _WEB_ROOT . '/gioi-thieu' ?>">GIỚI THIỆU</a>
+                                        <a style="font-display:swap" class="navigation-content__link" href="<?php echo _WEB_ROOT . '/gioi-thieu' ?>">GIỚI THIỆU</a>
                                     </li>
                                     <li class="navigation-content__item nav-content_dropdown">
-                                        <a class="navigation-content__link" href="#">SẢN PHẨM</a>
+                                        <a style="font-display:swap" class="navigation-content__link" href="#">SẢN PHẨM</a>
                                         <ul class="nav-content_submenu">
                                             <?php foreach ($typesProduct as $type)
                                             {
@@ -295,20 +348,37 @@
                                           </ul>
                                     </li>
                                     <li class="navigation-content__item">
-                                        <a class="navigation-content__link" href="<?php echo _WEB_ROOT . '/tin-tuc' ?>">TIN TỨC</a>
+                                        <a style="font-display:swap" class="navigation-content__link" href="<?php echo _WEB_ROOT . '/tin-tuc' ?>">TIN TỨC</a>
                                     </li>
                                     <li class="navigation-content__item">
-                                        <a class="navigation-content__link" href="<?php echo _WEB_ROOT . '/lien-he' ?>">LIÊN HỆ</a>
+                                        <a style="font-display:swap" class="navigation-content__link" href="<?php echo _WEB_ROOT . '/lien-he' ?>">LIÊN HỆ</a>
                                     </li>
                             </ul>
                             <form method="GET" action="<?php echo _WEB_ROOT ?>/search" class="navigation-search">
                                 <input type="text" name="k" placeholder="Tìm kiếm sản phẩm" class="navigation-search__input">
-                                <button type="submit" class="navigation-search__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button type="submit" class="navigation-search__submit" aria-label="search"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </nav>
                         
-                        
-                        <div id="slider" class="slider-content">
+                        <div class="swiper-container">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"><img width="100%" height="100%" rel="preload" as="image" src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_4.jpg" alt="slider_4"  /></div>
+                                <div class="swiper-slide"><img width="100%" height="100%" rel="preload" as="image" src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_2.jpg" alt="slider_2" /></div>
+                                <div class="swiper-slide"><img width="100%" height="100%" rel="preload" as="image" src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_1.jpg" alt="slider_1" /></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-next"></div>
+                             <div class="swiper-button-prev"></div>
+
+                            <!-- If we need scrollbar -->
+                        <!--     <div class="swiper-scrollbar"></div> -->
+                        </div>
+                        <!-- <div id="slider" class="slider-content">
                             <div class="wrapper">
                                 <div id="slides" class="slides">
                                 
@@ -321,9 +391,7 @@
                                 <span class="slide">
                                     <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_1.jpg" alt="slider_1" />
                                 </span>
-                                <span class="slide">
-                                    <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_3.png" alt="slider_3" />
-                                </span>
+                                
                             </div>
                             </div>
                             <p id="prev" class="control prev">
@@ -333,11 +401,11 @@
                             <p id="next" class="control next">
                                 <i class="fa-solid fa-chevron-right"></i>
                             </p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                <div class="promo-product">
-                    <h2 class="promo-product_heading"><p style="display: inline;" class="promo-text_link" >Sản Phẩm Khuyến Mãi</p></h2>
+                    <h2  class="promo-product_heading"><p style="display: inline;" class="promo-text_link" >Sản Phẩm Khuyến Mãi</p></h2>
                     <div class="row">
                         <div class="col l-4 m-6 c-12">
                             <a href="<?php echo _WEB_ROOT ?>/loai-san-pham/tam-lop-lay-sang-composite.html" title="tấm lợp lấy sáng composite"  class ="promo-product_link">
@@ -358,7 +426,7 @@
                 </div>
                 <!-- product catalog -->
                 <div class="product-catalog">
-                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[2]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo  $typesProduct[2]['name_type'] ?></a></h2>
+                    <h2  class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[2]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo  $typesProduct[2]['name_type'] ?></a></h2>
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
@@ -373,7 +441,7 @@
                                     ?>
                                     <div class="col l-3 m-4 c-6">
                                         <a href="<?php echo _WEB_ROOT . '/san-pham/'. $product['slug'] .'.html' ?>" class="home-product_item">
-                                            <img class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
+                                            <img width="100%" height="100%" loading="lazy" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
                                             <h3 class="home-product_heading"><?php echo $product['name']  ?></h3>
                                             <p class="home-product_code">Mã sản phẩm: <?php echo $product['code']  ?></p>
                                             <p class="hom-product-price">Liên hệ</p>
@@ -391,7 +459,7 @@
 
                 <!-- product catalog -->
                 <div class="product-catalog">
-                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[1]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo  $typesProduct[1]['name_type'] ?></a></h2>
+                    <h2  class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[1]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo  $typesProduct[1]['name_type'] ?></a></h2>
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
@@ -406,7 +474,7 @@
                                     ?>
                                     <div class="col l-3 m-4 c-6">
                                         <a href="<?php echo _WEB_ROOT . '/san-pham/'. $product['slug'] .'.html' ?>" class="home-product_item">
-                                            <img class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
+                                            <img width="100%" height="100%" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
                                             <h3 class="home-product_heading"><?php echo $product['name']  ?></h3>
                                             <p class="home-product_code">Mã sản phẩm: <?php echo $product['code']  ?></p>
                                             <p class="hom-product-price">Liên hệ</p>
@@ -423,7 +491,7 @@
 
                 <!-- product catalog three -->
                 <div class="product-catalog">
-                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[0]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo $typesProduct[0]['name_type'] ?></a></h2>
+                    <h2  class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[0]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo $typesProduct[0]['name_type'] ?></a></h2>
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
@@ -438,7 +506,7 @@
                                     ?>
                                     <div class="col l-3 m-4 c-6">
                                         <a href="<?php echo _WEB_ROOT . '/san-pham/'. $product['slug'] .'.html' ?>" class="home-product_item">
-                                            <img class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
+                                            <img width="100%" height="100%" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
                                             <h3 class="home-product_heading"><?php echo $product['name']  ?></h3>
                                             <p class="home-product_code">Mã sản phẩm: <?php echo $product['code']  ?></p>
                                             <p class="hom-product-price">Liên hệ</p>
@@ -455,7 +523,7 @@
 
                 <!-- product catalog four -->
                 <div class="product-catalog">
-                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[3]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo $typesProduct[3]['name_type'] ?></a></h2>
+                    <h2  class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/loai-san-pham/'. $typesProduct[3]['slug_type'].'.html' ?>" class="promo-text_link" ><?php echo $typesProduct[3]['name_type'] ?></a></h2>
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
@@ -470,7 +538,7 @@
                                     ?>
                                     <div class="col l-3 m-4 c-6">
                                         <a href="<?php echo _WEB_ROOT . '/san-pham/'. $product['slug'] .'.html' ?>" class="home-product_item">
-                                            <img class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
+                                            <img width="100%" height="100%" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
                                             <h3 class="home-product_heading"><?php echo $product['name']  ?></h3>
                                             <p class="home-product_code">Mã sản phẩm: <?php echo $product['code']  ?></p>
                                             <p class="hom-product-price">Liên hệ</p>
@@ -487,14 +555,14 @@
                 
                 <!-- start news -->
                 <div class="product-catalog">
-                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/tin-tuc/' ?>" class="promo-text_link" >Tin Tức - Sự Kiện</a></h2>
+                    <h2  class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/tin-tuc/' ?>" class="promo-text_link" >Tin Tức - Sự Kiện</a></h2>
                     <div class="row">
                         
                         <div class="col l-8 m-12 c-12">                      
                                 <a href="<?php echo _WEB_ROOT .'/tin-tuc/'.$news[0]['slug'] .'.html' ?>" class="home-news">
                                     <h3 class="home-news_heading"><?php echo $news[0]['title']?></h3>
                                     <div class="home-news_continer">
-                                        <img width="280px" class="home-news_img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[0]['img']  ?>" alt="<?php echo $news[0]['slug'] ?>"></img>
+                                        <img loading="lazy" width="100%" height="100%"  class="home-news_img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[0]['img']  ?>" alt="<?php echo $news[0]['slug'] ?>"></img>
                                         <div class="home-new_content">
                                             <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[0]['date']); echo $dt->format('m/d/Y');?></p>
                                             <p class="hom-news-des"><?php echo $news[0]['description']?></p>
@@ -511,7 +579,7 @@
                                                 <div class="row ">
 
                                                    <div class="col l-5 m-5 c-5">
-                                                       <img class="home-news_img offer-img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[1]['img']  ?>" alt="<?php echo $news[1]['slug'] ?>"></img>
+                                                       <img loading="lazy" class="home-news_img offer-img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[1]['img']  ?>" alt="<?php echo $news[1]['slug'] ?>"></img>
                                                    </div> 
                                                    <div class="col l-7 m-6 c-6">
                                                         <div class="home-new_content offer-content">
@@ -529,7 +597,7 @@
                                                 <div class="row ">
 
                                                    <div class="col l-5 m-5 c-5">
-                                                       <img class="home-news_img offer-img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[2]['img']  ?>" alt="<?php echo $news[2]['slug'] ?>"></img>
+                                                       <img loading="lazy" class="home-news_img offer-img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[2]['img']  ?>" alt="<?php echo $news[2]['slug'] ?>"></img>
                                                    </div> 
                                                     
                                                    <div class="col l-7 m-6 c-6">
@@ -568,19 +636,19 @@
                   
                   <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo3.jpg" alt="plogo3"></div>
                   <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vingroup.jpg" alt="vingroup"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo2.jpg" alt="plogo2"></div>  
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo2.jpg" alt="plogo2"></div>  
                   <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/makrolon-bayer.png" alt="makrolon-bayer"></div>
 
                 </div> 
               </div>
-              <button class="slider-two_left"> <i class="fa-solid fa-chevron-left"></i> </button>
-              <button class="slider-two_right"> <i class="fa-solid fa-chevron-right"></i></i></button>
+              <button class="slider-two_left" aria-label="slider-two_left"> <i class="fa-solid fa-chevron-left"></i> </button>
+              <button class="slider-two_right" aria-label="slider-two_right"> <i class="fa-solid fa-chevron-right"></i></i></button>
               
               <div class="dots-wrapper">
-                <button class="dot active"></button>
-                <button class="dot"></button>
-                <button class="dot"></button>
-                <button class="dot dot-mobile"></button>
+                <button class="dot active" aria-label="dot-1"></button>
+                <button class="dot" aria-label="dot-2"></button>
+                <button class="dot" aria-label="dot-3"></button>
+                <button class="dot dot-mobile" aria-label="dot-4"></button>
               </div>
               
         </div>
@@ -595,23 +663,24 @@
                                 <h2  class="footer-name_cty " >Công ty TNHH Thương Mại Và Sản Xuất Tân Minh Nhật</h2>
                             </li>
                             <li class="footer-item footer-flexbox">
-                                <p class="footer-item_link">
+                                <div class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <h4 class="footer-item_location">
+                                    <p class="footer-item_location">
                                         Văn Phòng Giao Dịch: Số 32 Thanh Lân - Thanh Trì - Hoàng Mai - Hà Nội.
-                                    </h4>
-                                </p>
+                                    </p>
+                                </div>
                                      
                             </li>
                             <li class="footer-item">
                                 <a href="tel:02203882983" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 02203 882 983 </a>
                             </li>
                             <li class="footer-item footer-flexbox">
-                                <a href="#" class="footer-item_link">
+                                <div class="footer-item_link">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <h4 class="footer-item_location">
+                                    <p class="footer-item_location">
                                         Nhà Máy:  165 Lê Thanh Nghị - Hoàng Tân - Chí linh - Hải Dương.
-                                    </h4>
+                                    </p>
+                                <div>
                                      
                             </li>
                             <li class="footer-item">
@@ -621,7 +690,7 @@
                                 <a href="tel:0961045066" class="footer-item_link" style="color: #006600; margin-left: 15px; font-weight: 600;">Tel: 0961 045 066</a>
                             </li>
                             <li class="footer-item">
-                                <h4  class="footer-item_link" style="margin-left: 15px; font-size: 2rem;">HOTLINE:  <a href="tel:0964297683" style=" font-weight: bold ;font-family: 'Open Sans'; color: #ce0000; display: block;"> 0964 297 683</a></h4>
+                                <p  style=" font-weight: bold ;" class="footer-item_link" style="margin-left: 15px; font-size: 2rem;">HOTLINE:  <a href="tel:0964297683" class="hotline_number-phone"> 0964 297 683</a></p>
                             </li>
                            
                             
@@ -645,7 +714,7 @@
                             </li>
                             <li class="footer-item">
                                 <a href="https://www.facebook.com/tonnhualaysangtanminhnhat" class="footer-item_link">
-                                    <img src="<?php echo _WEB_ROOT .'/public/assets/client/images/plug_page_facebook.png' ?>" alt="plug_page_facebook">
+                                    <img loading="lazy" width="100%" height="100%" src="<?php echo _WEB_ROOT .'/public/assets/client/images/plug_page_facebook.png' ?>" alt="plug_page_facebook">
                                 </a>
                             </li>
                             
@@ -664,16 +733,16 @@
                                 <div class="footer-vn-background footer-vn-jcb-png" style="width: 55px; height: 23px;"></div>
                             </li>
                             <li class="footer-item-tt">
-                               <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-vnpay.png" alt="logo-vnpay">
+                               <img loading="lazy" style="width: 77px; height: 30px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-vnpay.png" alt="logo-vnpay">
                             </li>
                             <li class="footer-item-tt">
                                 <div class="footer-vn-background footer-vn-vn_cod_footer-png" style="width: 50px; height: 29px;"></div>
                             </li>
                             <li class="footer-item-tt">
-                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-atm.png" alt="logo-atm">
+                                <img loading="lazy" style="width: 55px; height: 23px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo-atm.png" alt="logo-atm">
                             </li>
                             <li class="footer-item-tt">
-                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/bct.png" alt="logo-bct" width="100%">
+                                <img loading="lazy" style="width: 123px; height: 47px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/bct.png" alt="logo-bct" >
                             </li>
                         </ul>
                        
@@ -683,7 +752,7 @@
                         <p class="footer__hedding">Vị trí </p>
                         <div class="footer-dowload">
                             <a href="https://www.google.com/maps/place/C%C3%B4ng+ty+TNHH+Th%C6%B0%C6%A1ng+m%E1%BA%A1i+v%C3%A0+Sx+T%C3%A2n+Minh+Nh%E1%BA%ADt/@21.1342605,106.4231619,16.25z/data=!4m5!3m4!1s0x0:0x42751289833074c1!8m2!3d21.13364!4d106.4249772!5m2!1e4!1e2?hl=vi" title="Bản đồ">
-                                <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/mapTMN.jpg" alt="bản đồ">
+                                <img width="100%" height="100%" loading="lazy" style="max-height:147px" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/mapTMN.jpg" alt="bản đồ">
                             </a>
                         </div>
                     </div>
@@ -705,7 +774,7 @@
             <div class="hotline-zalo-ring-circle-fill"></div>
             <div class="hotline-zalo-ring-icon">
                 <a href="https://zalo.me/0961045066">
-                    <img class="hotline-phone-ring-img" style="margin-top: 5px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/zalo.png" alt="logo-zalo">
+                    <img width="100%" height="100%" class="hotline-phone-ring-img" style="margin-top: 5px;" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/zalo.png" alt="logo-zalo">
                 </a>
             </div>
         </div>
@@ -718,7 +787,7 @@
             <div class="hotline-phone-ring-circle-fill"></div>
             <div class="hotline-phone-ring-icon">
                 <a href="tel:0973 022 983">
-                    <img class="hotline-phone-ring-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-ring-phone.png" alt="icon-ring-phone">
+                    <img width="100%" height="100%" class="hotline-phone-ring-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-ring-phone.png" alt="icon-ring-phone">
                 </a>
             </div>
         </div>
@@ -730,12 +799,16 @@
         </div>
     </div>
     <!-- go to top  -->
-    <button  id="btn_gototop" title="Go to top">
+    <button  id="btn_gototop" title="Go to top" aria-label="go_to_top">
     <i class="fa-solid fa-chevron-up"></i>
     </button>
 
-        <script src="<?php echo _WEB_ROOT ?>/public/assets/client/js/script.js"></script>
-        <script src="<?php echo _WEB_ROOT ?>/public/assets/client/js/carousel.js"></script>
+        <script async src="<?php echo _WEB_ROOT ?>/public/assets/client/js/script.js"></script>
+
+        <script async src="<?php echo _WEB_ROOT ?>/public/assets/client/js/carousel.js"></script>
+        <script>
+            
+        </script>
 
 </body>
 </html>

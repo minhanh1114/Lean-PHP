@@ -5,6 +5,12 @@
         display: none;
     }
     
+    
+}
+@media (min-width: 1024px){
+.hidden_scroll{
+    padding-right:17px
+}
 }
 /* tablet and mobile */
 @media  (max-width: 1023px) {
@@ -50,7 +56,7 @@
         display: none;
     }
     .home-news_img.offer-img{
-        max-width: 100%;
+        /* max-width: 100%; */
     }
     .promo-text_link{
         font-size:1.6rem;
@@ -63,11 +69,11 @@
     #btn_gototop{
         display: none !important;
     }
-    .control{
-        height: 30px;
-        width: 30px;
-        font-size: 1.4rem;
+    .swiper-button-next,
+    .swiper-button-prev{
+        background-size: 10px 177px !important;
     }
+    
     .page_contact-address-form{
         margin-top: 20px;
     }

@@ -67,7 +67,7 @@
                                                             <td>
                                                                 <a  class =" btn btn-success" href="<?php echo _WEB_ROOT . '/admin/product/edit/'. $product['id'] ?> "><i class="fa fa-edit"></i> Sửa</a>
                                                             
-                                                                <a class="btn btn-warning" href="<?php echo _WEB_ROOT . '/admin/product/del/'. $product['id'] ?> "><i class="fa fa-times"></i>Xóa</a></td>
+                                                                <a class="btn btn-warning" href="<?php echo _WEB_ROOT . '/admin/product/del/'. $product['id'] ?>"><i class="fa fa-times"></i>Xóa</a></td>
                                                             
                                                  </tr>
                                                  <?php 
@@ -103,5 +103,16 @@
         document.getElementById('select-type_product').addEventListener('change', function(){
             document.getElementById('form-type_product').submit();
         });
+        document.querySelectorAll('.btn.btn-warning').forEach((item=>{
+            item.addEventListener('click', function(event){
+            var confirmDel = confirm("Bạn có chắc chắn muốn xóa không ?");  
+            if (confirmDel == true) {  
+                 console.log("You have selected OK!") ;  
+            } else {  
+                event.preventDefault();
+                console.log("You have selected Cancelled!");  
+            }  
+        })
+        }));
     </script>
            

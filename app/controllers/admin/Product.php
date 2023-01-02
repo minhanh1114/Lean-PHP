@@ -195,6 +195,7 @@ function edit($id){
     $this->data['sub_content']['title'] = 'Sửa sản phẩm';
     $this->data['content']='admin/edit_product';
 
+    Session::flash('pageHistoryProduct',$_SERVER["HTTP_REFERER"]);
     $this->render('layouts/admin_layout', $this->data);
 }
 function postEdit(){
@@ -266,6 +267,7 @@ function postEdit(){
     }
 
     $data['slug'] = $this->create_slug($data['name']);
+    $data['date'] = date('Y-m-d H:i:s');
                 // truy vấn database
     if(!empty($data['id']))
     {
@@ -285,7 +287,8 @@ function postEdit(){
         }
         // session
         Session::flash('mess',$error);
-        $response->redirect('admin/product');
+        $pageHistoryProduct = Session::flash('pageHistoryProduct');
+        $response->redirect($pageHistoryProduct);
     }
 
     else
@@ -332,7 +335,8 @@ function postEdit(){
             
         }
         Session::flash('mess',$mess);
-        $response->redirect('admin/product');
+        $response->redirect($_SERVER["HTTP_REFERER"]);
+
 
         
     }

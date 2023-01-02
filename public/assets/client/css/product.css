@@ -119,6 +119,7 @@ td {
 .header-logo img{
     max-width: 125px;
     width: 50%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -138,11 +139,10 @@ td {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    margin-left: 7px;
 
 }
-.header-content_item + .header-content_item{
-    margin-left: 30px;
-}
+
 .header-content_icon{
     /* max-width: 100%; */
     width: 50px;
@@ -151,7 +151,7 @@ td {
     margin-left: 10px;
 }
 .header-content_title{
- font-size: 1.2rem;
+font-size: 1.4rem;
 font-weight: 700;
 text-transform: uppercase;
 color: var(--private-color);
@@ -160,7 +160,7 @@ font-family: Helvetica, sans-serif;
 
 }
 .header-content_des{
- font-size: 1.1rem;
+ font-size: 1.2rem;
 font-weight: 300;
 color: var(--text-color);
 
@@ -665,7 +665,13 @@ justify-content: space-evenly;
     color: #333333;
     text-decoration: none;
     font-weight: 400;
-
+}
+.hotline_number-phone{
+    font-weight: bold ;
+    font-family: 'Open Sans'; 
+    color: #ce0000; 
+    display: block;
+    font-size: 2rem;
 }
 .footer-item_link:hover{
     color:#ee4d2d;
@@ -763,13 +769,13 @@ justify-content: space-evenly;
 }
 .bar-mobile{
     position: absolute;
-    top: 5%;
     font-size: 1.4rem;
     font-weight: 600;
     right: 5%;
     text-align: center;
     cursor: pointer;
     display: none;
+    padding: 12px;
 }
 .bar-mobile i{
     color: var(--white-color);
@@ -897,7 +903,7 @@ color: var(--white-color);
 }
 .hidden_scroll{
     overflow: hidden;
-    padding-right: 17px;
+    /* padding-right: 17px; */
 }
 /* zalo zing */
 .hotline-zalo_ring{
@@ -1166,6 +1172,9 @@ flex:1
     text-align: justify;
     margin: 0 0 10px 0;
     
+}
+.show-news_des-html a{
+    color: #2294f1;
 }
 .show-news_des-html h1 {
     font-size: 2.3rem !important;

@@ -69,7 +69,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label>Mô tả</label>
-                                                    <textarea name ="description" id="editor" rows="4" cols="80" class="form-control" p ><?php echo $item['description'] ?></textarea>
+                                                    <textarea name ="description" id="editor" rows="4" cols="80" class="form-control"  ><?php echo $item['description'] ?></textarea>
                                                 </div>
                                             </div>
                                         </div>
