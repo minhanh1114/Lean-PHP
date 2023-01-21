@@ -47,7 +47,8 @@ private function create_slug($string)
         $string = strtolower($string);
         return $string;
     }
-function index(){
+
+    function index(){
     
     $this->data['mess'] = Session::flash('mess');
     
@@ -99,6 +100,43 @@ function index(){
     }
     
 }
+
+private function create_thumb($fileImageDrirect,$newName)
+{
+    $fileImage = $fileImageDrirect . $newName;
+    // Set a maximum height and width
+$width = 250;
+$height = 200;
+
+
+// Get new dimensions
+list($width_orig, $height_orig) = getimagesize($fileImage);
+
+$ratio_orig = $width_orig/$height_orig;
+
+if ($width/$height > $ratio_orig) {
+   $width = $height*$ratio_orig;
+} else {
+   $height = $width/$ratio_orig;
+}
+
+// Resample
+$image_p = imagecreatetruecolor($width, $height);
+// $image = imagecreatefromjpeg($fileImage);
+$exploded = explode('.',$fileImage);
+$ext = end($exploded);
+
+if (preg_match('/jpg|jpeg/i',$ext)){$image=imagecreatefromjpeg($fileImage);}
+else if (preg_match('/png/i',$ext)){$image=imagecreatefrompng($fileImage);}
+else if (preg_match('/gif/i',$ext)){$image=imagecreatefromgif($fileImage);}
+else    {return false;}
+
+imagecopyresampled($image_p, $image, 0, 0, 0, 0, $width, $height, $width_orig, $height_orig);
+
+// Output
+// imagejpeg($image_p, "public/assets/products/" . $newName, 100);
+imagejpeg($image_p, "public/assets/products/thumb". '/' . $newName, 90);
+}
 function addProduct(){
   
 
@@ -140,6 +178,7 @@ function postAddProduct(){
             {
                 $data['img'] = $newName;
                 $data['slug'] = $this->create_slug($data['name']);
+                $this->create_thumb(_DIR_ROOT . '/public/assets/products/',$newName);
                 // truy vấn database
                 $inserted =$this->ProductModel->insertProduct($data);
                 if($inserted)
@@ -175,7 +214,7 @@ function postAddProduct(){
 
     }
     Session::flash('mess',$error);
-    $response->redirect('admin/product');
+     $response->redirect('admin/product');
     
 
 
@@ -230,12 +269,18 @@ function postEdit(){
                 
                 if($upload)
                 {
+                   
+                    $this->create_thumb(_DIR_ROOT . '/public/assets/products/',$newName);
+
                     //xóa ảnh cũ
                     $product = $this->ProductModel->getProductId($data['id']);
                     $old_image= _DIR_ROOT . '/public/assets/products/'.$product['img'];
+                    $old_image_thumb= _DIR_ROOT . '/public/assets/products/thumb/'.$product['img'];
                     if (file_exists($old_image))
                     {
                         unlink($old_image);
+                        unlink($old_image_thumb);
+
                         $data['img'] = $newName;
                         $error ="upload thành công";
                         
@@ -311,18 +356,20 @@ function postEdit(){
         $condition = 'id='.$id;
         $product = $this->ProductModel->getProductId($id);
         $old_image= _DIR_ROOT . '/public/assets/products/'.$product['img'];
+        $old_image_thumb= _DIR_ROOT . '/public/assets/products/thumb/'.$product['img'];
+
 
         //  echo '<pre>';
         // print_r($product['img']);
         // echo '</pre>';
         if($this->ProductModel->delProduct($condition))
         {
-            if (file_exists($old_image))
+            if (file_exists($old_image) && file_exists($old_image_thumb))
             {
-                if(unlink($old_image))
-                {
-                    $mess ="Xóa sản phẩm thành công";
-                }
+                unlink($old_image);
+                unlink($old_image_thumb);
+                $mess ="Xóa sản phẩm thành công";
+                
             }
             else{
                 $mess ="Hình ảnh không tồn tại";
@@ -332,7 +379,7 @@ function postEdit(){
         }
         else
         {
-            $mess +=" Xóa sản phẩm thất bại";
+            $mess =" Xóa sản phẩm thất bại";
             
         }
         Session::flash('mess',$mess);

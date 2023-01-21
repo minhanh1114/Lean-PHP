@@ -1,8 +1,15 @@
-<div class="breadcrumb">
-    <span class="">
-        <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
-        <span class="breadcrumb_last">Tin tức</span>
-    </span>
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"> 
+                        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="<?php echo _WEB_ROOT ?>">
+                                <span itemprop="name">Trang chủ</span>
+                            </a>  » 
+                            <meta itemprop="position" content="1" />
+                        </span>
+                        
+                        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <span class="breadcrumb_last" itemprop="name">Tin tức</span>
+                            <meta itemprop="position" content="2" />
+                        </span>
 </div>
 <style>
                 
@@ -10,9 +17,10 @@
                     <div class="product-catalog">
                         <h1 class="promo-product_heading">
                             <a href="" class="promo-text_link" >Tin tức & Sự kiện </a>
+
                         </h1>
                         <div class="row">
-                            <div class="col l-8 m-12 c-12" style=" border-right: 2px solid #ccc;">   
+                            <div class="col l-8 m-12 c-12">   
                                                    <!--  item new-->
                             <?php
                                 foreach($dataNewsAll as $news)
@@ -40,7 +48,9 @@
                                 
                             </div>
                             <div class="col l-4 m-12 c-12">
-                                <h2 class="new_offer-heading">Tin tức nổi bật</h2>
+                                <h2 class="new_offer-heading">
+                                    <span>Tin Tức Nổi Bật</span>
+                                </h2>
                                                  <!--  item new-->
                                              <?php
                                                 foreach($dataNewsOffer as $news)

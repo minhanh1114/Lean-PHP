@@ -1,8 +1,21 @@
 <link rel="preload" as="image" href="<?php  echo _WEB_ROOT . '/public/assets/products/'. $dataProduct[0]['img'] ?>">
-<div class="breadcrumb">
-                        <span class="">
-                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
-                            <span class="breadcrumb_last"><a  href="<?php echo _WEB_ROOT .'/loai-san-pham/'.$dataProduct[0]['slug_type'].'.html'?>"><?php echo $dataProduct[0]['name_type'] ?> » </a><?php echo $dataProduct[0]['name'] ?></span>
+
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"> 
+                        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="<?php echo _WEB_ROOT ?>">
+                                <span itemprop="name">Trang chủ</span>
+                            </a>  » 
+                            <meta itemprop="position" content="1" />
+                        </span>
+                        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" > 
+                            <a itemprop="item" itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="<?php echo _WEB_ROOT .'/loai-san-pham/'.$dataProduct[0]['slug_type'].'.html'?>" href="<?php echo _WEB_ROOT .'/loai-san-pham/'.$dataProduct[0]['slug_type'].'.html'?>">
+                                <span itemprop="name"><?php echo $dataProduct[0]['name_type'] ?></span>  
+                            </a> »
+                            <meta itemprop="position" content="2" />
+                        </span>
+                        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <span class="breadcrumb_last" itemprop="name"><?php echo $dataProduct[0]['name'] ?></span>
+                            <meta itemprop="position" content="3" />
                         </span>
 </div>
 <div class="detail-product">
@@ -26,6 +39,12 @@
                                     <div class="product-submit">
                                         <a href="tel:0973 022 983" class="buy-product">Mua ngay</a>
                                         <a href="<?php  echo _WEB_ROOT . '/lien-he' ?>" class="product-contact">Liên hệ</a>
+                                    </div>
+                                    <div class="product-attention">
+                                        <p>
+                                            Sản phẩm đã mua của quý khách gặp trục trặc? Liên hệ trung tâm chăm sóc khách hàng 
+                                            <span><a style="color:#2C74B3" href="https://zalo.me/0961045066">0961 045 066</a> hoặc <a style="color:#2C74B3" href="tel:0964297683">0964 297 683</a></span>
+                                        </p>
                                     </div>
                                     
                                 </div>

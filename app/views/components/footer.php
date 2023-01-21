@@ -334,7 +334,7 @@
                     slider.addEventListener('touchend', end);
                 })();
 
-            document.querySelector('.category_heading-icon').addEventListener('click',function(e){
+            document.querySelector('.category_heading').addEventListener('click',function(e){
                 document.querySelector('.category_list').classList.toggle('open_bar-mobile');
 
             })

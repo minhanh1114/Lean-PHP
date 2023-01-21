@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="copyright" content="Tấm Lợp Tấn Minh Nhật">
-    <meta name="author" content="Tấn Minh Nhật">
-    <meta name="keywords" content="Báo Giá Nhựa Lấy Sáng Composite Poly, tonnhualaysang, Tấn Minh Nhật, ton nhua lay sang, Nhựa Lấy Sáng Tấn Minh Nhật.">
-    <meta name="description" content="Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
+    <meta name="copyright" content="Tấm Nhựa Tân Minh Nhật">
+    <meta name="author" content="Tân Minh Nhật">
+    <meta name="keywords" content="Báo Giá Nhựa Lấy Sáng Composite Poly, tonnhualaysang, Tân Minh Nhật, ton nhua lay sang, Nhựa Lấy Sáng Tân Minh Nhật.">
+    <meta name="description" content="Tấm nhựa Tân Minh Nhật chuyên cung cấp tấm nhựa lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm nhựa thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng, tonnhualaysang">
-    <meta property="og:description" content="Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
+    <meta property="og:title" content="Tấm Nhựa Tân Minh Nhật: Tấm Nhựa Lấy Sáng Bền Đẹp Chất Lượng, tonnhualaysang">
+    <meta property="og:description" content="Tấm nhựa Tân Minh Nhật chuyên cung cấp tấm nhựa lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm nhựa thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
     <meta property="og:url" content="<?php echo _WEB_ROOT ?>">
     <meta property="og:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:height" content="900">
     <meta property="og:image:width" content="900">
-    <meta property="og:site_name" content="Tấm Lợp Tân Minh Nhật">
+    <meta property="og:site_name" content="Tấm Nhựa Tân Minh Nhật">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng, tonnhualaysang">
-    <meta name="twitter:description" content="Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
+    <meta name="twitter:title" content="Tấm Nhựa Tân Minh Nhật: Tấm Nhựa Lấy Sáng Bền Đẹp Chất Lượng, tonnhualaysang">
+    <meta name="twitter:description" content="Tấm nhựa Tân Minh Nhật chuyên cung cấp tấm nhựa lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm nhựa thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường">
     <meta name="twitter:image" content="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>">
     <meta name=”geo.region” content=”VN-HN” />
     <meta name="geo.position" content="20.9922614 , 105.8884573" />
@@ -32,22 +32,12 @@
     <link rel="canonical" href="<?php echo _WEB_ROOT ?>">
     <link rel="icon" href="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>" type="image/jpg" sizes="30x30">
     <!--load lcp-->
-    <link rel="preload" as="image" href="<?php echo _WEB_ROOT ?>/public/assets/client/images/slider_4.jpg">
+    <link rel="preload" fetchpriority="high" as="image" href="https://tonnhualaysang.vn/public/assets/client/images/slider_4.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link  href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap" rel="stylesheet">
     
-    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/fonts/fontawesome/css/all.min.css" as="style" 
-     onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css" >
-    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/styles.css" >
-    
-    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css" as="style"   onload="this.onload=null;this.rel='stylesheet'">
-    <!-- <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css" as="style"  onload="this.onload=null;this.rel='stylesheet'" > -->
 
-    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css"> 
-
-<title>Tấm Lợp Tân Minh Nhật: Tấm Lợp Lấy Sáng Bền Đẹp Chất Lượng</title>
+<title>Tấm Nhựa Tân Minh Nhật: Tấm Nhựa Lấy Sáng Bền Đẹp Chất Lượng</title>
 <!--  -->
 
 
@@ -61,34 +51,85 @@
   gtag('config', 'G-7PV8LYT75Z');
 </script>
 <!--Google tag -->
+
 <script type="application/ld+json">
-	{
-  	"@context": "http://schema.org",
-  	"@type": "LocalBusiness",
-	"url": "https://tonnhualaysang.vn/",
-	"logo": "https://tonnhualaysang.vn/public/assets/client/images/logo.jpg",
-	"hasMap": "https://goo.gl/maps/3GBtjMjVcXK9s8HGA",
-    "name": "Tấm Lợp Lấy Sáng Tân Minh Nhật",
-	"email": "thuha1001@gmail.com",
-  	"address": {
-    	"@type": "PostalAddress",
-    	"addressLocality": "Chí Linh",
-    	"addressRegion": "Hải Dương",
-    	"postalCode":"174200",
-    	"streetAddress": "165 Lê Thanh Nghị - Phường Hoàng Tân",
-        "addressCountry": "VN"
-  	},
-  	"description": "Tấm lợp Tân Minh Nhật chuyên cung cấp tấm lợp lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm lợp thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường.",
-  	"telephone": "0964297683",
-  	"openingHours": [ "Mo-Th 09:00-17:00", "Fr 09:00-12:00" ],
-  	"geo": {
-    	"@type": "GeoCoordinates",
-   	    "latitude": "21.133572",
-    	"longitude": "106.424753"
- 		}, 			
-  	"sameAs" : [ "https://www.facebook.com/tonnhualaysangtanminhnhat"]
-	}
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Tôn Nhựa Lấy Sáng Tân Minh Nhật",
+  "image": "https://tonnhualaysang.vn/public/assets/client/images/logo.jpg",
+  "@id": "https://tonnhualaysang.vn/",
+  "url": "https://tonnhualaysang.vn/",
+  "telephone": "0964297683",
+  "priceRange": "80.000vnd - 2.000.000vnd",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "165 Lê Thanh Nghị - Phường Hoàng Tân - Chí Linh",
+    "addressLocality": "Hải Dương",
+    "postalCode": "174200",
+    "addressCountry": "VN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "21.133572",
+    "longitude": "106.424753"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "07:00",
+    "closes": "20:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/tonnhualaysangtanminhnhat"
+  ] 
+}
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  "name": "Tôn Nhựa Lấy Sáng Tân Minh Nhật",
+  "alternateName": "Tấm nhựa lấy sáng composite, poly Tân Minh Nhật",
+  "url": "https://tonnhualaysang.vn/",
+  "logo": "https://tonnhualaysang.vn/public/assets/client/images/logo.jpg",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "0964297683",
+    "contactType": "technical support",
+    "contactOption": "Roofing Contractor",
+    "areaServed": "VN",
+    "availableLanguage": "Vietnamese"
+  },
+  "sameAs": [
+    "https://www.facebook.com/tonnhualaysangtanminhnhat"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@type": "WebSite",
+       "url": "https://tonnhualaysang.vn/",
+       "potentialAction": {
+         "@type": "SearchAction",
+         "target": {
+           "@type": "EntryPoint",
+           "urlTemplate": "https://tonnhualaysang.vn/search?k={k}"
+         },
+         "query-input": "required name=k"
+       }
+     }
+</script>;
+
 <style>
     .swiper-container {
   max-width: 894px;
@@ -138,6 +179,17 @@ margin: 0!important;
 </style>
 </head>
 <body>
+    <link   href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/fonts/fontawesome/css/all.min.css" as="style" 
+     onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css" >
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/styles.css" >
+    
+    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css" as="style"   onload="this.onload=null;this.rel='stylesheet'">
+    <!-- <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css" as="style"  onload="this.onload=null;this.rel='stylesheet'" > -->
+
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css"> 
     <!-- Messenger Plugin chat Code -->
     <div id="fb-root"></div>
     <!-- Your Plugin chat code -->
@@ -167,7 +219,7 @@ margin: 0!important;
       }(document, 'script', 'facebook-jssdk'));
     </script>
     <!-- mess -->
-    <h1 style="display: none">Tấm Lợp Tân Minh Nhật Tấm lợp lấy Sáng Composite,Poly Tấm Lợp Thông Minh Chất Lượng Cao</h1>
+    <h1 style="display: none">Tấm Nhựa Tân Minh Nhật Tấm nhựa lấy Sáng Composite,Poly Tấm Nhựa Thông Minh Chất Lượng Cao</h1>
     <!-- modal bar -->
     <div class="bar_menu-mobile">
         <div class="bar_container">
@@ -204,7 +256,7 @@ margin: 0!important;
                 </li>
         </ul>
         <form class="bar_search-mobile" action="<?php echo _WEB_ROOT . '/search' ?>" method="GET">
-            <input type="text" name="k" placeholder="Tìm kiếm... " class="bar_mobile__input">
+            <input required type="text" name="k" placeholder="Tìm kiếm... " class="bar_mobile__input">
             <button type="submit" class="bar_mobile__submit" aria-label="search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         </div>
@@ -224,10 +276,10 @@ margin: 0!important;
                                 <i class="fa-brands fa-facebook"></i>
                                 <i class="fa-brands fa-twitter"></i>
                                 <i class="fa-brands fa-google"></i>
-                                <!-- <span class="header-top_language">
+                                <span class="header-top_language">
                                     Tiếng việt <i class="fa-solid fa-chevron-down"></i>
         
-                                </span> -->
+                                </span>
                             </span >
                             
                             
@@ -246,13 +298,13 @@ margin: 0!important;
                             <p>(Hỗ trợ 24/7)</p>
                         </div>
                         <div class="bar-mobile"><i class="fa-solid fa-bars"></i> <br>Menu</div>
-                        <a href="<?php echo _WEB_ROOT ?>" title="Tấm Poly Tân Minh Nhật Tấm Lợp Lấy Sáng" class="header-logo"><img width="100%" height="100%" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" alt="logo-cong-ty" ></a>
+                        <a href="<?php echo _WEB_ROOT ?>" title="Tấm Poly Tân Minh Nhật Tấm Nhựa Lấy Sáng" class="header-logo"><img loading="lazy" width="100%" height="100%" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" alt="logo-cong-ty" ></a>
                     </div>
                     <div class="col l-9 m-0 c-0 header-right">
                         <div class=" header-content">
                             <p  class=" header-content_item">
                                 
-                                    <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-dich-vu.png" alt="icon-dich-vu" class=" header-content_icon" >
+                                    <img width="100%" height="100%" loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-dich-vu.png" alt="icon-dich-vu" class=" header-content_icon" >
                                     <div class=" header-content_text" style="font-display:swap">
                                         <h4 class="header-content_title">dịch vụ chuyên nghiệp</h4>
                                         <p class="header-content_des">Độ tin cậy, Năng lực, Tác phong</p>
@@ -261,7 +313,7 @@ margin: 0!important;
                             </p>
                             <p class=" header-content_item">
                                 
-                                    <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-san-pham.jpg" alt="icon-san-pham" class="  header-content_icon">
+                                    <img width="100%" height="100%" loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-san-pham.jpg" alt="icon-san-pham" class="  header-content_icon">
                                     <div class=" header-content_text" style="font-display:swap">
                                         <h4 class="header-content_title">SẢN PHẨM CHẤT LƯỢNG</h4>
                                         <p class="header-content_des">Bảo hành 10 năm</p>
@@ -270,7 +322,7 @@ margin: 0!important;
                             </p>
                             <p class=" header-content_item" style="font-display:swap">
                                 
-                                    <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-chat-luong.png" alt="icon-chat-luon" class="  header-content_icon">
+                                    <img width="100%" height="100%" loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-chat-luong.png" alt="icon-chat-luon" class="  header-content_icon">
                                     <div class=" header-content_text">
                                         <h4 class="header-content_title">UY TÍN HÀNG ĐẦU</h4>
                                         <p class="header-content_des">Năng lực & Nhiệt huyết</p>
@@ -279,7 +331,7 @@ margin: 0!important;
                             </p>
                             <p class=" header-content_item" style="font-display:swap">
                             
-                                    <img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-handshake.png" alt="icon-handshake" class="  header-content_icon">
+                                    <img width="100%" height="100%" loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-handshake.png" alt="icon-handshake" class="  header-content_icon">
                                     <div class=" header-content_text">
                                         <h4 class="header-content_title">MẪU MÃ ĐA DẠNG</h4>
                                         <p class="header-content_des">Sản phẩm chất lượng cao</p>
@@ -355,7 +407,7 @@ margin: 0!important;
                                     </li>
                             </ul>
                             <form method="GET" action="<?php echo _WEB_ROOT ?>/search" class="navigation-search">
-                                <input type="text" name="k" placeholder="Tìm kiếm sản phẩm" class="navigation-search__input">
+                                <input required type="text" name="k" placeholder="Tìm kiếm sản phẩm" class="navigation-search__input">
                                 <button type="submit" class="navigation-search__submit" aria-label="search"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </nav>
@@ -378,48 +430,25 @@ margin: 0!important;
                             <!-- If we need scrollbar -->
                         <!--     <div class="swiper-scrollbar"></div> -->
                         </div>
-                        <!-- <div id="slider" class="slider-content">
-                            <div class="wrapper">
-                                <div id="slides" class="slides">
-                                
-                                <span class="slide">
-                                    <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_4.jpg" alt="slider_4" />
-                                </span>
-                                <span class="slide">
-                                    <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_2.jpg" alt="slider_2" />
-                                </span>
-                                <span class="slide">
-                                    <img src="<?php echo _WEB_ROOT . '/public/assets/client/images/' ?>slider_1.jpg" alt="slider_1" />
-                                </span>
-                                
-                            </div>
-                            </div>
-                            <p id="prev" class="control prev">
-                            
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </p>
-                            <p id="next" class="control next">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </p>
-                        </div> -->
+                        
                     </div>
                 </div>
                <div class="promo-product">
                     <h2  class="promo-product_heading"><p style="display: inline;" class="promo-text_link" >Sản Phẩm Khuyến Mãi</p></h2>
                     <div class="row">
                         <div class="col l-4 m-6 c-12">
-                            <a href="<?php echo _WEB_ROOT ?>/loai-san-pham/tam-lop-lay-sang-composite.html" title="tấm lợp lấy sáng composite"  class ="promo-product_link">
-                                <img class="promo-product-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_1.jpg" alt="sp_khuyen_mai_1" >
+                            <a href="<?php echo _WEB_ROOT ?>/loai-san-pham/tam-lop-lay-sang-composite.html" title="tấm nhựa lấy sáng composite"  class ="promo-product_link">
+                                <img width="100%" height="100%" loading="lazy" class="promo-product-img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_1.jpg" alt="sp_khuyen_mai_1" >
                             </a>
                         </div>
                         <div class="col l-4 m-6 c-12">
-                            <a href="<?php echo _WEB_ROOT ?>/loai-san-pham/tam-nhua-lay-sang-polycarbonate.html" title="tấm lợp dạng đặc poly">
-                                <img class="promo-product-img"  src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_2.jpg" alt="sp_khuyen_mai_2">
+                            <a href="<?php echo _WEB_ROOT ?>/loai-san-pham/tam-nhua-lay-sang-polycarbonate.html" title="tấm nhựa dạng đặc poly">
+                                <img width="100%" height="100%" loading="lazy" class="promo-product-img"  src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_2.jpg" alt="sp_khuyen_mai_2">
                             </a>
                         </div>
                         <div class="col l-4 m-6 c-12">
-                            <a href="<?php echo _WEB_ROOT ?>/loai-san-pham/tam-nhua-polycarbonate-rong-ruot.html" title="tấm lợp dạng rỗng poly">
-                            <img class="promo-product-img"  src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_3.jpg" alt="sp_khuyen_mai_3">
+                            <a href="<?php echo _WEB_ROOT ?>/loai-san-pham/tam-nhua-polycarbonate-rong-ruot.html" title="tấm nhựa dạng rỗng poly">
+                            <img width="100%" height="100%" loading="lazy" class="promo-product-img"  src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sp_khuyen_mai_3.jpg" alt="sp_khuyen_mai_3">
                             </a>
                         </div>
                     </div>
@@ -430,7 +459,7 @@ margin: 0!important;
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
-                                <img class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home.jpg" alt="banner-home" >
+                                <img width="100%" height="100%" loading="lazy" class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home-2.jpg" alt="banner-home" >
                             </div>
                         </div>
                         <div class="col l-10 m-12 c-12">
@@ -463,7 +492,7 @@ margin: 0!important;
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
-                                <img class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home.jpg" alt="banner-home" >
+                                <img width="100%" height="100%" loading="lazy"class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home-1.jpg" alt="banner-home" >
                             </div>
                         </div>
                         <div class="col l-10 m-12 c-12">
@@ -495,7 +524,7 @@ margin: 0!important;
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
-                                <img class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home.jpg" alt="banner-home" >
+                                <img width="100%" height="100%" loading="lazy" class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home.jpg" alt="banner-home" >
                             </div>
                         </div>
                         <div class="col l-10 m-12 c-12">
@@ -527,7 +556,7 @@ margin: 0!important;
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
-                                <img class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home.jpg" alt="banner-home" >
+                                <img width="100%" height="100%" loading="lazy" class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home.jpg" alt="banner-home" >
                             </div>
                         </div>
                         <div class="col l-10 m-12 c-12">
@@ -576,12 +605,12 @@ margin: 0!important;
                         <div class="col l-4 m-12 c-12">
                                         <div class="new_offer">
                                             <a href="<?php echo _WEB_ROOT .'/tin-tuc/'.$news[1]['slug'] .'.html' ?>" class="home-news">
-                                                <div class="row ">
+                                                <div class="row no-gutters ">
 
-                                                   <div class="col l-5 m-5 c-5">
+                                                   <div class="col l-5 m-4 c-4">
                                                        <img loading="lazy" class="home-news_img offer-img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[1]['img']  ?>" alt="<?php echo $news[1]['slug'] ?>"></img>
                                                    </div> 
-                                                   <div class="col l-7 m-6 c-6">
+                                                   <div class="col l-7 m-8 c-8">
                                                         <div class="home-new_content offer-content">
                                                             <h3 class="hom-news-des"><?php echo $news[1]['title']?></h3>
                                                             <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[1]['date']); echo $dt->format('m/d/Y');?></p>
@@ -594,13 +623,13 @@ margin: 0!important;
                                          </div>
                                         <div class="new_offer">
                                             <a href="<?php echo _WEB_ROOT .'/tin-tuc/'.$news[2]['slug'] .'.html' ?>" class="home-news">
-                                                <div class="row ">
+                                                <div class="row no-gutters ">
 
-                                                   <div class="col l-5 m-5 c-5">
+                                                   <div class="col l-5 m-4 c-4">
                                                        <img loading="lazy" class="home-news_img offer-img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[2]['img']  ?>" alt="<?php echo $news[2]['slug'] ?>"></img>
                                                    </div> 
                                                     
-                                                   <div class="col l-7 m-6 c-6">
+                                                   <div class="col l-7 m-8 c-8">
                                                         <div class="home-new_content offer-content">
                                                             <h3 class="hom-news-des"><?php echo $news[2]['title']?></h3>
                                                             <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[2]['date']); echo $dt->format('m/d/Y');?></p>
@@ -624,20 +653,20 @@ margin: 0!important;
             <h2 class="slide-two_heading">ĐỐI TÁC</h2>
             <div class="display-area">
                 <div class="cards-wrapper">
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vingroup.jpg" alt="vingroup"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sungroup.jpg" alt="sungroup"></div>  
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/tonhoasen.jpg" alt="tonhoasen"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vinamilk.jpg" alt="vinamilk"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vingroup.jpg" alt="vingroup"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/sungroup.jpg" alt="sungroup"></div>  
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/tonhoasen.jpg" alt="tonhoasen"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vinamilk.jpg" alt="vinamilk"></div>
               
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/makrolon-bayer.png" alt="makrolon-bayer"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo6.jpg" alt="plogo6"></div>  
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo5.jpg" alt="plogo5"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo4.jpg" alt="plogo4"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/makrolon-bayer.png" alt="makrolon-bayer"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo6.jpg" alt="plogo6"></div>  
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo5.jpg" alt="plogo5"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo4.jpg" alt="plogo4"></div>
                   
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo3.jpg" alt="plogo3"></div>
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vingroup.jpg" alt="vingroup"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo3.jpg" alt="plogo3"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/vingroup.jpg" alt="vingroup"></div>
                   <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/plogo2.jpg" alt="plogo2"></div>  
-                  <div class="card"><img src="<?php echo _WEB_ROOT ?>/public/assets/client/images/makrolon-bayer.png" alt="makrolon-bayer"></div>
+                  <div class="card"><img loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/makrolon-bayer.png" alt="makrolon-bayer"></div>
 
                 </div> 
               </div>

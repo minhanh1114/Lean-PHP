@@ -1,8 +1,14 @@
 
-<div class="breadcrumb">
-                        <span class="">
-                            <a href="<?php echo _WEB_ROOT ?>">Trang chủ</a>  » 
-                            <span class="breadcrumb_last"> <?php if (!empty( $dataProductAll[0]['name_type'])) echo $dataProductAll[0]['name_type'] ?></span>
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"> 
+                        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="<?php echo _WEB_ROOT ?>">
+                                <span itemprop="name">Trang chủ</span>
+                            </a>  » 
+                            <meta itemprop="position" content="1" />
+                        </span>
+                        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <span class="breadcrumb_last" itemprop="name"> <?php if (!empty( $dataProductAll[0]['name_type'])) echo $dataProductAll[0]['name_type'] ?></span>
+                            <meta itemprop="position" content="2" />
                         </span>
 </div>
  <!-- show typeProduct -->

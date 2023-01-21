@@ -11,12 +11,12 @@ class Home extends Controller{
     }
     public function index (){
         $data['typesProduct']= $this->ProductModel->getTypeProduct();
-        $dataNews = $this->NewsModel->getNewsList(3);
+        $dataNews = $this->NewsModel->getNewsOrderDate(3);
         for ($i=0; $i < count($dataNews); $i++) 
             {
                 if(!empty($dataNews[$i]['description']))
                 {
-                    $dataNews[$i]['description'] = $this->character_limiter($dataNews[$i]['description'],100);
+                    $dataNews[$i]['description'] = $this->character_limiter($dataNews[$i]['description'],200);
                     
                 }
             }

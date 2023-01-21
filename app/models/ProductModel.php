@@ -41,9 +41,18 @@ class ProductModel extends Model{
     {
         return $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type  WHERE product.slug = ' .'"'. $slug.'"')->fetchAll(PDO::FETCH_ASSOC);
     }
-    function getProductOffer($limit)
+    function getProductOffer($limit,$typeId="")
     {
-        return $this->database->query('SELECT * FROM '. $this->_table . ' ORDER BY view DESC limit ' . $limit)->fetchAll(PDO::FETCH_ASSOC);
+        if(!empty($typeId))
+        {
+
+            return $this->database->query('SELECT * FROM '. $this->_table . ' WHERE type = '.$typeId .' ORDER BY view DESC limit ' . $limit)->fetchAll(PDO::FETCH_ASSOC);
+        }
+        else
+        {
+            return $this->database->query('SELECT * FROM '. $this->_table . ' ORDER BY view DESC limit ' . $limit)->fetchAll(PDO::FETCH_ASSOC);
+
+        }
     }
 
     function getTypeProduct(){

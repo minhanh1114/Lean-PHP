@@ -76,9 +76,16 @@ class NewsModel extends Model{
     {
         return $this->database->query('select count(*) from ' . $this->_table)->fetchAll();
     }
-    public function getNewsOrderDate()
+    public function getNewsOrderDate($limit='')
     {
-        return $this->database->query('select * from ' . $this->_table. ' ORDER BY date DESC ')->fetchAll(PDO::FETCH_ASSOC);
+        if(!empty($limit))
+        {
+            return $this->database->query('select * from ' . $this->_table. ' ORDER BY date DESC LIMIT ' .$limit)->fetchAll(PDO::FETCH_ASSOC);
+        }
+        else
+        {
+            return $this->database->query('select * from ' . $this->_table. ' ORDER BY date DESC ')->fetchAll(PDO::FETCH_ASSOC);
+        }
         
     }
 }

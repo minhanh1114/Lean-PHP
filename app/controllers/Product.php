@@ -10,9 +10,15 @@ class Product extends Controller{
         // chi tiết sản phẩm
         $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
         $this->data['sub_content']['dataProduct'] = $this->ProductModel->getProductSlug($slug); 
-        $this->data['sub_content']['dataProductOffer']=$this->ProductModel->getProductOffer(5);
         if(!empty($this->data['sub_content']['dataProduct']))
         {
+                
+                $this->data['sub_content']['dataProductOffer']=$this->ProductModel->getProductOffer(5,$this->data['sub_content']['dataProduct'][0]['type']);
+                if(count($this->data['sub_content']['dataProductOffer'])<= 1)
+                {
+                    $this->data['sub_content']['dataProductOffer'] =$this->ProductModel->getProductOffer(5);  
+                }
+               
                 // mô tả tag meta
                 $this->data['title'] = $this->data['sub_content']['dataProduct'][0]['name'];
                 $this->data['code'] = $this->data['sub_content']['dataProduct'][0]['code'];

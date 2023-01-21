@@ -71,7 +71,7 @@
                                         for($i=1;$i<=$totalPage;$i++)
                                         {
                                 ?>
-                                     <li class="page-item <?php if($i == $page_index)echo 'active'; ?>"><a class="page-link" href="<?php echo _WEB_ROOT .'/admin/product?page='.$i?>"><?php echo $i ?></a></li>
+                                     <li class="page-item <?php if($i == $page_index)echo 'active'; ?>"><a class="page-link" href="<?php echo _WEB_ROOT .'/admin/news?page='.$i?>"><?php echo $i ?></a></li>
                                 <?php
                                         } }
                                  ?>
