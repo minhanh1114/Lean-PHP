@@ -36,6 +36,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+     <link   href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/fonts/fontawesome/css/all.min.css" as="style" 
+     onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css" >
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/styles.css" >
+    
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css">
+
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css"> 
 
 <title>Tấm Nhựa Tân Minh Nhật: Tấm Nhựa Lấy Sáng Bền Đẹp Chất Lượng</title>
 <!--  -->
@@ -51,7 +61,6 @@
   gtag('config', 'G-7PV8LYT75Z');
 </script>
 <!--Google tag -->
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -128,7 +137,7 @@
          "query-input": "required name=k"
        }
      }
-</script>;
+</script>
 
 <style>
     .swiper-container {
@@ -179,17 +188,7 @@ margin: 0!important;
 </style>
 </head>
 <body>
-    <link   href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap" rel="stylesheet">
-    
-    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/fonts/fontawesome/css/all.min.css" as="style" 
-     onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/slide.css" >
-    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/styles.css" >
-    
-    <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/gird.css" as="style"   onload="this.onload=null;this.rel='stylesheet'">
-    <!-- <link rel="preload" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css" as="style"  onload="this.onload=null;this.rel='stylesheet'" > -->
-
-    <link rel="stylesheet" href="<?php echo _WEB_ROOT ?>/public/assets/client/css/response.css"> 
+   
     <!-- Messenger Plugin chat Code -->
     <div id="fb-root"></div>
     <!-- Your Plugin chat code -->
@@ -256,7 +255,7 @@ margin: 0!important;
                 </li>
         </ul>
         <form class="bar_search-mobile" action="<?php echo _WEB_ROOT . '/search' ?>" method="GET">
-            <input required type="text" name="k" placeholder="Tìm kiếm... " class="bar_mobile__input">
+            <input type="text" name="k" placeholder="Tìm kiếm... " class="bar_mobile__input">
             <button type="submit" class="bar_mobile__submit" aria-label="search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         </div>
@@ -378,7 +377,7 @@ margin: 0!important;
                             </ul>
                         </nav>
                     </div>
-                    <div class="col  l-9 m-12 c-12 " style="margin-left: -12px;">
+                    <div class="col  l-9 m-12 c-12 " >
                         <nav class="navigation-content">
                             <ul class="navigation-content__list">
                                     <li class="navigation-content__item">
@@ -407,7 +406,7 @@ margin: 0!important;
                                     </li>
                             </ul>
                             <form method="GET" action="<?php echo _WEB_ROOT ?>/search" class="navigation-search">
-                                <input required type="text" name="k" placeholder="Tìm kiếm sản phẩm" class="navigation-search__input">
+                                <input type="text" name="k" placeholder="Tìm kiếm sản phẩm" class="navigation-search__input">
                                 <button type="submit" class="navigation-search__submit" aria-label="search"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </nav>
@@ -470,7 +469,7 @@ margin: 0!important;
                                     ?>
                                     <div class="col l-3 m-4 c-6">
                                         <a href="<?php echo _WEB_ROOT . '/san-pham/'. $product['slug'] .'.html' ?>" class="home-product_item">
-                                            <img width="100%" height="100%" loading="lazy" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
+                                            <img width="100%" height="100%" loading="lazy" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/thumb/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
                                             <h3 class="home-product_heading"><?php echo $product['name']  ?></h3>
                                             <p class="home-product_code">Mã sản phẩm: <?php echo $product['code']  ?></p>
                                             <p class="hom-product-price">Liên hệ</p>
@@ -492,7 +491,7 @@ margin: 0!important;
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
-                                <img width="100%" height="100%" loading="lazy"class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home-1.jpg" alt="banner-home" >
+                                <img width="100%" height="100%" loading="lazy"class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home.jpg" alt="banner-home" >
                             </div>
                         </div>
                         <div class="col l-10 m-12 c-12">
@@ -503,7 +502,7 @@ margin: 0!important;
                                     ?>
                                     <div class="col l-3 m-4 c-6">
                                         <a href="<?php echo _WEB_ROOT . '/san-pham/'. $product['slug'] .'.html' ?>" class="home-product_item">
-                                            <img width="100%" height="100%" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
+                                            <img width="100%" height="100%" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/thumb/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
                                             <h3 class="home-product_heading"><?php echo $product['name']  ?></h3>
                                             <p class="home-product_code">Mã sản phẩm: <?php echo $product['code']  ?></p>
                                             <p class="hom-product-price">Liên hệ</p>
@@ -535,7 +534,7 @@ margin: 0!important;
                                     ?>
                                     <div class="col l-3 m-4 c-6">
                                         <a href="<?php echo _WEB_ROOT . '/san-pham/'. $product['slug'] .'.html' ?>" class="home-product_item">
-                                            <img width="100%" height="100%" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
+                                            <img width="100%" height="100%" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/thumb/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
                                             <h3 class="home-product_heading"><?php echo $product['name']  ?></h3>
                                             <p class="home-product_code">Mã sản phẩm: <?php echo $product['code']  ?></p>
                                             <p class="hom-product-price">Liên hệ</p>
@@ -556,7 +555,7 @@ margin: 0!important;
                     <div class="row">
                         <div class="col l-2 m-0 c-0">
                             <div  class ="promo-product_link">
-                                <img width="100%" height="100%" loading="lazy" class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home.jpg" alt="banner-home" >
+                                <img width="100%" height="100%" loading="lazy" class="product-catalog_img" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/banner-home-1.jpg" alt="banner-home" >
                             </div>
                         </div>
                         <div class="col l-10 m-12 c-12">
@@ -567,7 +566,7 @@ margin: 0!important;
                                     ?>
                                     <div class="col l-3 m-4 c-6">
                                         <a href="<?php echo _WEB_ROOT . '/san-pham/'. $product['slug'] .'.html' ?>" class="home-product_item">
-                                            <img width="100%" height="100%" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
+                                            <img width="100%" height="100%" loading="lazy" class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/thumb/'.$product['img'] ?>" alt="<?php echo $product['slug'] ?>"></img>
                                             <h3 class="home-product_heading"><?php echo $product['name']  ?></h3>
                                             <p class="home-product_code">Mã sản phẩm: <?php echo $product['code']  ?></p>
                                             <p class="hom-product-price">Liên hệ</p>
@@ -593,7 +592,7 @@ margin: 0!important;
                                     <div class="home-news_continer">
                                         <img loading="lazy" width="100%" height="100%"  class="home-news_img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[0]['img']  ?>" alt="<?php echo $news[0]['slug'] ?>"></img>
                                         <div class="home-new_content">
-                                            <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[0]['date']); echo $dt->format('m/d/Y');?></p>
+                                            <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[0]['date']); echo $dt->format('d/m/Y');?></p>
                                             <p class="hom-news-des"><?php echo $news[0]['description']?></p>
                                         </div>
                                         
@@ -605,7 +604,7 @@ margin: 0!important;
                         <div class="col l-4 m-12 c-12">
                                         <div class="new_offer">
                                             <a href="<?php echo _WEB_ROOT .'/tin-tuc/'.$news[1]['slug'] .'.html' ?>" class="home-news">
-                                                <div class="row no-gutters ">
+                                                <div class="row no-gutters">
 
                                                    <div class="col l-5 m-4 c-4">
                                                        <img loading="lazy" class="home-news_img offer-img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[1]['img']  ?>" alt="<?php echo $news[1]['slug'] ?>"></img>
@@ -613,7 +612,7 @@ margin: 0!important;
                                                    <div class="col l-7 m-8 c-8">
                                                         <div class="home-new_content offer-content">
                                                             <h3 class="hom-news-des"><?php echo $news[1]['title']?></h3>
-                                                            <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[1]['date']); echo $dt->format('m/d/Y');?></p>
+                                                            <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[1]['date']); echo $dt->format('d/m/Y');?></p>
                                                         </div>
                                                     </div>
                                                     
@@ -623,7 +622,7 @@ margin: 0!important;
                                          </div>
                                         <div class="new_offer">
                                             <a href="<?php echo _WEB_ROOT .'/tin-tuc/'.$news[2]['slug'] .'.html' ?>" class="home-news">
-                                                <div class="row no-gutters ">
+                                                <div class="row no-gutters">
 
                                                    <div class="col l-5 m-4 c-4">
                                                        <img loading="lazy" class="home-news_img offer-img" src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news[2]['img']  ?>" alt="<?php echo $news[2]['slug'] ?>"></img>
@@ -632,7 +631,7 @@ margin: 0!important;
                                                    <div class="col l-7 m-8 c-8">
                                                         <div class="home-new_content offer-content">
                                                             <h3 class="hom-news-des"><?php echo $news[2]['title']?></h3>
-                                                            <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[2]['date']); echo $dt->format('m/d/Y');?></p>
+                                                            <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news[2]['date']); echo $dt->format('d/m/Y');?></p>
                                                         </div>
                                                     </div>
                                                     

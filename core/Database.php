@@ -1,2 +1,34 @@
 <?php
- class Database { private static $instance = null; private static $connection; private function __construct() { $con = ''; $dbhost = "\154\x6f\143\x61\x6c\150\x6f\163\x74"; $dbuser = "\162\x6f\157\164"; $dbpassword = ''; $database = "\161\x75\141\x6e\154\151\142\x61\156\150\141\x6e\x67"; try { $con = new PDO("\155\171\163\161\x6c\x3a\150\x6f\163\x74\75{$dbhost}\73\x64\x62\x6e\x61\x6d\145\x3d{$database}", "{$dbuser}", "{$dbpassword}", array(PDO::MYSQL_ATTR_INIT_COMMAND => "\123\105\x54\x20\116\101\115\105\x53\40\165\164\146\x38")); $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); self::$connection = $con; } catch (PDOException $e) { App::$app->loadError("\x64\x61\x74\x61\x62\141\x73\145", array("\155\145\163\163\141\147\x65" => new PDOException($e->getMessage(), (int) $e->getCode()))); die; } } public static function getInstance() { if (static::$instance == null) { new Database(); self::$instance = self::$connection; } return static::$instance; } }
+class Database {
+    private static $instance = null;
+    private static $connection;
+ 
+    private function __construct()
+    {
+        $con="";
+        $dbhost = "localhost";
+        $dbuser = "root";
+        $dbpassword = "";
+        $database = "quanlibanhang";
+        try {
+            $con = new PDO ("mysql:host=$dbhost;dbname=$database", "$dbuser", "$dbpassword", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+            $con->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION ); 
+            self::$connection = $con;
+        } catch (PDOException $e) {
+            App::$app->loadError('database',['message'=> new PDOException($e->getMessage(), (int)$e->getCode())]);
+            die();
+
+        }
+   
+    }
+ 
+    public static function getInstance()
+    {
+        if (static::$instance == null) {
+           new Database();
+           self::$instance = self::$connection;
+        }
+         
+        return static::$instance;
+    }
+}

@@ -33,7 +33,7 @@
     <link rel="icon" href="<?php  echo _WEB_ROOT . '/public/assets/client/images/logo.jpg'?>" type="image/jpg" sizes="30x30">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link  href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap" rel="stylesheet">
+        <link  href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900&display=swap" rel="stylesheet">
 
     <link rel="preload" fetchpriority="high" as="image" href="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg">
    
@@ -56,62 +56,83 @@
 </script>
 <!--Google tag -->
 <script type="application/ld+json">
-	{
-  	"@context": "http://schema.org",
-  	"@type": "LocalBusiness",
-	"url": "https://tonnhualaysang.vn/",
-	"image": "https://tonnhualaysang.vn/public/assets/client/images/logo.jpg",
-	"hasMap": "https://goo.gl/maps/3GBtjMjVcXK9s8HGA",
-	"name": "Tấm Nhựa Lấy Sáng Tân Minh Nhật",
-	"email": "thuha1001@gmail.com",
-    "priceRange": "80.000vnd - 2.000.000vnd",
-  	"address": {
-    	"@type": "PostalAddress",
-    	"addressLocality": "Chí Linh",
-    	"addressRegion": "Hải Dương",
-    	"postalCode":"174200",
-    	"streetAddress": "165 Lê Thanh Nghị - Phường Hoàng Tân",
-        "addressCountry": "VN"
-  	},
-  	"description": "Tấm nhựa Tân Minh Nhật chuyên cung cấp tấm nhựa lấy sáng Composite, Poly, Tấm poly đặc ruột, Tấm nhựa thông minh, Tấm cách nhiệt cao cấp tốt nhất thị trường.",
-  	"telephone": "0964297683",
-  	"openingHours": [ "Mo-Th 09:00-17:00", "Fr 09:00-12:00" ],
-  	"geo": {
-    	"@type": "GeoCoordinates",
-   	    "latitude": "21.133572",
-    	"longitude": "106.424753"
- 		}, 			
-  	"sameAs" : [ "https://www.facebook.com/tonnhualaysangtanminhnhat"]
-	}
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Tôn Nhựa Lấy Sáng Tân Minh Nhật",
+  "image": "https://tonnhualaysang.vn/public/assets/client/images/logo.jpg",
+  "@id": "https://tonnhualaysang.vn/",
+  "url": "https://tonnhualaysang.vn/",
+  "telephone": "0964297683",
+  "priceRange": "80.000vnd - 2.000.000vnd",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "165 Lê Thanh Nghị - Phường Hoàng Tân - Chí Linh",
+    "addressLocality": "Hải Dương",
+    "postalCode": "174200",
+    "addressCountry": "VN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "21.133572",
+    "longitude": "106.424753"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "07:00",
+    "closes": "20:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/tonnhualaysangtanminhnhat"
+  ] 
+}
 </script>
-<?php 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  "name": "Tôn Nhựa Lấy Sáng Tân Minh Nhật",
+  "alternateName": "Tấm nhựa lấy sáng composite, poly Tân Minh Nhật",
+  "url": "https://tonnhualaysang.vn/",
+  "logo": "https://tonnhualaysang.vn/public/assets/client/images/logo.jpg",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "0964297683",
+    "contactType": "technical support",
+    "contactOption": "Roofing Contractor",
+    "areaServed": "VN",
+    "availableLanguage": "Vietnamese"
+  },
+  "sameAs": [
+    "https://www.facebook.com/tonnhualaysangtanminhnhat"
+  ]
+}
+</script>
 
-echo '<script type="application/ld+json">
+
+<script type="application/ld+json">
      {
        "@context": "https://schema.org",
        "@type": "WebSite",
-       "url": "'._WEB_ROOT.'",
+       "url": "https://tonnhualaysang.vn/",
        "potentialAction": {
          "@type": "SearchAction",
          "target": {
            "@type": "EntryPoint",
-           "urlTemplate": "'._WEB_ROOT.'/search?k={k}"
+           "urlTemplate": "https://tonnhualaysang.vn/search?k={k}"
          },
          "query-input": "required name=k"
        }
      }
-     </script>';
-
-if(!empty($sub_content['dataProduct']))
-{
-    // echo '<script type="application/ld+json">{"@context": "https://schema.org/","@type": "Product","name": "'. $title.'","image": "'. $image.'","description": " '. $description.'","sku":"'. $code.'","mpn": "'. $code.'","brand": {"@type": "Brand","name": "Tân Minh Nhật"},"aggregateRating": {"@type": "AggregateRating","ratingValue": "","reviewCount": ""},"offers": {"@type": "Offer", "priceCurrency": "VND","price": "0","priceValidUntil":"2030-01-01", "availability": "http://schema.org/InStock"}}</script>';
-}
-else if(!empty($sub_content['dataNews']))
-{
-     
-}
-?>
-
+</script>
 
 
 </head>
@@ -229,10 +250,10 @@ else if(!empty($sub_content['dataNews']))
                             <i class="fa-brands fa-facebook"></i>
                             <i class="fa-brands fa-twitter"></i>
                             <i class="fa-brands fa-google"></i>
-                            <!-- <span class="header-top_language">
+                            <span class="header-top_language">
                                 Tiếng việt <i class="fa-solid fa-chevron-down"></i>
     
-                            </span> -->
+                            </span> 
                         </span>  
                     </div>
                 </div>

@@ -35,7 +35,7 @@
                                                        <div class="col l-7 m-7 c-7">
                                                             <div class="home-new_content offer-content">
                                                                 <h3 class="hom-news-des"><?php echo $news['title'] ?></h3>
-                                                                <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news['date']); echo $dt->format('m/d/Y');?></p>
+                                                                <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news['date']); echo $dt->format('d/m/Y');?></p>
                                                                 <p class="new_offer-description"><?php echo $news['description'] ?></p>
                                                             </div>
                                                         </div>
@@ -65,7 +65,7 @@
                                                         <div class="col l-7 m-7 c-7">
                                                                 <div class="home-new_content offer-content">
                                                                     <h3 class="hom-news-title offer-title"><?php echo $news['title'] ?></h3>
-                                                                    <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news['date']); echo $dt->format('m/d/Y');?> </p>
+                                                                    <p class="home-news_date">Ngày đăng: <?php $dt = new DateTime($news['date']); echo $dt->format('d/m/Y');?> </p>
                                                                    
                                                                 </div>
                                                             </div>

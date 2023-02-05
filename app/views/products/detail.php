@@ -1,5 +1,4 @@
 <link rel="preload" as="image" href="<?php  echo _WEB_ROOT . '/public/assets/products/'. $dataProduct[0]['img'] ?>">
-
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"> 
                         <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                             <a itemprop="item" href="<?php echo _WEB_ROOT ?>">
@@ -71,7 +70,7 @@
                             <div  class="product-offer">
                                 <a href="<?php  echo _WEB_ROOT .'/san-pham/'. $product['slug']?>.html" style="display: block;">
                                     <div class="product-offer_img">
-                                        <img loading="lazy" height="150px" src="<?php  echo _WEB_ROOT . '/public/assets/products/'. $product['img'] ?>" alt="<?php echo $product['name'] ?>">
+                                        <img loading="lazy" height="150px" src="<?php  echo _WEB_ROOT . '/public/assets/products/thumb/'. $product['img'] ?>" alt="<?php echo $product['name'] ?>">
                                     </div>
                                 
                                     <h3  class="product-offer_title"><?php echo $product['name'] ?></h3>

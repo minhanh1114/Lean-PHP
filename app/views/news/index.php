@@ -25,11 +25,11 @@
                                     <meta itemprop="image" content="<?php echo _WEB_ROOT .'/public/assets/news/'.$dataNews[0]['img'] ?>" />
                                     <meta itemprop="articleSection" content="Tin tức" />
                                     <meta itemprop="inLanguage" content="vi" />
-                                    <p class="show-news-date" itemprop="datePublished" content="<?php echo $dataNews[0]['date'] ?>"><i class="fa-solid fa-calendar-days"></i> Ngày đăng: <?php $dt = new DateTime($dataNews[0]['date']); echo $dt->format('m/d/Y');?>
+                                    <p class="show-news-date" itemprop="datePublished" content="<?php echo $dataNews[0]['date'] ?>"><i class="fa-solid fa-calendar-days"></i> Ngày đăng: <?php $dt = new DateTime($dataNews[0]['date']); echo $dt->format('d/m/Y');?>
                                         <span class="show-news_view">  <i class="fa-solid fa-eye"></i> Lượt xem: <?php  echo $dataNews[0]['view'] ?></span>
                                     </p>
                                     <span style="display:none" itemprop="dateModified" content="<?php echo $dataNews[0]['date'] ?>">
-                                        <?php $dt = new DateTime($dataNews[0]['date']); echo $dt->format('m/d/Y');?>
+                                        <?php $dt = new DateTime($dataNews[0]['date']); echo $dt->format('d/m/Y');?>
                                     </span>
                                     <div class="show-news_des-html active-tab_content" itemprop="description" content = "<?php echo Controller::character_limiter($dataNews[0]['description'],999999,false) ?>">
                                         <?php echo htmlspecialchars_decode($dataNews[0]['description']) ?>
@@ -71,7 +71,7 @@
                                     </div>
                                 </a>
                                 <div class="product-offer_code">
-                                    Ngày đăng: <span><?php $dt = new DateTime($news['date']); echo $dt->format('m/d/Y');?></span>
+                                    Ngày đăng: <span><?php $dt = new DateTime($news['date']); echo $dt->format('d/m/Y');?></span>
                                 </div>
                                
                              

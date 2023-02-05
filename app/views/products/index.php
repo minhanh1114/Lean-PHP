@@ -64,7 +64,7 @@
                                             ?>
                                                 <div class="col l-3 m-4 c-6">
                                                         <a href="<?php echo _WEB_ROOT . '/san-pham/'. $product['slug'] .'.html' ?>" class="home-product_item">
-                                                            <img class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/'. $product['img'] ?>" alt="<?php echo $product['name'] ?>"></img>
+                                                            <img class="home-product_img" src="<?php echo _WEB_ROOT . '/public/assets/products/thumb/'. $product['img'] ?>" alt="<?php echo $product['name'] ?>"></img>
                                                             <h3 class="home-product_heading"><?php echo $product['name'] ?></h3>
                                                             <p class="home-product_code">Mã sản phẩm: <?php echo $product['code'] ?></p>
                                                             <p class="hom-product-price">Liên hệ</p>
