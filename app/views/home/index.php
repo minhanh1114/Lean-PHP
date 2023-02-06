@@ -297,13 +297,13 @@ margin: 0!important;
                             <p>(Hỗ trợ 24/7)</p>
                         </div>
                         <div class="bar-mobile"><i class="fa-solid fa-bars"></i> <br>Menu</div>
-                        <a href="<?php echo _WEB_ROOT ?>" title="Tấm Poly Tân Minh Nhật Tấm Nhựa Lấy Sáng" class="header-logo"><img loading="lazy" width="100%" height="100%" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" alt="logo-cong-ty" ></a>
+                        <a href="<?php echo _WEB_ROOT ?>" title="Tấm Poly Tân Minh Nhật Tấm Nhựa Lấy Sáng" class="header-logo"><img rel="preload" width="100%" height="100%" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/logo.jpg" alt="logo-cong-ty" ></a>
                     </div>
                     <div class="col l-9 m-0 c-0 header-right">
                         <div class=" header-content">
                             <p  class=" header-content_item">
                                 
-                                    <img width="100%" height="100%" loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-dich-vu.png" alt="icon-dich-vu" class=" header-content_icon" >
+                                    <img width="100%" height="100%" rel="preload" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-dich-vu.jpg" alt="icon-dich-vu" class=" header-content_icon" >
                                     <div class=" header-content_text" style="font-display:swap">
                                         <h4 class="header-content_title">dịch vụ chuyên nghiệp</h4>
                                         <p class="header-content_des">Độ tin cậy, Năng lực, Tác phong</p>
@@ -312,7 +312,7 @@ margin: 0!important;
                             </p>
                             <p class=" header-content_item">
                                 
-                                    <img width="100%" height="100%" loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-san-pham.jpg" alt="icon-san-pham" class="  header-content_icon">
+                                    <img width="100%" height="100%" rel="preload" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-san-pham.jpg" alt="icon-san-pham" class="  header-content_icon">
                                     <div class=" header-content_text" style="font-display:swap">
                                         <h4 class="header-content_title">SẢN PHẨM CHẤT LƯỢNG</h4>
                                         <p class="header-content_des">Bảo hành 10 năm</p>
@@ -321,7 +321,7 @@ margin: 0!important;
                             </p>
                             <p class=" header-content_item" style="font-display:swap">
                                 
-                                    <img width="100%" height="100%" loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-chat-luong.png" alt="icon-chat-luon" class="  header-content_icon">
+                                    <img width="100%" height="100%" rel="preload" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-chat-luong.jpg" alt="icon-chat-luon" class="  header-content_icon">
                                     <div class=" header-content_text">
                                         <h4 class="header-content_title">UY TÍN HÀNG ĐẦU</h4>
                                         <p class="header-content_des">Năng lực & Nhiệt huyết</p>
@@ -330,7 +330,7 @@ margin: 0!important;
                             </p>
                             <p class=" header-content_item" style="font-display:swap">
                             
-                                    <img width="100%" height="100%" loading="lazy" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-handshake.png" alt="icon-handshake" class="  header-content_icon">
+                                    <img width="100%" height="100%" rel="preload" src="<?php echo _WEB_ROOT ?>/public/assets/client/images/icon-handshake.jpg" alt="icon-handshake" class="  header-content_icon">
                                     <div class=" header-content_text">
                                         <h4 class="header-content_title">MẪU MÃ ĐA DẠNG</h4>
                                         <p class="header-content_des">Sản phẩm chất lượng cao</p>
