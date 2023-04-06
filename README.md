@@ -17,7 +17,7 @@ $folder= $folder[3];
  $web_root = $web_root . $folder ; // thay đổi khi upload hosting ( nhớ bỏ gạch chéo  '/' và .folder)
  ```
  <br>
-Thành như sau : 
+ Thành như sau : 
 <br>
 ```
 if(!empty($_SERVER['HTTPS'])&& $_SERVER['HTTPS']=='on')
@@ -34,7 +34,7 @@ $folder= $folder[3];
 $web_root = $web_root  ; // thay đổi khi upload hosting ( nhớ bỏ gạch chéo  '/' và .folder)
 ```
 <br>
-#THIẾT LẬP BIẾN MÔI TRƯỜNG TRONG FILE .htacces
+THIẾT LẬP BIẾN MÔI TRƯỜNG TRONG FILE .htacces
 ```
 RewriteEngine On
 SetEnv DBUSER bqsvaqtahosting_quanlibanhang
@@ -48,7 +48,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ index.php/$1 [L,QSA]
 ```
-#LẤY DỮ LIỆU TỪ BIẾN MÔI TRƯỜNG
+LẤY DỮ LIỆU TỪ BIẾN MÔI TRƯỜNG
 ```
 <?php
 class Database {
