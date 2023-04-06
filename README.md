@@ -1,7 +1,7 @@
 
 Khi Đưa lên server thay đổi đường đẫn trong file bootstrap.php:
 <br>
-
+```
 if(!empty($_SERVER['HTTPS'])&& $_SERVER['HTTPS']=='on')
 {
 
@@ -15,9 +15,11 @@ $folder = explode('/',$_SERVER['SCRIPT_FILENAME']);
 $folder= $folder[3]; 
 
  $web_root = $web_root . $folder ; // thay đổi khi upload hosting ( nhớ bỏ gạch chéo  '/' và .folder)
+ ```
  <br>
 Thành như sau : 
 <br>
+```
 if(!empty($_SERVER['HTTPS'])&& $_SERVER['HTTPS']=='on')
 {
 
@@ -31,8 +33,10 @@ $folder = explode('/',$_SERVER['SCRIPT_FILENAME']);
 $folder= $folder[3]; 
 
  $web_root = $web_root  ; // thay đổi khi upload hosting ( nhớ bỏ gạch chéo  '/' và .folder)
+ ```
 <br>
 #THIẾT LẬP BIẾN MÔI TRƯỜNG TRONG FILE .htacces
+```
 RewriteEngine On
 SetEnv DBUSER bqsvaqtahosting_quanlibanhang
 SetEnv DBPASS quantrivien_admin0011
@@ -44,8 +48,9 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ index.php/$1 [L,QSA]
-
+```
 #LẤY DỮ LIỆU TỪ BIẾN MÔI TRƯỜNG
+```
 <?php
 class Database {
     private static $instance = null;
@@ -80,3 +85,4 @@ class Database {
         return static::$instance;
     }
 }
+```
