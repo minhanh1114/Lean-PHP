@@ -31,8 +31,7 @@ else{
 }
 $folder = explode('/',$_SERVER['SCRIPT_FILENAME']);
 $folder= $folder[3]; 
-
- $web_root = $web_root  ; // thay đổi khi upload hosting ( nhớ bỏ gạch chéo  '/' và .folder)
+$web_root = $web_root  ; // thay đổi khi upload hosting ( nhớ bỏ gạch chéo  '/' và .folder)
 ```
 <br>
 #THIẾT LẬP BIẾN MÔI TRƯỜNG TRONG FILE .htacces
