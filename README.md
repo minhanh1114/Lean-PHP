@@ -1,7 +1,7 @@
 
 Khi Đưa lên server thay đổi đường đẫn trong file bootstrap.php:
 <br>
-```
+```PHP
 if(!empty($_SERVER['HTTPS'])&& $_SERVER['HTTPS']=='on')
 {
 
@@ -19,7 +19,7 @@ $folder= $folder[3];
  <br>
  Thành như sau : 
 <br>
-```
+```PHP
 if(!empty($_SERVER['HTTPS'])&& $_SERVER['HTTPS']=='on')
 {
 
@@ -49,7 +49,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ index.php/$1 [L,QSA]
 ```
 LẤY DỮ LIỆU TỪ BIẾN MÔI TRƯỜNG
-```
+```PHP
 <?php
 class Database {
     private static $instance = null;
