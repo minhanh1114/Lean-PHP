@@ -1,0 +1,18 @@
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET,PUT,POST,DELETE"
+Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+RewriteEngine On
+SetEnv DBUSER bqsvaqtahosting_quanlibanhang
+SetEnv DBPASS quantrivien_admin0011
+SetEnv DBNAME bqsvaqtahosting_quanlibanhang
+SetEnv SECRETCLOUD 0x4AAAAAAAkYbnIJR1eAtvtZg2OMIRgmQMI
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php/$1 [L,QSA]
+

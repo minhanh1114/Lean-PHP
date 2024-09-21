@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" integrity="sha512-DD6Lm09YDHzhW3K4eLJ9Y7sFrBwtCF+KuSWOLYFqKsZ6RX4ifCu9vWqM4R+Uy++aBWe6wD4csgQRzGKp5vP6tg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <audio id="ra-audio" data-lang="vi-VN" data-voice="Google vi-VN-Standard-B" data-key="d110dd2406ed0bad273bc2b1baecea94"></audio>
+                <script> window.addEventListener("DOMContentLoaded", (event) => {
+                    var elementLink= document.createElement("link");
+                    document.head.appendChild(elementLink);
+                    elementLink.setAttribute("type", "text/css");
+                    elementLink.setAttribute("rel", "stylesheet");
+                    elementLink.setAttribute("href", "https://tonnhualaysang.vn/customer1/style.css");
+                    
+                    const raPlayer = document.getElementById('ra-player');
+                    const link= raPlayer.getAttribute('data-skin');
+                    const template = fetch(link+"/template.html")
+                    .then(response => response.text())
+                    .then(data => {raPlayer.innerHTML = data;})
+                    .catch((exception)=>{console.log('request error');});
+                });
+                function readAloud(e,n){var s="https://tonnhualaysang.vn/customer1/";/iPad|iPhone|iPod/.test(navigator.userAgent)&&(e.src=s+"silence.mp3",e.play(),"undefined"!=typeof speechSynthesis&&speechSynthesis.speak(new SpeechSynthesisUtterance(" ")));var t=document.createElement("script");t.onload=function(){readAloudInit(e,n)},t.src="readaloud.min.js",document.head.appendChild(t)}</script>
+                
+                <div id="ra-player" data-skin="https://tonnhualaysang.vn/customer1/" class="">
+                </div>
+                
+   <div class="col-sm-16 col-md-18">
+      <div class="news_column panel panel-default">
+         <div class="panel-body">
+            <div class="row margin-bottom-lg">
+                <div class="col-md-12">
+                    <span class="h5">Thứ năm - 09/02/2023 17:47</span>
+                </div>
+                <div class="col-md-12">
+                    <ul class="list-inline text-right">
+                   <li class="fb-like fb_iframe_widget" data-href="http://cntt.saodo.edu.vn/tin-tuc/khai-truong-khong-gian-giao-duc-so-smart-edu-hub-noi-ket-noi-tri-thuc-cong-dong-va-khoi-day-dam-me-cong-nghe-trong-sinh-vien-1203.html" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=14&amp;href=http%3A%2F%2Fcntt.saodo.edu.vn%2Ftin-tuc%2Fkhai-truong-khong-gian-giao-duc-so-smart-edu-hub-noi-ket-noi-tri-thuc-cong-dong-va-khoi-day-dam-me-cong-nghe-trong-sinh-vien-1203.html&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=false"><span style="vertical-align: bottom; width: 150px; height: 28px;"><iframe name="f1c99edf56da364" width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like.php?action=like&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df22017c72cbbd38%26domain%3Dcntt.saodo.edu.vn%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252Fcntt.saodo.edu.vn%252Ff1f4afc779b3c38%26relation%3Dparent.parent&amp;container_width=14&amp;href=http%3A%2F%2Fcntt.saodo.edu.vn%2Ftin-tuc%2Fkhai-truong-khong-gian-giao-duc-so-smart-edu-hub-noi-ket-noi-tri-thuc-cong-dong-va-khoi-day-dam-me-cong-nghe-trong-sinh-vien-1203.html&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=false" style="border: none; visibility: visible; width: 150px; height: 28px;" class=""></iframe></span></li>
+                  </ul>
+                </div>
+            <div style="position: relative; display: flex; justify-content: space-between; height: 60px; background-color: rgb(233, 236, 239); margin-top: 16px; float: left; width: 100%; padding-left: 5px; padding-right: 5px;"><div class="left" style="display: flex; flex-grow: 1; align-items: center"><button class="play-button" style="width: 36px; height: 36px; background-color: rgba(255, 255, 255, 0.9); border: 1px solid rgba(0, 0, 0, 0.3); border-radius: 50%; cursor: pointer;"><i class="fa fa-play" style="display: flex; justify-content: center; align-items: center;"></i></button><button class="mute-button activeVolume" style="width: 36px; height: 36px; padding: 0px 16px 0px 8px; outline: none; border: none; font-size: 18px; cursor: pointer;"><i class="fa fa-volume-up" aria-hidden="true"></i></button><div class="volume-slider" id="volume-slider"><div class="volume-slider-handle"></div></div><span class="current">0:00</span>/<span class="duration">0:00</span><div class="progress-bar" id="progress-bar" style="background-color: rgb(233, 236, 239); position: relative; margin-left: 16px; margin-right: 16px; height: 100%; flex-grow: 1; align-items: center;"><span class="bg-voice" style="position: absolute; display: flex; height: 0px; top: 29px; width: 100%; transition: all 0.15s linear 0s; border-top: 1px solid rgba(0, 0, 0, 0.1);"></span><div class="wrap-recent"><span class="fill-recent" style="position: absolute; display: flex; height: 0px; top: 29px; left: 0px; border-top-width: 3px; border-top-style: solid; font-size: 0px; cursor: pointer; transition: all 0.15s linear 0s;"><span class="current_time" style="position: absolute; right: -7px; top: -5px; width: 7px; height: 7px; border-radius: 7px; justify-content: center; align-items: center; cursor: pointer; text-indent: -999em; transition: all 0.15s linear 0s; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px;"></span></span></div></div></div><div class="right-voice" style="width: 159px; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa fa-microphone" aria-hidden="true"></i>&nbsp;<select id="voiceselection" class="input input--dropdown js--animations" style="width: 159px; height: 34px; border-radius: 3px; background-color: rgba(255, 255, 255, 0.9); border: 1px solid rgba(0, 0, 0, 0.2); font-size: 15px; margin-right: 11px;"><option class="voice-male" id="option-voice" value="Vietnamese Male" style="width: 159px; height: 25px;">Giọng nam Việt Nam</option><option class="voice-female" id="option-voice" value="Vietnamese Female">Giọng nữ Việt Nam</option></select></div></div></div>
+          <h1 class="title margin-bottom-lg">Khai trương Không gian giáo dục số (Smart Edu Hub) - Nơi kết nối tri thức cộng đồng và khơi dậy đam mê công nghệ trong sinh viên!</h1>
+          <div class="clearfix">
+          </div>
+          <div class="clearfix">
+              <div class="hometext m-bottom">Phát huy hiệu quả mối quan hệ hợp tác quốc tế nhằm góp phần nâng cao chất lượng đào tạo, Trường Đại học Sao Đỏ phối hợp với Cơ quan Hợp tác quốc tế Hàn Quốc (KOICA) và Công ty TNHH REMANn thực hiện dự án – Thành lập Không gian giáo dục số (Smart Edu Hub). Sau khi triển khai thi công, lắp đặt thiết bị, Smart Edu Hub tại Trường Đại học Sao Đỏ (Hải Dương) đã hoàn thiện và chính thức khai trương vào ngày 09/02/2023.</div>
+              <figure class="article center">
+                 <img alt="IMG 4182" src="/uploads/news/2023_02/img_4182.jpg" width="460" class="img-thumbnail">
+                 <figcaption>IMG 4182</figcaption>
+              </figure>
+          </div>
+          <div id="news-bodyhtml" class="bodytext margin-bottom-lg">
+             <div style="text-align: justify;">&nbsp; &nbsp; &nbsp; Tham dự lễ khai trương Không gian giáo dục số (Smart Edu Hub) tại Trường Đại học Sao Đỏ (Hải Dương), về phía<strong>&nbsp;</strong>Cơ quan Hợp tác quốc tế Hàn Quốc (KOICA) có bà Yoo Soo Yeon – Phó Giám đốc Quốc gia KOICA Việt Nam. Về phía<strong>&nbsp;</strong>Công ty TNHH REMANnn có ông Koo Ja Deok – Tổng Giám đốc Công ty REMANn Hàn Quốc; ông Jang Man Ho - Giám đốc Công ty REMANn Việt Nam; ông Jeong Woo Seong – Giám đốc dự án; bà Phạm Minh Hằng – Giám đốc vận hành dự án. Về phía mạng lưới Hub và các đối tác của KOICA và REMANn Việt Nam có ông Hà Xuân Linh – Trưởng khoa Quốc tế Trường Đại học Thái Nguyên; ông Nguyễn Ngọc Tuấn – Giám đốc chương trình Học viện Công nghệ thông tin (Đại học Bách khoa Hà Nội); ông Trịnh Văn Huy – Phó Giám đốc chương trình Học viện Công nghệ thông tin; ông Nguyễn Minh Tuân – Phó Giám đốc Công ty TNHH Tiến Phúc; ông Nguyễn Đức Tuấn – Giám đốc Công ty TNHH Giải pháp và Công nghệ số. Về phía lãnh đạo địa phương có ông Lương Văn Việt – Giám đốc Sở Giáo dục và Đào tạo tỉnh Hải Dương. Về phía Trường Đại học Sao Đỏ có NGND.TS. Đinh Văn Nhượng – Bí thư Đảng ủy, Hiệu trưởng, cùng các đồng chí trong Hội đồng trường, Ban Giám hiệu và đông đảo cán bộ, viên chức, sinh viên nhà trường.<br>
+    Phát biểu chúc mừng tại lễ khai trương, bà Yoo Soo Yeon – Phó Giám đốc Quốc gia KOICA Việt Nam khẳng định: Cơ quan Hợp tác Quốc tế Hàn Quốc (KOICA) là cơ quan của Chính phủ, thuộc sự quản lý trực tiếp của Bộ Ngoại Giao, Hàn Quốc, chuyên thực hiện các chương trình viện trợ không hoàn lại cho các nước đang phát triển trong đó có Việt Nam. Trong khuôn khổ Dự án: “Thành lập các không gian Giáo dục số và hỗ trợ kinh doanh trong lĩnh vực CNTT ở cấp làng/xã nhằm thu hẹp Khoảng cách số tại Việt Nam”, Trường Đại học Sao Đỏ là một trong số 03 trường Đại học tại Việt Nam được lựa chọn thực hiện dự án này. KOICA và Công ty REMANn luôn quan tâm và hỗ trợ tích cực để dự án thành công tốt đẹp. Mong rằng Không gian giáo dục số tại Trường Đại học Sao Đỏ (Hải Dương) sẽ đạt được hiệu quả tốt nhất cho nhà trường và cộng đồng”.<br>
+    &nbsp; Phát biểu tại Lễ khai trương, ông Koo Ja Deok – Tổng Giám đốc Công ty REMANn Hàn Quốc cho biết: Hiện nay, Cơ quan Hợp tác Quốc tế Hàn Quốc (KOICA) và Công ty REMANn đang nỗ lực không ngừng để tiếp tục xây dựng nhiều hơn nữa Không gian giáo dục số (Smart Edu Hub) đến các vùng miền cần hỗ trợ các thiết bị công nghệ thông tin. Tôi hy vọng, sau lễ khai trương, Smart Edu Hub tại Trường Đại học Sao Đỏ (Hải Dương) đi vào hoạt động sẽ giúp các bạn sinh viên nhà trường nâng cao năng lực học tập trong lĩnh vực công nghệ thông tin, đồng thời giúp người dân nơi đây có thể sử dụng và tiếp cận với công nghệ thông tin miễn phí và hiệu quả như đúng với mục đích của dự án đề ra.<br>
+    &nbsp; Thay mặt lãnh đạo Trường Đại học Sao Đỏ phát biểu tại lễ khai trương TS Đỗ Văn Đỉnh – Phó Hiệu trưởng nhà trường bày tỏ sự vui mừng và gửi lời cảm ơn chân thành<em>&nbsp;</em>đến Cơ quan Hợp tác Quốc tế Hàn Quốc (KOICA) và Công ty&nbsp;REMANn&nbsp;cùng các điều phối viên, kỹ thuật viên, trợ lý dự án đã cố gắng, nỗ lực và trách nhiệm trong việc triển khai thi công, lắp đặt thiết bị đúng tiến độ và đảm bảo chất lượng để Smart Edu Hub tại Trường Đại học Sao Đỏ (Hải Dương) được khai trương và đi vào sử dụng.&nbsp;TS Đỗ Văn Đỉnh khẳng định&nbsp;Smart Edu Hub tại Trường Đại học Sao Đỏ sẽ được quản lý và sử dụng hiệu quả,&nbsp;góp phần tích cực vào mục tiêu “thu hẹp khoảng cách số” của dự án và thực sự hữu ích cho cán bộ, viên chức, sinh viên và cộng đồng trong tỉnh Hải Dương.&nbsp;Đồng chí cũng&nbsp;mong&nbsp;muốn&nbsp;trong tương lai, Trường Đại học Sao Đỏ sẽ tiếp tục nhận được sự quan tâm, ủng hộ của Cơ quan Hợp tác Quốc tế Hàn Quốc (KOICA), Công ty&nbsp;REMANn và các công ty đối tác luôn quan tâm ủng hộ nhà trường thực hiện dự án đạt hiệu quả cao.<br>
+    &nbsp; Trong thời gian tới&nbsp;Smart Edu Hub sẽ hoạt động hiệu quả dưới sự quản lý và điều hành của<em>&nbsp;</em>phòng Quản lý đào tạo. Đây sẽ là nơi khơi dậy cảm hứng học tập, sáng tạo công nghệ, kết nối cộng đồng, góp phần nâng cao chất lượng đào tạo của nhà trường, đồng thời mang lại giá trị cao cho việc thực hiện dự án KOICA: Thu hẹp Khoảng cách số tại Việt nam.&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <strong>Một số hình ảnh tại lễ khai trương:</strong>
+    
+    <div style="text-align:center"><img alt="" height="394" src="https://saodo.edu.vn/uploads/news/2023_02/z4096109642650_5316231052675de6f7c3ec335de4b916.jpg" width="566"></div>
+    
+    <div style="text-align: center;"><em>Ông Koo Ja Deok – Tổng Giám đốc Công ty REMANn</em><em>&nbsp;Hàn Quốc tặng hoa chúc mừng nhà trường</em></div>
+    
+    <div style="text-align:center"><img alt="" height="408" src="https://saodo.edu.vn/uploads/news/2023_02/image002_1.jpg" width="566"></div>
+    
+    <div style="text-align: center;"><em>Ông Lương Văn Việt – Giám đốc Sở Giáo dục và Đào tạo tỉnh Hải Dương tặng hoa chúc mừng nhà trường</em></div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    
+    <div style="text-align:center"><img alt="" height="381" src="https://saodo.edu.vn/uploads/news/2023_02/image003_1.jpg" width="566"></div>
+    
+    <div style="text-align: center;"><em>Ông Koo Ja Deok – Tổng Giám đốc Công ty</em><em>&nbsp;REMANn</em><em>&nbsp;Hàn Quốc p</em><em>hát biểu tại&nbsp;</em><em>Lễ</em><em>&nbsp;khai trương</em></div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    <div style="text-align:center"><img alt="" height="377" src="https://saodo.edu.vn/uploads/news/2023_02/image004_1.jpg" width="566"></div>
+    
+    <div style="text-align: center;"><em>Bà Yoo Soo Yeon – Phó Giám đốc Quốc gia KOICA Việt Nam phát biểu tại lễ khai trương</em></div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    
+    <div style="text-align:center"><img alt="" height="372" src="https://saodo.edu.vn/uploads/news/2023_02/image005_1.jpg" width="566"></div>
+    
+    <div style="text-align: center;"><em>TS&nbsp;</em><em>Đỗ Văn Đỉnh</em>&nbsp;<em>– Phó Hiệu trưởng nhà trường phát biểu tại lễ khai trương</em></div>
+    
+    <div style="text-align:center"><img alt="" height="348" src="https://saodo.edu.vn/uploads/news/2023_02/image006_2.jpg" width="566"></div>
+    <br>
+    <div style="text-align:center"><img alt="" height="305" src="https://saodo.edu.vn/uploads/news/2023_02/image007_2.jpg" width="566"></div>
+    <br>
+    <div style="text-align:center"><img alt="" height="328" src="https://saodo.edu.vn/uploads/news/2023_02/image008_1.jpg" width="566"></div>
+    
+    <div style="text-align: center;"><em>Lễ cắt băng khánh thành&nbsp;</em><em>Smart Edu Hub</em><em>&nbsp;tại Trường Đại học Sao Đỏ (Hải Dương)</em></div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    
+    <div style="text-align:center"><img alt="" height="410" src="https://saodo.edu.vn/uploads/news/2023_02/image009_1.jpg" width="566"></div>
+    &nbsp;
+    
+    <div style="text-align:center"><img alt="" height="380" src="https://saodo.edu.vn/uploads/news/2023_02/image010_1.jpg" width="566"></div>
+    <br>
+    <div style="text-align:center"><img alt="" height="380" src="https://saodo.edu.vn/uploads/news/2023_02/image011_1.jpg" width="566"></div>
+    <br>
+    <div style="text-align:center"><img alt="" height="345" src="https://saodo.edu.vn/uploads/news/2023_02/img_4289.jpg" width="566"></div>
+    <br>
+    <div style="text-align:center"><img alt="" height="459" src="https://saodo.edu.vn/uploads/news/2023_02/image013_1.jpg" width="566"></div>
+    <br>
+    <div style="text-align:center"><img alt="" height="424" src="https://saodo.edu.vn/uploads/news/2023_02/image014_1.jpg" width="566"></div>
+    <br>
+    <div style="text-align:center"><img alt="" height="424" src="https://saodo.edu.vn/uploads/news/2023_02/image015_1.jpg" width="566"></div>
+    &nbsp;
+          </div>
+            <div class="margin-bottom-lg">
+              <p class="h5 text-right">
+                 <strong>Tác giả bài viết: </strong>ĐTN-CNTT
+              </p>
+            </div>
+        </div>
+      </div>>
+   </div>
+         <i class="fa fa-play" aria-hidden="true"></i>
+         <script >
+           
+         </script>
+         <script src='./readaloud.min.js'>
+
+         </script>
+</body>
+</html>
