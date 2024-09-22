@@ -6,6 +6,7 @@ public function __construct()
 {
     $this->NewsModel = $this->model('NewsModel');
 }
+<<<<<<< HEAD
 private function create_thumb($fileImageDrirect,$newName)
 {
     $fileImage = $fileImageDrirect . $newName;
@@ -42,6 +43,8 @@ imagecopyresampled($image_p, $image, 0, 0, 0, 0, $width, $height, $width_orig, $
 // imagejpeg($image_p, "public/assets/products/" . $newName, 90);
 imagejpeg($image_p, "public/assets/news/thumb/" . $newName, 100);
 }
+=======
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
 private function create_slug($string)
     {
         $search = array(
@@ -80,7 +83,10 @@ private function create_slug($string)
         );
         $string = preg_replace($search, $replace, $string);
         $string = preg_replace('/(-)+/', '-', $string);
+<<<<<<< HEAD
         $string = trim($string, '-');
+=======
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
         $string = strtolower($string);
         return $string;
     }
@@ -110,7 +116,11 @@ function index(){
         $limit = 8;
         $page_index = ($page-1) * $limit; 
         //  lấy dữ liêu từ đâu đến đâu
+<<<<<<< HEAD
         $dataNews = $this->NewsModel->getAllNews($page_index,$limit);
+=======
+        $dataNews = array_reverse($this->NewsModel->getAllNews($page_index,$limit));
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
         $this->data['sub_content']['news'] = $dataNews;
         $totalNews= $this->NewsModel->getCountNew();
         $totalNews = $totalNews[0][0];
@@ -158,6 +168,7 @@ function postAddNews (){
     {
         $size = $file['size']/1024/1024; //  bytes->mb
         if($size<=$size_allow)
+<<<<<<< HEAD
         { 
             
             $upload = move_uploaded_file($file['tmp_name'],$target_dir . $newName);
@@ -166,16 +177,30 @@ function postAddNews (){
             {
                 $createthumb= $this->create_thumb(_DIR_ROOT . '/public/assets/news/',$newName);
                 
+=======
+        {
+            $upload = move_uploaded_file($file['tmp_name'],$target_dir . '/' . $newName);
+            if($upload)
+            {
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                 $dataNews['img'] = $newName;
                 $inserted =$this->NewsModel->insertNews($dataNews);
                 if($inserted)
                 {
                    
+<<<<<<< HEAD
                     $error = 'Thêm tin tức thành công';
                 }
                 else
                 {
                     $error ="thêm thất bại";
+=======
+                    $erro = 'Thêm tin tức thành công';
+                }
+                else
+                {
+                    $erro ="thêm thất bại";
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                 }
                 
             }
@@ -262,10 +287,15 @@ function postEdit()
                 $upload = move_uploaded_file($file['tmp_name'],$target_dir . '/' . $newName);
                 if($upload)
                 {
+<<<<<<< HEAD
                     
                     $news = $this->NewsModel->getNewsId($data['id']);
                     $old_image= _DIR_ROOT . '/public/assets/news/'.$news['img'];
                     $createthumb= $this->create_thumb(_DIR_ROOT . '/public/assets/news/',$newName);
+=======
+                    $news = $this->NewsModel->getNewsId($data['id']);
+                    $old_image= _DIR_ROOT . '/public/assets/news/'.$news['img'];
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                     if (file_exists($old_image))
                     {
                             unlink($old_image);

@@ -19,7 +19,11 @@ class NewsModel extends Model{
     }
     public function getAllNews($page_index,$limit)
     {
+<<<<<<< HEAD
         return $this->database->query('select * from ' . $this->_table .' ORDER BY date DESC ' . ' limit ' . $page_index . ' , ' . $limit )->fetchAll(PDO::FETCH_ASSOC);
+=======
+        return $this->database->query('select * from ' . $this->_table . ' limit ' . $page_index . ' , ' . $limit)->fetchAll(PDO::FETCH_ASSOC);
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
     }
     
     public function getNewsSlug($slug)

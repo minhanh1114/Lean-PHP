@@ -10,7 +10,11 @@ class Session{
 
     static public function data($key='', $value=''){
         $sessionKey = self::isInvalid();
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
         if (!empty($value)){
             if (!empty($key)){
                 $_SESSION[$sessionKey][$key] = $value; //set session

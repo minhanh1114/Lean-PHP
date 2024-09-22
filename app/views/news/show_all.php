@@ -30,7 +30,11 @@
                                                 <a href="<?php echo _WEB_ROOT.'/tin-tuc/'. $news['slug'] . '.html' ?> " class="home-news">
                                                     <div class="row no-gutters">
                                                        <div class="col l-5 m-5 c-5">
+<<<<<<< HEAD
                                                            <img class="home-news_img" src="<?php echo _WEB_ROOT . '/public/assets/news/thumb/'. $news['img'] ?>" alt="<?php echo $news['title'] ?>" ></img>
+=======
+                                                           <img class="home-news_img" src="<?php echo _WEB_ROOT . '/public/assets/news/'. $news['img'] ?>" alt="<?php echo $news['title'] ?>" ></img>
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                                                        </div> 
                                                        <div class="col l-7 m-7 c-7">
                                                             <div class="home-new_content offer-content">
@@ -60,7 +64,11 @@
                                                     <a href="<?php echo _WEB_ROOT . '/tin-tuc/'  . $news['slug'] .'.html' ?>" class="home-news">
                                                         <div class="row no-gutters">
                                                         <div class="col l-5 m-5 c-5">
+<<<<<<< HEAD
                                                             <img class="home-news_img offer-img " src="<?php echo _WEB_ROOT . '/public/assets/news/thumb/' . $news['img'] ?>" alt="<?php echo $news['title'] ?>"></img>
+=======
+                                                            <img class="home-news_img offer-img " src="<?php echo _WEB_ROOT . '/public/assets/news/' . $news['img'] ?>" alt="<?php echo $news['title'] ?>"></img>
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                                                         </div> 
                                                         <div class="col l-7 m-7 c-7">
                                                                 <div class="home-new_content offer-content">

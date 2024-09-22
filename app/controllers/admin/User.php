@@ -17,11 +17,14 @@ class User extends Controller{
         $this->data['sub_content']['title'] = 'Danh Sách tài khoản quản trị';
         $this->data['sub_content']['users'] = $this->User->getAllUser();
         $this->data['content']='admin/user';
+<<<<<<< HEAD
         $checkMess = Session::flash('mess');
         if(!empty($checkMess))
         {
             $this->data['mess'] = $checkMess;
         }
+=======
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
         $this->render('layouts/admin_layout', $this->data);
     }
     private function randomPassword() {
@@ -36,7 +39,10 @@ class User extends Controller{
     }
     function changePass()
     {
+<<<<<<< HEAD
         
+=======
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
         $this->render('admin/changepass', $this->data);
     }
     function postChangePass()
@@ -56,6 +62,7 @@ class User extends Controller{
         }
         
     }
+<<<<<<< HEAD
 
     function senEmail($newPassword){
         $to = "tuan28dk10cntt@gmail.com";  
@@ -68,6 +75,8 @@ class User extends Controller{
         return false;
     }
 
+=======
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
     function resetPass($id)
     {
 
@@ -79,6 +88,7 @@ class User extends Controller{
             $newPassword = $this->randomPassword();
             $newPasswordHash = md5($newPassword);
             $resetData['password'] = $newPasswordHash;
+<<<<<<< HEAD
             if($this->senEmail($newPassword))
             {
 
@@ -94,6 +104,11 @@ class User extends Controller{
             
 
             
+=======
+            $this->User->updateUser($resetData,$condition);
+            Session::flash('mess','Mật khẩu mới:'.$newPassword);
+            $response->redirect('admin/user');
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
         }
         else
         {

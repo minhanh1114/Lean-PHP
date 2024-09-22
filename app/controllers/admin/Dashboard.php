@@ -29,6 +29,15 @@ function icons(){
     $this->data['content']='admin/icons';
     $this->render('layouts/admin_layout', $this->data);
 }
+<<<<<<< HEAD
 
+=======
+function notification(){
+    $this->data['sub_content']['title'] = 'Thông báo';
+
+    $this->data['content']='admin/notifications';
+    $this->render('layouts/admin_layout', $this->data);
+}
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
 
 }

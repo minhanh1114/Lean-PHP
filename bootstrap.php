@@ -4,17 +4,28 @@ define('_DIR_ROOT',__DIR__);
 if(!empty($_SERVER['HTTPS'])&& $_SERVER['HTTPS']=='on')
 {
 
+<<<<<<< HEAD
     $web_root = 'https://'. $_SERVER['HTTP_HOST'];
 }
 else{
     $web_root = 'http://'. $_SERVER['HTTP_HOST'];
+=======
+    $web_root = 'https://'. $_SERVER['HTTP_HOST'].'/';
+}
+else{
+    $web_root = 'http://'. $_SERVER['HTTP_HOST'].'/';
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
 
 }
 $folder = explode('/',$_SERVER['SCRIPT_FILENAME']);
 $folder= $folder[3]; 
 
+<<<<<<< HEAD
 //  $web_root =  $web_root ; mở khi đưa lên hosting
 $web_root =  $web_root.'/'.$folder ; // đóng khi đưa lên hosting
+=======
+ $web_root = $web_root . $folder ; // thay đổi khi upload hosting ( nhớ bỏ gạch chéo  '/' và .folder)
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
  define('_WEB_ROOT', $web_root);
  require_once ('./configs/App.php');
  require_once ('./configs/Session.php');

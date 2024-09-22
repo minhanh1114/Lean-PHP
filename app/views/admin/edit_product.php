@@ -50,7 +50,11 @@
                                             <div class="col-md-8">
                                                 <div class="form-group des_short">
                                                     <label>Tóm tắt</label>
+<<<<<<< HEAD
                                                     <textarea   name="des_short" id="editor_short" maxlength="500" class="form-control"  rows="5" style="height: 100%;"><?php echo $item['des_short'] ?></textarea>
+=======
+                                                    <textarea  required name="des_short" id="editor_short" maxlength="500" class="form-control"  rows="5" style="height: 100%;"><?php echo $item['des_short'] ?></textarea>
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                                                    
                                                 </div>
                                             </div>
@@ -138,6 +142,7 @@
                 .catch( error => {
                     console.error( error );
                 } );
+<<<<<<< HEAD
                 ClassicEditor
                 .create( document.querySelector( '#editor_short' ), {
                     // minHeight: '500px',
@@ -161,6 +166,8 @@
                 .catch( error => {
                     console.error( error );
                 } );
+=======
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                 
 
 

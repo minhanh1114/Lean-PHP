@@ -2,7 +2,11 @@
 class Database {
     private static $instance = null;
     private static $connection;
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
     private function __construct()
     {
         $con="";

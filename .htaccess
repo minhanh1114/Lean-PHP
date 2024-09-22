@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Header set Access-Control-Allow-Origin "*"
 Header set Access-Control-Allow-Methods "GET,PUT,POST,DELETE"
 Header set Access-Control-Allow-Headers "Content-Type, Authorization"
@@ -10,6 +11,11 @@ SetEnv SECRETCLOUD 0x4AAAAAAAkYbnIJR1eAtvtZg2OMIRgmQMI
 
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+=======
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d

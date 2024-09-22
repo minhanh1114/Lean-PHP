@@ -61,7 +61,11 @@ class News extends Controller{
         $limit = 10;
         $page_index = ($page-1) * $limit; 
         //  lấy dữ liêu từ đâu đến đâu
+<<<<<<< HEAD
         $dataNews = $this->NewsModel->getAllNews($page_index,$limit);
+=======
+        $dataNews = array_reverse($this->NewsModel->getAllNews($page_index,$limit));
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
         // gán lại description ngắn gọn;
             for ($i=0; $i < count($dataNews); $i++) 
             {

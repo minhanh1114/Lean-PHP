@@ -41,7 +41,11 @@
 
                                         <div class="row">
                                             <div class="col-md-12">
+<<<<<<< HEAD
                                                 <div class="form-group content-news">
+=======
+                                                <div class="form-group">
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                                                     <label>Mô tả</label>
                                                     <textarea name ="description" id="editor" rows="4" cols="80" class="form-control" p ></textarea>
                                                 </div>

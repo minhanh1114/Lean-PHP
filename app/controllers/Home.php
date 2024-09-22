@@ -10,9 +10,13 @@ class Home extends Controller{
       $this->NewsModel = $this->model('NewsModel');
     }
     public function index (){
+<<<<<<< HEAD
         
        $this->data['sub_content']['typesProduct']= $this->ProductModel->getTypeProduct();
 
+=======
+        $data['typesProduct']= $this->ProductModel->getTypeProduct();
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
         $dataNews = $this->NewsModel->getNewsOrderDate(3);
         for ($i=0; $i < count($dataNews); $i++) 
             {
@@ -22,6 +26,7 @@ class Home extends Controller{
                     
                 }
             }
+<<<<<<< HEAD
             $this->data['sub_content']['news']=$dataNews;
             
         //get list products
@@ -37,6 +42,24 @@ class Home extends Controller{
         $this->render('layouts/client_layout',$this->data);
     }
     
+=======
+            $data['news']=$dataNews;
+        //get list products
+        $data['productList']['one'] = $this->ProductModel->getProductList($data['typesProduct'][0]['id_type'],8);
+        $data['productList']['two'] = $this->ProductModel->getProductList($data['typesProduct'][1]['id_type'],8);
+        $data['productList']['three'] = $this->ProductModel->getProductList($data['typesProduct'][2]['id_type'],8);
+        $data['productList']['four'] = $this->ProductModel->getProductList($data['typesProduct'][3]['id_type'],8);
+
+        $this->render('home/index',$data);
+    }
+    public function contact()
+    {
+        $this->data['title'] = 'Liên hệ';
+        $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
+        $this->data['content'] = 'home/contact';
+        $this->render('layouts/client_layout', $this->data);
+    }
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
     public function subRouter($content)
     {
         $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();

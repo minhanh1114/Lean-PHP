@@ -164,12 +164,16 @@ function postAddProduct(){
     $newName = md5(uniqid()) .'.'. $extension;
 
 
+<<<<<<< HEAD
     if (strlen($data['des_short']) > 500) {
         $error = "Tóm tắt sản phẩm không được vượt quá 500 ký tự.";
         Session::flash('mess', $error);
         $response->redirect('admin/product');
         return;
     }
+=======
+    // if($data['des_short'])
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
 
     // check type image upload
     
@@ -189,15 +193,26 @@ function postAddProduct(){
                 if($inserted)
                 {
                    
+<<<<<<< HEAD
                     $error = 'Thêm sản phẩm thành công';
+=======
+                    $erro = 'thêm thành công';
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                     
                 }
                 else
                 {
+<<<<<<< HEAD
                     $error ="Thêm sản phẩm thất bại";
                 }
                 
               
+=======
+                    $erro ="thêm thất bại";
+                }
+                
+                $error="upload thành công";
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
             }
             else{
                 $error="upload thất bại";
@@ -253,6 +268,7 @@ function postEdit(){
     $error = '';
     $type_allow= ['png', 'jpg', 'jpeg', 'gif'];
     // var_dump($file);
+<<<<<<< HEAD
 
     if (strlen($data['des_short']) > 500) {
         $error = "Tóm tắt sản phẩm không được vượt quá 500 ký tự.";
@@ -260,6 +276,8 @@ function postEdit(){
         $response->redirect('admin/product');
         return;
     }
+=======
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
     // check file tồn tại không
     //delete file img old
     if (!empty($file['tmp_name']))

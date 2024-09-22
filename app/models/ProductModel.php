@@ -76,8 +76,15 @@ class ProductModel extends Model{
         if($this->database->insertData($this->_table,$data)){
             return true;
         }
+<<<<<<< HEAD
       
          return false;
+=======
+        else
+        {
+            return false;
+        }
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
     }
 
     function delProduct($condition){

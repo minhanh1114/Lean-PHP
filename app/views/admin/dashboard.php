@@ -47,7 +47,11 @@
                     <div class="main-title">
                         <h3 class="m-0">Sản phẩm được thêm gần đây</h3>
                     </div>
+<<<<<<< HEAD
                     <a href="<?php echo _WEB_ROOT . '/admin/product' ?>">
+=======
+                    <a href="#">
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                     <p>View all</p>
                     </a>
                 </div>

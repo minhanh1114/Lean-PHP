@@ -4,7 +4,11 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
+<<<<<<< HEAD
                                     <h4 class="card-title">Thêm Sản Phẩm</h4>
+=======
+                                    <h4 class="card-title">Thêm sản phẩm</h4>
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                                 </div>
                                 <div class="card-body">
                                     <form method="post" action="<?php echo _WEB_ROOT; ?>/admin/product/postAddProduct" enctype="multipart/form-data">
@@ -43,15 +47,23 @@
                                             <div class="col-md-8 ">
                                                 <div class="form-group des_short">
                                                     <label>Tóm tắt</label>
+<<<<<<< HEAD
                                                     <textarea   name="des_short" id="editor_short" maxlength="500" class="form-control"  rows="5" style="height: 100%;"></textarea>
+=======
+                                                    <textarea  required name="des_short" id="editor_short" maxlength="500" class="form-control"  rows="5" style="height: 100%;"></textarea>
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-4 ">
                                                 <div class="form-group">
                                                     <label>Hình ảnh</label>
+<<<<<<< HEAD
                                                     <input id='input_img_product' required name="img" type="file" class="form-control-file">
                                                     <img id ="img_product" style="max-width:150px ; max-height:200px" src="<?php echo _WEB_ROOT ?>/public/assets/admin/assets/img/img_noimg.png" alt="hình ảnh sản phẩm">
+=======
+                                                    <input required name="img" type="file" class="form-control-file">
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                                                 </div>
                                             </div>
                                         </div>
@@ -90,6 +102,7 @@
                 </div>
             </div>
             
+<<<<<<< HEAD
 
         <script>
             document.getElementById('input_img_product').addEventListener('change',(e)=>{
@@ -100,6 +113,8 @@
             });
 
         </script>
+=======
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
          <script>
             ClassicEditor
                 .create( document.querySelector( '#editor' ), {
@@ -116,14 +131,22 @@
                         'link', '|',
                         'outdent', 'indent', '|',
                         'bulletedList', 'numberedList', 'todoList', '|',
+<<<<<<< HEAD
                         'undo', 'redo','sourceEditing' ],
 
                     
+=======
+                        'code', 'codeBlock', '|',
+                        'insertTable', '|',
+                         'blockQuote', '|',
+                        'undo', 'redo','sourceEditing' ],
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                        
                 } )
                 .catch( error => {
                     console.error( error );
                 } );
+<<<<<<< HEAD
                 
                 ClassicEditor
                 .create( document.querySelector( '#editor_short' ), {
@@ -151,6 +174,8 @@
            
                 
 
+=======
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
 
            
             

@@ -28,8 +28,13 @@
 
 
     <!--     Fonts and icons     -->
+<<<<<<< HEAD
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+=======
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
     <link href="<?php echo _WEB_ROOT?>/public/assets/admin/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
     <!-- end -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -41,6 +46,7 @@
 
 
     <style>
+<<<<<<< HEAD
        .form-group.description .ck-editor__editable {
                 min-height: 500px !important;
             }
@@ -50,6 +56,14 @@
         .content-news .ck-editor__editable {
                 min-height: 500px !important;
             }
+=======
+        .ck-editor__editable {
+                min-height: 500px !important;
+            }
+        /* .des_short .ck-editor__editable {
+                min-height: 200px !important;
+            } */
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
         </style>
 </head>
 
@@ -74,7 +88,11 @@
 
             <ul class="nav">
                 <li >
+<<<<<<< HEAD
                     <a href="<?php echo _WEB_ROOT . '/admin/dashboard'?>">
+=======
+                    <a href="<?php echo _WEB_ROOT . '/quantri'?>">
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
@@ -98,19 +116,37 @@
                     </a>
                 </li>
                 <li>
+<<<<<<< HEAD
                     <a href="<?php echo _WEB_ROOT . '/admin/Dashboard/notification'?>">
                         <i class="pe-7s-bell"></i>
                         <p>Notification</p>
                     </a>
                 </li>
                 <li>
+=======
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
                     <a href="<?php echo _WEB_ROOT . '/admin/Dashboard/icons'?>">
                         <i class="pe-7s-science"></i>
                         <p>Icons</p>
                     </a>
                 </li>
+<<<<<<< HEAD
                
                 
+=======
+                <!-- <li>
+                    <a href="maps.html">
+                        <i class="pe-7s-map-marker"></i>
+                        <p>Maps</p>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="<?php echo _WEB_ROOT . '/admin/Dashboard/notification'?>">
+                        <i class="pe-7s-bell"></i>
+                        <p>Notification</p>
+                    </a>
+                </li>
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
 				
             </ul>
     	</div>
@@ -227,7 +263,11 @@
     <script src="<?php echo _WEB_ROOT?>/public/assets/admin/assets/js/bootstrap-notify.js"></script>
 
     <!--  Google Maps Plugin    -->
+<<<<<<< HEAD
     <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+=======
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="<?php echo _WEB_ROOT?>/public/assets/admin/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>

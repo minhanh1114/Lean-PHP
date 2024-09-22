@@ -66,7 +66,11 @@ $config['images'] = array(
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
+<<<<<<< HEAD
     'baseUrl'      => 'https://tonnhualaysang.vn/public/assets/admin/upload', 
+=======
+    'baseUrl'      => '/admin/upload', 
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
 //  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,

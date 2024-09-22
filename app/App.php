@@ -145,7 +145,11 @@ class App{
         else
             echo 'k thấy config middleWare';
     }
+<<<<<<< HEAD
    static function loadError($nameError='404',$data =[]){
+=======
+    function loadError($nameError='404',$data =[]){
+>>>>>>> 73b293fda7e7c2ecf0d16e231ec9b57e48463000
             extract($data);
         require_once('app/errors/'.$nameError.'.php');
 
