@@ -1,0 +1,37 @@
+RewriteEngine On
+SetEnv DBUSER bqsvaqtahosting_tanminhnhat_quanlibanhang
+SetEnv DBPASS quantrivien_admin0011
+SetEnv DBNAME bqsvaqtahosting_quanlibanhang
+SetEnv SECRETCLOUD 0x4AAAAAAAkYbnIJR1eAtvtZg2OMIRgmQMI
+
+
+RewriteCond %{HTTP_HOST} ^www\.tonnhualaysang\.vn [NC]
+RewriteRule ^(.*)$ https://tonnhualaysang.vn/$1 [L,R=301]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+RewriteRule ^(app|core|vendor|logs|configs)/ - [F,L]
+
+RewriteCond %{REQUEST_URI} \.php/$ [NC]
+RewriteRule ^(.*)$ - [F,L]
+
+
+RewriteCond %{REQUEST_URI} \.php$ [NC]
+RewriteCond %{REQUEST_URI} !/index\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/public/assets/admin/ckfinder/core/connector/php/connector.php$
+RewriteRule ^(.*)$ - [F,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.+)$ index.php/$1 [L,QSA]
+
+
+
+Redirect 301 /customer1/ https://tonnhualaysang.vn/
+
+
+

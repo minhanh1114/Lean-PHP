@@ -1,0 +1,59 @@
+[03-Jan-2025 22:44:44 Asia/Ho_Chi_Minh] PHP Warning:  Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' (this will throw an Error in a future version of PHP) in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Product.php on line 92
+[03-Jan-2025 23:16:58 Asia/Ho_Chi_Minh] PHP Warning:  Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' (this will throw an Error in a future version of PHP) in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Product.php on line 92
+[03-Jan-2025 23:56:14 Asia/Ho_Chi_Minh] PHP Warning:  Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' (this will throw an Error in a future version of PHP) in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Product.php on line 92
+[03-Jan-2025 23:56:39 Asia/Ho_Chi_Minh] PHP Warning:  Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' (this will throw an Error in a future version of PHP) in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Product.php on line 92
+[04-Jan-2025 00:38:36 Asia/Ho_Chi_Minh] PHP Warning:  Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' (this will throw an Error in a future version of PHP) in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Product.php on line 92
+[04-Jan-2025 07:10:49 Asia/Ho_Chi_Minh] PHP Warning:  Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' (this will throw an Error in a future version of PHP) in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/News.php on line 84
+[04-Jan-2025 07:10:59 Asia/Ho_Chi_Minh] PHP Warning:  Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' (this will throw an Error in a future version of PHP) in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/News.php on line 84
+[04-Jan-2025 07:12:17 Asia/Ho_Chi_Minh] PHP Warning:  Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' (this will throw an Error in a future version of PHP) in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/News.php on line 84
+[04-Jan-2025 07:12:17 Asia/Ho_Chi_Minh] PHP Warning:  Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' (this will throw an Error in a future version of PHP) in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/News.php on line 84
+[04-Jan-2025 07:12:18 Asia/Ho_Chi_Minh] PHP Warning:  Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' (this will throw an Error in a future version of PHP) in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/News.php on line 84
+[04-Jan-2025 07:13:51 Asia/Ho_Chi_Minh] PHP Warning:  Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' (this will throw an Error in a future version of PHP) in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/News.php on line 84
+[04-Jan-2025 23:23:48 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to undefined function vardum() in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php:14
+Stack trace:
+#0 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(121): Home->index()
+#1 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(16): App->handleUrl()
+#2 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/index.php(4): App->__construct()
+#3 {main}
+  thrown in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php on line 14
+[04-Jan-2025 23:23:50 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to undefined function vardum() in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php:14
+Stack trace:
+#0 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(121): Home->index()
+#1 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(16): App->handleUrl()
+#2 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/index.php(4): App->__construct()
+#3 {main}
+  thrown in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php on line 14
+[04-Jan-2025 23:23:53 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to undefined function vardum() in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php:14
+Stack trace:
+#0 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(121): Home->index()
+#1 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(16): App->handleUrl()
+#2 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/index.php(4): App->__construct()
+#3 {main}
+  thrown in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php on line 14
+[04-Jan-2025 23:24:21 Asia/Ho_Chi_Minh] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php on line 14
+[04-Jan-2025 23:24:21 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php:14
+Stack trace:
+#0 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(121): Home->index()
+#1 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(16): App->handleUrl()
+#2 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/index.php(4): App->__construct()
+#3 {main}
+  thrown in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php on line 14
+[04-Jan-2025 23:24:23 Asia/Ho_Chi_Minh] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php on line 14
+[04-Jan-2025 23:24:23 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php:14
+Stack trace:
+#0 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(121): Home->index()
+#1 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(16): App->handleUrl()
+#2 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/index.php(4): App->__construct()
+#3 {main}
+  thrown in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php on line 14
+[04-Jan-2025 23:24:24 Asia/Ho_Chi_Minh] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php on line 14
+[04-Jan-2025 23:24:24 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php:14
+Stack trace:
+#0 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(121): Home->index()
+#1 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/App.php(16): App->handleUrl()
+#2 /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/index.php(4): App->__construct()
+#3 {main}
+  thrown in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/Home.php on line 14
+[09-Jan-2025 21:56:02 Asia/Ho_Chi_Minh] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/admin/Product.php on line 129
+[09-Jan-2025 21:56:02 Asia/Ho_Chi_Minh] PHP Warning:  imagecreatefromjpeg(): '/home/bqsvaqtahosting/public_html/tonnhualaysang.vn/public/assets/products/images/c500da0c226c601e5fe55d18d4399aa6.jpg' is not a valid JPEG file in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/admin/Product.php on line 129
+[09-Jan-2025 21:56:02 Asia/Ho_Chi_Minh] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, bool given in /home/bqsvaqtahosting/public_html/tonnhualaysang.vn/app/controllers/admin/Product.php on line 134

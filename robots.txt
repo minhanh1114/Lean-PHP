@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /*?ID=
+Disallow: /*.xml$
+Disallow: /*.xhtml$
+Disallow: /*.phtml$
+Disallow: /*.shtml$
+Disallow: /*.pdf$
+Disallow: /*.jsp$
+Disallow: /*.doc$
+Sitemap: https://tonnhualaysang.vn/Home/sitemap
