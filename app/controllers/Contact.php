@@ -67,7 +67,7 @@ class Contact extends Controller {
             // check trường dữ liệu
             if (
                 preg_match('/^[0-9]{10}$/', $this->data['phone']) &&
-                isset($this->data['name']) && strlen($this->data['name']) > 3 && strlen($this->data['name']) < 30 &&
+                isset($this->data['name']) && strlen($this->data['name']) > 2 && strlen($this->data['name']) < 30 &&
                 isset($this->data['content']) && strlen($this->data['content']) < 500) 
            
             {

@@ -91,4 +91,11 @@ class NewsModel extends Model{
     public function getSiteNews(){
         return $this->database->query('select slug,date from ' . $this->_table )->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function updatePin($data,$condition){
+        return $this->database->updateData($this->_table,$data,$condition);
+    }
+    public function getPinned()
+    {
+        return $this->database->query('select * from ' . $this->_table . ' where is_pinned = 1')->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

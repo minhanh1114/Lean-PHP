@@ -16,6 +16,7 @@ $routers['loai-san-pham/(.*).html'] = 'product/typeProduct/$1'; //
 
 $routers['admin/dashboard'] = 'admin/dashboard';
 $routers['admin/product'] = 'admin/product';
+$routers['admin/typeProduct'] = 'admin/typeProduct';
 $routers['admin/news'] = 'admin/news';
 $routers['admin/user'] = 'admin/user';
 $routers['admin/contact'] = 'admin/contact';

@@ -88,6 +88,7 @@ class Product extends Controller{
 
         if(!empty($this->data['sub_content']['dataProductAll']))
         {
+            $this->data['sub_content']['desType'] = $this->ProductModel->getDesTypeProduct($this->data['sub_content']['dataProductAll'][0]['id_type'])['des_type'];
             $this->data['title'] = $this->data['sub_content']['dataProductAll'][0]['name_type'];
             $this->data['canonical'] = "https://". rtrim(htmlspecialchars($_SERVER['HTTP_HOST'])). "/loai-san-pham/" .$this->data['sub_content']['dataProductAll'][0]['slug_type'].".html";
         }

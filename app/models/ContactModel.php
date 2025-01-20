@@ -10,5 +10,9 @@ class ContactModel extends Model{
         $data = $this->database->query('SELECT * FROM '. $this->_table)->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
+    function delete($condition)
+    {
+        return $this->database->deleteData($this->_table,$condition);
+    }
 }
 ?>

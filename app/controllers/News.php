@@ -11,11 +11,17 @@ class News extends Controller{
     function index($slug){
         // chi tiết news
         $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
-        $this->data['sub_content']['dataNewsOffer'] = $this->NewsModel->getNewsList(5);
+        $newOffer = $this->NewsModel->getPinned();
+        if(count($newOffer)>0)
+        {
+            $this->data['sub_content']['dataNewsOffer'] =$newOffer;
+        }
+        else
+        {
+            $this->data['sub_content']['dataNewsOffer'] = $this->NewsModel->getNewsList(5);
+        }
         $this->data['sub_content']['dataNews'] = $this->NewsModel->getNewsSlug($slug);
 
-
-    
         if(!empty($this->data['sub_content']['dataNews']))
         {
             //get data to tag meta
@@ -50,7 +56,6 @@ class News extends Controller{
     }
     function getAllNew(){
         // 
-        // $this->data['sub_content']['dataNewsOffer'] = $this->NewsModel->getNewsList(5);
         $request = new Request();
         $page = $request->getDataRequest();
         if(!empty($page["page"]))
@@ -81,8 +86,16 @@ class News extends Controller{
         $this->data['sub_content']['totalPage'] = $total;
         $this->data['sub_content']['page_index'] =  $page;
         $this->data['sub_content']['typesProduct'] = $this->ProductModel->getTypeProduct();
-        
-        $this->data['sub_content']['dataNewsOffer'] = $this->NewsModel->getNewsList(4);
+        $newOffer = $this->NewsModel->getPinned();
+        if(count($newOffer)>0)
+        {
+            $this->data['sub_content']['dataNewsOffer'] =$newOffer;
+        }
+        else
+        {
+            $this->data['sub_content']['dataNewsOffer'] = $this->NewsModel->getNewsList(5);
+        }
+       
         $this->data['title']='Tin Tức & Sự kiện';
         $this->data['canonical']="https://".rtrim(htmlspecialchars($_SERVER['HTTP_HOST'])). "/tin-tuc";
         $this->data['content']='news/show_all';

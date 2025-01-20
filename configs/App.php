@@ -7,6 +7,7 @@ $config['app'] = [
         'admin/user' => AuthMiddleware::class,
         'admin/dashboard'=>AuthMiddleware::class,
         'admin/contact' => AuthMiddleware::class,
+        'admin/typeProduct' => AuthMiddleware::class,
         'quantrivien' => AuthMiddleware::class
 
     ],

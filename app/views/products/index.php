@@ -91,24 +91,16 @@
                                     
                                 </div>
                             </div>
+                            <div class="show-news_des-html show_product_pane active-tab_content">
+                    
+                                <?php 
+                                echo isset($desType)?htmlspecialchars_decode($desType):"" ?>
+                            </div>
                         </div>
                         
                     </div>
                 </div>
-                <!-- mô tả loại sản phẩm  -->
-                <!-- <div class="product-describe_container">
-                    <div class="row">
-                        <div class="col l-12">
-                            <div class="product-describe">
-                                <p>I. GIỚI THIỆU TẤM LỢP LẤY SÁNG POLYCARBONATE
-                                Tấm lợp lấy sáng polycarbonate còn được biết đến với tên gọi Tấm Polycarbonate. Đây là một trong những dạng tấm có những ưu điểm lớn như khả năng chống va đập cực kỳ cao, khả năng lấy ánh sáng từ mặt trời tốt.
-                                
-                                Đặc biệt, nó còn có một hệ thống màu sắc vô cùng phong phú mà những sản phẩm có cùng tính năng không có được. Chúng tôi tin rằng trong những năm sắp tới thì tấm lợp polycarbonate sẽ thay thế hoàn toàn so với các vật liệu lợp mái lấy sáng đang dùng như hiện nay.</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div> -->
+                
     <script>
         document.querySelector('.product-catalog_select').addEventListener('change', function(){
             // console.log('select ');

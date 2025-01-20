@@ -2,6 +2,7 @@
 class ProductModel extends Model{
     private $_table='product';
     private $_table_Images='product_images';
+    private $_table_TypeProduct = 'types';
 
 
     public function getProductList($idType ="",$limit ="")
@@ -29,12 +30,12 @@ class ProductModel extends Model{
     {
         if(!empty($orderby))
         {
-            return $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type where types.slug_type = ' . '"' .$slugType.'"' .' ORDER BY ' .$orderby . ' DESC ' )->fetchAll(PDO::FETCH_ASSOC);
+            return $this->database->query('SELECT  product.*,types.id_type,types.slug_type,types.name_type FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type where types.slug_type = ' . '"' .$slugType.'"' .' ORDER BY ' .$orderby . ' DESC ' )->fetchAll(PDO::FETCH_ASSOC);
         }
         else 
         {
 
-            return $this->database->query('SELECT * FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type where types.slug_type = ' . '"' .$slugType.'"')->fetchAll(PDO::FETCH_ASSOC);
+            return $this->database->query('SELECT  product.*,types.id_type,types.slug_type,types.name_type FROM '. $this->_table . ' INNER JOIN types ON product.type = types.id_type where types.slug_type = ' . '"' .$slugType.'"')->fetchAll(PDO::FETCH_ASSOC);
         }
            
     }
@@ -58,7 +59,7 @@ class ProductModel extends Model{
     }
 
     function getTypeProduct(){
-        $data = $this->database->query("SELECT * FROM types")->fetchAll(PDO::FETCH_ASSOC);
+        $data = $this->database->query("SELECT id_type,name_type,slug_type,display_order,date_type FROM types")->fetchAll(PDO::FETCH_ASSOC);
         return  $data;
     }
     function getProductId($id)
@@ -147,5 +148,24 @@ class ProductModel extends Model{
     public function deleteImages($condition)
     {
         return $this->database->deleteData($this->_table_Images,$condition);
+    }
+    // TYPE PRODUCT
+    public function getTypeProductId($id)
+    {
+        return $this->database->query('select * from ' . $this->_table_TypeProduct . ' where id_type = '. $id)->fetch(PDO::FETCH_ASSOC);
+    }
+    public function insert_typeproduct($data){
+       return $this->database->insertData($this->_table_TypeProduct,$data);
+    }
+    public function update_typeproduct($data,$condition){
+        return $this->database->updateData($this->_table_TypeProduct,$data,$condition);
+
+    }
+    public function delete_typeproduct($condition){
+        return $this->database->deleteData($this->_table_TypeProduct,$condition);
+    }
+    public function getDesTypeProduct($id){
+        return $this->database->query('select des_type from ' . $this->_table_TypeProduct . ' where id_type = '. $id)->fetch(PDO::FETCH_ASSOC);
+
     }
 }

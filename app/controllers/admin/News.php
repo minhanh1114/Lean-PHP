@@ -330,12 +330,56 @@ function postEdit()
         $data['message'] ='lỗi truy vấn thiếu trường id hoặc '.$error;
         App::loadError('exception',$data);
     }
+}
+function pin($id)
+{
+    $mess ="Dữ liệu không hợp lệ";
+    $status="403";
+    if(filter_var($id,FILTER_VALIDATE_INT)!==false)
+    {
+        // var_dump($id);
+        $newsPinned = $this->NewsModel->getPinned();
+        // var_dump( array_column($newsPinned,'id'));
 
+        if(in_array($id, array_column($newsPinned,'id'),true))
+        {
+            $condition = "id = " . $id;
+            $data['is_pinned']=0;
+            if($this->NewsModel->updatePin($data,$condition)){
+                $status = "200";
+                $mess = "Đã Bỏ Ghim Bài Viết";
+            }
+            else{
+                $status = "400";
+                $mess = "Bỏ Ghim Bài Viết Thất Bại";
+            }
+        }
+        else if(count($newsPinned)<4)
+        {
+            $condition = "id = " . $id;
+            $data['is_pinned']=1;
+            if($this->NewsModel->updatePin($data,$condition)){
+                $status = "200";
+                $mess = "Ghim thành công";
+            }
+            else
+            {
+                $status = "400";
+                $mess = "Ghim dữ liệu thất bại";
+            }
 
-    // 
-//    echo '<pre>';
-//    print_r($data);
-//    echo '</pre>';
+        }
+        else{
+            $mess ="Số lượng bài ghim vượt quá 4 bài";
+        }
+    }
+    else 
+    {
+            $mess = "Truy cập từ chối";
+    }
+    header('Content-Type: application/json');
+    echo json_encode(["mess"=>$mess,"status"=>$status]);
+    exit();
 }
 
 }

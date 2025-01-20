@@ -48,7 +48,8 @@
                                                             <td>
                                                                 <a  class =" btn btn-success" href="<?php echo _WEB_ROOT . '/admin/news/edit/'. $item['id'] ?> "><i class="fa fa-edit"></i> Sửa</a>
                                                             
-                                                                <a class="btn btn-warning" href="<?php echo _WEB_ROOT . '/admin/news/del/'. $item['id'] ?> "><i class="fa fa-times"></i>Xóa</a></td>
+                                                                <a class="btn btn-warning" href="<?php echo _WEB_ROOT . '/admin/news/del/'. $item['id'] ?> "><i class="fa fa-times"></i>Xóa</a>
+                                                                <a  class="pinButton btn <?php echo  $item['is_pinned']==1?'btn-info' : 'btn-secondary' ?>" href="<?php echo _WEB_ROOT . '/admin/news/pin/'. $item['id'] ?> "><i class="pe-7s-ribbon"></i></a></td>
                                                             
                                                  </tr>
                                                  <?php 
@@ -93,4 +94,31 @@
         })
         }));
     </script>
+    <script>
+        document.querySelectorAll('.pinButton').forEach($item=>{
+            $item.addEventListener('click',async function(e){
+                e.preventDefault();
+                fetch($item.href)
+                .then((response)=>response.json())
+                .then((data)=>{
+                    console.log(data);
+                    if(data['status']==='200')
+                    {
+                        if($item.classList.contains('btn-info')){
+                            $item.classList.remove('btn-info');
+                            $item.classList.add('btn-secondary');
+                        } 
+                        else{
+                            $item.classList.remove('btn-secondary');
+                            $item.classList.add('btn-info');
+                        }
+                    }
+                    $.notify({icon: 'pe-7s-info',message: data.mess},{type: 'info',timer: 5000});
+                }
+                )
+                .catch((err)=>{console.log(err)})
+            })
+        })
+    </script>
+  
            

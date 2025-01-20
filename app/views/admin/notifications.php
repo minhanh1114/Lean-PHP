@@ -47,9 +47,9 @@
                                     
                                     
                                     <div class="alert alert-info">
-                                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert">
-                                            <i class="nc-icon nc-simple-remove"></i>
-                                        </button>
+                                        <a href="<?php echo 'contact/del/'. $item['id']?>" type="button" aria-hidden="true" class="close" data-dismiss="alert">
+                                            <i class="pe-7s-close"></i>
+                                        </a>
                                         <span> 
                                             <small><?php echo "Ngày: ".$item['date'] ?></small>
                                             <br>

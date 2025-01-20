@@ -781,7 +781,7 @@ span {
     max-height: 54px;
     text-decoration: none;
 }
-.giuseart-nav ul>li a span {
+.giuseart-nav ul>li>a>span {
   display: none;
 }
 .giuseart-nav ul>li .chat_animation{display:none}
@@ -812,12 +812,10 @@ span {
     font-weight: bold;
     text-transform: none;
 }
-.giuseart-nav ul li .button .phone_animation i {
-    display: inline-block;
-    width: 27px;
-    font-size: 26px;
-    margin-top: 12px;
-}.giuseart-nav ul>li a.chat_animation svg {
+.giuseart-nav .phone-mobile{
+  display: none;
+}
+.giuseart-nav ul>li a.chat_animation svg {
     margin: -13px 0 -20px;
 }
 .giuseart-nav_icon-messenger {
@@ -826,7 +824,7 @@ span {
     width: 36px;
     height: 36px;
     display: block;
-}.giuseart-nav ul li .button .phone_animation i {
+}.giuseart-nav .giuseart-nav_icon-phone {
     display: inline-block;
     width: 27px;
     font-size: 26px;
@@ -861,7 +859,7 @@ span {
     box-shadow: none;
     position: absolute;
     top: -16px;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%,0);
     width: 50px;
     height: 50px;
@@ -869,6 +867,7 @@ span {
     background: #6cb917;
     line-height: 15px;
     border: 2px solid white;
+    animation: phone-vr-circle-fill 1s infinite ease-in-out;
     }
   .giuseart-nav ul>li a{padding:0; margin:0 auto}
   .giuseart-nav {
@@ -981,6 +980,35 @@ span {
   }
   to {
     width: 60%;
+  }
+}
+@-webkit-keyframes phone-vr-circle-fill {
+  0% {
+      -webkit-transform: rotate(0) scale(1) skew(1deg)
+  }
+
+  10% {
+      -webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+  }
+
+  20% {
+      -webkit-transform: rotate(25deg) scale(1) skew(1deg)
+  }
+
+  30% {
+      -webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+  }
+
+  40% {
+      -webkit-transform: rotate(25deg) scale(1) skew(1deg)
+  }
+
+  50% {
+      -webkit-transform: rotate(0) scale(1) skew(1deg)
+  }
+
+  100% {
+      -webkit-transform: rotate(0) scale(1) skew(1deg)
   }
 }
 .grid {

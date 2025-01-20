@@ -22,7 +22,7 @@ class Query{
             $valueStr = rtrim($valueStr, ',');
 
             $sql = "INSERT INTO $table($fieldStr) VALUES ($valueStr)";
-            $status = $this->conn->query($sql);
+            $status = $this->query($sql);
 
             if ($status){
                 return true;
@@ -50,9 +50,9 @@ class Query{
                 $sql = "UPDATE $table SET $updateStr";
             }
 
-            $status = $this->conn->query($sql);
+            $status = $this->query($sql);
 
-            if ($status){
+            if ($status->rowCount()>0){
                 return true;
             }
         }
@@ -69,7 +69,7 @@ class Query{
             $sql = 'DELETE FROM '.$table;
         }
 
-        $status = $this->conn->query($sql);
+        $status = $this->query($sql);
 
         if ($status){
             return true;

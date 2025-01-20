@@ -58,7 +58,7 @@
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+    <div class="sidebar" data-color="purple" >
 
     <!--
 
@@ -79,6 +79,12 @@
                     <a href="<?php echo _WEB_ROOT . '/admin/dashboard'?>">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo _WEB_ROOT . '/admin/typeProduct' ?>">
+                        <i class="pe-7s-plugin"></i>
+                        <p>Loại Sản Phẩm</p>
                     </a>
                 </li>
                 <li>
@@ -243,7 +249,7 @@
         	demo.initChartist();
             <?php
              if(!empty($mess)) 
-                 {echo "$.notify({icon: 'pe-7s-gift',message: '".$mess."'},{type: 'info',timer: 2000});";}
+                 {echo "$.notify({icon: 'pe-7s-gift',message: '".$mess."'},{type: 'info',timer: 5000});";}
              
              
              ?>
