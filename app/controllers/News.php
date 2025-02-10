@@ -29,7 +29,8 @@ class News extends Controller{
             $this->data['image'] = 'news/' . $this->data['sub_content']['dataNews'][0]['img'];
             $this->data['meta_description']=$this->data['sub_content']['dataNews'][0]['meta_description'];
             $this->data['canonical'] = "https://". rtrim(htmlspecialchars($_SERVER['HTTP_HOST'])). "/tin-tuc/" .$this->data['sub_content']['dataNews'][0]['slug'].".html"; 
-
+            // create toc
+            $this->data['sub_content']['tocData']=$this->generateToc($this->data['sub_content']['dataNews'][0]['description']);
 
             // update view 
             $dataView['view'] =  $this->data['sub_content']['dataNews'][0]['view'] +1;

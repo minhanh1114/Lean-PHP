@@ -1,10 +1,20 @@
 <?php
+
  function calculatorPrice($price, $discountPercent) {
     $percent = (100 - $discountPercent) / 100;
     $calculatedPrice = floor($price / $percent / 1000) * 1000;
     return number_format($calculatedPrice, 0, ',', '.') . '₫';
 }
 ?>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    #toc{
+        position: static;
+        margin-top: 30px;
+    }
+</style>
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"> 
                         <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                             <a itemprop="item" href="<?php echo _WEB_ROOT ?>">
@@ -91,10 +101,25 @@
                                     
                                 </div>
                             </div>
+                            <div id="toc">
+                                            <h3><i class="fas fa-indent"></i> Nội dung chính</h3>
+                                            <ul>
+                                                <?php foreach ($tocData['toc'] as $item): ?>
+                                                    <li<?= $item['level'] == 3 ? ' style="margin-left: 20px;"' : '' ?>>
+                                                        <a href="#<?= htmlspecialchars($item['id']) ?>"><?= $item['title'] ?></a>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                            </div>
                             <div class="show-news_des-html show_product_pane active-tab_content">
-                    
+                            <div>
+                                <?php
+                                    echo($tocData['content']) ;
+                                ?>
+                            </div>        
                                 <?php 
-                                echo isset($desType)?htmlspecialchars_decode($desType):"" ?>
+                                
+                                // echo isset($desType)?htmlspecialchars_decode($desType):"" ?>
                             </div>
                         </div>
                         

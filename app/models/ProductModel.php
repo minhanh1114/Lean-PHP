@@ -102,13 +102,8 @@ class ProductModel extends Model{
     }
     function updateProduct($data,$condition)
     {
-        if($this->database->updateData($this->_table,$data,$condition))
-        {
-            return true;
-        }
-        else{
-            return false;
-        }
+        return $this->database->updateData($this->_table,$data,$condition);
+        
     }
     function getCountProduct()
     {

@@ -35,7 +35,15 @@
                                             </div>
                                            
                                         </div>
-                                       
+                                        <div class="row">
+                                            <div class="col-md-6 px-1">
+                                            <div class="form-group">
+                                                    <label>Meta Description</label>
+                                                    <textarea required name="meta_description" type="text" placeholder="Nội dung mô tả ngắn về loại sản phẩm khoảng 150-170 kí tự" class="form-control" rows="3" ></textarea>
+                                                    <div id="charCountMetaDes">0/170 ký tự</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group description">
@@ -82,7 +90,44 @@
                 .catch( error => {
                     console.error( error );
                 } );
-                
+                const charCountMetaDescription = document.getElementById('charCountMetaDes');
+                const textareaMetaDescription = document.querySelector('textarea[name="meta_description"]');
+                let prevMetaDes;
+                textareaMetaDescription.addEventListener('input',(e)=>{
+                    
+                    if( e.target.value.length >255) {
+                        e.target.value=  prevMetaDes;
+                        textareaMetaDescription.style.color = 'red';
+
+                        $.notify({
+                                icon: "pe-7s-info",
+                                message: "Số kí tự giới hạn trong 255 kí tự "
+
+                            },{
+                                type: 'danger',
+                                timer: 4000
+                                
+                            });
+                    }
+                    else if(e.target.value.length >170)
+                    {
+                        textareaMetaDescription.style.color = '#c9d22a';
+                        $.notify({
+                                icon: "pe-7s-info",
+                                message: "Số kí tự nên giới hạn trong 170 kí tự "
+
+                            },{
+                                type: 'warning',
+                                timer: 4000
+                        
+                            });
+                    }
+                    else{
+                        prevMetaDes = e.target.value;
+                        textareaMetaDescription.style.color = '#333'
+                    }
+                    charCountMetaDescription.innerText =  e.target.value.length +'/170 ký tự'; 
+                });
                
            
                 

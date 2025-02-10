@@ -223,18 +223,25 @@ function postAddProduct(){
                 $idProduct =$this->ProductModel->insertProduct($data);
                 if(!empty($idProduct))
                 {
-                    $dataImages['product_id']=$idProduct;
-                    $dataImages['is_temp']=0;
-                    $conditionUpdateImages='product_id='.$idTemp;
-                   if($this->ProductModel->updateImages($dataImages,$conditionUpdateImages))
-                   {
-                    $error = 'Thêm sản phẩm thành công';
-                   }
-                   else
-                   {
-                    $error="Sửa dữ liệu ảnh phụ thất bại";
-
-                   }
+                    $slugNew['slug'] = $data['slug'].'-'.$idProduct;
+                    $condition = 'id = '.$idProduct;
+                    $updateSlugNew = $this->ProductModel->updateProduct($slugNew,$condition);
+                    if($updateSlugNew)
+                    {
+                        $dataImages['product_id']=$idProduct;
+                        $dataImages['is_temp']=0;
+                        $conditionUpdateImages='product_id='.$idTemp;
+                       if($this->ProductModel->updateImages($dataImages,$conditionUpdateImages))
+                       {
+                        $error = 'Thêm sản phẩm thành công';
+                       }
+                       else
+                       {
+                        $error="Sửa dữ liệu ảnh phụ thất bại";
+    
+                       }
+                    }
+                    
                    
                     
                 }
@@ -427,11 +434,11 @@ function postEdit(){
         $fileName = $file['name'];
         $fileName = explode('.',$fileName);
         $extension = end($fileName);
-        $data['slug'] = $this->create_slug($data['name']);
-        $newName = $data['slug'] .'-'.$data['code'].'.'. $extension;
+        $slugName = $this->create_slug($data['name']);
+        $newName = $slugName .'-'.$data['code'].'.'. $extension;
         while (file_exists($target_dir . $newName)) {
         $countImage++;
-        $newName = $data['slug'] . '-' . $data['code'] . $countImage . '.' . $extension; 
+        $newName = $slugName . '-' . $data['code'] . $countImage . '.' . $extension; 
         }
 
         // check type image upload format

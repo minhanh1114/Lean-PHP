@@ -69,7 +69,7 @@ class TypeProduct  extends Controller {
         $response = new Response();
         $dataType = $request->getDataRequest();
       
-        if(filter_var($dataType['display_order'],FILTER_VALIDATE_INT)!==false && !empty( $dataType['name_type'] ))
+        if(filter_var($dataType['display_order'],FILTER_VALIDATE_INT)!==false && !empty( $dataType['name_type'] )&& strlen($dataType['meta_description'])<=255)
         {
             $dataType['slug_type'] = $this->create_slug($dataType['name_type']);
            if( $this->ProductModel->insert_typeproduct($dataType)){
@@ -110,11 +110,13 @@ class TypeProduct  extends Controller {
         $request = new Request();
         $response = new Response();
         $dataType = $request->getDataRequest();
-        if(filter_var($dataType['display_order'],FILTER_VALIDATE_INT)!==false && !empty( $dataType['name_type'] ))
+        if(filter_var($dataType['display_order'],FILTER_VALIDATE_INT)!==false && !empty( $dataType['name_type'] )&& strlen($dataType['meta_description'])<=255)
         {
             $dataType['slug_type'] = $this->create_slug($dataType['name_type']);
+            $dataType['date_type'] = date('Y-m-d H:i:s');
             $condition = 'id_type = '.$dataType['id_type'];
             unset($dataType['id_type']);
+           
            if( $this->ProductModel->update_typeproduct($dataType,$condition)){
                 $mess.="Sửa loại sản phẩm thành công";
            }
@@ -128,8 +130,9 @@ class TypeProduct  extends Controller {
         }
         
         Session::flash('mess',$mess);
-        $response->redirect('admin/typeProduct');
-        var_dump($dataType);
+        echo Session::flash('mess');
+        // $response->redirect('admin/typeProduct');
+        
 
     }
     function del ($id)

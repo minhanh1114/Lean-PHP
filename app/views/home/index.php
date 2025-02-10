@@ -225,7 +225,7 @@
                 
                 <!-- start news -->
                 <div class="product-catalog">
-                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/tin-tuc/' ?>" class="promo-text_link">Tin Tức - Sự Kiện</a></h2>
+                    <h2 class="promo-product_heading"><a href="<?php echo _WEB_ROOT . '/tin-tuc' ?>" class="promo-text_link">Tin Tức - Sự Kiện</a></h2>
                     <div class="row">
 
                         <div class="col l-8 m-12 c-12">

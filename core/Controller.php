@@ -44,6 +44,33 @@ class Controller{
         return $trimmed_text;
         
     }
+    function generateToc($description) {
+        $description = htmlspecialchars_decode($description);
+        $pattern = '/<h([2-3])>(.*?)<\/h[2-3]>/i';
+
+        $toc = [];
+        $counter = 0;
+
+        $content_with_ids = preg_replace_callback($pattern, function ($matches) use (&$toc, &$counter) {
+            $level = $matches[1];
+            $title = $matches[2];
+            $id = 'heading-' . $counter++;
+
+            $toc[] = [
+                'level' => $level,
+                'title' => $title,
+                'id' => $id
+            ];
+
+            return '<h' . $level . ' id="' . $id . '">' . $title . '</h' . $level . '>';
+        }, $description);
+
+        return [
+            'content' => $content_with_ids,
+            'toc' => $toc
+        ];
+    }
+
     
         
         

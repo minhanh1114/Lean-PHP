@@ -51,40 +51,20 @@
                                      <!-- AddToAny END -->
                                     </div>
                                     <div class="row ">
-                                        <div class="col l-3 m-12 c-12">
-                                            <?php
-                                                    $description = htmlspecialchars_decode($dataNews[0]['description']);
-                                                  
-                                                        $pattern = '/<h([2-3])>(.*?)<\/h[2-3]>/i';
-
-                                                        $toc = array();
-                                                        $counter = 0;
-                                                       
-                                                        $content_with_ids = preg_replace_callback($pattern, function ($matches) use (&$toc, &$counter) {
-                                                            $level = $matches[1]; // Mức độ tiêu đề (2 hoặc 3)
-                                                            $title = $matches[2]; // Nội dung tiêu đề
-                                                            $id = 'heading-' . $counter++; // Tạo ID duy nhất cho tiêu đề
-                                                            
-                                                            $toc[] = [
-                                                                'level' => $level,
-                                                                'title' => $title,
-                                                                'id' => $id
-                                                            ];
-                                                            
-                                                            return '<h' . $level . ' id="' . $id . '">' . $title . '</h' . $level . '>';
-                                                        }, $description);
-
-                                                        echo '<div id="toc"><h3><i class="fas fa-indent"></i> Nội dung chính</h3><ul>';
-                                                        foreach ($toc as $item) {
-                                                            $indent = ($item['level'] == 3) ? ' style="margin-left: 20px;"' : '';
-                                                            echo '<li' . $indent . '><a href="#' . $item['id'] . '">' . $item['title'] . '</a></li>';
-                                                        }
-                                                        echo '</ul></div>';
-                                            ?>
-
+                                    <div class="col l-3 m-12 c-12">
+                                        <div id="toc">
+                                            <h3><i class="fas fa-indent"></i> Nội dung chính</h3>
+                                            <ul>
+                                                <?php foreach ($tocData['toc'] as $item): ?>
+                                                    <li<?= $item['level'] == 3 ? ' style="margin-left: 20px;"' : '' ?>>
+                                                        <a href="#<?= htmlspecialchars($item['id']) ?>"><?= $item['title'] ?></a>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
                                         </div>
+                                    </div>
                                         <div class=" col l-9 m-12 c-12 show-news_des-html active-tab_content" itemprop="description" content = "<?php echo Controller::character_limiter($dataNews[0]['description'],999999,false) ?>">
-                                            <?php echo htmlspecialchars_decode($content_with_ids) ?>
+                                            <?php echo($tocData['content']) ?>
                                         </div>
                                     </div>
                                     <span style="font-size:1.5rem" itemprop="author" itemscope itemtype="https://schema.org/Person">
@@ -118,7 +98,7 @@
                             <div  class="product-offer">
                                 <a href="<?php echo _WEB_ROOT .'/tin-tuc/'.$news['slug'] .'.html' ?>" style="display: block;">
                                     <div class="product-offer_img">
-                                        <img src="<?php echo _WEB_ROOT .'/public/assets/news/'.$news['img'] ?>" alt="<?php echo $news['title'] ?>">
+                                        <img src="<?php echo _WEB_ROOT .'/public/assets/news/thumb/'.$news['img'] ?>" alt="<?php echo $news['title'] ?>">
                                     </div>
                                     <div class="product-offer_title">
                                         <h3><?php echo $news['title'] ?></h3>
